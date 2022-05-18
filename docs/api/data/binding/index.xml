@@ -2,273 +2,273 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>binding on Hugo Book</title>
-    <link>http://localhost:1313/docs/api/data/binding/</link>
+    <link>https://darcybook.github.io/docs/api/data/binding/</link>
     <description>Recent content in binding on Hugo Book</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="http://localhost:1313/docs/api/data/binding/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/docs/api/data/binding/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>binding</title>
-      <link>http://localhost:1313/docs/api/data/binding/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/</guid>
       <description>binding# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#types# Bool BoolList DataItem DataList DataListener DataMap ExternalBool ExternalBoolList ExternalFloat ExternalFloatList ExternalInt ExternalIntList ExternalRune ExternalRuneList ExternalString ExternalStringList ExternalURI ExternalURIList ExternalUntyped ExternalUntypedList ExternalUntypedMap Float FloatList Int IntList Rune RuneList String StringList Struct URI URIList Untyped UntypedList UntypedMap  </description>
     </item>
     
     <item>
       <title>binding.Bool</title>
-      <link>http://localhost:1313/docs/api/data/binding/bool/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/bool/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/bool/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/bool/</guid>
       <description>binding.Bool# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type Bool#type Bool interface { 	DataItem 	Get() (bool, error) 	Set(bool) error } Bool supports binding a bool value.
 Since: 2.0func BindPreferenceBool#func BindPreferenceBool(key string, p fyne.Preferences) Bool BindPreferenceBool returns a bindable bool value that is managed by the application preferences. Changes to this value will be saved to application storage and when the app starts the previous values will be read.</description>
     </item>
     
     <item>
       <title>binding.BoolList</title>
-      <link>http://localhost:1313/docs/api/data/binding/boollist/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/boollist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/boollist/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/boollist/</guid>
       <description>binding.BoolList# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type BoolList#type BoolList interface { 	DataList  	Append(value bool) error 	Get() ([]bool, error) 	GetValue(index int) (bool, error) 	Prepend(value bool) error 	Set(list []bool) error 	SetValue(index int, value bool) error } BoolList supports binding a list of bool values.
 Since: 2.0func NewBoolList#func NewBoolList() BoolList NewBoolList returns a bindable list of bool values.</description>
     </item>
     
     <item>
       <title>binding.DataItem</title>
-      <link>http://localhost:1313/docs/api/data/binding/dataitem/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/dataitem/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/dataitem/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/dataitem/</guid>
       <description>binding.DataItem# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type DataItem#type DataItem interface { 	// AddListener attaches a new change listener to this DataItem. 	// Listeners are called each time the data inside this DataItem changes. 	// Additionally the listener will be triggered upon successful connection to get the current value. 	AddListener(DataListener) 	// RemoveListener will detach the specified change listener from the DataItem.</description>
     </item>
     
     <item>
       <title>binding.DataList</title>
-      <link>http://localhost:1313/docs/api/data/binding/datalist/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/datalist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/datalist/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/datalist/</guid>
       <description>binding.DataList# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type DataList#type DataList interface { 	DataItem 	GetItem(index int) (DataItem, error) 	Length() int } DataList is the base interface for all bindable data lists.
 Since: 2.0</description>
     </item>
     
     <item>
       <title>binding.DataListener</title>
-      <link>http://localhost:1313/docs/api/data/binding/datalistener/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/datalistener/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/datalistener/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/datalistener/</guid>
       <description>binding.DataListener# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type DataListener#type DataListener interface { 	DataChanged() } DataListener is any object that can register for changes in a bindable DataItem. See NewDataListener to define a new listener using just an inline function.
 Since: 2.0func NewDataListener#func NewDataListener(fn func()) DataListener NewDataListener is a helper function that creates a new listener type from a simple callback function.</description>
     </item>
     
     <item>
       <title>binding.DataMap</title>
-      <link>http://localhost:1313/docs/api/data/binding/datamap/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/datamap/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/datamap/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/datamap/</guid>
       <description>binding.DataMap# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type DataMap#type DataMap interface { 	DataItem 	GetItem(string) (DataItem, error) 	Keys() []string } DataMap is the base interface for all bindable data maps.
 Since: 2.0</description>
     </item>
     
     <item>
       <title>binding.ExternalBool</title>
-      <link>http://localhost:1313/docs/api/data/binding/externalbool/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/externalbool/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/externalbool/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/externalbool/</guid>
       <description>binding.ExternalBool# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type ExternalBool#type ExternalBool interface { 	Bool 	Reload() error } ExternalBool supports binding a bool value to an external value.
 Since: 2.0func BindBool#func BindBool(v *bool) ExternalBool BindBool returns a new bindable value that controls the contents of the provided bool variable. If your code changes the content of the variable this refers to you should call Reload() to inform the bindings.</description>
     </item>
     
     <item>
       <title>binding.ExternalBoolList</title>
-      <link>http://localhost:1313/docs/api/data/binding/externalboollist/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/externalboollist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/externalboollist/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/externalboollist/</guid>
       <description>binding.ExternalBoolList# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type ExternalBoolList#type ExternalBoolList interface { 	BoolList  	Reload() error } ExternalBoolList supports binding a list of bool values from an external variable.
 Since: 2.0func BindBoolList#func BindBoolList(v *[]bool) ExternalBoolList BindBoolList returns a bound list of bool values, based on the contents of the passed slice. If your code changes the content of the slice this refers to you should call Reload() to inform the bindings.</description>
     </item>
     
     <item>
       <title>binding.ExternalFloat</title>
-      <link>http://localhost:1313/docs/api/data/binding/externalfloat/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/externalfloat/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/externalfloat/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/externalfloat/</guid>
       <description>binding.ExternalFloat# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type ExternalFloat#type ExternalFloat interface { 	Float 	Reload() error } ExternalFloat supports binding a float64 value to an external value.
 Since: 2.0func BindFloat#func BindFloat(v *float64) ExternalFloat BindFloat returns a new bindable value that controls the contents of the provided float64 variable. If your code changes the content of the variable this refers to you should call Reload() to inform the bindings.</description>
     </item>
     
     <item>
       <title>binding.ExternalFloatList</title>
-      <link>http://localhost:1313/docs/api/data/binding/externalfloatlist/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/externalfloatlist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/externalfloatlist/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/externalfloatlist/</guid>
       <description>binding.ExternalFloatList# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type ExternalFloatList#type ExternalFloatList interface { 	FloatList  	Reload() error } ExternalFloatList supports binding a list of float64 values from an external variable.
 Since: 2.0func BindFloatList#func BindFloatList(v *[]float64) ExternalFloatList BindFloatList returns a bound list of float64 values, based on the contents of the passed slice. If your code changes the content of the slice this refers to you should call Reload() to inform the bindings.</description>
     </item>
     
     <item>
       <title>binding.ExternalInt</title>
-      <link>http://localhost:1313/docs/api/data/binding/externalint/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/externalint/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/externalint/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/externalint/</guid>
       <description>binding.ExternalInt# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type ExternalInt#type ExternalInt interface { 	Int 	Reload() error } ExternalInt supports binding a int value to an external value.
 Since: 2.0func BindInt#func BindInt(v *int) ExternalInt BindInt returns a new bindable value that controls the contents of the provided int variable. If your code changes the content of the variable this refers to you should call Reload() to inform the bindings.</description>
     </item>
     
     <item>
       <title>binding.ExternalIntList</title>
-      <link>http://localhost:1313/docs/api/data/binding/externalintlist/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/externalintlist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/externalintlist/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/externalintlist/</guid>
       <description>binding.ExternalIntList# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type ExternalIntList#type ExternalIntList interface { 	IntList  	Reload() error } ExternalIntList supports binding a list of int values from an external variable.
 Since: 2.0func BindIntList#func BindIntList(v *[]int) ExternalIntList BindIntList returns a bound list of int values, based on the contents of the passed slice. If your code changes the content of the slice this refers to you should call Reload() to inform the bindings.</description>
     </item>
     
     <item>
       <title>binding.ExternalRune</title>
-      <link>http://localhost:1313/docs/api/data/binding/externalrune/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/externalrune/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/externalrune/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/externalrune/</guid>
       <description>binding.ExternalRune# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type ExternalRune#type ExternalRune interface { 	Rune 	Reload() error } ExternalRune supports binding a rune value to an external value.
 Since: 2.0func BindRune#func BindRune(v *rune) ExternalRune BindRune returns a new bindable value that controls the contents of the provided rune variable. If your code changes the content of the variable this refers to you should call Reload() to inform the bindings.</description>
     </item>
     
     <item>
       <title>binding.ExternalRuneList</title>
-      <link>http://localhost:1313/docs/api/data/binding/externalrunelist/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/externalrunelist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/externalrunelist/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/externalrunelist/</guid>
       <description>binding.ExternalRuneList# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type ExternalRuneList#type ExternalRuneList interface { 	RuneList  	Reload() error } ExternalRuneList supports binding a list of rune values from an external variable.
 Since: 2.0func BindRuneList#func BindRuneList(v *[]rune) ExternalRuneList BindRuneList returns a bound list of rune values, based on the contents of the passed slice. If your code changes the content of the slice this refers to you should call Reload() to inform the bindings.</description>
     </item>
     
     <item>
       <title>binding.ExternalString</title>
-      <link>http://localhost:1313/docs/api/data/binding/externalstring/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/externalstring/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/externalstring/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/externalstring/</guid>
       <description>binding.ExternalString# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type ExternalString#type ExternalString interface { 	String 	Reload() error } ExternalString supports binding a string value to an external value.
 Since: 2.0func BindString#func BindString(v *string) ExternalString BindString returns a new bindable value that controls the contents of the provided string variable. If your code changes the content of the variable this refers to you should call Reload() to inform the bindings.</description>
     </item>
     
     <item>
       <title>binding.ExternalStringList</title>
-      <link>http://localhost:1313/docs/api/data/binding/externalstringlist/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/externalstringlist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/externalstringlist/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/externalstringlist/</guid>
       <description>binding.ExternalStringList# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type ExternalStringList#type ExternalStringList interface { 	StringList  	Reload() error } ExternalStringList supports binding a list of string values from an external variable.
 Since: 2.0func BindStringList#func BindStringList(v *[]string) ExternalStringList BindStringList returns a bound list of string values, based on the contents of the passed slice. If your code changes the content of the slice this refers to you should call Reload() to inform the bindings.</description>
     </item>
     
     <item>
       <title>binding.ExternalUntyped</title>
-      <link>http://localhost:1313/docs/api/data/binding/externaluntyped/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/externaluntyped/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/externaluntyped/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/externaluntyped/</guid>
       <description>binding.ExternalUntyped# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type ExternalUntyped#type ExternalUntyped interface { 	Untyped 	Reload() error } ExternalUntyped supports binding a interface{} value to an external value.
 Since: 2.1func BindUntyped#func BindUntyped(v interface{}) ExternalUntyped BindUntyped returns a bindable interface{} value that is bound to an external type. The parameter must be a pointer to the type you wish to bind.</description>
     </item>
     
     <item>
       <title>binding.ExternalUntypedList</title>
-      <link>http://localhost:1313/docs/api/data/binding/externaluntypedlist/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/externaluntypedlist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/externaluntypedlist/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/externaluntypedlist/</guid>
       <description>binding.ExternalUntypedList# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type ExternalUntypedList#type ExternalUntypedList interface { 	UntypedList  	Reload() error } ExternalUntypedList supports binding a list of interface{} values from an external variable.
 Since: 2.1func BindUntypedList#func BindUntypedList(v *[]interface{}) ExternalUntypedList BindUntypedList returns a bound list of interface{} values, based on the contents of the passed slice. If your code changes the content of the slice this refers to you should call Reload() to inform the bindings.</description>
     </item>
     
     <item>
       <title>binding.ExternalUntypedMap</title>
-      <link>http://localhost:1313/docs/api/data/binding/externaluntypedmap/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/externaluntypedmap/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/externaluntypedmap/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/externaluntypedmap/</guid>
       <description>binding.ExternalUntypedMap# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type ExternalUntypedMap#type ExternalUntypedMap interface { 	UntypedMap 	Reload() error } ExternalUntypedMap is a map data binding with all values untyped (interface{}), connected to an external data source.
 Since: 2.0func BindUntypedMap#func BindUntypedMap(d *map[string]interface{}) ExternalUntypedMap BindUntypedMap creates a new map binding of string to interface{} based on the data passed. If your code changes the content of the map this refers to you should call Reload() to inform the bindings.</description>
     </item>
     
     <item>
       <title>binding.ExternalURI</title>
-      <link>http://localhost:1313/docs/api/data/binding/externaluri/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/externaluri/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/externaluri/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/externaluri/</guid>
       <description>binding.ExternalURI# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type ExternalURI#type ExternalURI interface { 	URI 	Reload() error } ExternalURI supports binding a fyne.URI value to an external value.
 Since: 2.1func BindURI#func BindURI(v *fyne.URI) ExternalURI BindURI returns a new bindable value that controls the contents of the provided fyne.URI variable. If your code changes the content of the variable this refers to you should call Reload() to inform the bindings.</description>
     </item>
     
     <item>
       <title>binding.ExternalURIList</title>
-      <link>http://localhost:1313/docs/api/data/binding/externalurilist/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/externalurilist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/externalurilist/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/externalurilist/</guid>
       <description>binding.ExternalURIList# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type ExternalURIList#type ExternalURIList interface { 	URIList  	Reload() error } ExternalURIList supports binding a list of fyne.URI values from an external variable.
 Since: 2.1func BindURIList#func BindURIList(v *[]fyne.URI) ExternalURIList BindURIList returns a bound list of fyne.URI values, based on the contents of the passed slice. If your code changes the content of the slice this refers to you should call Reload() to inform the bindings.</description>
     </item>
     
     <item>
       <title>binding.Float</title>
-      <link>http://localhost:1313/docs/api/data/binding/float/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/float/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/float/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/float/</guid>
       <description>binding.Float# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type Float#type Float interface { 	DataItem 	Get() (float64, error) 	Set(float64) error } Float supports binding a float64 value.
 Since: 2.0func BindPreferenceFloat#func BindPreferenceFloat(key string, p fyne.Preferences) Float BindPreferenceFloat returns a bindable float64 value that is managed by the application preferences. Changes to this value will be saved to application storage and when the app starts the previous values will be read.</description>
     </item>
     
     <item>
       <title>binding.FloatList</title>
-      <link>http://localhost:1313/docs/api/data/binding/floatlist/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/floatlist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/floatlist/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/floatlist/</guid>
       <description>binding.FloatList# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type FloatList#type FloatList interface { 	DataList  	Append(value float64) error 	Get() ([]float64, error) 	GetValue(index int) (float64, error) 	Prepend(value float64) error 	Set(list []float64) error 	SetValue(index int, value float64) error } FloatList supports binding a list of float64 values.
 Since: 2.0func NewFloatList#func NewFloatList() FloatList NewFloatList returns a bindable list of float64 values.</description>
     </item>
     
     <item>
       <title>binding.Int</title>
-      <link>http://localhost:1313/docs/api/data/binding/int/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/int/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/int/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/int/</guid>
       <description>binding.Int# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type Int#type Int interface { 	DataItem 	Get() (int, error) 	Set(int) error } Int supports binding a int value.
 Since: 2.0func BindPreferenceInt#func BindPreferenceInt(key string, p fyne.Preferences) Int BindPreferenceInt returns a bindable int value that is managed by the application preferences. Changes to this value will be saved to application storage and when the app starts the previous values will be read.</description>
     </item>
     
     <item>
       <title>binding.IntList</title>
-      <link>http://localhost:1313/docs/api/data/binding/intlist/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/intlist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/intlist/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/intlist/</guid>
       <description>binding.IntList# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type IntList#type IntList interface { 	DataList  	Append(value int) error 	Get() ([]int, error) 	GetValue(index int) (int, error) 	Prepend(value int) error 	Set(list []int) error 	SetValue(index int, value int) error } IntList supports binding a list of int values.
 Since: 2.0func NewIntList#func NewIntList() IntList NewIntList returns a bindable list of int values.</description>
     </item>
     
     <item>
       <title>binding.Rune</title>
-      <link>http://localhost:1313/docs/api/data/binding/rune/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/rune/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/rune/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/rune/</guid>
       <description>binding.Rune# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type Rune#type Rune interface { 	DataItem 	Get() (rune, error) 	Set(rune) error } Rune supports binding a rune value.
 Since: 2.0func NewRune#func NewRune() Rune NewRune returns a bindable rune value that is managed internally.
 Since: 2.0</description>
@@ -276,50 +276,50 @@ Since: 2.0</description>
     
     <item>
       <title>binding.RuneList</title>
-      <link>http://localhost:1313/docs/api/data/binding/runelist/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/runelist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/runelist/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/runelist/</guid>
       <description>binding.RuneList# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type RuneList#type RuneList interface { 	DataList  	Append(value rune) error 	Get() ([]rune, error) 	GetValue(index int) (rune, error) 	Prepend(value rune) error 	Set(list []rune) error 	SetValue(index int, value rune) error } RuneList supports binding a list of rune values.
 Since: 2.0func NewRuneList#func NewRuneList() RuneList NewRuneList returns a bindable list of rune values.</description>
     </item>
     
     <item>
       <title>binding.String</title>
-      <link>http://localhost:1313/docs/api/data/binding/string/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/string/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/string/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/string/</guid>
       <description>binding.String# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type String#type String interface { 	DataItem 	Get() (string, error) 	Set(string) error } String supports binding a string value.
 Since: 2.0func BindPreferenceString#func BindPreferenceString(key string, p fyne.Preferences) String BindPreferenceString returns a bindable string value that is managed by the application preferences. Changes to this value will be saved to application storage and when the app starts the previous values will be read.</description>
     </item>
     
     <item>
       <title>binding.StringList</title>
-      <link>http://localhost:1313/docs/api/data/binding/stringlist/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/stringlist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/stringlist/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/stringlist/</guid>
       <description>binding.StringList# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type StringList#type StringList interface { 	DataList  	Append(value string) error 	Get() ([]string, error) 	GetValue(index int) (string, error) 	Prepend(value string) error 	Set(list []string) error 	SetValue(index int, value string) error } StringList supports binding a list of string values.
 Since: 2.0func NewStringList#func NewStringList() StringList NewStringList returns a bindable list of string values.</description>
     </item>
     
     <item>
       <title>binding.Struct</title>
-      <link>http://localhost:1313/docs/api/data/binding/struct/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/struct/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/struct/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/struct/</guid>
       <description>binding.Struct# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type Struct#type Struct interface { 	DataMap 	GetValue(string) (interface{}, error) 	SetValue(string, interface{}) error 	Reload() error } Struct is the base interface for a bound struct type.
 Since: 2.0func BindStruct#func BindStruct(i interface{}) Struct BindStruct creates a new map binding of string to interface{} using the struct passed as data. The key for each item is a string representation of each exported field with the value set as an interface{}.</description>
     </item>
     
     <item>
       <title>binding.Untyped</title>
-      <link>http://localhost:1313/docs/api/data/binding/untyped/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/untyped/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/untyped/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/untyped/</guid>
       <description>binding.Untyped# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type Untyped#type Untyped interface { 	DataItem 	Get() (interface{}, error) 	Set(interface{}) error } Untyped supports binding a interface{} value.
 Since: 2.1func NewUntyped#func NewUntyped() Untyped NewUntyped returns a bindable interface{} value that is managed internally.
 Since: 2.1</description>
@@ -327,20 +327,20 @@ Since: 2.1</description>
     
     <item>
       <title>binding.UntypedList</title>
-      <link>http://localhost:1313/docs/api/data/binding/untypedlist/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/untypedlist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/untypedlist/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/untypedlist/</guid>
       <description>binding.UntypedList# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type UntypedList#type UntypedList interface { 	DataList  	Append(value interface{}) error 	Get() ([]interface{}, error) 	GetValue(index int) (interface{}, error) 	Prepend(value interface{}) error 	Set(list []interface{}) error 	SetValue(index int, value interface{}) error } UntypedList supports binding a list of interface{} values.
 Since: 2.1func NewUntypedList#func NewUntypedList() UntypedList NewUntypedList returns a bindable list of interface{} values.</description>
     </item>
     
     <item>
       <title>binding.UntypedMap</title>
-      <link>http://localhost:1313/docs/api/data/binding/untypedmap/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/untypedmap/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/untypedmap/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/untypedmap/</guid>
       <description>binding.UntypedMap# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type UntypedMap#type UntypedMap interface { 	DataMap 	Delete(string) 	Get() (map[string]interface{}, error) 	GetValue(string) (interface{}, error) 	Set(map[string]interface{}) error 	SetValue(string, interface{}) error } UntypedMap is a map data binding with all values Untyped (interface{}).
 Since: 2.0func NewUntypedMap#func NewUntypedMap() UntypedMap NewUntypedMap creates a new, empty map binding of string to interface{}.
 Since: 2.</description>
@@ -348,10 +348,10 @@ Since: 2.</description>
     
     <item>
       <title>binding.URI</title>
-      <link>http://localhost:1313/docs/api/data/binding/uri/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/uri/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/uri/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/uri/</guid>
       <description>binding.URI# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type URI#type URI interface { 	DataItem 	Get() (fyne.URI, error) 	Set(fyne.URI) error } URI supports binding a fyne.URI value.
 Since: 2.1func NewURI#func NewURI() URI NewURI returns a bindable fyne.URI value that is managed internally.
 Since: 2.1func StringToURI#func StringToURI(str String) URI StringToURI creates a binding that connects a String data item to a URI.</description>
@@ -359,10 +359,10 @@ Since: 2.1func StringToURI#func StringToURI(str String) URI StringToURI cre
     
     <item>
       <title>binding.URIList</title>
-      <link>http://localhost:1313/docs/api/data/binding/urilist/</link>
+      <link>https://darcybook.github.io/docs/api/data/binding/urilist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/data/binding/urilist/</guid>
+      <guid>https://darcybook.github.io/docs/api/data/binding/urilist/</guid>
       <description>binding.URIList# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#type URIList#type URIList interface { 	DataList  	Append(value fyne.URI) error 	Get() ([]fyne.URI, error) 	GetValue(index int) (fyne.URI, error) 	Prepend(value fyne.URI) error 	Set(list []fyne.URI) error 	SetValue(index int, value fyne.URI) error } URIList supports binding a list of fyne.URI values.
 Since: 2.1func NewURIList#func NewURIList() URIList NewURIList returns a bindable list of fyne.</description>
     </item>

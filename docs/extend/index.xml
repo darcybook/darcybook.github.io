@@ -2,54 +2,54 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Extending Fyne on Hugo Book</title>
-    <link>http://localhost:1313/docs/extend/</link>
+    <link>https://darcybook.github.io/docs/extend/</link>
     <description>Recent content in Extending Fyne on Hugo Book</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="http://localhost:1313/docs/extend/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/docs/extend/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building a Custom Layout</title>
-      <link>http://localhost:1313/docs/extend/custom-layout/</link>
+      <link>https://darcybook.github.io/docs/extend/custom-layout/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/extend/custom-layout/</guid>
+      <guid>https://darcybook.github.io/docs/extend/custom-layout/</guid>
       <description>In a Fyne application each Container arranges it&amp;rsquo;s child elements using a simple layout algorithm. Fyne defines many layouts available in the fyne.io/fyne/v2/layout package. If you look at the code you will see that they all implement the Layout interface.
 type Layout interface { 	Layout([]CanvasObject, Size) 	MinSize(objects []CanvasObject) Size } Any application can provide a custom layout to arrange widgets in a non-standard manner. To do this you need to implement the interface above in your own code.</description>
     </item>
     
     <item>
       <title>Bundling resources</title>
-      <link>http://localhost:1313/docs/extend/bundle/</link>
+      <link>https://darcybook.github.io/docs/extend/bundle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/extend/bundle/</guid>
+      <guid>https://darcybook.github.io/docs/extend/bundle/</guid>
       <description>Go based applications are usually built as a single binary executable, and this is the same for Fyne applications. A single file makes it easier to distribute install our software. Unfortunately GUI applications typically require additional resources to render the user interface. To manage this challenge a Go application can bundle assets into the binary itself. The Fyne toolkit prefers the use of &amp;ldquo;fyne bundle&amp;rdquo; as it has various benefits that we will explore below.</description>
     </item>
     
     <item>
       <title>Creating a Custom Theme</title>
-      <link>http://localhost:1313/docs/extend/custom-theme/</link>
+      <link>https://darcybook.github.io/docs/extend/custom-theme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/extend/custom-theme/</guid>
+      <guid>https://darcybook.github.io/docs/extend/custom-theme/</guid>
       <description>Applications are able to load custom themes that can apply small changes to the standard theme or provide a completely unique look. A theme will need to implement the functions of fyne.Theme interface, which is defined as follows:
 type Theme interface { 	Color(ThemeColorName, ThemeVariant) color.Color 	Font(TextStyle) Resource 	Icon(ThemeIconName) Resource 	Size(ThemeSizeName) float32 } To apply our theme changes we will first define a new type that that implements this interface.</description>
     </item>
     
     <item>
       <title>Writing a Custom Widget</title>
-      <link>http://localhost:1313/docs/extend/custom-widget/</link>
+      <link>https://darcybook.github.io/docs/extend/custom-widget/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/extend/custom-widget/</guid>
+      <guid>https://darcybook.github.io/docs/extend/custom-widget/</guid>
       <description>The standard widgets included with Fyne are designed to support standard user interactions and requirements. As a GUI often has to provide custom functionality it may be necessary to write a custom widget. This article outlines how.
 A widget is split into two areas - each implementing a standard interface - the fyne.Widget and the fyne.WidgetRenderer. The widget defines behaviour and state, with the renderer being used to define how it should be drawn to screen.</description>
     </item>
     
     <item>
       <title>Numerical Entry</title>
-      <link>http://localhost:1313/docs/extend/numerical-entry/</link>
+      <link>https://darcybook.github.io/docs/extend/numerical-entry/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/extend/numerical-entry/</guid>
+      <guid>https://darcybook.github.io/docs/extend/numerical-entry/</guid>
       <description>In the traditional sense, GUI programs have used callbacks to customize actions for widgets. Fyne does not expose inserting custom callbacks to capture events on widgets, but it does not need to. The Go language is plenty extensible to make this work.
 Instead we can simply use Type Embedding and extend the widget to only make it possible to enter numerical values.
 First create a new type struct, we will call it numericalEntry.</description>
@@ -57,10 +57,10 @@ First create a new type struct, we will call it numericalEntry.</description>
     
     <item>
       <title>Extending Widgets</title>
-      <link>http://localhost:1313/docs/extend/extending-widgets/</link>
+      <link>https://darcybook.github.io/docs/extend/extending-widgets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/extend/extending-widgets/</guid>
+      <guid>https://darcybook.github.io/docs/extend/extending-widgets/</guid>
       <description>The standard Fyne widgets provide the minimum functionality and customisation to support most use-cases. It may be required at certain times to have more advanced functionality. Rather than have developers build their own widgets it is possible to extend the existing ones.
 For example we will extend the icon widget to support being tapped. To do this we declare a new struct that embeds the widget.Icon type. We create a constructor function that calls the important ExtendBaseWidget function.</description>
     </item>

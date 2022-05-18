@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Drawing and Animation on Hugo Book</title>
-    <link>http://localhost:1313/fyne/docs/canvas/</link>
+    <link>https://darcybook.github.io/fyne/docs/canvas/</link>
     <description>Recent content in Drawing and Animation on Hugo Book</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="http://localhost:1313/fyne/docs/canvas/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/fyne/docs/canvas/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rectangle</title>
-      <link>http://localhost:1313/fyne/docs/canvas/rectangle/</link>
+      <link>https://darcybook.github.io/fyne/docs/canvas/rectangle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/canvas/rectangle/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/canvas/rectangle/</guid>
       <description>canvas.Rectangle is the simplest canvas object in Fyne. It displays a block of the specified colour. You can also set the colour using the FillColor field.
 In this example the rectangle fills the window as it is the only content element.
 package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; )  func main() { 	myApp := app.New() 	w := myApp.NewWindow(&amp;#34;Rectangle&amp;#34;)  	rect := canvas.</description>
@@ -18,10 +18,10 @@ package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2
     
     <item>
       <title>Text</title>
-      <link>http://localhost:1313/fyne/docs/canvas/text/</link>
+      <link>https://darcybook.github.io/fyne/docs/canvas/text/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/canvas/text/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/canvas/text/</guid>
       <description>canvas.Text is used for all text rendering within Fyne. It is created by specifying the text and colour for the text. Text is rendered using the default font, specified by the current theme.
 The text object allows certain configuration like the Alignment and TextStyle field. as illustrated in the example here. To use a monospaced font instead you can specify fyne.TextStyle{Monospace: true}.
 package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.</description>
@@ -29,20 +29,20 @@ package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.</descript
     
     <item>
       <title>Line</title>
-      <link>http://localhost:1313/fyne/docs/canvas/line/</link>
+      <link>https://darcybook.github.io/fyne/docs/canvas/line/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/canvas/line/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/canvas/line/</guid>
       <description>The canvas.Line object draws a line from the Position1 (default is top, left) to Position2 (default is bottom, right). You specify its colour and can vary the stroke width which otherwise defaults to 1.
 A line position can be manipulated using the Position1 or Position2 fields or by using the Move() and Resize() functions. For example a 0 width area will show a vertical line whereas 0 height would be horizontal.</description>
     </item>
     
     <item>
       <title>Circle</title>
-      <link>http://localhost:1313/fyne/docs/canvas/circle/</link>
+      <link>https://darcybook.github.io/fyne/docs/canvas/circle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/canvas/circle/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/canvas/circle/</guid>
       <description>canvas.Circle defines a circle shape filled by the specified colour. You may also set a StrokeWidth and therefore a different StrokeColor as shown in this example.
 The circle will fill the space specified by calling Resize() or by the layout it is controlled by. As the example sets the circle as the window content it will resize to fill the window, within a basic padding (controlled by the theme).
 package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.</description>
@@ -50,40 +50,40 @@ package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.</descript
     
     <item>
       <title>Image</title>
-      <link>http://localhost:1313/fyne/docs/canvas/image/</link>
+      <link>https://darcybook.github.io/fyne/docs/canvas/image/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/canvas/image/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/canvas/image/</guid>
       <description>A canvas.Image represents a scalable image resource in Fyne. It can be loaded from a resource (as shown in the example), from an image file, from a URI location containing an image, from an io.Reader, or from a Go image.Image in memory.
 The default image fill mode is canvas.ImageFillStretch which will cause it to fill the space specified (through Resize() or layout). Alternatively you could use canvas.ImageFillContain to ensure that the aspect ratio is maintained and the image is within the bounds.</description>
     </item>
     
     <item>
       <title>Raster</title>
-      <link>http://localhost:1313/fyne/docs/canvas/raster/</link>
+      <link>https://darcybook.github.io/fyne/docs/canvas/raster/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/canvas/raster/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/canvas/raster/</guid>
       <description>The canvas.Raster is like an image but draws exactly one spot for each pixel on the screen. This means that as a user interface scales or the image resizes more pixels will be requested to fill the space. To do this we use a Generator function as illustrated in this example - it will be used to return the colour of each pixel.
 The generator functions can be pixel based (as in this example where we generate a new random colour for each pixel) or based on full images.</description>
     </item>
     
     <item>
       <title>Animation</title>
-      <link>http://localhost:1313/fyne/docs/canvas/animation/</link>
+      <link>https://darcybook.github.io/fyne/docs/canvas/animation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/canvas/animation/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/canvas/animation/</guid>
       <description>Fyne includes an animation framework that allows you to smoothly transition canvas properties from one value to another over time. An animation can contain any code which means that any types of object attributes can be managed, however there are builtin animations for size, position and color.
 Animations are normally created using the builtin helpers of the canvas package, such as NewSizeAnimation, and calling Start() on the created animation. You can set animations to repeat or auto reverse, as we will see below.</description>
     </item>
     
     <item>
       <title>Gradient</title>
-      <link>http://localhost:1313/fyne/docs/canvas/gradient/</link>
+      <link>https://darcybook.github.io/fyne/docs/canvas/gradient/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/canvas/gradient/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/canvas/gradient/</guid>
       <description>The last canvas primitive type is Gradient, available as canvas.LinearGradient and canvas.RadialGradient which is used to draw a gradient from one colour to another in various patterns. You can create gradients using NewHorizontalGradient(), NewVerticalGradient() or NewRadialGradient().
 To create a gradient you need a start and end colour - every colour in between is calculated by the canvas. In this example we use color.Transparent to show how a gradient (or any other type) could use an alpha value to be semi-transparent over the content behind.</description>
     </item>

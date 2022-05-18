@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>test on Hugo Book</title>
-    <link>http://localhost:1313/fyne/docs/api/test/</link>
+    <link>https://darcybook.github.io/fyne/docs/api/test/</link>
     <description>Recent content in test on Hugo Book</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="http://localhost:1313/fyne/docs/api/test/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/fyne/docs/api/test/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>test</title>
-      <link>http://localhost:1313/fyne/docs/api/test/</link>
+      <link>https://darcybook.github.io/fyne/docs/api/test/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/api/test/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/api/test/</guid>
       <description>test# import &amp;#34;fyne.io/fyne/v2/test&amp;#34; Package test provides utility drivers for running UI tests without rendering
 Usage#func ApplyTheme#func ApplyTheme(t *testing.T, theme fyne.Theme) ApplyTheme sets the given theme and waits for it to be applied to the current app.
 func AssertCanvasTappableAt#func AssertCanvasTappableAt(t *testing.T, c fyne.Canvas, pos fyne.Position) bool AssertCanvasTappableAt asserts that the canvas is tappable at the given position.
@@ -19,19 +19,19 @@ func AssertImageMatches#func AssertImageMatches(t *testing.</description>
     
     <item>
       <title>test.SoftwarePainter</title>
-      <link>http://localhost:1313/fyne/docs/api/test/softwarepainter/</link>
+      <link>https://darcybook.github.io/fyne/docs/api/test/softwarepainter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/api/test/softwarepainter/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/api/test/softwarepainter/</guid>
       <description>test.SoftwarePainter# import &amp;#34;fyne.io/fyne/v2/test&amp;#34; Usage#type SoftwarePainter#type SoftwarePainter interface { 	Paint(fyne.Canvas) image.Image } SoftwarePainter describes a simple type that can render canvases</description>
     </item>
     
     <item>
       <title>test.WindowlessCanvas</title>
-      <link>http://localhost:1313/fyne/docs/api/test/windowlesscanvas/</link>
+      <link>https://darcybook.github.io/fyne/docs/api/test/windowlesscanvas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/api/test/windowlesscanvas/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/api/test/windowlesscanvas/</guid>
       <description>test.WindowlessCanvas# import &amp;#34;fyne.io/fyne/v2/test&amp;#34; Usage#type WindowlessCanvas#type WindowlessCanvas interface { 	fyne.Canvas  	Padded() bool 	Resize(fyne.Size) 	SetPadded(bool) 	SetScale(float32) } WindowlessCanvas provides functionality for a canvas to operate without a window
 func NewCanvas#func NewCanvas() WindowlessCanvas NewCanvas returns a single use in-memory canvas used for testing
 func NewCanvasWithPainter#func NewCanvasWithPainter(painter SoftwarePainter) WindowlessCanvas NewCanvasWithPainter allows creation of an in-memory canvas with a specific painter.</description>

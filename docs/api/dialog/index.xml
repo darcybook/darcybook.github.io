@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>dialog on Hugo Book</title>
-    <link>http://localhost:1313/docs/api/dialog/</link>
+    <link>https://darcybook.github.io/docs/api/dialog/</link>
     <description>Recent content in dialog on Hugo Book</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="http://localhost:1313/docs/api/dialog/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/docs/api/dialog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>dialog</title>
-      <link>http://localhost:1313/docs/api/dialog/</link>
+      <link>https://darcybook.github.io/docs/api/dialog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/dialog/</guid>
+      <guid>https://darcybook.github.io/docs/api/dialog/</guid>
       <description>dialog# import &amp;#34;fyne.io/fyne/v2/dialog&amp;#34; Package dialog defines standard dialog windows for application GUIs.
 Usage#func ShowColorPicker#func ShowColorPicker(title, message string, callback func(c color.Color), parent fyne.Window) ShowColorPicker creates and shows a color dialog. The callback is triggered when the user selects a color.
 Since: 1.4func ShowConfirm#func ShowConfirm(title, message string, callback func(bool), parent fyne.Window) ShowConfirm shows a dialog over the specified window for a user confirmation.</description>
@@ -18,70 +18,70 @@ Since: 1.4func ShowConfirm#func ShowConfirm(title, message string, callback
     
     <item>
       <title>dialog.ColorPickerDialog</title>
-      <link>http://localhost:1313/docs/api/dialog/colorpickerdialog/</link>
+      <link>https://darcybook.github.io/docs/api/dialog/colorpickerdialog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/dialog/colorpickerdialog/</guid>
+      <guid>https://darcybook.github.io/docs/api/dialog/colorpickerdialog/</guid>
       <description>dialog.ColorPickerDialog# import &amp;#34;fyne.io/fyne/v2/dialog&amp;#34; Usage#type ColorPickerDialog#type ColorPickerDialog struct { 	Advanced bool } ColorPickerDialog is a simple dialog window that displays a color picker.
 Since: 1.4func NewColorPicker#func NewColorPicker(title, message string, callback func(c color.Color), parent fyne.Window) *ColorPickerDialog NewColorPicker creates a color dialog and returns the handle. Using the returned type you should call Show() and then set its color through SetColor().</description>
     </item>
     
     <item>
       <title>dialog.ConfirmDialog</title>
-      <link>http://localhost:1313/docs/api/dialog/confirmdialog/</link>
+      <link>https://darcybook.github.io/docs/api/dialog/confirmdialog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/dialog/confirmdialog/</guid>
+      <guid>https://darcybook.github.io/docs/api/dialog/confirmdialog/</guid>
       <description>dialog.ConfirmDialog# import &amp;#34;fyne.io/fyne/v2/dialog&amp;#34; Usage#type ConfirmDialog#type ConfirmDialog struct { } ConfirmDialog is like the standard Dialog but with an additional confirmation button
 func NewConfirm#func NewConfirm(title, message string, callback func(bool), parent fyne.Window) *ConfirmDialog NewConfirm creates a dialog over the specified window for user confirmation. The title is used for the dialog window and message is the content. The callback is executed when the user decides.</description>
     </item>
     
     <item>
       <title>dialog.Dialog</title>
-      <link>http://localhost:1313/docs/api/dialog/dialog/</link>
+      <link>https://darcybook.github.io/docs/api/dialog/dialog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/dialog/dialog/</guid>
+      <guid>https://darcybook.github.io/docs/api/dialog/dialog/</guid>
       <description>dialog.Dialog# import &amp;#34;fyne.io/fyne/v2/dialog&amp;#34; Usage#type Dialog#type Dialog interface { 	Show() 	Hide() 	SetDismissText(label string) 	SetOnClosed(closed func()) 	Refresh() 	Resize(size fyne.Size)  	// Since: 2.1 	MinSize() fyne.Size } Dialog is the common API for any dialog window with a single dismiss button
 func NewCustom#func NewCustom(title, dismiss string, content fyne.CanvasObject, parent fyne.Window) Dialog NewCustom creates and returns a dialog over the specified application using custom content.</description>
     </item>
     
     <item>
       <title>dialog.EntryDialog</title>
-      <link>http://localhost:1313/docs/api/dialog/entrydialog/</link>
+      <link>https://darcybook.github.io/docs/api/dialog/entrydialog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/dialog/entrydialog/</guid>
+      <guid>https://darcybook.github.io/docs/api/dialog/entrydialog/</guid>
       <description>dialog.EntryDialog# import &amp;#34;fyne.io/fyne/v2/dialog&amp;#34; Usage#type EntryDialog#type EntryDialog struct { } EntryDialog is a variation of a dialog which prompts the user to enter some text.
 Deprecated: Use dialog.NewFormDialog() or dialog.ShowFormDialog() with a widget.Entry inside instead.func NewEntryDialog#func NewEntryDialog(title, message string, onConfirm func(string), parent fyne.Window) *EntryDialog NewEntryDialog creates a dialog over the specified window for the user to enter a value.</description>
     </item>
     
     <item>
       <title>dialog.FileDialog</title>
-      <link>http://localhost:1313/docs/api/dialog/filedialog/</link>
+      <link>https://darcybook.github.io/docs/api/dialog/filedialog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/dialog/filedialog/</guid>
+      <guid>https://darcybook.github.io/docs/api/dialog/filedialog/</guid>
       <description>dialog.FileDialog# import &amp;#34;fyne.io/fyne/v2/dialog&amp;#34; Usage#type FileDialog#type FileDialog struct { } FileDialog is a dialog containing a file picker for use in opening or saving files.
 func NewFileOpen#func NewFileOpen(callback func(fyne.URIReadCloser, error), parent fyne.Window) *FileDialog NewFileOpen creates a file dialog allowing the user to choose a file to open. The callback function will run when the dialog closes. The URI will be nil when the user cancels or when nothing is selected.</description>
     </item>
     
     <item>
       <title>dialog.ProgressDialog</title>
-      <link>http://localhost:1313/docs/api/dialog/progressdialog/</link>
+      <link>https://darcybook.github.io/docs/api/dialog/progressdialog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/dialog/progressdialog/</guid>
+      <guid>https://darcybook.github.io/docs/api/dialog/progressdialog/</guid>
       <description>dialog.ProgressDialog# import &amp;#34;fyne.io/fyne/v2/dialog&amp;#34; Usage#type ProgressDialog#type ProgressDialog struct { } ProgressDialog is a simple dialog window that displays text and a progress bar.
 Deprecated: Create a new custom dialog with a widget.ProgressBar() inside.func NewProgress#func NewProgress(title, message string, parent fyne.Window) *ProgressDialog NewProgress creates a progress dialog and returns the handle. Using the returned type you should call Show() and then set its value through SetValue().</description>
     </item>
     
     <item>
       <title>dialog.ProgressInfiniteDialog</title>
-      <link>http://localhost:1313/docs/api/dialog/progressinfinitedialog/</link>
+      <link>https://darcybook.github.io/docs/api/dialog/progressinfinitedialog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/dialog/progressinfinitedialog/</guid>
+      <guid>https://darcybook.github.io/docs/api/dialog/progressinfinitedialog/</guid>
       <description>dialog.ProgressInfiniteDialog# import &amp;#34;fyne.io/fyne/v2/dialog&amp;#34; Usage#type ProgressInfiniteDialog#type ProgressInfiniteDialog struct { } ProgressInfiniteDialog is a simple dialog window that displays text and a infinite progress bar.
 Deprecated: Create a new custom dialog with a widget.ProgressBarInfinite() inside.func NewProgressInfinite#func NewProgressInfinite(title, message string, parent fyne.Window) *ProgressInfiniteDialog NewProgressInfinite creates a infinite progress dialog and returns the handle. Using the returned type you should call Show().</description>
     </item>

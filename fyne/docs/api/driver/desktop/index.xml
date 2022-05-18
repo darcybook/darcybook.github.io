@@ -2,127 +2,127 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>desktop on Hugo Book</title>
-    <link>http://localhost:1313/fyne/docs/api/driver/desktop/</link>
+    <link>https://darcybook.github.io/fyne/docs/api/driver/desktop/</link>
     <description>Recent content in desktop on Hugo Book</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="http://localhost:1313/fyne/docs/api/driver/desktop/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/fyne/docs/api/driver/desktop/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>desktop</title>
-      <link>http://localhost:1313/fyne/docs/api/driver/desktop/</link>
+      <link>https://darcybook.github.io/fyne/docs/api/driver/desktop/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/api/driver/desktop/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/api/driver/desktop/</guid>
       <description>desktop# import &amp;#34;fyne.io/fyne/v2/driver/desktop&amp;#34; Package desktop provides desktop specific driver functionality.
 Usage#const ( 	// KeyNone represents no key 	KeyNone fyne.KeyName = &amp;#34;&amp;#34; 	// KeyShiftLeft represents the left shift key 	KeyShiftLeft fyne.KeyName = &amp;#34;LeftShift&amp;#34; 	// KeyShiftRight represents the right shift key 	KeyShiftRight fyne.KeyName = &amp;#34;RightShift&amp;#34; 	// KeyControlLeft represents the left control key 	KeyControlLeft fyne.KeyName = &amp;#34;LeftControl&amp;#34; 	// KeyControlRight represents the right control key 	KeyControlRight fyne.</description>
     </item>
     
     <item>
       <title>desktop.Canvas</title>
-      <link>http://localhost:1313/fyne/docs/api/driver/desktop/canvas/</link>
+      <link>https://darcybook.github.io/fyne/docs/api/driver/desktop/canvas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/api/driver/desktop/canvas/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/api/driver/desktop/canvas/</guid>
       <description>desktop.Canvas# import &amp;#34;fyne.io/fyne/v2/driver/desktop&amp;#34; Usage#type Canvas#type Canvas interface { 	OnKeyDown() func(*fyne.KeyEvent) 	SetOnKeyDown(func(*fyne.KeyEvent)) 	OnKeyUp() func(*fyne.KeyEvent) 	SetOnKeyUp(func(*fyne.KeyEvent)) } Canvas defines the desktop specific extensions to a fyne.Canvas.</description>
     </item>
     
     <item>
       <title>desktop.Cursor</title>
-      <link>http://localhost:1313/fyne/docs/api/driver/desktop/cursor/</link>
+      <link>https://darcybook.github.io/fyne/docs/api/driver/desktop/cursor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/api/driver/desktop/cursor/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/api/driver/desktop/cursor/</guid>
       <description>desktop.Cursor# import &amp;#34;fyne.io/fyne/v2/driver/desktop&amp;#34; Usage#type Cursor#type Cursor interface { 	// Image returns the image for the given cursor, or nil if none should be shown. 	// It also returns the x and y pixels that should act as the hot-spot (measured from top left corner). 	Image() (image.Image, int, int) } Cursor interface is used for objects that desire a specific cursor.</description>
     </item>
     
     <item>
       <title>desktop.Cursorable</title>
-      <link>http://localhost:1313/fyne/docs/api/driver/desktop/cursorable/</link>
+      <link>https://darcybook.github.io/fyne/docs/api/driver/desktop/cursorable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/api/driver/desktop/cursorable/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/api/driver/desktop/cursorable/</guid>
       <description>desktop.Cursorable# import &amp;#34;fyne.io/fyne/v2/driver/desktop&amp;#34; Usage#type Cursorable#type Cursorable interface { 	Cursor() Cursor } Cursorable describes any CanvasObject that needs a cursor change</description>
     </item>
     
     <item>
       <title>desktop.CustomShortcut</title>
-      <link>http://localhost:1313/fyne/docs/api/driver/desktop/customshortcut/</link>
+      <link>https://darcybook.github.io/fyne/docs/api/driver/desktop/customshortcut/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/api/driver/desktop/customshortcut/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/api/driver/desktop/customshortcut/</guid>
       <description>desktop.CustomShortcut# import &amp;#34;fyne.io/fyne/v2/driver/desktop&amp;#34; Usage#type CustomShortcut#type CustomShortcut struct { 	fyne.KeyName 	Modifier } CustomShortcut describes a shortcut desktop event.
 func (*CustomShortcut) ShortcutName#func (cs *CustomShortcut) ShortcutName() string ShortcutName returns the shortcut name associated to the event</description>
     </item>
     
     <item>
       <title>desktop.Driver</title>
-      <link>http://localhost:1313/fyne/docs/api/driver/desktop/driver/</link>
+      <link>https://darcybook.github.io/fyne/docs/api/driver/desktop/driver/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/api/driver/desktop/driver/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/api/driver/desktop/driver/</guid>
       <description>desktop.Driver# import &amp;#34;fyne.io/fyne/v2/driver/desktop&amp;#34; Usage#type Driver#type Driver interface { 	// Create a new borderless window that is centered on screen 	CreateSplashWindow() fyne.Window } Driver represents the extended capabilities of a desktop driver</description>
     </item>
     
     <item>
       <title>desktop.Hoverable</title>
-      <link>http://localhost:1313/fyne/docs/api/driver/desktop/hoverable/</link>
+      <link>https://darcybook.github.io/fyne/docs/api/driver/desktop/hoverable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/api/driver/desktop/hoverable/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/api/driver/desktop/hoverable/</guid>
       <description>desktop.Hoverable# import &amp;#34;fyne.io/fyne/v2/driver/desktop&amp;#34; Usage#type Hoverable#type Hoverable interface { 	// MouseIn is a hook that is called if the mouse pointer enters the element. 	MouseIn(*MouseEvent) 	// MouseMoved is a hook that is called if the mouse pointer moved over the element. 	MouseMoved(*MouseEvent) 	// MouseOut is a hook that is called if the mouse pointer leaves the element. 	MouseOut() } Hoverable is used when a canvas object wishes to know if a pointer device moves over it.</description>
     </item>
     
     <item>
       <title>desktop.Keyable</title>
-      <link>http://localhost:1313/fyne/docs/api/driver/desktop/keyable/</link>
+      <link>https://darcybook.github.io/fyne/docs/api/driver/desktop/keyable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/api/driver/desktop/keyable/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/api/driver/desktop/keyable/</guid>
       <description>desktop.Keyable# import &amp;#34;fyne.io/fyne/v2/driver/desktop&amp;#34; Usage#type Keyable#type Keyable interface { 	fyne.Focusable  	KeyDown(*fyne.KeyEvent) 	KeyUp(*fyne.KeyEvent) } Keyable describes any focusable canvas object that can accept desktop key events. This is the traditional key down and up event that is not applicable to all devices.</description>
     </item>
     
     <item>
       <title>desktop.Modifier</title>
-      <link>http://localhost:1313/fyne/docs/api/driver/desktop/modifier/</link>
+      <link>https://darcybook.github.io/fyne/docs/api/driver/desktop/modifier/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/api/driver/desktop/modifier/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/api/driver/desktop/modifier/</guid>
       <description>desktop.Modifier# import &amp;#34;fyne.io/fyne/v2/driver/desktop&amp;#34; Usage#type Modifier#type Modifier int Modifier captures any key modifiers (shift etc) pressed during this key event
 const ( 	// ShiftModifier represents a shift key being held 	ShiftModifier Modifier = 1 &amp;lt;&amp;lt; iota 	// ControlModifier represents the ctrl key being held 	ControlModifier 	// AltModifier represents either alt keys being held 	AltModifier 	// SuperModifier represents either super keys being held 	SuperModifier ) </description>
     </item>
     
     <item>
       <title>desktop.Mouseable</title>
-      <link>http://localhost:1313/fyne/docs/api/driver/desktop/mouseable/</link>
+      <link>https://darcybook.github.io/fyne/docs/api/driver/desktop/mouseable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/api/driver/desktop/mouseable/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/api/driver/desktop/mouseable/</guid>
       <description>desktop.Mouseable# import &amp;#34;fyne.io/fyne/v2/driver/desktop&amp;#34; Usage#type Mouseable#type Mouseable interface { 	MouseDown(*MouseEvent) 	MouseUp(*MouseEvent) } Mouseable represents desktop mouse events that can be sent to CanvasObjects</description>
     </item>
     
     <item>
       <title>desktop.MouseButton</title>
-      <link>http://localhost:1313/fyne/docs/api/driver/desktop/mousebutton/</link>
+      <link>https://darcybook.github.io/fyne/docs/api/driver/desktop/mousebutton/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/api/driver/desktop/mousebutton/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/api/driver/desktop/mousebutton/</guid>
       <description>desktop.MouseButton# import &amp;#34;fyne.io/fyne/v2/driver/desktop&amp;#34; Usage#type MouseButton#type MouseButton int MouseButton represents a single button in a desktop MouseEvent
 const ( 	// MouseButtonPrimary is the most common mouse button - on some systems the only one. 	// This will normally be on the left side of a mouse. 	// 	// Since: 2.0 	MouseButtonPrimary MouseButton = 1 &amp;lt;&amp;lt; iota  	// MouseButtonSecondary is the secondary button on most mouse input devices.</description>
     </item>
     
     <item>
       <title>desktop.MouseEvent</title>
-      <link>http://localhost:1313/fyne/docs/api/driver/desktop/mouseevent/</link>
+      <link>https://darcybook.github.io/fyne/docs/api/driver/desktop/mouseevent/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/api/driver/desktop/mouseevent/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/api/driver/desktop/mouseevent/</guid>
       <description>desktop.MouseEvent# import &amp;#34;fyne.io/fyne/v2/driver/desktop&amp;#34; Usage#type MouseEvent#type MouseEvent struct { 	fyne.PointEvent 	Button MouseButton 	Modifier Modifier } MouseEvent contains data relating to desktop mouse events</description>
     </item>
     
     <item>
       <title>desktop.StandardCursor</title>
-      <link>http://localhost:1313/fyne/docs/api/driver/desktop/standardcursor/</link>
+      <link>https://darcybook.github.io/fyne/docs/api/driver/desktop/standardcursor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/api/driver/desktop/standardcursor/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/api/driver/desktop/standardcursor/</guid>
       <description>desktop.StandardCursor# import &amp;#34;fyne.io/fyne/v2/driver/desktop&amp;#34; Usage#type StandardCursor#type StandardCursor int StandardCursor represents a standard Fyne cursor. These values were previously of type fyne.Cursor.
 Since: 2.0const ( 	// DefaultCursor is the default cursor typically an arrow 	DefaultCursor StandardCursor = iota 	// TextCursor is the cursor often used to indicate text selection 	TextCursor 	// CrosshairCursor is the cursor often used to indicate bitmaps 	CrosshairCursor 	// PointerCursor is the cursor often used to indicate a link 	PointerCursor 	// HResizeCursor is the cursor often used to indicate horizontal resize 	HResizeCursor 	// VResizeCursor is the cursor often used to indicate vertical resize 	VResizeCursor 	// HiddenCursor will cause the cursor to not be shown 	HiddenCursor ) func (StandardCursor) Image#func (d StandardCursor) Image() (image.</description>
     </item>

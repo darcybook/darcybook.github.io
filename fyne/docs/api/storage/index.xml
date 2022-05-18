@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>storage on Hugo Book</title>
-    <link>http://localhost:1313/fyne/docs/api/storage/</link>
+    <link>https://darcybook.github.io/fyne/docs/api/storage/</link>
     <description>Recent content in storage on Hugo Book</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="http://localhost:1313/fyne/docs/api/storage/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/fyne/docs/api/storage/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>storage</title>
-      <link>http://localhost:1313/fyne/docs/api/storage/</link>
+      <link>https://darcybook.github.io/fyne/docs/api/storage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/api/storage/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/api/storage/</guid>
       <description>storage# import &amp;#34;fyne.io/fyne/v2/storage&amp;#34; Package storage provides storage access and management functionality.
 Usage#var URIRootError = repository.ErrURIRoot URIRootError is a wrapper for repository.URIRootError
 Deprecated - use repository.ErrURIRoot instead
@@ -21,20 +21,20 @@ This method may fail in several ways:
     
     <item>
       <title>storage.ExtensionFileFilter</title>
-      <link>http://localhost:1313/fyne/docs/api/storage/extensionfilefilter/</link>
+      <link>https://darcybook.github.io/fyne/docs/api/storage/extensionfilefilter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/api/storage/extensionfilefilter/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/api/storage/extensionfilefilter/</guid>
       <description>storage.ExtensionFileFilter# import &amp;#34;fyne.io/fyne/v2/storage&amp;#34; Usage#type ExtensionFileFilter#type ExtensionFileFilter struct { 	Extensions []string } ExtensionFileFilter represents a file filter based on the the ending of file names, for example &amp;ldquo;.txt&amp;rdquo; and &amp;ldquo;.png&amp;rdquo;.
 func (*ExtensionFileFilter) Matches#func (e *ExtensionFileFilter) Matches(uri fyne.URI) bool Matches returns true if a file URI has one of the filtered extensions.</description>
     </item>
     
     <item>
       <title>storage.FileFilter</title>
-      <link>http://localhost:1313/fyne/docs/api/storage/filefilter/</link>
+      <link>https://darcybook.github.io/fyne/docs/api/storage/filefilter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/api/storage/filefilter/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/api/storage/filefilter/</guid>
       <description>storage.FileFilter# import &amp;#34;fyne.io/fyne/v2/storage&amp;#34; Usage#type FileFilter#type FileFilter interface { 	Matches(fyne.URI) bool } FileFilter is an interface that can be implemented to provide a filter to a file dialog.
 func NewExtensionFileFilter#func NewExtensionFileFilter(extensions []string) FileFilter NewExtensionFileFilter takes a string slice of extensions with a leading . and creates a filter for the file dialog. Example: .jpg, .mp3, .txt, .sh
 func NewMimeTypeFileFilter#func NewMimeTypeFileFilter(mimeTypes []string) FileFilter NewMimeTypeFileFilter takes a string slice of mimetypes, including globs, and creates a filter for the file dialog.</description>
@@ -42,10 +42,10 @@ func NewMimeTypeFileFilter#func NewMimeTypeFileFilter(mimeTypes []string) Fil
     
     <item>
       <title>storage.MimeTypeFileFilter</title>
-      <link>http://localhost:1313/fyne/docs/api/storage/mimetypefilefilter/</link>
+      <link>https://darcybook.github.io/fyne/docs/api/storage/mimetypefilefilter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fyne/docs/api/storage/mimetypefilefilter/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/api/storage/mimetypefilefilter/</guid>
       <description>storage.MimeTypeFileFilter# import &amp;#34;fyne.io/fyne/v2/storage&amp;#34; Usage#type MimeTypeFileFilter#type MimeTypeFileFilter struct { 	MimeTypes []string } MimeTypeFileFilter represents a file filter based on the files mime type, for example &amp;ldquo;image/*&amp;rdquo;, &amp;ldquo;audio/mp3&amp;rdquo;.
 func (*MimeTypeFileFilter) Matches#func (mt *MimeTypeFileFilter) Matches(uri fyne.URI) bool Matches returns true if a file URI has one of the filtered mimetypes.</description>
     </item>

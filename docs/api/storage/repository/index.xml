@@ -2,78 +2,78 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>repository on Hugo Book</title>
-    <link>http://localhost:1313/docs/api/storage/repository/</link>
+    <link>https://darcybook.github.io/docs/api/storage/repository/</link>
     <description>Recent content in repository on Hugo Book</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="http://localhost:1313/docs/api/storage/repository/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/docs/api/storage/repository/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>repository.CopyableRepository&#34;</title>
-      <link>http://localhost:1313/docs/api/storage/repository/copyablerepository/</link>
+      <link>https://darcybook.github.io/docs/api/storage/repository/copyablerepository/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/storage/repository/copyablerepository/</guid>
+      <guid>https://darcybook.github.io/docs/api/storage/repository/copyablerepository/</guid>
       <description>repository.CopyableRepository# import &amp;#34;fyne.io/fyne/v2/storage/repository&amp;#34; Usage#type CopyableRepository#type CopyableRepository interface { 	Repository  	// Copy will be used to implement calls to storage.Copy() for the 	// registered scheme of this repository. 	// 	// A generic implementation is provided by GenericCopy(). 	// 	// NOTE: the first parameter is the source, the second is the 	// destination. 	// 	// NOTE: if storage.</description>
     </item>
     
     <item>
       <title>repository.CustomURIRepository&#34;</title>
-      <link>http://localhost:1313/docs/api/storage/repository/customurirepository/</link>
+      <link>https://darcybook.github.io/docs/api/storage/repository/customurirepository/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/storage/repository/customurirepository/</guid>
+      <guid>https://darcybook.github.io/docs/api/storage/repository/customurirepository/</guid>
       <description>repository.CustomURIRepository# import &amp;#34;fyne.io/fyne/v2/storage/repository&amp;#34; Usage#type CustomURIRepository#type CustomURIRepository interface { 	Repository  	// ParseURI will be used to implement calls to storage.ParseURI() 	// for the registered scheme of this repository. 	ParseURI(string) (fyne.URI, error) } CustomURIRepository is an extension of the repository interface which allows the behavior of storage.ParseURI to be overridden. This is only needed if you wish to generate custom URI types, rather than using Fyne&amp;rsquo;s URI implementation and net/url based parsing.</description>
     </item>
     
     <item>
       <title>repository.HierarchicalRepository&#34;</title>
-      <link>http://localhost:1313/docs/api/storage/repository/hierarchicalrepository/</link>
+      <link>https://darcybook.github.io/docs/api/storage/repository/hierarchicalrepository/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/storage/repository/hierarchicalrepository/</guid>
+      <guid>https://darcybook.github.io/docs/api/storage/repository/hierarchicalrepository/</guid>
       <description>repository.HierarchicalRepository# import &amp;#34;fyne.io/fyne/v2/storage/repository&amp;#34; Usage#type HierarchicalRepository#type HierarchicalRepository interface { 	Repository  	// Parent will be used to implement calls to storage.Parent() for the 	// registered scheme of this repository. 	// 	// A generic implementation is provided in GenericParent(), which 	// is based on the RFC3986 definition of a URI parent. 	// 	// Since: 2.0 	Parent(fyne.</description>
     </item>
     
     <item>
       <title>repository.ListableRepository&#34;</title>
-      <link>http://localhost:1313/docs/api/storage/repository/listablerepository/</link>
+      <link>https://darcybook.github.io/docs/api/storage/repository/listablerepository/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/storage/repository/listablerepository/</guid>
+      <guid>https://darcybook.github.io/docs/api/storage/repository/listablerepository/</guid>
       <description>repository.ListableRepository# import &amp;#34;fyne.io/fyne/v2/storage/repository&amp;#34; Usage#type ListableRepository#type ListableRepository interface { 	Repository  	// CanList will be used to implement calls to storage.Listable() for 	// the registered scheme of this repository. 	// 	// Since: 2.0 	CanList(u fyne.URI) (bool, error)  	// List will be used to implement calls to storage.List() for the 	// registered scheme of this repository.</description>
     </item>
     
     <item>
       <title>repository.MovableRepository&#34;</title>
-      <link>http://localhost:1313/docs/api/storage/repository/movablerepository/</link>
+      <link>https://darcybook.github.io/docs/api/storage/repository/movablerepository/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/storage/repository/movablerepository/</guid>
+      <guid>https://darcybook.github.io/docs/api/storage/repository/movablerepository/</guid>
       <description>repository.MovableRepository# import &amp;#34;fyne.io/fyne/v2/storage/repository&amp;#34; Usage#type MovableRepository#type MovableRepository interface { 	Repository  	// Move will be used to implement calls to storage.Move() for the 	// registered scheme of this repository. 	// 	// A generic implementation is provided by GenericMove(). 	// 	// NOTE: the first parameter is the source, the second is the 	// destination. 	// 	// NOTE: if storage.</description>
     </item>
     
     <item>
       <title>repository.Repository&#34;</title>
-      <link>http://localhost:1313/docs/api/storage/repository/repository/</link>
+      <link>https://darcybook.github.io/docs/api/storage/repository/repository/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/storage/repository/repository/</guid>
+      <guid>https://darcybook.github.io/docs/api/storage/repository/repository/</guid>
       <description>repository.Repository# import &amp;#34;fyne.io/fyne/v2/storage/repository&amp;#34; Usage#type Repository#type Repository interface {  	// Exists will be used to implement calls to storage.Exists() for the 	// registered scheme of this repository. 	// 	// Since: 2.0 	Exists(u fyne.URI) (bool, error)  	// Reader will be used to implement calls to storage.Reader() 	// for the registered scheme of this repository. 	// 	// Since: 2.</description>
     </item>
     
     <item>
       <title>repository.WritableRepository&#34;</title>
-      <link>http://localhost:1313/docs/api/storage/repository/writablerepository/</link>
+      <link>https://darcybook.github.io/docs/api/storage/repository/writablerepository/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/storage/repository/writablerepository/</guid>
+      <guid>https://darcybook.github.io/docs/api/storage/repository/writablerepository/</guid>
       <description>repository.WritableRepository# import &amp;#34;fyne.io/fyne/v2/storage/repository&amp;#34; Usage#type WritableRepository#type WritableRepository interface { 	Repository  	// Writer will be used to implement calls to storage.WriterTo() for 	// the registered scheme of this repository. 	// 	// Since: 2.0 	Writer(u fyne.URI) (fyne.URIWriteCloser, error)  	// CanWrite will be used to implement calls to storage.CanWrite() for 	// the registered scheme of this repository.</description>
     </item>
     
     <item>
       <title>repository&#34;</title>
-      <link>http://localhost:1313/docs/api/storage/repository/</link>
+      <link>https://darcybook.github.io/docs/api/storage/repository/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/storage/repository/</guid>
+      <guid>https://darcybook.github.io/docs/api/storage/repository/</guid>
       <description>repository# import &amp;#34;fyne.io/fyne/v2/storage/repository&amp;#34; Usage#var ( 	// ErrOperationNotSupported may be thrown by certain functions in the storage 	// or repository packages which operate on URIs if an operation is attempted 	// that is not supported for the scheme relevant to the URI, normally because 	// the underlying repository has either not implemented the relevant function, 	// or has explicitly returned this error.</description>
     </item>
     

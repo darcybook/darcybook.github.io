@@ -2,54 +2,54 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Data Binding on Hugo Book</title>
-    <link>http://localhost:1313/docs/binding/</link>
+    <link>https://darcybook.github.io/docs/binding/</link>
     <description>Recent content in Data Binding on Hugo Book</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="http://localhost:1313/docs/binding/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/docs/binding/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Data Binding</title>
-      <link>http://localhost:1313/docs/binding/</link>
+      <link>https://darcybook.github.io/docs/binding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/binding/</guid>
+      <guid>https://darcybook.github.io/docs/binding/</guid>
       <description>Data binding is a powerful new addition to the Fyne toolkit that was introduced in version v2.0.0. By using data binding we can avoid manually managing many standard objects like Labels, Buttons and Lists.
 The builtin bindings support many primitive types (like Int, String, Float etc), lists (such as StringList, BoolList) as well as Map and Struct bindings. Each of these types can be created using a simple constructor function. For example to create a new string binding with a zero value you can use binding.</description>
     </item>
     
     <item>
       <title>Binding Simple Widgets</title>
-      <link>http://localhost:1313/docs/binding/simple/</link>
+      <link>https://darcybook.github.io/docs/binding/simple/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/binding/simple/</guid>
+      <guid>https://darcybook.github.io/docs/binding/simple/</guid>
       <description>The simplest form of binding a widget is to pass it a bound item as a value instead of a static value. Many widgets provide a WithData constructor that will accept a typed data binding item. To set up the binding all you need to do is pass the right type in.
 Although this may not look like much of a benefit in the initial code you can then see how it ensures that the displayed content is always up to date with the source of the data.</description>
     </item>
     
     <item>
       <title>Two-Way Binding</title>
-      <link>http://localhost:1313/docs/binding/twoway/</link>
+      <link>https://darcybook.github.io/docs/binding/twoway/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/binding/twoway/</guid>
+      <guid>https://darcybook.github.io/docs/binding/twoway/</guid>
       <description>So far we have looked at data binding as a way of keeping our user interface elements up to date. Far more common, however, is the need to update values from the UI widgets and keep the data up to date everywhere. Thankfully the bindings provided in Fyne are &amp;ldquo;two-way&amp;rdquo; which means that values can be pushed into them as well as read out. The change in data will be communicated to all connected code without any additional code.</description>
     </item>
     
     <item>
       <title>Data Conversion</title>
-      <link>http://localhost:1313/docs/binding/conversion/</link>
+      <link>https://darcybook.github.io/docs/binding/conversion/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/binding/conversion/</guid>
+      <guid>https://darcybook.github.io/docs/binding/conversion/</guid>
       <description>So far we have used data binding where the type of data matches the output type (for example String and Label or Entry). Often it will be desirable to present data that is not already in the correct format. To do this the binding package provides a number of helpful conversion functions.
 Most commonly this will be used to convert different types of data into strings for displaying in Label or Entry widgets.</description>
     </item>
     
     <item>
       <title>List Data</title>
-      <link>http://localhost:1313/docs/binding/list/</link>
+      <link>https://darcybook.github.io/docs/binding/list/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/binding/list/</guid>
+      <guid>https://darcybook.github.io/docs/binding/list/</guid>
       <description>To demonstrate how more complex types can be connected we will look at the List widget and how data binding can make it easier to use. Firstly we create a StringList data binding, which is a list of String data type. Once we have a data of list type we can connect this to the standard List widget. To do so we use the widget.NewListWithData constructor, much like other widgets.</description>
     </item>
     
