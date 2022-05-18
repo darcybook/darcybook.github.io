@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="fyne" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Shortcuts are common tasks that can be triggered by keyboard combinations or context menus. Shortcuts, much like keyboard events, can be attached to a focused element or registered on the Canvas to always be available in a Window.
+Registering with a Canvas#There are many standard shortcuts defined (such as fyne.ShortcutCopy) which are connected to standard keyboard shortcuts and right-click menus. The first step to adding a new Shortcut is to define the shortcut.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Adding Shortcuts to an App" />
+<meta property="og:description" content="Shortcuts are common tasks that can be triggered by keyboard combinations or context menus. Shortcuts, much like keyboard events, can be attached to a focused element or registered on the Canvas to always be available in a Window.
+Registering with a Canvas#There are many standard shortcuts defined (such as fyne.ShortcutCopy) which are connected to standard keyboard shortcuts and right-click menus. The first step to adding a new Shortcut is to define the shortcut." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://darcybook.github.io/fyne/docs/explore/shortcuts/" /><meta property="article:section" content="docs" />
+
+<meta property="article:modified_time" content="2022-05-18T20:08:53+08:00" />
+
+<title>Adding Shortcuts to an App | Hugo Book</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css" integrity="sha256-gsXb0jRHzuC0wqo&#43;0Izglh&#43;qQOH6Nw7uT4yfAuDUa18=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/fyne.search.min.c040b1d257415f1710e5bbbff6ebe8fb6a1c3eadb8741dad0e421b5333e98185.js" integrity="sha256-wECx0ldBXxcQ5bu/9uvo&#43;2ocPq24dB2tDkIbUzPpgYU=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/fyne/"><span>Hugo Book</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+  
+
+
+
+  
+    
+  
+    
+  
+
+
+
+<ul class="book-languages">
+  <li>
+    <input type="checkbox" id="languages" class="toggle" />
+    <label for="languages" class="flex justify-between">
+      <a role="button" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        fyne
+      </a>
+    </label>
+
+    <ul>
+      
+      <li>
+        <a href="https://darcybook.github.io/">
+          fyne中文
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://darcybook.github.io/analects/">
+          论语
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5f9d0aad26982a16f281c40bcafb6725" class="toggle"  />
+    <label for="section-5f9d0aad26982a16f281c40bcafb6725" class="flex justify-between">
+      <a href="/fyne/docs/started/" class="">Getting Started</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/introduction/" class="">Introduction</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/helloword/" class="">Hello World</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/apprun/" class="">Application and RunLoop</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/updating/" class="">Updating Content</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/windows/" class="">Window Handling</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/testing/" class="">Testing Graphical Apps</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/packaging/" class="">Packaging for Desktop</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/mobile/" class="">Packaging Mobile Apps</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/distribution/" class="">Distributing to App Stores</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/metadata/" class="">App Metadata</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/cross-compiling/" class="">Cross Compiling</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-81fa205a1bd0374005def1b00e6db049" class="toggle" checked />
+    <label for="section-81fa205a1bd0374005def1b00e6db049" class="flex justify-between">
+      <a href="/fyne/docs/explore/" class="">Exploring Fyne</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/canvas/" class="">Canvas and CanvasObject</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/container/" class="">Container and Layouts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/widgets/" class="">Widget List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/shortcuts/" class="active">Adding Shortcuts to an App</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/compiling/" class="">Compile Options</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/binding/" class="">Data Binding</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/dialogs/" class="">Dialog List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/layouts/" class="">Layout List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/preferences/" class="">Using the Preferences API</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="" target="_blank" rel="noopener">
+        --------------------------------------------------
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/alex-shpak/hugo-book" target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://themes.gohugo.io/hugo-book/" target="_blank" rel="noopener">
+        Hugo Themes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Adding Shortcuts to an App</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#registering-with-a-canvas">Registering with a Canvas</a></li>
+        <li><a href="#adding-shortcuts-to-an-entry">Adding shortcuts to an Entry</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><p>Shortcuts are common tasks that can be triggered by keyboard combinations or context menus. Shortcuts, much like keyboard events, can be attached to a focused element or registered on the <code>Canvas</code> to always be available in a <code>Window</code>.</p>
+<h2 id="registering-with-a-canvas">
+  Registering with a Canvas
+  <a class="anchor" href="#registering-with-a-canvas">#</a>
+</h2>
+<p>There are many standard shortcuts defined (such as <code>fyne.ShortcutCopy</code>) which are connected to standard keyboard shortcuts and right-click menus. The first step to adding a new <code>Shortcut</code> is to define the shortcut. For most uses this will be a keyboard triggered shortcut, which is a desktop extension. To do this we use <code>desktop.CustomShortcut</code>, for example to use the Tab key and Control modifier you might do the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>	<span style="color:#a6e22e">ctrlTab</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">desktop</span>.<span style="color:#a6e22e">CustomShortcut</span>{<span style="color:#a6e22e">KeyName</span>: <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">KeyTab</span>, <span style="color:#a6e22e">Modifier</span>: <span style="color:#a6e22e">desktop</span>.<span style="color:#a6e22e">ControlModifier</span>}
+</span></span></code></pre></div><p>Notice that this shortcut can be re-used so you could attach it to menus or other items as well. For this example we want it to be always available, so we register it with our window&rsquo;s <code>Canvas</code> as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>	<span style="color:#a6e22e">ctrlTab</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">desktop</span>.<span style="color:#a6e22e">CustomShortcut</span>{<span style="color:#a6e22e">KeyName</span>: <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">KeyTab</span>, <span style="color:#a6e22e">Modifier</span>: <span style="color:#a6e22e">desktop</span>.<span style="color:#a6e22e">ControlModifier</span>}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">Canvas</span>().<span style="color:#a6e22e">AddShortcut</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">ctrlTab</span>, <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">shortcut</span> <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">Shortcut</span>) {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;We tapped Ctrl+Tab&#34;</span>)
+</span></span><span style="display:flex;"><span>	})
+</span></span></code></pre></div><p>As you can see there are two parts to registering a shortcut in this way - passing the shortcut definition and also a callback function. If the user types the keyboard shortcut then the function will be called and the output printed.</p>
+<h2 id="adding-shortcuts-to-an-entry">
+  Adding shortcuts to an Entry
+  <a class="anchor" href="#adding-shortcuts-to-an-entry">#</a>
+</h2>
+<p>It can also be helpful to have a shortcut apply only when the current item is focused. This approach can be used for any focusable widget, and is managed by extending that widget and adding a <code>TypedShortcut</code> handler. This is much like adding key handlers, except the value passed in will be a <code>fyne.Shortcut</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">myEntry</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">widget</span>.<span style="color:#a6e22e">Entry</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">m</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">myEntry</span>) <span style="color:#a6e22e">TypedShortcut</span>(<span style="color:#a6e22e">s</span> <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">Shortcut</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">ok</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">s</span>.(<span style="color:#f92672">*</span><span style="color:#a6e22e">desktop</span>.<span style="color:#a6e22e">CustomShortcut</span>); !<span style="color:#a6e22e">ok</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">m</span>.<span style="color:#a6e22e">Entry</span>.<span style="color:#a6e22e">TypedShortcut</span>(<span style="color:#a6e22e">s</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Shortcut typed:&#34;</span>, <span style="color:#a6e22e">s</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>From the excerpt above you can see how a <code>TypedShortcut</code> handler might be implemented. Inside this function you should check whether the shortcut is of the custom type used earlier. If the shortcut is a standard one it&rsquo;s a good idea to call the original shortcut handler (if the widget had one).
+With those checks done you can compare the shortcut with the various types you are handling (if there are multiple).</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+  <div><a class="flex align-center" href="https://gitee.com/darcyjoven/hugo_gitee/commit/153f9a099ec75f6256631092c806f475236ba4f0" title='最后修改者 darcyjoven | May 18, 2022' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>May 18, 2022</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://gitee.com/darcyjoven/hugo_gitee/edit/main/exampleSite/content.fyne/docs/explore/shortcuts.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>编辑本页</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#registering-with-a-canvas">Registering with a Canvas</a></li>
+        <li><a href="#adding-shortcuts-to-an-entry">Adding shortcuts to an Entry</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

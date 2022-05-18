@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="fyne" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Storing user configurations and values is a common task for application developers, but implementing it across multiple platforms can be tedious and time-consuming. To make it easier, Fyne has an API for storing values on the filesystem in a clean and understandable way while the complex parts are handled for you.
+Lets start with the setup of the API. It is part of the Preferences interface where storage and loading functions exist for values of Bool, Float, Int and String.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Using the Preferences API" />
+<meta property="og:description" content="Storing user configurations and values is a common task for application developers, but implementing it across multiple platforms can be tedious and time-consuming. To make it easier, Fyne has an API for storing values on the filesystem in a clean and understandable way while the complex parts are handled for you.
+Lets start with the setup of the API. It is part of the Preferences interface where storage and loading functions exist for values of Bool, Float, Int and String." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://darcybook.github.io/fyne/docs/explore/preferences/" /><meta property="article:section" content="docs" />
+
+<meta property="article:modified_time" content="2022-05-18T20:08:53+08:00" />
+
+<title>Using the Preferences API | Hugo Book</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css" integrity="sha256-gsXb0jRHzuC0wqo&#43;0Izglh&#43;qQOH6Nw7uT4yfAuDUa18=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/fyne.search.min.c040b1d257415f1710e5bbbff6ebe8fb6a1c3eadb8741dad0e421b5333e98185.js" integrity="sha256-wECx0ldBXxcQ5bu/9uvo&#43;2ocPq24dB2tDkIbUzPpgYU=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/fyne/"><span>Hugo Book</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+  
+
+
+
+  
+    
+  
+    
+  
+
+
+
+<ul class="book-languages">
+  <li>
+    <input type="checkbox" id="languages" class="toggle" />
+    <label for="languages" class="flex justify-between">
+      <a role="button" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        fyne
+      </a>
+    </label>
+
+    <ul>
+      
+      <li>
+        <a href="https://darcybook.github.io/">
+          fyne中文
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://darcybook.github.io/analects/">
+          论语
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5f9d0aad26982a16f281c40bcafb6725" class="toggle"  />
+    <label for="section-5f9d0aad26982a16f281c40bcafb6725" class="flex justify-between">
+      <a href="/fyne/docs/started/" class="">Getting Started</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/introduction/" class="">Introduction</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/helloword/" class="">Hello World</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/apprun/" class="">Application and RunLoop</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/updating/" class="">Updating Content</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/windows/" class="">Window Handling</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/testing/" class="">Testing Graphical Apps</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/packaging/" class="">Packaging for Desktop</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/mobile/" class="">Packaging Mobile Apps</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/distribution/" class="">Distributing to App Stores</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/metadata/" class="">App Metadata</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/cross-compiling/" class="">Cross Compiling</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-81fa205a1bd0374005def1b00e6db049" class="toggle" checked />
+    <label for="section-81fa205a1bd0374005def1b00e6db049" class="flex justify-between">
+      <a href="/fyne/docs/explore/" class="">Exploring Fyne</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/canvas/" class="">Canvas and CanvasObject</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/container/" class="">Container and Layouts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/widgets/" class="">Widget List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/shortcuts/" class="">Adding Shortcuts to an App</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/compiling/" class="">Compile Options</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/binding/" class="">Data Binding</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/dialogs/" class="">Dialog List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/layouts/" class="">Layout List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/preferences/" class="active">Using the Preferences API</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="" target="_blank" rel="noopener">
+        --------------------------------------------------
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/alex-shpak/hugo-book" target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://themes.gohugo.io/hugo-book/" target="_blank" rel="noopener">
+        Hugo Themes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Using the Preferences API</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><p>Storing user configurations and values is a common task for application developers, but implementing it across multiple platforms can be tedious and time-consuming. To make it easier, Fyne has an API for storing values on the filesystem in a clean and understandable way while the complex parts are handled for you.</p>
+<p>Lets start with the setup of the API. It is part of the 
+  <a href="https://pkg.go.dev/fyne.io/fyne/v2?tab=doc#Preferences">Preferences</a> interface where storage and loading functions exist for values of Bool, Float, Int and String. They each consist of three different functions, one for loading, one loading with a fallback value and lastly, one for storing values. An example of the three functions and their behaviour can be seen below for the String type:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// String looks up a string value for the key
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">String</span>(<span style="color:#a6e22e">key</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// StringWithFallback looks up a string value and returns the given fallback if not found
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">StringWithFallback</span>(<span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">fallback</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// SetString saves a string value for the given key
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">SetString</span>(<span style="color:#a6e22e">key</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">value</span> <span style="color:#66d9ef">string</span>)
+</span></span></code></pre></div><p>These functions can be accessed through the created application variable and calling the <code>Preferences()</code> method on. Please note that it is necessary to create the apps with a unique ID (usually like a reversed url). This means that the application will need to be created using <code>app.NewWithID()</code> to have its own place to store values. It can roughly be used like the example below:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">NewWithID</span>(<span style="color:#e6db74">&#34;com.example.tutorial.preferences&#34;</span>)
+</span></span><span style="display:flex;"><span>[<span style="color:#f92672">...</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">Preferences</span>().<span style="color:#a6e22e">SetBool</span>(<span style="color:#e6db74">&#34;Boolean&#34;</span>, <span style="color:#66d9ef">true</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">number</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">Preferences</span>().<span style="color:#a6e22e">IntWithFallback</span>(<span style="color:#e6db74">&#34;ApplicationLuckyNumber&#34;</span>, <span style="color:#ae81ff">21</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">expression</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">Preferences</span>().<span style="color:#a6e22e">String</span>(<span style="color:#e6db74">&#34;RegularExpression&#34;</span>)
+</span></span><span style="display:flex;"><span>[<span style="color:#f92672">...</span>]
+</span></span></code></pre></div><p>To show this, we are going to build a simple little app that always closes after a set amount of time. This timeout should be user changeable and applied on the next start of the application.</p>
+<p>Let us start by creating a variable called <code>timeout</code> that will be used to store time in the form of <code>time.Duration</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">timeout</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Duration</span>
+</span></span></code></pre></div><p>Then we could create a select widget to let the user select the timeout from a couple pre-defined strings and then multiplying the timeout by the number of seconds that the string relates to. Lastly, the <code>&quot;AppTimeout&quot;</code> key is used to set the string value to the selected one.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">timeoutSelector</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">widget</span>.<span style="color:#a6e22e">NewSelect</span>([]<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;10 seconds&#34;</span>, <span style="color:#e6db74">&#34;30 seconds&#34;</span>, <span style="color:#e6db74">&#34;1 minute&#34;</span>}, <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">selected</span> <span style="color:#66d9ef">string</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">selected</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;10 seconds&#34;</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">timeout</span> = <span style="color:#ae81ff">10</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;30 seconds&#34;</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">timeout</span> = <span style="color:#ae81ff">30</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;1 minute&#34;</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">timeout</span> = <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Minute</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">Preferences</span>().<span style="color:#a6e22e">SetString</span>(<span style="color:#e6db74">&#34;AppTimeout&#34;</span>, <span style="color:#a6e22e">selected</span>)
+</span></span><span style="display:flex;"><span>})
+</span></span></code></pre></div><p>Now we want to grab the set value and if none exists, we want to have a fallback that sets the timeout to the shortest one possible to save the user time when waiting. This can be done by setting the selected value of <code>timeoutSelector</code> to the loaded value or the fallback if that happens to be the case. By doing it this way, the code inside the select widget will run for that specific value.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">timeoutSelector</span>.<span style="color:#a6e22e">SetSelected</span>(<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">Preferences</span>().<span style="color:#a6e22e">StringWithFallback</span>(<span style="color:#e6db74">&#34;AppTimeout&#34;</span>, <span style="color:#e6db74">&#34;10 seconds&#34;</span>))
+</span></span></code></pre></div><p>The last part will just be to have a function that starts in a separate goroutine and tells the application to quit after the selected timeout.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">go</span> <span style="color:#66d9ef">func</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Sleep</span>(<span style="color:#a6e22e">timeout</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">Quit</span>()
+</span></span><span style="display:flex;"><span>}()
+</span></span></code></pre></div><p>In the end, the resulting code should look something like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;time&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;fyne.io/fyne/v2/app&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;fyne.io/fyne/v2/widget&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">NewWithID</span>(<span style="color:#e6db74">&#34;com.example.tutorial.preferences&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">w</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">NewWindow</span>(<span style="color:#e6db74">&#34;Timeout&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">timeout</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Duration</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">timeoutSelector</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">widget</span>.<span style="color:#a6e22e">NewSelect</span>([]<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;10 seconds&#34;</span>, <span style="color:#e6db74">&#34;30 seconds&#34;</span>, <span style="color:#e6db74">&#34;1 minute&#34;</span>}, <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">selected</span> <span style="color:#66d9ef">string</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">selected</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;10 seconds&#34;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">timeout</span> = <span style="color:#ae81ff">10</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;30 seconds&#34;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">timeout</span> = <span style="color:#ae81ff">30</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;1 minute&#34;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">timeout</span> = <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Minute</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">Preferences</span>().<span style="color:#a6e22e">SetString</span>(<span style="color:#e6db74">&#34;AppTimeout&#34;</span>, <span style="color:#a6e22e">selected</span>)
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">timeoutSelector</span>.<span style="color:#a6e22e">SetSelected</span>(<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">Preferences</span>().<span style="color:#a6e22e">StringWithFallback</span>(<span style="color:#e6db74">&#34;AppTimeout&#34;</span>, <span style="color:#e6db74">&#34;10 seconds&#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">go</span> <span style="color:#66d9ef">func</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Sleep</span>(<span style="color:#a6e22e">timeout</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">Quit</span>()
+</span></span><span style="display:flex;"><span>    }()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">SetContent</span>(<span style="color:#a6e22e">timeoutSelector</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">ShowAndRun</span>()
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+  <div><a class="flex align-center" href="https://gitee.com/darcyjoven/hugo_gitee/commit/153f9a099ec75f6256631092c806f475236ba4f0" title='最后修改者 darcyjoven | May 18, 2022' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>May 18, 2022</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://gitee.com/darcyjoven/hugo_gitee/edit/main/exampleSite/content.fyne/docs/explore/preferences.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>编辑本页</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

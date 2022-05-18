@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="fyne" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cross Compiling">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Cross Compiling" />
+<meta property="og:description" content="Cross Compiling" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://darcybook.github.io/fyne/docs/started/cross-compiling/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2022-05-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-05-18T20:08:53+08:00" />
+
+<title>Cross Compiling | Hugo Book</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css" integrity="sha256-gsXb0jRHzuC0wqo&#43;0Izglh&#43;qQOH6Nw7uT4yfAuDUa18=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/fyne.search.min.c040b1d257415f1710e5bbbff6ebe8fb6a1c3eadb8741dad0e421b5333e98185.js" integrity="sha256-wECx0ldBXxcQ5bu/9uvo&#43;2ocPq24dB2tDkIbUzPpgYU=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/fyne/"><span>Hugo Book</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+  
+
+
+
+  
+    
+  
+    
+  
+
+
+
+<ul class="book-languages">
+  <li>
+    <input type="checkbox" id="languages" class="toggle" />
+    <label for="languages" class="flex justify-between">
+      <a role="button" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        fyne
+      </a>
+    </label>
+
+    <ul>
+      
+      <li>
+        <a href="https://darcybook.github.io/">
+          fyne中文
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://darcybook.github.io/analects/">
+          论语
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5f9d0aad26982a16f281c40bcafb6725" class="toggle" checked />
+    <label for="section-5f9d0aad26982a16f281c40bcafb6725" class="flex justify-between">
+      <a href="/fyne/docs/started/" class="">Getting Started</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/introduction/" class="">Introduction</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/helloword/" class="">Hello World</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/apprun/" class="">Application and RunLoop</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/updating/" class="">Updating Content</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/windows/" class="">Window Handling</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/testing/" class="">Testing Graphical Apps</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/packaging/" class="">Packaging for Desktop</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/mobile/" class="">Packaging Mobile Apps</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/distribution/" class="">Distributing to App Stores</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/metadata/" class="">App Metadata</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/cross-compiling/" class="active">Cross Compiling</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-81fa205a1bd0374005def1b00e6db049" class="toggle"  />
+    <label for="section-81fa205a1bd0374005def1b00e6db049" class="flex justify-between">
+      <a href="/fyne/docs/explore/" class="">Exploring Fyne</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/canvas/" class="">Canvas and CanvasObject</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/container/" class="">Container and Layouts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/widgets/" class="">Widget List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/shortcuts/" class="">Adding Shortcuts to an App</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/compiling/" class="">Compile Options</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/binding/" class="">Data Binding</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/dialogs/" class="">Dialog List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/layouts/" class="">Layout List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/preferences/" class="">Using the Preferences API</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="" target="_blank" rel="noopener">
+        --------------------------------------------------
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/alex-shpak/hugo-book" target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://themes.gohugo.io/hugo-book/" target="_blank" rel="noopener">
+        Hugo Themes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Cross Compiling</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#compiling-for-different-platforms">Compiling for different platforms</a>
+          <ul>
+            <li><a href="#compiling-from-a-development-computer">Compiling from a development computer</a></li>
+            <li><a href="#using-a-virtual-environment">Using a virtual environment</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="compiling-for-different-platforms">
+  Compiling for different platforms
+  <a class="anchor" href="#compiling-for-different-platforms">#</a>
+</h2>
+<hr>
+<p>Cross compiling with Go is designed to be simple - we just set the environment variable <code>GOOS</code> for the target Operating System (and <code>GOARCH</code> if targeting a different architecture). Unfortunately when using native graphics calls the use of CGo in Fyne makes this a little harder.</p>
+<h3 id="compiling-from-a-development-computer">
+  Compiling from a development computer
+  <a class="anchor" href="#compiling-from-a-development-computer">#</a>
+</h3>
+<p>To cross-compile a Fyne application you will also have to set <code>CGO_ENABLED=1</code> which tells go to enable the C compiler (this is normally turned off when the target platform is different to the current system). Doing so unfortunately means that you must have a C compiler for the target platform that you are going to compile for.
+After installing the appropriate compilers you will also need to set the <code>CC</code> environment variable to tell Go which compiler to use.</p>
+<p>There are many ways to install the required tools - and different tools that can be used. The configuration recommended by the Fyne developers is:</p>
+<table>
+<thead>
+<tr>
+<th>GOOS (target)</th>
+<th>CC</th>
+<th>provider</th>
+<th>download</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>darwin</code></td>
+<td><code>o32-clang</code></td>
+<td>osxcross</td>
+<td>
+  <a href="https://github.com/tpoechtrager/osxcross">from github.com</a></td>
+<td>You will also need to install the macOS SDK (instructions at the download link)</td>
+</tr>
+<tr>
+<td><code>windows</code></td>
+<td><code>x86_64-w64-mingw64-gcc</code></td>
+<td>mingw64</td>
+<td>package manager</td>
+<td>For macOS use 
+  <a href="https://brew.sh">homebrew</a></td>
+</tr>
+<tr>
+<td><code>linux</code></td>
+<td><code>gcc</code> or <code>x86_64-linux-musl-gcc</code></td>
+<td>gcc or musl-cross</td>
+<td>
+  <a href="https://www.cygwin.com/">cygwin</a> or package manager</td>
+<td>musl-cross is available from 
+  <a href="https://brew.sh">homebrew</a> to provide the linux gcc. You will also need to install X11 and mesa headers for compilation.</td>
+</tr>
+</tbody>
+</table>
+<p>With the environment variables above set you should be able to compile in the usual manner.
+If further errors occur it is likely to be due to missing packages. Some target platforms require additional libraries or headers to be installed for the compilation to succeed.</p>
+<h3 id="using-a-virtual-environment">
+  Using a virtual environment
+  <a class="anchor" href="#using-a-virtual-environment">#</a>
+</h3>
+<p>As a Linux system is able to cross compile to macOS and Windows easily it can be simpler to use a virtualised environment when you are not developing from Linux. Docker images are a useful tool for a complex build configuration and this works for Fyne as well. There are different tools that can be used. The tool recommended by the Fyne developers is 
+  <a href="https://github.com/fyne-io/fyne-cross">fyne-cross</a>. It has been inspired by 
+  <a href="https://github.com/karalabe/xgo">xgo</a> and uses a 
+  <a href="https://hub.docker.com/r/fyneio/fyne-cross">docker image</a> built on top of the 
+  <a href="https://github.com/docker/golang-cross">golang-cross</a> image,
+that includes the MinGW compiler for windows, and a macOS SDK, along with the Fyne requirements.</p>
+<p>fyne-cross allows to build binaries and create distribution packages for the following targets:</p>
+<table>
+<thead>
+<tr>
+<th>GOOS</th>
+<th>GOARCH</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>darwin</td>
+<td>amd64</td>
+</tr>
+<tr>
+<td>darwin</td>
+<td>386</td>
+</tr>
+<tr>
+<td>linux</td>
+<td>amd64</td>
+</tr>
+<tr>
+<td>linux</td>
+<td>386</td>
+</tr>
+<tr>
+<td>linux</td>
+<td>arm64</td>
+</tr>
+<tr>
+<td>linux</td>
+<td>arm</td>
+</tr>
+<tr>
+<td>windows</td>
+<td>amd64</td>
+</tr>
+<tr>
+<td>windows</td>
+<td>386</td>
+</tr>
+<tr>
+<td>android</td>
+<td>amd64</td>
+</tr>
+<tr>
+<td>android</td>
+<td>386</td>
+</tr>
+<tr>
+<td>android</td>
+<td>arm64</td>
+</tr>
+<tr>
+<td>android</td>
+<td>arm</td>
+</tr>
+<tr>
+<td>ios</td>
+<td></td>
+</tr>
+<tr>
+<td>freebsd</td>
+<td>amd64</td>
+</tr>
+<tr>
+<td>freebsd</td>
+<td>arm64</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Note: iOS compilation is supported only on darwin hosts.</p>
+</blockquote>
+<h4 id="requirements">
+  Requirements
+  <a class="anchor" href="#requirements">#</a>
+</h4>
+<ul>
+<li>go &gt;= 1.13</li>
+<li>docker</li>
+</ul>
+<h4 id="installation">
+  Installation
+  <a class="anchor" href="#installation">#</a>
+</h4>
+<pre tabindex="0"><code>go get github.com/fyne-io/fyne-cross
+</code></pre><h4 id="usage">
+  Usage
+  <a class="anchor" href="#usage">#</a>
+</h4>
+<pre tabindex="0"><code>fyne-cross &lt;command&gt; [options]
+
+The commands are:
+
+	darwin        Build and package a fyne application for the darwin OS
+	linux         Build and package a fyne application for the linux OS
+	windows       Build and package a fyne application for the windows OS
+	android       Build and package a fyne application for the android OS
+	ios           Build and package a fyne application for the iOS OS
+	freebsd       Build and package a fyne application for the freebsd OS
+	version       Print the fyne-cross version information
+
+Use &#34;fyne-cross &lt;command&gt; -help&#34; for more information about a command.
+</code></pre><h4 id="wildcards">
+  Wildcards
+  <a class="anchor" href="#wildcards">#</a>
+</h4>
+<p>The <code>arch</code> flag support wildcards in case want to compile against all supported GOARCH for a specified GOOS</p>
+<p>Example:</p>
+<pre tabindex="0"><code>fyne-cross windows -arch=*
+</code></pre><p>is equivalent to</p>
+<pre tabindex="0"><code>fyne-cross windows -arch=amd64,386
+</code></pre><h4 id="example">
+  Example
+  <a class="anchor" href="#example">#</a>
+</h4>
+<p>The example below cross compile and package the 
+  <a href="https://github.com/fyne-io/examples">fyne examples application</a></p>
+<pre tabindex="0"><code>git clone https://github.com/fyne-io/examples.git
+cd examples
+</code></pre><h5 id="compile-and-package-the-main-example-app">
+  Compile and package the main example app
+  <a class="anchor" href="#compile-and-package-the-main-example-app">#</a>
+</h5>
+<pre tabindex="0"><code>fyne-cross linux
+</code></pre><blockquote>
+<p>Note: by default fyne-cross will compile the package into the current dir.</p>
+<p>The command above is equivalent to: <code>fyne-cross linux .</code></p>
+</blockquote>
+<h5 id="compile-and-package-a-particular-example-app">
+  Compile and package a particular example app
+  <a class="anchor" href="#compile-and-package-a-particular-example-app">#</a>
+</h5>
+<pre tabindex="0"><code>fyne-cross linux -output bugs ./cmd/bugs
+</code></pre></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+  <div><a class="flex align-center" href="https://gitee.com/darcyjoven/hugo_gitee/commit/153f9a099ec75f6256631092c806f475236ba4f0" title='最后修改者 darcyjoven | May 18, 2022' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>May 18, 2022</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://gitee.com/darcyjoven/hugo_gitee/edit/main/exampleSite/content.fyne/docs/started/cross-compiling.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>编辑本页</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#compiling-for-different-platforms">Compiling for different platforms</a>
+          <ul>
+            <li><a href="#compiling-from-a-development-computer">Compiling from a development computer</a></li>
+            <li><a href="#using-a-virtual-environment">Using a virtual environment</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

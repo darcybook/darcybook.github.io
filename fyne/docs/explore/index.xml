@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exploring Fyne on Hugo Book</title>
+    <link>https://darcybook.github.io/fyne/docs/explore/</link>
+    <description>Recent content in Exploring Fyne on Hugo Book</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/fyne/docs/explore/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Canvas and CanvasObject</title>
+      <link>https://darcybook.github.io/fyne/docs/explore/canvas/</link>
+      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/fyne/docs/explore/canvas/</guid>
+      <description>In Fyne a Canvas is the area which an application is drawn within. Each window has a canvas which you can access with Window.Canvas() but usually you will find functions on Window that avoid accessing the canvas.
+Everything that can be drawn in Fyne is a type of CanvasObject. The example here opens a new window and then shows different types of primitive graphical element by setting the content of the window canvas.</description>
+    </item>
+    
+    <item>
+      <title>Container and Layouts</title>
+      <link>https://darcybook.github.io/fyne/docs/explore/container/</link>
+      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/fyne/docs/explore/container/</guid>
+      <description>In the previous example we saw how to set a CanvasObject to the content of a Canvas, but it is not very useful to only show one visual element. To show more than one item we use the Container type.
+As the fyne.Container also is a fyne.CanvasObject, we can set it to be the content of a fyne.Canvas. In this example we create 3 text objects and then place them in a container using the container.</description>
+    </item>
+    
+    <item>
+      <title>Widget List</title>
+      <link>https://darcybook.github.io/fyne/docs/explore/widgets/</link>
+      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/fyne/docs/explore/widgets/</guid>
+      <description>Standard Widgets (in widget package)# Accordion#Accordion displays a list of AccordionItems. Each item is represented by a button that reveals a detailed view when tapped.
+Button#Button widget has a text label and icon, both are optional.
+Card#Card widget groups elements with a header and subheader, all are optional.
+Check#Check widget has a text label and a checked (or unchecked) icon.</description>
+    </item>
+    
+    <item>
+      <title>Adding Shortcuts to an App</title>
+      <link>https://darcybook.github.io/fyne/docs/explore/shortcuts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/fyne/docs/explore/shortcuts/</guid>
+      <description>Shortcuts are common tasks that can be triggered by keyboard combinations or context menus. Shortcuts, much like keyboard events, can be attached to a focused element or registered on the Canvas to always be available in a Window.
+Registering with a Canvas#There are many standard shortcuts defined (such as fyne.ShortcutCopy) which are connected to standard keyboard shortcuts and right-click menus. The first step to adding a new Shortcut is to define the shortcut.</description>
+    </item>
+    
+    <item>
+      <title>Compile Options</title>
+      <link>https://darcybook.github.io/fyne/docs/explore/compiling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/fyne/docs/explore/compiling/</guid>
+      <description>Build tags#Fyne will typically configure your application appropriately for the target platform by selecting the driver and configuration. The following build tags are supported and can help in your development. For example if you wish to simulate a mobile application whilst running on a desktop computer you could use the following command:
+go run -tags mobile main.go    Tag Description     gles Force use of embedded OpenGL (GLES) instead of full OpenGL.</description>
+    </item>
+    
+    <item>
+      <title>Data Binding</title>
+      <link>https://darcybook.github.io/fyne/docs/explore/binding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/fyne/docs/explore/binding/</guid>
+      <description>Data binding was introduced in Fyne v2.0.0 and makes it easier to connect many widgets to a data source that will update over time. the data/binding package has many helpful bindings that can manage most standard types that will be used in an application. A data binding can be managed using the binding API (for example NewString) or it can be connected to an external item of data like (`BindInt(*int)).</description>
+    </item>
+    
+    <item>
+      <title>Dialog List</title>
+      <link>https://darcybook.github.io/fyne/docs/explore/dialogs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/fyne/docs/explore/dialogs/</guid>
+      <description>Standard Dialogs# Color#Allow users to pick a colour from a standard set (or any color in advanced mode).
+{% include dialog.html name=&amp;ldquo;color&amp;rdquo; %}
+Confirm#Ask for conformation of an action.
+{% include dialog.html name=&amp;ldquo;confirm&amp;rdquo; %}
+FileOpen#Present this to ask user to choose a file to use inside the app. The actual dialog displayed will depend on the current operating system.</description>
+    </item>
+    
+    <item>
+      <title>Layout List</title>
+      <link>https://darcybook.github.io/fyne/docs/explore/layouts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/fyne/docs/explore/layouts/</guid>
+      <description>Standard Layouts# Horizontal Box (HBox)#Horizontal Box arranges items in a horizontal row. Every element will have the same height (the height of the tallest item in the container) and objects will be left-aligned at their minimum width.
+{% include layout.html name=&amp;ldquo;hbox&amp;rdquo; %}
+Vertical Box (VBox)#Vertical Box arranges items in a vertical column. Every element will have the same width (the width of the widest item in the container) and objects will be top-aligned at their minimum height.</description>
+    </item>
+    
+    <item>
+      <title>Using the Preferences API</title>
+      <link>https://darcybook.github.io/fyne/docs/explore/preferences/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/fyne/docs/explore/preferences/</guid>
+      <description>Storing user configurations and values is a common task for application developers, but implementing it across multiple platforms can be tedious and time-consuming. To make it easier, Fyne has an API for storing values on the filesystem in a clean and understandable way while the complex parts are handled for you.
+Lets start with the setup of the API. It is part of the Preferences interface where storage and loading functions exist for values of Bool, Float, Int and String.</description>
+    </item>
+    
+  </channel>
+</rss>

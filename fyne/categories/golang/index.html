@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="fyne" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="golang" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://darcybook.github.io/fyne/categories/golang/" />
+
+<title>golang | Hugo Book</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+  <link rel="alternate" hreflang="en" href="https://darcybook.github.io/categories/golang/" title="golang">
+<link rel="stylesheet" href="/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css" integrity="sha256-gsXb0jRHzuC0wqo&#43;0Izglh&#43;qQOH6Nw7uT4yfAuDUa18=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/fyne.search.min.c040b1d257415f1710e5bbbff6ebe8fb6a1c3eadb8741dad0e421b5333e98185.js" integrity="sha256-wECx0ldBXxcQ5bu/9uvo&#43;2ocPq24dB2tDkIbUzPpgYU=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<link rel="alternate" type="application/rss+xml" href="https://darcybook.github.io/fyne/categories/golang/index.xml" title="Hugo Book" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/fyne/"><span>Hugo Book</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+  
+
+
+
+  
+    
+  
+    
+  
+
+
+  
+
+
+<ul class="book-languages">
+  <li>
+    <input type="checkbox" id="languages" class="toggle" />
+    <label for="languages" class="flex justify-between">
+      <a role="button" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        fyne
+      </a>
+    </label>
+
+    <ul>
+      
+      <li>
+        <a href="https://darcybook.github.io/categories/golang/">
+          fyne中文
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://darcybook.github.io/analects/">
+          论语
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5f9d0aad26982a16f281c40bcafb6725" class="toggle"  />
+    <label for="section-5f9d0aad26982a16f281c40bcafb6725" class="flex justify-between">
+      <a href="/fyne/docs/started/" class="">Getting Started</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/introduction/" class="">Introduction</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/helloword/" class="">Hello World</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/apprun/" class="">Application and RunLoop</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/updating/" class="">Updating Content</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/windows/" class="">Window Handling</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/testing/" class="">Testing Graphical Apps</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/packaging/" class="">Packaging for Desktop</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/mobile/" class="">Packaging Mobile Apps</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/distribution/" class="">Distributing to App Stores</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/metadata/" class="">App Metadata</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/started/cross-compiling/" class="">Cross Compiling</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-81fa205a1bd0374005def1b00e6db049" class="toggle"  />
+    <label for="section-81fa205a1bd0374005def1b00e6db049" class="flex justify-between">
+      <a href="/fyne/docs/explore/" class="">Exploring Fyne</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/canvas/" class="">Canvas and CanvasObject</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/container/" class="">Container and Layouts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/widgets/" class="">Widget List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/shortcuts/" class="">Adding Shortcuts to an App</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/compiling/" class="">Compile Options</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/binding/" class="">Data Binding</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/dialogs/" class="">Dialog List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/layouts/" class="">Layout List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/explore/preferences/" class="">Using the Preferences API</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="" target="_blank" rel="noopener">
+        --------------------------------------------------
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/alex-shpak/hugo-book" target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://themes.gohugo.io/hugo-book/" target="_blank" rel="noopener">
+        Hugo Themes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>golang</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav>
+  <ul>
+  
+    
+    <li class="book-section-flat">
+      <strong>Categories</strong>
+      <ul>
+      
+        <li class="flex justify-between">
+          <a href="/fyne/categories/Development/">Development</a>
+          <span>14</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/fyne/categories/golang/">golang</a>
+          <span>14</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+    
+    <li class="book-section-flat">
+      <strong>Tags</strong>
+      <ul>
+      
+        <li class="flex justify-between">
+          <a href="/fyne/tags/development/">development</a>
+          <span>14</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/fyne/tags/fyne/">fyne</a>
+          <span>7</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/fyne/tags/go/">go</a>
+          <span>14</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/fyne/tags/golang/">golang</a>
+          <span>14</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/fyne/tags/hugo/">hugo</a>
+          <span>14</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/fyne/docs/explore/canvas/">Canvas and CanvasObject</a>
+    </h2>
+    
+  <h5>May 18, 2022</h5>
+
+
+
+  
+  <div>
+    
+      <a href="/fyne/categories/Development/">Development</a>, 
+      <a href="/fyne/categories/golang/">golang</a>
+  </div>
+  
+
+  
+  <div>
+    
+      <a href="/fyne/tags/go/">go</a>, 
+      <a href="/fyne/tags/golang/">golang</a>, 
+      <a href="/fyne/tags/hugo/">hugo</a>, 
+      <a href="/fyne/tags/development/">development</a>
+  </div>
+  
+
+
+
+
+    <p>In Fyne a Canvas is the area which an application is drawn within. Each window has a canvas which you can access with Window.Canvas() but usually you will find functions on Window that avoid accessing the canvas.
+Everything that can be drawn in Fyne is a type of CanvasObject. The example here opens a new window and then shows different types of primitive graphical element by setting the content of the window canvas.
+        <a href="/fyne/docs/explore/canvas/">...</a>
+      
+    </p>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/fyne/docs/started/introduction/">Introduction</a>
+    </h2>
+    
+  <h5>May 18, 2022</h5>
+
+
+
+  
+  <div>
+    
+      <a href="/fyne/categories/Development/">Development</a>, 
+      <a href="/fyne/categories/golang/">golang</a>
+  </div>
+  
+
+  
+  <div>
+    
+      <a href="/fyne/tags/go/">go</a>, 
+      <a href="/fyne/tags/golang/">golang</a>, 
+      <a href="/fyne/tags/hugo/">hugo</a>, 
+      <a href="/fyne/tags/development/">development</a>
+  </div>
+  
+
+
+
+
+    <p>Getting Started#Using the Fyne toolkit to build cross platform applications is very simple but does require some tools to be installed before you can begin. If your computer is set up for development with Go then the following steps may not be required, but we advise reading the tips for your operating system just in case. If later steps in this tutorial fail then you should re-visit the prerequisites below.
+        <a href="/fyne/docs/started/introduction/">...</a>
+      
+    </p>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/fyne/docs/explore/container/">Container and Layouts</a>
+    </h2>
+    
+  <h5>May 18, 2022</h5>
+
+
+
+  
+  <div>
+    
+      <a href="/fyne/categories/Development/">Development</a>, 
+      <a href="/fyne/categories/golang/">golang</a>
+  </div>
+  
+
+  
+  <div>
+    
+      <a href="/fyne/tags/go/">go</a>, 
+      <a href="/fyne/tags/golang/">golang</a>, 
+      <a href="/fyne/tags/hugo/">hugo</a>, 
+      <a href="/fyne/tags/development/">development</a>
+  </div>
+  
+
+
+
+
+    <p>In the previous example we saw how to set a CanvasObject to the content of a Canvas, but it is not very useful to only show one visual element. To show more than one item we use the Container type.
+As the fyne.Container also is a fyne.CanvasObject, we can set it to be the content of a fyne.Canvas. In this example we create 3 text objects and then place them in a container using the container.
+        <a href="/fyne/docs/explore/container/">...</a>
+      
+    </p>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/fyne/docs/started/helloword/">Hello World</a>
+    </h2>
+    
+  <h5>May 18, 2022</h5>
+
+
+
+  
+  <div>
+    
+      <a href="/fyne/categories/Development/">Development</a>, 
+      <a href="/fyne/categories/golang/">golang</a>
+  </div>
+  
+
+  
+  <div>
+    
+      <a href="/fyne/tags/go/">go</a>, 
+      <a href="/fyne/tags/golang/">golang</a>, 
+      <a href="/fyne/tags/hugo/">hugo</a>, 
+      <a href="/fyne/tags/development/">development</a>, 
+      <a href="/fyne/tags/fyne/">fyne</a>
+  </div>
+  
+
+
+
+
+    <p>Create your first Fyne app# Having completed the steps in the getting started document you&rsquo;re ready to build your first app. To illustrate the process we will build a simple hello world application.
+A simple app starts by creating an app instance with app.New() and then opening a window with app.NewWindow(). Then a widget tree is defined that is set as the main content with SetContent() on a window.
+        <a href="/fyne/docs/started/helloword/">...</a>
+      
+    </p>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/fyne/docs/started/apprun/">Application and RunLoop</a>
+    </h2>
+    
+  <h5>May 18, 2022</h5>
+
+
+
+  
+  <div>
+    
+      <a href="/fyne/categories/Development/">Development</a>, 
+      <a href="/fyne/categories/golang/">golang</a>
+  </div>
+  
+
+  
+  <div>
+    
+      <a href="/fyne/tags/go/">go</a>, 
+      <a href="/fyne/tags/golang/">golang</a>, 
+      <a href="/fyne/tags/hugo/">hugo</a>, 
+      <a href="/fyne/tags/development/">development</a>
+  </div>
+  
+
+
+
+
+    <p>For a GUI application to work it needs to run an event loop (sometimes called a runloop) that processes user interactions and drawing events. In Fyne this is started using the App.Run() or Window.ShowAndRun() functions. One of these must be called from the end of your setup code in the main() function.
+An application should only have one runloop and so you should only call Run() once in your code. Calling it a second time will cause errors.
+        <a href="/fyne/docs/started/apprun/">...</a>
+      
+    </p>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/fyne/docs/explore/widgets/">Widget List</a>
+    </h2>
+    
+  <h5>May 18, 2022</h5>
+
+
+
+  
+  <div>
+    
+      <a href="/fyne/categories/Development/">Development</a>, 
+      <a href="/fyne/categories/golang/">golang</a>
+  </div>
+  
+
+  
+  <div>
+    
+      <a href="/fyne/tags/go/">go</a>, 
+      <a href="/fyne/tags/golang/">golang</a>, 
+      <a href="/fyne/tags/hugo/">hugo</a>, 
+      <a href="/fyne/tags/development/">development</a>
+  </div>
+  
+
+
+
+
+    <p>Standard Widgets (in widget package)# Accordion#Accordion displays a list of AccordionItems. Each item is represented by a button that reveals a detailed view when tapped.
+Button#Button widget has a text label and icon, both are optional.
+Card#Card widget groups elements with a header and subheader, all are optional.
+Check#Check widget has a text label and a checked (or unchecked) icon.
+        <a href="/fyne/docs/explore/widgets/">...</a>
+      
+    </p>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/fyne/docs/started/updating/">Updating Content</a>
+    </h2>
+    
+  <h5>May 18, 2022</h5>
+
+
+
+  
+  <div>
+    
+      <a href="/fyne/categories/Development/">Development</a>, 
+      <a href="/fyne/categories/golang/">golang</a>
+  </div>
+  
+
+  
+  <div>
+    
+      <a href="/fyne/tags/go/">go</a>, 
+      <a href="/fyne/tags/golang/">golang</a>, 
+      <a href="/fyne/tags/hugo/">hugo</a>, 
+      <a href="/fyne/tags/development/">development</a>, 
+      <a href="/fyne/tags/fyne/">fyne</a>
+  </div>
+  
+
+
+
+
+    <p>Having completed the hello world tutorial or other examples you will have created a basic user interface. In this page we see how the content of a GUI can be updated from your code.
+The first step is to assign the widget you want to update to a variable. In the hello world tutorial we passed widget.NewLabel directly into SetContent(), to update it we change that to two different lines, such as:
+        <a href="/fyne/docs/started/updating/">...</a>
+      
+    </p>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/fyne/docs/started/windows/">Window Handling</a>
+    </h2>
+    
+  <h5>May 18, 2022</h5>
+
+
+
+  
+  <div>
+    
+      <a href="/fyne/categories/Development/">Development</a>, 
+      <a href="/fyne/categories/golang/">golang</a>
+  </div>
+  
+
+  
+  <div>
+    
+      <a href="/fyne/tags/go/">go</a>, 
+      <a href="/fyne/tags/golang/">golang</a>, 
+      <a href="/fyne/tags/hugo/">hugo</a>, 
+      <a href="/fyne/tags/development/">development</a>, 
+      <a href="/fyne/tags/fyne/">fyne</a>
+  </div>
+  
+
+
+
+
+    <p>Windows are created using App.NewWindow() and need to be shown using the Show() function. The helper method ShowAndRun() on fyne.Window allows you to show your window and run the application at the same time.
+By default a window will be the right size to show its content by checking the MinSize() function (more on that in later examples). You can set a larger size by calling the Window.Resize() method. Into this is passed a fyne.
+        <a href="/fyne/docs/started/windows/">...</a>
+      
+    </p>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/fyne/docs/started/testing/">Testing Graphical Apps</a>
+    </h2>
+    
+  <h5>May 18, 2022</h5>
+
+
+
+  
+  <div>
+    
+      <a href="/fyne/categories/Development/">Development</a>, 
+      <a href="/fyne/categories/golang/">golang</a>
+  </div>
+  
+
+  
+  <div>
+    
+      <a href="/fyne/tags/go/">go</a>, 
+      <a href="/fyne/tags/golang/">golang</a>, 
+      <a href="/fyne/tags/hugo/">hugo</a>, 
+      <a href="/fyne/tags/development/">development</a>, 
+      <a href="/fyne/tags/fyne/">fyne</a>
+  </div>
+  
+
+
+
+
+    <p>Part of a good test suite is being able to quickly write tests and run them on a regular basis. Fyne&rsquo;s API is designed to make testing applications easy. By separating component logic from it&rsquo;s rendering definition we can load applications without actually displaying them and test the functionality completely.
+Example#We can demonstrate unit testing by extending our Hello World app to include space for users to input their name to be greeted.
+        <a href="/fyne/docs/started/testing/">...</a>
+      
+    </p>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/fyne/docs/started/packaging/">Packaging for Desktop</a>
+    </h2>
+    
+  <h5>May 18, 2022</h5>
+
+
+
+  
+  <div>
+    
+      <a href="/fyne/categories/Development/">Development</a>, 
+      <a href="/fyne/categories/golang/">golang</a>
+  </div>
+  
+
+  
+  <div>
+    
+      <a href="/fyne/tags/go/">go</a>, 
+      <a href="/fyne/tags/golang/">golang</a>, 
+      <a href="/fyne/tags/hugo/">hugo</a>, 
+      <a href="/fyne/tags/development/">development</a>, 
+      <a href="/fyne/tags/fyne/">fyne</a>
+  </div>
+  
+
+
+
+
+    <p>Packaging a graphical app for distribution can be complex. Graphical applications typically have icons and metadata associated with them as well as specific formats required to integrate with each environment. Windows executables need embedded icons, macOS apps are bundles and with Linux there are various metadata files that should get installed. What a hassle!
+Thankfully the &ldquo;fyne&rdquo; app has a &ldquo;package&rdquo; command that can handle this automatically. Just specifying the target OS and any required metadata (such as icon) will generate the appropriate package.
+        <a href="/fyne/docs/started/packaging/">...</a>
+      
+    </p>
+  </article>
+  
+
+  
+    <ul class="pagination pagination-default">
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="First" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Previous" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item active">
+        <a aria-current="page" aria-label="Page 1" class="page-link" role="button">1</a>
+      </li>
+      <li class="page-item">
+        <a href="/fyne/categories/golang/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
+      </li>
+      <li class="page-item">
+        <a href="/fyne/categories/golang/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/fyne/categories/golang/page/2/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  <nav>
+  <ul>
+  
+    
+    <li class="book-section-flat">
+      <strong>Categories</strong>
+      <ul>
+      
+        <li class="flex justify-between">
+          <a href="/fyne/categories/Development/">Development</a>
+          <span>14</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/fyne/categories/golang/">golang</a>
+          <span>14</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+    
+    <li class="book-section-flat">
+      <strong>Tags</strong>
+      <ul>
+      
+        <li class="flex justify-between">
+          <a href="/fyne/tags/development/">development</a>
+          <span>14</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/fyne/tags/fyne/">fyne</a>
+          <span>7</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/fyne/tags/go/">go</a>
+          <span>14</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/fyne/tags/golang/">golang</a>
+          <span>14</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/fyne/tags/hugo/">hugo</a>
+          <span>14</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+  </ul>
+</nav>
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
