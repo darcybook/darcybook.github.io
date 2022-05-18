@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Containers and Layout on Hugo Book</title>
-    <link>https://darcybook.github.io/fyne/docs/container/</link>
+    <link>http://localhost:1313/fyne/docs/container/</link>
     <description>Recent content in Containers and Layout on Hugo Book</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/fyne/docs/container/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://localhost:1313/fyne/docs/container/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Box</title>
-      <link>https://darcybook.github.io/fyne/docs/container/box/</link>
+      <link>http://localhost:1313/fyne/docs/container/box/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/container/box/</guid>
+      <guid>http://localhost:1313/fyne/docs/container/box/</guid>
       <description>As discussed in Container and Layouts elements within a container can be arranged using a layout. This section explores the builtin layouts and how to use them.
 The most commonly used layout is layout.BoxLayout and it has two variants, horizontal and vertical. A box layout arranges all elements in a single row or column with optional spaces to assist alignment.
 A horizontal box layout, created with layout.NewHBoxLayout() creates an arrangement of items in a single row.</description>
@@ -18,69 +18,69 @@ A horizontal box layout, created with layout.NewHBoxLayout() creates an arrangem
     
     <item>
       <title>Grid</title>
-      <link>https://darcybook.github.io/fyne/docs/container/grid/</link>
+      <link>http://localhost:1313/fyne/docs/container/grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/container/grid/</guid>
+      <guid>http://localhost:1313/fyne/docs/container/grid/</guid>
       <description>The grid layout lays out the elements of a container in a grid pattern with a fixed number of columns. Items will fill a single row until the number of columns is met, after this a new row will be created. Vertical space will be split equally between each of the rows of objects.
 You create a grid layout using layout.NewGridLayout(cols) where cols is the number of items (columns) you wish to have in each row.</description>
     </item>
     
     <item>
       <title>Grid Wrap</title>
-      <link>https://darcybook.github.io/fyne/docs/container/gridwrap/</link>
+      <link>http://localhost:1313/fyne/docs/container/gridwrap/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/container/gridwrap/</guid>
+      <guid>http://localhost:1313/fyne/docs/container/gridwrap/</guid>
       <description>Like the previous grid layout, the grid wrap layout creates an arrangement of elements in a grid pattern. However this grid does not have a set number of columns, instead it uses a fixed size for each cell and then flows the content to as many rows as is needed to display the items.
 You create a grid wrap layout using layout.NewGridWrapLayout(size) where size specifies the size to apply to all child elements.</description>
     </item>
     
     <item>
       <title>Border</title>
-      <link>https://darcybook.github.io/fyne/docs/container/border/</link>
+      <link>http://localhost:1313/fyne/docs/container/border/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/container/border/</guid>
+      <guid>http://localhost:1313/fyne/docs/container/border/</guid>
       <description>The border layout is possibly the most widely used to construct user interfaces as it allows the positioning of items around a central element which will expand to fill the space. To create a border layout you need to pass the fyne.CanvasObjects that should be positioned in a border position to the layout (as well as the container as usual). This syntax is a little different to the other layouts but is basically just layout.</description>
     </item>
     
     <item>
       <title>Form</title>
-      <link>https://darcybook.github.io/fyne/docs/container/form/</link>
+      <link>http://localhost:1313/fyne/docs/container/form/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/container/form/</guid>
+      <guid>http://localhost:1313/fyne/docs/container/form/</guid>
       <description>The layout.FormLayout is like a 2 column grid layout but tweaked to lay out forms in an application. The height of each item will be the larger of the two minimum heights in each row. The width of the left item will be the largest minimum width of all items in the first column whilst the second item in each row will expand to fill the space.
 This layout is more typically used within the widget.</description>
     </item>
     
     <item>
       <title>Center</title>
-      <link>https://darcybook.github.io/fyne/docs/container/center/</link>
+      <link>http://localhost:1313/fyne/docs/container/center/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/container/center/</guid>
+      <guid>http://localhost:1313/fyne/docs/container/center/</guid>
       <description>layout.CenterLayout organises all items in its container to be centered in the available space. The objects will be drawn in the order they are passed to the container, with the last being drawn top-most.
 package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/layout&amp;#34; 	&amp;#34;fyne.io/fyne/v2/theme&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Center Layout&amp;#34;)  	img := canvas.</description>
     </item>
     
     <item>
       <title>Max</title>
-      <link>https://darcybook.github.io/fyne/docs/container/max/</link>
+      <link>http://localhost:1313/fyne/docs/container/max/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/container/max/</guid>
+      <guid>http://localhost:1313/fyne/docs/container/max/</guid>
       <description>The layout.MaxLayout is the simplest layout, it sets all items in the container to be the same size as the container. This is not often useful in general containers but can be suitable when composing widgets.
 The max layout will expand the container to be at least the size of the largest item&amp;rsquo;s minimum size. The objects will be drawn in the order the are passed to the container, with the last being drawn top-most.</description>
     </item>
     
     <item>
       <title>AppTabs</title>
-      <link>https://darcybook.github.io/fyne/docs/container/apptabs/</link>
+      <link>http://localhost:1313/fyne/docs/container/apptabs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/container/apptabs/</guid>
+      <guid>http://localhost:1313/fyne/docs/container/apptabs/</guid>
       <description>The AppTabs container is used to allow the user to switch between different content panels. Tabs are either just text or text and an icon. It is recommended not to mix some tabs having icons and some without. A tab container is created using container.NewAppTabs(...) and passing container.TabItem items (that can be created using container.NewTabItem(...)).
 The tab container can be configured by setting the location of tabs, one of container.TabLocationTop, container.</description>
     </item>

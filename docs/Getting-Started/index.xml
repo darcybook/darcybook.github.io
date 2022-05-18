@@ -1,18 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Hugo Book</title>
-    <link>https://darcybook.github.io/docs/Getting-Started/</link>
-    <description>Recent content on Hugo Book</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/docs/Getting-Started/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Introduction</title>
-      <link>https://darcybook.github.io/docs/Getting-Started/introduction/</link>
-      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/Getting-Started/introduction/</guid>
-      <description>快速开始#</description>
-    </item>
-    
-  </channel>
-</rss>

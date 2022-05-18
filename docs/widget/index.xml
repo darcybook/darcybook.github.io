@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Widgets on Hugo Book</title>
+    <link>http://localhost:1313/docs/widget/</link>
+    <description>Recent content in Widgets on Hugo Book</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://localhost:1313/docs/widget/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Label</title>
+      <link>http://localhost:1313/docs/widget/label/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/widget/label/</guid>
+      <description>Widgets are the main components of a Fyne application GUI, they can be used in any place that a basic fyne.CanvasObject can. They manage user interactions and will always match the current theme.
+The Label widget is the simplest of them - it presents text to the user. Unlike canvas.Text it can handle some simple formatting (such as \n) and wrapping (by setting the Wrapping field). You can create a label by calling widget.</description>
+    </item>
+    
+    <item>
+      <title>Button</title>
+      <link>http://localhost:1313/docs/widget/button/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/widget/button/</guid>
+      <description>The button widget can contain text, an icon or both, the constructor functions are widget.NewButton() and widget.NewButtonWithIcon(). To create a text button there are just 2 parameters, the string content and a 0 parameter func() that will be called when the button is tapped. See the example for how that can be created.
+The button constructor with an icon includes an additional parameter which is the fyne.Resource which contains the icon data.</description>
+    </item>
+    
+    <item>
+      <title>Entry</title>
+      <link>http://localhost:1313/docs/widget/entry/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/widget/entry/</guid>
+      <description>The entry widget is used for user input of simple text content. An entry can be created with a simple widget.NewEntry() constructing function. When you create the widget keep a reference so that you can access its Text field later. It is also possible to use the OnChanged callback function to be notified every time the content changes.
+Entry widgets can also have validation for verifying the text input typed into it.</description>
+    </item>
+    
+    <item>
+      <title>Choices</title>
+      <link>http://localhost:1313/docs/widget/choices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/widget/choices/</guid>
+      <description>There are various widgets available to present the user with a choice, these include a checkbox, radio group and select popup.
+The widget.Check provides a simple yes/no choice and is created using a string label. Each of these widgets also takes a &amp;ldquo;changed&amp;rdquo; func(...) where the parameter is of the appropriate type. widget.NewCheck(..) therefore takes a string parameter for the label and a func(bool) param for the change handler. You can also use the Checked field to get the boolean value.</description>
+    </item>
+    
+    <item>
+      <title>Form</title>
+      <link>http://localhost:1313/docs/widget/form/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/widget/form/</guid>
+      <description>The form widget is used to lay out many input fields with labels and optional cancel and submit buttons. In its most bare form it aligns labels to the left of each input widget. By setting OnCancel or OnSubmit the form will add a button bar with the specified handlers called when appropriate.
+The widget can be created with widget.NewForm(...) passing a list of widget.FormItems, or by using the &amp;amp;widget.Form{} syntax illustrated in the example.</description>
+    </item>
+    
+    <item>
+      <title>ProgressBar</title>
+      <link>http://localhost:1313/docs/widget/progressbar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/widget/progressbar/</guid>
+      <description>The progress bar widget has two forms, the standard progress bar shows the user which Value has been reached, from Min to Max. The default min is 0.0 and the max defaults to 1.0. To use the default values just call widget.NewProgressBar(). After creating you can set the Value field.
+To set up a custom range you can set Min and Max fields manually. The label will always show the percentage completion.</description>
+    </item>
+    
+    <item>
+      <title>Toolbar</title>
+      <link>http://localhost:1313/docs/widget/toolbar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/widget/toolbar/</guid>
+      <description>The toolbar widget creates a row of action buttons using icons to represent each. The widget.NewToolbar(...) constructor function takes a list of widget.ToolbarItem parameters. The builtin types of toolbar items are action, separator and spacer.
+The most used item is an action that is created using the widget.NewToolbarItemAction(..) function. An action takes two parameters, first being the icon resource to draw and the latter is the func() to call when tapped.</description>
+    </item>
+    
+    <item>
+      <title>List</title>
+      <link>http://localhost:1313/docs/widget/list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/widget/list/</guid>
+      <description>The List widget is one of the toolkit&amp;rsquo;s collection widgets. These widgets are designed to help build really performant interfaces when lots of data is being presented. You can also see the Table and Tree widgets which have a similar API. Because of this design they are a little more complicated to use.
+The List uses callback functions to ask for data when it is required. There are 3 main callbacks, Length, CreateItem and UpdateItem.</description>
+    </item>
+    
+    <item>
+      <title>Table</title>
+      <link>http://localhost:1313/docs/widget/table/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/widget/table/</guid>
+      <description>The Table widget is like the List widget (another of the toolkit&amp;rsquo;s collection widgets) with a two-dimensional index. Like List this is designed to help build really performant interfaces when lots of data is being presented. Because of this the widget is not created with all the data embedded, but instead calls out to the data source when needed.
+The Table uses callback functions to ask for data when it is required.</description>
+    </item>
+    
+  </channel>
+</rss>

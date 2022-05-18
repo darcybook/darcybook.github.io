@@ -2,76 +2,76 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>fyne on Hugo Book</title>
-    <link>https://darcybook.github.io/fyne/tags/fyne/</link>
+    <link>http://localhost:1313/fyne/tags/fyne/</link>
     <description>Recent content in fyne on Hugo Book</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 18 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://darcybook.github.io/fyne/tags/fyne/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/fyne/tags/fyne/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello World</title>
-      <link>https://darcybook.github.io/fyne/docs/started/helloword/</link>
+      <link>http://localhost:1313/fyne/docs/started/helloword/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/started/helloword/</guid>
+      <guid>http://localhost:1313/fyne/docs/started/helloword/</guid>
       <description>Create your first Fyne app# Having completed the steps in the getting started document you&amp;rsquo;re ready to build your first app. To illustrate the process we will build a simple hello world application.
 A simple app starts by creating an app instance with app.New() and then opening a window with app.NewWindow(). Then a widget tree is defined that is set as the main content with SetContent() on a window.</description>
     </item>
     
     <item>
       <title>Updating Content</title>
-      <link>https://darcybook.github.io/fyne/docs/started/updating/</link>
+      <link>http://localhost:1313/fyne/docs/started/updating/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/started/updating/</guid>
+      <guid>http://localhost:1313/fyne/docs/started/updating/</guid>
       <description>Having completed the hello world tutorial or other examples you will have created a basic user interface. In this page we see how the content of a GUI can be updated from your code.
 The first step is to assign the widget you want to update to a variable. In the hello world tutorial we passed widget.NewLabel directly into SetContent(), to update it we change that to two different lines, such as:</description>
     </item>
     
     <item>
       <title>Window Handling</title>
-      <link>https://darcybook.github.io/fyne/docs/started/windows/</link>
+      <link>http://localhost:1313/fyne/docs/started/windows/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/started/windows/</guid>
+      <guid>http://localhost:1313/fyne/docs/started/windows/</guid>
       <description>Windows are created using App.NewWindow() and need to be shown using the Show() function. The helper method ShowAndRun() on fyne.Window allows you to show your window and run the application at the same time.
 By default a window will be the right size to show its content by checking the MinSize() function (more on that in later examples). You can set a larger size by calling the Window.Resize() method. Into this is passed a fyne.</description>
     </item>
     
     <item>
       <title>Testing Graphical Apps</title>
-      <link>https://darcybook.github.io/fyne/docs/started/testing/</link>
+      <link>http://localhost:1313/fyne/docs/started/testing/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/started/testing/</guid>
+      <guid>http://localhost:1313/fyne/docs/started/testing/</guid>
       <description>Part of a good test suite is being able to quickly write tests and run them on a regular basis. Fyne&amp;rsquo;s API is designed to make testing applications easy. By separating component logic from it&amp;rsquo;s rendering definition we can load applications without actually displaying them and test the functionality completely.
 Example#We can demonstrate unit testing by extending our Hello World app to include space for users to input their name to be greeted.</description>
     </item>
     
     <item>
       <title>Packaging for Desktop</title>
-      <link>https://darcybook.github.io/fyne/docs/started/packaging/</link>
+      <link>http://localhost:1313/fyne/docs/started/packaging/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/started/packaging/</guid>
+      <guid>http://localhost:1313/fyne/docs/started/packaging/</guid>
       <description>Packaging a graphical app for distribution can be complex. Graphical applications typically have icons and metadata associated with them as well as specific formats required to integrate with each environment. Windows executables need embedded icons, macOS apps are bundles and with Linux there are various metadata files that should get installed. What a hassle!
 Thankfully the &amp;ldquo;fyne&amp;rdquo; app has a &amp;ldquo;package&amp;rdquo; command that can handle this automatically. Just specifying the target OS and any required metadata (such as icon) will generate the appropriate package.</description>
     </item>
     
     <item>
       <title>Packaging Mobile Apps</title>
-      <link>https://darcybook.github.io/fyne/docs/started/mobile/</link>
+      <link>http://localhost:1313/fyne/docs/started/mobile/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/started/mobile/</guid>
+      <guid>http://localhost:1313/fyne/docs/started/mobile/</guid>
       <description>Your Fyne app code will work out of the box as mobile apps, just as it did for desktop. However it is a little more complex to package the code for distribution. This page will explore the process to do just that to get your app on iOS and Android.
 Firstly you will need some more development tools installed for mobile packaging to complete. For Android builds you must have the Android SDK and NDK installed with appropriate environment set up so that the tools (such as adb) can be found on the command line.</description>
     </item>
     
     <item>
       <title>App Metadata</title>
-      <link>https://darcybook.github.io/fyne/docs/started/metadata/</link>
+      <link>http://localhost:1313/fyne/docs/started/metadata/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/started/metadata/</guid>
+      <guid>http://localhost:1313/fyne/docs/started/metadata/</guid>
       <description>App Metadata#Since release v2.1.0 of the fyne command we support a metadata file that allows you to store information about your application in the repository. This file is optional, but can help to avoid having to remember specific build parameters for each package and release command.
 The file should be named FyneApp.toml in the directory where you run the fyne command (this is normally the main package). The contents of the file are as follows:</description>
     </item>

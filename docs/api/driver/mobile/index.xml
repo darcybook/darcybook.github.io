@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mobile on Hugo Book</title>
+    <link>http://localhost:1313/docs/api/driver/mobile/</link>
+    <description>Recent content in mobile on Hugo Book</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://localhost:1313/docs/api/driver/mobile/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>mobile</title>
+      <link>http://localhost:1313/docs/api/driver/mobile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/api/driver/mobile/</guid>
+      <description>mobile# import &amp;#34;fyne.io/fyne/v2/driver/mobile&amp;#34; Package mobile provides mobile specific driver functionality.
+Usage#types# Device KeyboardType Keyboardable TouchEvent Touchable  </description>
+    </item>
+    
+    <item>
+      <title>mobile.Device</title>
+      <link>http://localhost:1313/docs/api/driver/mobile/device/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/api/driver/mobile/device/</guid>
+      <description>mobile.Device# import &amp;#34;fyne.io/fyne/v2/driver/mobile&amp;#34; Usage#type Device#type Device interface { 	// Request that the mobile device show the touch screen keyboard (standard layout) 	ShowVirtualKeyboard() 	// Request that the mobile device show the touch screen keyboard (custom layout) 	ShowVirtualKeyboardType(KeyboardType) 	// Request that the mobile device dismiss the touch screen keyboard 	HideVirtualKeyboard() } Device describes functionality only available on mobile</description>
+    </item>
+    
+    <item>
+      <title>mobile.Keyboardable</title>
+      <link>http://localhost:1313/docs/api/driver/mobile/keyboardable/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/api/driver/mobile/keyboardable/</guid>
+      <description>mobile.Keyboardable# import &amp;#34;fyne.io/fyne/v2/driver/mobile&amp;#34; Usage#type Keyboardable#type Keyboardable interface { 	fyne.Focusable  	Keyboard() KeyboardType } Keyboardable describes any CanvasObject that needs a keyboard</description>
+    </item>
+    
+    <item>
+      <title>mobile.KeyboardType</title>
+      <link>http://localhost:1313/docs/api/driver/mobile/keyboardtype/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/api/driver/mobile/keyboardtype/</guid>
+      <description>mobile.KeyboardType# import &amp;#34;fyne.io/fyne/v2/driver/mobile&amp;#34; Usage#type KeyboardType#type KeyboardType int32 KeyboardType represents a type of virtual keyboard
+const ( 	// DefaultKeyboard is the keyboard with default input style and &amp;#34;return&amp;#34; return key 	DefaultKeyboard KeyboardType = iota 	// SingleLineKeyboard is the keyboard with default input style and &amp;#34;Done&amp;#34; return key 	SingleLineKeyboard 	// NumberKeyboard is the keyboard with number input style and &amp;#34;Done&amp;#34; return key 	NumberKeyboard 	// PasswordKeyboard is used to ensure that text is not leaked to 3rd party keyboard providers 	PasswordKeyboard ) </description>
+    </item>
+    
+    <item>
+      <title>mobile.Touchable</title>
+      <link>http://localhost:1313/docs/api/driver/mobile/touchable/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/api/driver/mobile/touchable/</guid>
+      <description>mobile.Touchable# import &amp;#34;fyne.io/fyne/v2/driver/mobile&amp;#34; Usage#type Touchable#type Touchable interface { 	TouchDown(*TouchEvent) 	TouchUp(*TouchEvent) 	TouchCancel(*TouchEvent) } Touchable represents mobile touch events that can be sent to CanvasObjects</description>
+    </item>
+    
+    <item>
+      <title>mobile.TouchEvent</title>
+      <link>http://localhost:1313/docs/api/driver/mobile/touchevent/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/api/driver/mobile/touchevent/</guid>
+      <description>mobile.TouchEvent# import &amp;#34;fyne.io/fyne/v2/driver/mobile&amp;#34; Usage#type TouchEvent#type TouchEvent struct { 	fyne.PointEvent } TouchEvent contains data relating to mobile touch events</description>
+    </item>
+    
+  </channel>
+</rss>

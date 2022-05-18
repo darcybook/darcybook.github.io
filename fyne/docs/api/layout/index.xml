@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>layout on Hugo Book</title>
-    <link>https://darcybook.github.io/fyne/docs/api/layout/</link>
+    <link>http://localhost:1313/fyne/docs/api/layout/</link>
     <description>Recent content in layout on Hugo Book</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/fyne/docs/api/layout/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://localhost:1313/fyne/docs/api/layout/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>layout</title>
-      <link>https://darcybook.github.io/fyne/docs/api/layout/</link>
+      <link>http://localhost:1313/fyne/docs/api/layout/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/layout/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/layout/</guid>
       <description>layout# import &amp;#34;fyne.io/fyne/v2/layout&amp;#34; Package layout defines the various layouts available to Fyne apps
 Usage#func NewAdaptiveGridLayout#func NewAdaptiveGridLayout(rowcols int) fyne.Layout NewAdaptiveGridLayout returns a new grid layout which uses columns when horizontal but rows when vertical.
 func NewBorderLayout#func NewBorderLayout(top, bottom, left, right fyne.CanvasObject) fyne.Layout NewBorderLayout creates a new BorderLayout instance with top, bottom, left and right objects set. All other items in the container will fill the centre space</description>
@@ -18,10 +18,10 @@ func NewBorderLayout#func NewBorderLayout(top, bottom, left, right fyne.Canva
     
     <item>
       <title>layout.Spacer</title>
-      <link>https://darcybook.github.io/fyne/docs/api/layout/spacer/</link>
+      <link>http://localhost:1313/fyne/docs/api/layout/spacer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/layout/spacer/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/layout/spacer/</guid>
       <description>layout.Spacer# import &amp;#34;fyne.io/fyne/v2/layout&amp;#34; Usage#type Spacer#type Spacer struct { 	FixHorizontal bool 	FixVertical bool } Spacer is any simple object that can be used in a box layout to space out child objects
 func (*Spacer) ExpandHorizontal#func (s *Spacer) ExpandHorizontal() bool ExpandHorizontal returns whether or not this spacer expands on the horizontal axis
 func (*Spacer) ExpandVertical#func (s *Spacer) ExpandVertical() bool ExpandVertical returns whether or not this spacer expands on the vertical axis</description>
@@ -29,10 +29,10 @@ func (*Spacer) ExpandVertical#func (s *Spacer) ExpandVertical() bool ExpandVe
     
     <item>
       <title>layout.SpacerObject</title>
-      <link>https://darcybook.github.io/fyne/docs/api/layout/spacerobject/</link>
+      <link>http://localhost:1313/fyne/docs/api/layout/spacerobject/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/layout/spacerobject/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/layout/spacerobject/</guid>
       <description>layout.SpacerObject# import &amp;#34;fyne.io/fyne/v2/layout&amp;#34; Usage#type SpacerObject#type SpacerObject interface { 	ExpandVertical() bool 	ExpandHorizontal() bool } SpacerObject is any object that can be used to space out child objects</description>
     </item>
     

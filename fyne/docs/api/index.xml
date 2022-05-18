@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>API Documentation on Hugo Book</title>
-    <link>https://darcybook.github.io/fyne/docs/api/</link>
+    <link>http://localhost:1313/fyne/docs/api/</link>
     <description>Recent content in API Documentation on Hugo Book</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/fyne/docs/api/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://localhost:1313/fyne/docs/api/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>fyne</title>
-      <link>https://darcybook.github.io/fyne/docs/api/</link>
+      <link>http://localhost:1313/fyne/docs/api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/</guid>
       <description>fyne# import &amp;#34;fyne.io/fyne/v2&amp;#34; Package fyne describes the objects and components available to any Fyne app. These can all be created, manipulated and tested without rendering (for speed). Your main package should use the app package to create an application with a default driver that will render your UI.
 A simple application may look like this:
  package main   import &amp;#34;fyne.io/fyne/v2/app&amp;#34;  import &amp;#34;fyne.io/fyne/v2/container&amp;#34;  import &amp;#34;fyne.</description>
@@ -18,84 +18,84 @@ A simple application may look like this:
     
     <item>
       <title>fyne.Animation</title>
-      <link>https://darcybook.github.io/fyne/docs/api/animation/</link>
+      <link>http://localhost:1313/fyne/docs/api/animation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/animation/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/animation/</guid>
       <description>fyne.Animation# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Animation#type Animation struct { 	AutoReverse bool 	Curve AnimationCurve 	Duration time.Duration 	RepeatCount int 	Tick func(float32) } Animation represents an animated element within a Fyne canvas. These animations may control individual objects or entire scenes.
 Since: 2.0func NewAnimation#func NewAnimation(d time.Duration, fn func(float32)) *Animation NewAnimation creates a very basic animation where the callback function will be called for every rendered frame between time.</description>
     </item>
     
     <item>
       <title>fyne.AnimationCurve</title>
-      <link>https://darcybook.github.io/fyne/docs/api/animationcurve/</link>
+      <link>http://localhost:1313/fyne/docs/api/animationcurve/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/animationcurve/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/animationcurve/</guid>
       <description>fyne.AnimationCurve# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type AnimationCurve#type AnimationCurve func(float32) float32 AnimationCurve represents an animation algorithm for calculating the progress through a timeline. Custom animations can be provided by implementing the &amp;ldquo;func(float32) float32&amp;rdquo; definition. The input parameter will start at 0.0 when an animation starts and travel up to 1.0 at which point it will end. A linear animation would return the same output value as is passed in.</description>
     </item>
     
     <item>
       <title>fyne.App</title>
-      <link>https://darcybook.github.io/fyne/docs/api/app/</link>
+      <link>http://localhost:1313/fyne/docs/api/app/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/app/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/app/</guid>
       <description>fyne.App# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type App#type App interface { 	// Create a new window for the application. 	// The first window to open is considered the &amp;#34;master&amp;#34; and when closed 	// the application will exit. 	NewWindow(title string) Window  	// Open a URL in the default browser application. 	OpenURL(url *url.URL) error  	// Icon returns the application icon, this is used in various ways 	// depending on operating system.</description>
     </item>
     
     <item>
       <title>fyne.BuildType</title>
-      <link>https://darcybook.github.io/fyne/docs/api/buildtype/</link>
+      <link>http://localhost:1313/fyne/docs/api/buildtype/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/buildtype/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/buildtype/</guid>
       <description>fyne.BuildType# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type BuildType#type BuildType int BuildType defines different modes that an application can be built using.
 const ( 	// BuildStandard is the normal build mode - it is not debug, test or release mode. 	BuildStandard BuildType = iota 	// BuildDebug is used when a developer would like more information and visual output for app debugging. 	BuildDebug 	// BuildRelease is a final production build, it is like BuildStandard but will use distribution certificates.</description>
     </item>
     
     <item>
       <title>fyne.Canvas</title>
-      <link>https://darcybook.github.io/fyne/docs/api/canvas/</link>
+      <link>http://localhost:1313/fyne/docs/api/canvas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/canvas/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/canvas/</guid>
       <description>fyne.Canvas# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Canvas#type Canvas interface { 	Content() CanvasObject 	SetContent(CanvasObject)  	Refresh(CanvasObject)  	// Focus makes the provided item focused. 	// The item has to be added to the contents of the canvas before calling this. 	Focus(Focusable) 	// FocusNext focuses the next focusable item. 	// If no item is currently focused, the first focusable item is focused.</description>
     </item>
     
     <item>
       <title>fyne.CanvasObject</title>
-      <link>https://darcybook.github.io/fyne/docs/api/canvasobject/</link>
+      <link>http://localhost:1313/fyne/docs/api/canvasobject/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/canvasobject/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/canvasobject/</guid>
       <description>fyne.CanvasObject# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type CanvasObject#type CanvasObject interface {  	// MinSize returns the minimum size this object needs to be drawn. 	MinSize() Size 	// Move moves this object to the given position relative to its parent. 	// This should only be called if your object is not in a container with a layout manager. 	Move(Position) 	// Position returns the current position of the object relative to its parent.</description>
     </item>
     
     <item>
       <title>fyne.Clipboard</title>
-      <link>https://darcybook.github.io/fyne/docs/api/clipboard/</link>
+      <link>http://localhost:1313/fyne/docs/api/clipboard/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/clipboard/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/clipboard/</guid>
       <description>fyne.Clipboard# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Clipboard#type Clipboard interface { 	// Content returns the clipboard content 	Content() string 	// SetContent sets the clipboard content 	SetContent(content string) } Clipboard represents the system clipboard interface</description>
     </item>
     
     <item>
       <title>fyne.Container</title>
-      <link>https://darcybook.github.io/fyne/docs/api/container/</link>
+      <link>http://localhost:1313/fyne/docs/api/container/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/container/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/container/</guid>
       <description>fyne.Container# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Container#type Container struct { 	Hidden bool // Is this Container hidden  	Layout Layout // The Layout algorithm for arranging child CanvasObjects 	Objects []CanvasObject // The set of CanvasObjects this container holds } Container is a CanvasObject that contains a collection of child objects. The layout of the children is set by the specified Layout.</description>
     </item>
     
     <item>
       <title>fyne.Delta</title>
-      <link>https://darcybook.github.io/fyne/docs/api/delta/</link>
+      <link>http://localhost:1313/fyne/docs/api/delta/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/delta/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/delta/</guid>
       <description>fyne.Delta# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Delta#type Delta struct { 	DX, DY float32 } Delta is a generic X, Y coordinate, size or movement representation.
 func NewDelta#func NewDelta(dx float32, dy float32) Delta NewDelta returns a newly allocated Delta representing a movement in the X and Y axis.
 func (Delta) Components#func (v Delta) Components() (float32, float32) Components returns the X and Y elements of this Delta.</description>
@@ -103,309 +103,309 @@ func (Delta) Components#func (v Delta) Components() (float32, float32) Compon
     
     <item>
       <title>fyne.Device</title>
-      <link>https://darcybook.github.io/fyne/docs/api/device/</link>
+      <link>http://localhost:1313/fyne/docs/api/device/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/device/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/device/</guid>
       <description>fyne.Device# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Device#type Device interface { 	Orientation() DeviceOrientation 	IsMobile() bool 	HasKeyboard() bool 	SystemScaleForWindow(Window) float32 } Device provides information about the devices the code is running on
 func CurrentDevice#func CurrentDevice() Device CurrentDevice returns the device information for the current hardware (via the driver)</description>
     </item>
     
     <item>
       <title>fyne.DeviceOrientation</title>
-      <link>https://darcybook.github.io/fyne/docs/api/deviceorientation/</link>
+      <link>http://localhost:1313/fyne/docs/api/deviceorientation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/deviceorientation/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/deviceorientation/</guid>
       <description>fyne.DeviceOrientation# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type DeviceOrientation#type DeviceOrientation int DeviceOrientation represents the different ways that a mobile device can be held
 const ( 	// OrientationVertical is the default vertical orientation 	OrientationVertical DeviceOrientation = iota 	// OrientationVerticalUpsideDown is the portrait orientation held upside down 	OrientationVerticalUpsideDown 	// OrientationHorizontalLeft is used to indicate a landscape orientation with the top to the left 	OrientationHorizontalLeft 	// OrientationHorizontalRight is used to indicate a landscape orientation with the top to the right 	OrientationHorizontalRight ) </description>
     </item>
     
     <item>
       <title>fyne.Disableable</title>
-      <link>https://darcybook.github.io/fyne/docs/api/disableable/</link>
+      <link>http://localhost:1313/fyne/docs/api/disableable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/disableable/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/disableable/</guid>
       <description>fyne.Disableable# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Disableable#type Disableable interface { 	Enable() 	Disable() 	Disabled() bool } Disableable describes any CanvasObject that can be disabled. This is primarily used with objects that also implement the Tappable interface.</description>
     </item>
     
     <item>
       <title>fyne.DoubleTappable</title>
-      <link>https://darcybook.github.io/fyne/docs/api/doubletappable/</link>
+      <link>http://localhost:1313/fyne/docs/api/doubletappable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/doubletappable/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/doubletappable/</guid>
       <description>fyne.DoubleTappable# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type DoubleTappable#type DoubleTappable interface { 	DoubleTapped(*PointEvent) } DoubleTappable describes any CanvasObject that can also be double tapped.</description>
     </item>
     
     <item>
       <title>fyne.DragEvent</title>
-      <link>https://darcybook.github.io/fyne/docs/api/dragevent/</link>
+      <link>http://localhost:1313/fyne/docs/api/dragevent/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/dragevent/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/dragevent/</guid>
       <description>fyne.DragEvent# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type DragEvent#type DragEvent struct { 	PointEvent 	Dragged Delta } DragEvent defines the parameters of a pointer or other drag event. The DraggedX and DraggedY fields show how far the item was dragged since the last event.</description>
     </item>
     
     <item>
       <title>fyne.Draggable</title>
-      <link>https://darcybook.github.io/fyne/docs/api/draggable/</link>
+      <link>http://localhost:1313/fyne/docs/api/draggable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/draggable/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/draggable/</guid>
       <description>fyne.Draggable# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Draggable#type Draggable interface { 	Dragged(*DragEvent) 	DragEnd() } Draggable indicates that a CanvasObject can be dragged. This is used for any item that the user has indicated should be moved across the screen.</description>
     </item>
     
     <item>
       <title>fyne.Driver</title>
-      <link>https://darcybook.github.io/fyne/docs/api/driver/</link>
+      <link>http://localhost:1313/fyne/docs/api/driver/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/driver/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/driver/</guid>
       <description>fyne.Driver# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Driver#type Driver interface { 	// CreateWindow creates a new UI Window. 	CreateWindow(string) Window 	// AllWindows returns a slice containing all app windows. 	AllWindows() []Window  	// RenderedTextSize returns the size required to render the given string of specified 	// font size and style. It also returns the height to text baseline, measured from the top.</description>
     </item>
     
     <item>
       <title>fyne.Focusable&#34;</title>
-      <link>https://darcybook.github.io/fyne/docs/api/focusable/</link>
+      <link>http://localhost:1313/fyne/docs/api/focusable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/focusable/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/focusable/</guid>
       <description>fyne.Focusable# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Focusable#type Focusable interface { 	// FocusGained is a hook called by the focus handling logic after this object gained the focus. 	FocusGained() 	// FocusLost is a hook called by the focus handling logic after this object lost the focus. 	FocusLost()  	// TypedRune is a hook called by the input handling logic on text input events if this object is focused.</description>
     </item>
     
     <item>
       <title>fyne.HardwareKey</title>
-      <link>https://darcybook.github.io/fyne/docs/api/hardwarekey/</link>
+      <link>http://localhost:1313/fyne/docs/api/hardwarekey/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/hardwarekey/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/hardwarekey/</guid>
       <description>fyne.HardwareKey# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type HardwareKey#type HardwareKey struct { 	// ScanCode represents a hardware ID for (normally desktop) keyboard events. 	ScanCode int } HardwareKey contains information associated with physical key events Most applications should use KeyName for cross-platform compatibility.</description>
     </item>
     
     <item>
       <title>fyne.KeyEvent</title>
-      <link>https://darcybook.github.io/fyne/docs/api/keyevent/</link>
+      <link>http://localhost:1313/fyne/docs/api/keyevent/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/keyevent/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/keyevent/</guid>
       <description>fyne.KeyEvent# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type KeyEvent#type KeyEvent struct { 	// Name describes the keyboard event that is consistent across platforms. 	Name KeyName 	// Physical is a platform specific field that reports the hardware information of physical keyboard events. 	Physical HardwareKey } KeyEvent describes a keyboard input event.</description>
     </item>
     
     <item>
       <title>fyne.KeyName</title>
-      <link>https://darcybook.github.io/fyne/docs/api/keyname/</link>
+      <link>http://localhost:1313/fyne/docs/api/keyname/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/keyname/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/keyname/</guid>
       <description>fyne.KeyName# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type KeyName#type KeyName string KeyName represents the name of a key that has been pressed
 const ( 	// KeyEscape is the &amp;#34;esc&amp;#34; key 	KeyEscape KeyName = &amp;#34;Escape&amp;#34; 	// KeyReturn is the carriage return (main keyboard) 	KeyReturn KeyName = &amp;#34;Return&amp;#34; 	// KeyTab is the tab advance key 	KeyTab KeyName = &amp;#34;Tab&amp;#34; 	// KeyBackspace is the delete-before-cursor key 	KeyBackspace KeyName = &amp;#34;BackSpace&amp;#34; 	// KeyInsert is the insert mode key 	KeyInsert KeyName = &amp;#34;Insert&amp;#34; 	// KeyDelete is the delete-after-cursor key 	KeyDelete KeyName = &amp;#34;Delete&amp;#34; 	// KeyRight is the right arrow key 	KeyRight KeyName = &amp;#34;Right&amp;#34; 	// KeyLeft is the left arrow key 	KeyLeft KeyName = &amp;#34;Left&amp;#34; 	// KeyDown is the down arrow key 	KeyDown KeyName = &amp;#34;Down&amp;#34; 	// KeyUp is the up arrow key 	KeyUp KeyName = &amp;#34;Up&amp;#34; 	// KeyPageUp is the page up num-pad key 	KeyPageUp KeyName = &amp;#34;Prior&amp;#34; 	// KeyPageDown is the page down num-pad key 	KeyPageDown KeyName = &amp;#34;Next&amp;#34; 	// KeyHome is the line-home key 	KeyHome KeyName = &amp;#34;Home&amp;#34; 	// KeyEnd is the line-end key 	KeyEnd KeyName = &amp;#34;End&amp;#34;  	// KeyF1 is the first function key 	KeyF1 KeyName = &amp;#34;F1&amp;#34; 	// KeyF2 is the second function key 	KeyF2 KeyName = &amp;#34;F2&amp;#34; 	// KeyF3 is the third function key 	KeyF3 KeyName = &amp;#34;F3&amp;#34; 	// KeyF4 is the fourth function key 	KeyF4 KeyName = &amp;#34;F4&amp;#34; 	// KeyF5 is the fifth function key 	KeyF5 KeyName = &amp;#34;F5&amp;#34; 	// KeyF6 is the sixth function key 	KeyF6 KeyName = &amp;#34;F6&amp;#34; 	// KeyF7 is the seventh function key 	KeyF7 KeyName = &amp;#34;F7&amp;#34; 	// KeyF8 is the eighth function key 	KeyF8 KeyName = &amp;#34;F8&amp;#34; 	// KeyF9 is the ninth function key 	KeyF9 KeyName = &amp;#34;F9&amp;#34; 	// KeyF10 is the tenth function key 	KeyF10 KeyName = &amp;#34;F10&amp;#34; 	// KeyF11 is the eleventh function key 	KeyF11 KeyName = &amp;#34;F11&amp;#34; 	// KeyF12 is the twelfth function key 	KeyF12 KeyName = &amp;#34;F12&amp;#34;  	// KeyEnter is the enter/ return key (keypad) 	KeyEnter KeyName = &amp;#34;KP_Enter&amp;#34;  	// Key0 represents the key 0 	Key0 KeyName = &amp;#34;0&amp;#34; 	// Key1 represents the key 1 	Key1 KeyName = &amp;#34;1&amp;#34; 	// Key2 represents the key 2 	Key2 KeyName = &amp;#34;2&amp;#34; 	// Key3 represents the key 3 	Key3 KeyName = &amp;#34;3&amp;#34; 	// Key4 represents the key 4 	Key4 KeyName = &amp;#34;4&amp;#34; 	// Key5 represents the key 5 	Key5 KeyName = &amp;#34;5&amp;#34; 	// Key6 represents the key 6 	Key6 KeyName = &amp;#34;6&amp;#34; 	// Key7 represents the key 7 	Key7 KeyName = &amp;#34;7&amp;#34; 	// Key8 represents the key 8 	Key8 KeyName = &amp;#34;8&amp;#34; 	// Key9 represents the key 9 	Key9 KeyName = &amp;#34;9&amp;#34; 	// KeyA represents the key A 	KeyA KeyName = &amp;#34;A&amp;#34; 	// KeyB represents the key B 	KeyB KeyName = &amp;#34;B&amp;#34; 	// KeyC represents the key C 	KeyC KeyName = &amp;#34;C&amp;#34; 	// KeyD represents the key D 	KeyD KeyName = &amp;#34;D&amp;#34; 	// KeyE represents the key E 	KeyE KeyName = &amp;#34;E&amp;#34; 	// KeyF represents the key F 	KeyF KeyName = &amp;#34;F&amp;#34; 	// KeyG represents the key G 	KeyG KeyName = &amp;#34;G&amp;#34; 	// KeyH represents the key H 	KeyH KeyName = &amp;#34;H&amp;#34; 	// KeyI represents the key I 	KeyI KeyName = &amp;#34;I&amp;#34; 	// KeyJ represents the key J 	KeyJ KeyName = &amp;#34;J&amp;#34; 	// KeyK represents the key K 	KeyK KeyName = &amp;#34;K&amp;#34; 	// KeyL represents the key L 	KeyL KeyName = &amp;#34;L&amp;#34; 	// KeyM represents the key M 	KeyM KeyName = &amp;#34;M&amp;#34; 	// KeyN represents the key N 	KeyN KeyName = &amp;#34;N&amp;#34; 	// KeyO represents the key O 	KeyO KeyName = &amp;#34;O&amp;#34; 	// KeyP represents the key P 	KeyP KeyName = &amp;#34;P&amp;#34; 	// KeyQ represents the key Q 	KeyQ KeyName = &amp;#34;Q&amp;#34; 	// KeyR represents the key R 	KeyR KeyName = &amp;#34;R&amp;#34; 	// KeyS represents the key S 	KeyS KeyName = &amp;#34;S&amp;#34; 	// KeyT represents the key T 	KeyT KeyName = &amp;#34;T&amp;#34; 	// KeyU represents the key U 	KeyU KeyName = &amp;#34;U&amp;#34; 	// KeyV represents the key V 	KeyV KeyName = &amp;#34;V&amp;#34; 	// KeyW represents the key W 	KeyW KeyName = &amp;#34;W&amp;#34; 	// KeyX represents the key X 	KeyX KeyName = &amp;#34;X&amp;#34; 	// KeyY represents the key Y 	KeyY KeyName = &amp;#34;Y&amp;#34; 	// KeyZ represents the key Z 	KeyZ KeyName = &amp;#34;Z&amp;#34;  	// KeySpace is the space key 	KeySpace KeyName = &amp;#34;Space&amp;#34; 	// KeyApostrophe is the key &amp;#34;&amp;#39;&amp;#34; 	KeyApostrophe KeyName = &amp;#34;&amp;#39;&amp;#34; 	// KeyComma is the key &amp;#34;,&amp;#34; 	KeyComma KeyName = &amp;#34;,&amp;#34; 	// KeyMinus is the key &amp;#34;-&amp;#34; 	KeyMinus KeyName = &amp;#34;-&amp;#34; 	// KeyPeriod is the key &amp;#34;.</description>
     </item>
     
     <item>
       <title>fyne.Layout</title>
-      <link>https://darcybook.github.io/fyne/docs/api/layout/</link>
+      <link>http://localhost:1313/fyne/docs/api/layout/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/layout/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/layout/</guid>
       <description>fyne.Layout# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Layout#type Layout interface { 	// Layout will manipulate the listed CanvasObjects Size and Position 	// to fit within the specified size. 	Layout([]CanvasObject, Size) 	// MinSize calculates the smallest size that will fit the listed 	// CanvasObjects using this Layout algorithm. 	MinSize(objects []CanvasObject) Size } Layout defines how CanvasObjects may be laid out in a specified Size.</description>
     </item>
     
     <item>
       <title>fyne.LegacyTheme</title>
-      <link>https://darcybook.github.io/fyne/docs/api/legacytheme/</link>
+      <link>http://localhost:1313/fyne/docs/api/legacytheme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/legacytheme/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/legacytheme/</guid>
       <description>fyne.LegacyTheme# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type LegacyTheme#type LegacyTheme interface { 	BackgroundColor() color.Color 	ButtonColor() color.Color 	DisabledButtonColor() color.Color 	TextColor() color.Color 	DisabledTextColor() color.Color 	PlaceHolderColor() color.Color 	PrimaryColor() color.Color 	HoverColor() color.Color 	FocusColor() color.Color 	ScrollBarColor() color.Color 	ShadowColor() color.Color  	TextSize() int 	TextFont() Resource 	TextBoldFont() Resource 	TextItalicFont() Resource 	TextBoldItalicFont() Resource 	TextMonospaceFont() Resource  	Padding() int 	IconInlineSize() int 	ScrollBarSize() int 	ScrollBarSmallSize() int } LegacyTheme defines the requirements of any Fyne theme.</description>
     </item>
     
     <item>
       <title>fyne.Lifecycle</title>
-      <link>https://darcybook.github.io/fyne/docs/api/lifecycle/</link>
+      <link>http://localhost:1313/fyne/docs/api/lifecycle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/lifecycle/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/lifecycle/</guid>
       <description>fyne.Lifecycle# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Lifecycle#type Lifecycle interface { 	// SetOnEnteredForeground hooks into the app becoming foreground and gaining focus. 	SetOnEnteredForeground(func()) 	// SetOnExitedForeground hooks into the app losing input focus and going into the background. 	SetOnExitedForeground(func()) 	// SetOnStarted hooks into an event that says the app is now running. 	SetOnStarted(func()) 	// SetOnStopped hooks into an event that says the app is no longer running.</description>
     </item>
     
     <item>
       <title>fyne.ListableURI</title>
-      <link>https://darcybook.github.io/fyne/docs/api/listableuri/</link>
+      <link>http://localhost:1313/fyne/docs/api/listableuri/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/listableuri/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/listableuri/</guid>
       <description>fyne.ListableURI# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type ListableURI#type ListableURI interface { 	URI  	// List returns a list of child URIs of this URI. 	List() ([]URI, error) } ListableURI represents a URI that can have child items, most commonly a directory on disk in the native filesystem.
 Since: 1.4</description>
     </item>
     
     <item>
       <title>fyne.MainMenu</title>
-      <link>https://darcybook.github.io/fyne/docs/api/mainmenu/</link>
+      <link>http://localhost:1313/fyne/docs/api/mainmenu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/mainmenu/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/mainmenu/</guid>
       <description>fyne.MainMenu# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type MainMenu#type MainMenu struct { 	Items []*Menu } MainMenu defines the data required to show a menu bar (desktop) or other appropriate top level menu.
 func NewMainMenu#func NewMainMenu(items ...*Menu) *MainMenu NewMainMenu creates a top level menu structure used by fyne.Window for displaying a menubar (or appropriate equivalent).</description>
     </item>
     
     <item>
       <title>fyne.Menu</title>
-      <link>https://darcybook.github.io/fyne/docs/api/menu/</link>
+      <link>http://localhost:1313/fyne/docs/api/menu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/menu/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/menu/</guid>
       <description>fyne.Menu# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Menu#type Menu struct { 	Label string 	Items []*MenuItem } Menu stores the information required for a standard menu. A menu can pop down from a MainMenu or could be a pop out menu.
 func NewMenu#func NewMenu(label string, items ...*MenuItem) *Menu NewMenu creates a new menu given the specified label (to show in a MainMenu) and list of items to display.</description>
     </item>
     
     <item>
       <title>fyne.MenuItem</title>
-      <link>https://darcybook.github.io/fyne/docs/api/menuitem/</link>
+      <link>http://localhost:1313/fyne/docs/api/menuitem/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/menuitem/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/menuitem/</guid>
       <description>fyne.MenuItem# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type MenuItem#type MenuItem struct { 	ChildMenu *Menu 	// Since: 2.1 	IsQuit bool 	IsSeparator bool 	Label string 	Action func() 	// Since: 2.1 	Disabled bool 	// Since: 2.1 	Checked bool } MenuItem is a single item within any menu, it contains a display Label and Action function that is called when tapped.</description>
     </item>
     
     <item>
       <title>fyne.Notification</title>
-      <link>https://darcybook.github.io/fyne/docs/api/notification/</link>
+      <link>http://localhost:1313/fyne/docs/api/notification/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/notification/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/notification/</guid>
       <description>fyne.Notification# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Notification#type Notification struct { 	Title, Content string } Notification represents a user notification that can be sent to the operating system.
 func NewNotification#func NewNotification(title, content string) *Notification NewNotification creates a notification that can be passed to App.SendNotification.</description>
     </item>
     
     <item>
       <title>fyne.OverlayStack</title>
-      <link>https://darcybook.github.io/fyne/docs/api/overlaystack/</link>
+      <link>http://localhost:1313/fyne/docs/api/overlaystack/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/overlaystack/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/overlaystack/</guid>
       <description>fyne.OverlayStack# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type OverlayStack#type OverlayStack interface { 	// Add adds an overlay on the top of the overlay stack. 	Add(overlay CanvasObject) 	// List returns the overlays currently on the overlay stack. 	List() []CanvasObject 	// Remove removes the given object and all objects above it from the overlay stack. 	Remove(overlay CanvasObject) 	// Top returns the top-most object of the overlay stack.</description>
     </item>
     
     <item>
       <title>fyne.PointEvent</title>
-      <link>https://darcybook.github.io/fyne/docs/api/pointevent/</link>
+      <link>http://localhost:1313/fyne/docs/api/pointevent/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/pointevent/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/pointevent/</guid>
       <description>fyne.PointEvent# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type PointEvent#type PointEvent struct { 	AbsolutePosition Position // The absolute position of the event 	Position Position // The relative position of the event } PointEvent describes a pointer input event. The position is relative to the top-left of the CanvasObject this is triggered on.</description>
     </item>
     
     <item>
       <title>fyne.Position</title>
-      <link>https://darcybook.github.io/fyne/docs/api/position/</link>
+      <link>http://localhost:1313/fyne/docs/api/position/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/position/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/position/</guid>
       <description>fyne.Position# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Position#type Position struct { 	X float32 // The position from the parent&amp;#39;s left edge 	Y float32 // The position from the parent&amp;#39;s top edge } Position describes a generic X, Y coordinate relative to a parent Canvas or CanvasObject.
 func NewPos#func NewPos(x float32, y float32) Position NewPos returns a newly allocated Position representing the specified coordinates.</description>
     </item>
     
     <item>
       <title>fyne.Preferences</title>
-      <link>https://darcybook.github.io/fyne/docs/api/preferences/</link>
+      <link>http://localhost:1313/fyne/docs/api/preferences/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/preferences/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/preferences/</guid>
       <description>fyne.Preferences# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Preferences#type Preferences interface { 	// Bool looks up a boolean value for the key 	Bool(key string) bool 	// BoolWithFallback looks up a boolean value and returns the given fallback if not found 	BoolWithFallback(key string, fallback bool) bool 	// SetBool saves a boolean value for the given key 	SetBool(key string, value bool)  	// Float looks up a float64 value for the key 	Float(key string) float64 	// FloatWithFallback looks up a float64 value and returns the given fallback if not found 	FloatWithFallback(key string, fallback float64) float64 	// SetFloat saves a float64 value for the given key 	SetFloat(key string, value float64)  	// Int looks up an integer value for the key 	Int(key string) int 	// IntWithFallback looks up an integer value and returns the given fallback if not found 	IntWithFallback(key string, fallback int) int 	// SetInt saves an integer value for the given key 	SetInt(key string, value int)  	// String looks up a string value for the key 	String(key string) string 	// StringWithFallback looks up a string value and returns the given fallback if not found 	StringWithFallback(key, fallback string) string 	// SetString saves a string value for the given key 	SetString(key string, value string)  	// RemoveValue removes a value for the given key (not currently supported on iOS) 	RemoveValue(key string)  	// AddChangeListener allows code to be notified when some preferences change.</description>
     </item>
     
     <item>
       <title>fyne.Resource</title>
-      <link>https://darcybook.github.io/fyne/docs/api/resource/</link>
+      <link>http://localhost:1313/fyne/docs/api/resource/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/resource/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/resource/</guid>
       <description>fyne.Resource# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Resource#type Resource interface { 	Name() string 	Content() []byte } Resource represents a single binary resource, such as an image or font. A resource has an identifying name and byte array content. The serialised path of a resource can be obtained which may result in a blocking filesystem write operation.
 func LoadResourceFromPath#func LoadResourceFromPath(path string) (Resource, error) LoadResourceFromPath creates a new StaticResource in memory using the contents of the specified file.</description>
     </item>
     
     <item>
       <title>fyne.Scrollable</title>
-      <link>https://darcybook.github.io/fyne/docs/api/scrollable/</link>
+      <link>http://localhost:1313/fyne/docs/api/scrollable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/scrollable/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/scrollable/</guid>
       <description>fyne.Scrollable# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Scrollable#type Scrollable interface { 	Scrolled(*ScrollEvent) } Scrollable describes any CanvasObject that can also be scrolled. This is mostly used to implement the widget.ScrollContainer.</description>
     </item>
     
     <item>
       <title>fyne.ScrollEvent</title>
-      <link>https://darcybook.github.io/fyne/docs/api/scrollevent/</link>
+      <link>http://localhost:1313/fyne/docs/api/scrollevent/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/scrollevent/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/scrollevent/</guid>
       <description>fyne.ScrollEvent# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type ScrollEvent#type ScrollEvent struct { 	PointEvent 	Scrolled Delta } ScrollEvent defines the parameters of a pointer or other scroll event. The DeltaX and DeltaY represent how large the scroll was in two dimensions.</description>
     </item>
     
     <item>
       <title>fyne.SecondaryTappable</title>
-      <link>https://darcybook.github.io/fyne/docs/api/secondarytappable/</link>
+      <link>http://localhost:1313/fyne/docs/api/secondarytappable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/secondarytappable/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/secondarytappable/</guid>
       <description>fyne.SecondaryTappable# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type SecondaryTappable#type SecondaryTappable interface { 	TappedSecondary(*PointEvent) } SecondaryTappable describes a CanvasObject that can be right-clicked or long-tapped.</description>
     </item>
     
     <item>
       <title>fyne.Settings</title>
-      <link>https://darcybook.github.io/fyne/docs/api/settings/</link>
+      <link>http://localhost:1313/fyne/docs/api/settings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/settings/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/settings/</guid>
       <description>fyne.Settings# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Settings#type Settings interface { 	Theme() Theme 	SetTheme(Theme) 	// ThemeVariant defines which preferred version of a theme should be used (i.e. light or dark) 	// 	// Since: 2.0 	ThemeVariant() ThemeVariant 	Scale() float32 	// PrimaryColor indicates a user preference for a named primary color 	// 	// Since: 1.4 	PrimaryColor() string  	AddChangeListener(chan Settings) 	BuildType() BuildType } Settings describes the application configuration available.</description>
     </item>
     
     <item>
       <title>fyne.Shortcut</title>
-      <link>https://darcybook.github.io/fyne/docs/api/shortcut/</link>
+      <link>http://localhost:1313/fyne/docs/api/shortcut/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/shortcut/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/shortcut/</guid>
       <description>fyne.Shortcut# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Shortcut#type Shortcut interface { 	ShortcutName() string } Shortcut is the interface used to describe a shortcut action</description>
     </item>
     
     <item>
       <title>fyne.Shortcutable</title>
-      <link>https://darcybook.github.io/fyne/docs/api/shortcutable/</link>
+      <link>http://localhost:1313/fyne/docs/api/shortcutable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/shortcutable/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/shortcutable/</guid>
       <description>fyne.Shortcutable# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Shortcutable#type Shortcutable interface { 	TypedShortcut(Shortcut) } Shortcutable describes any CanvasObject that can respond to shortcut commands (quit, cut, copy, and paste).</description>
     </item>
     
     <item>
       <title>fyne.ShortcutCopy</title>
-      <link>https://darcybook.github.io/fyne/docs/api/shortcutcopy/</link>
+      <link>http://localhost:1313/fyne/docs/api/shortcutcopy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/shortcutcopy/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/shortcutcopy/</guid>
       <description>fyne.ShortcutCopy# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type ShortcutCopy#type ShortcutCopy struct { 	Clipboard Clipboard } ShortcutCopy describes a shortcut copy action.
 func (*ShortcutCopy) ShortcutName#func (se *ShortcutCopy) ShortcutName() string ShortcutName returns the shortcut name</description>
     </item>
     
     <item>
       <title>fyne.ShortcutCut</title>
-      <link>https://darcybook.github.io/fyne/docs/api/shortcutcut/</link>
+      <link>http://localhost:1313/fyne/docs/api/shortcutcut/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/shortcutcut/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/shortcutcut/</guid>
       <description>fyne.ShortcutCut# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type ShortcutCut#type ShortcutCut struct { 	Clipboard Clipboard } ShortcutCut describes a shortcut cut action.
 func (*ShortcutCut) ShortcutName#func (se *ShortcutCut) ShortcutName() string ShortcutName returns the shortcut name</description>
     </item>
     
     <item>
       <title>fyne.ShortcutHandler</title>
-      <link>https://darcybook.github.io/fyne/docs/api/shortcuthandler/</link>
+      <link>http://localhost:1313/fyne/docs/api/shortcuthandler/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/shortcuthandler/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/shortcuthandler/</guid>
       <description>fyne.ShortcutHandler# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type ShortcutHandler#type ShortcutHandler struct { } ShortcutHandler is a default implementation of the shortcut handler for the canvasObject
 func (*ShortcutHandler) AddShortcut#func (sh *ShortcutHandler) AddShortcut(shortcut Shortcut, handler func(shortcut Shortcut)) AddShortcut register an handler to be executed when the shortcut action is triggered
 func (*ShortcutHandler) RemoveShortcut#func (sh *ShortcutHandler) RemoveShortcut(shortcut Shortcut) RemoveShortcut removes a registered shortcut</description>
@@ -413,239 +413,239 @@ func (*ShortcutHandler) RemoveShortcut#func (sh *ShortcutHandler) RemoveShort
     
     <item>
       <title>fyne.ShortcutPaste</title>
-      <link>https://darcybook.github.io/fyne/docs/api/shortcutpaste/</link>
+      <link>http://localhost:1313/fyne/docs/api/shortcutpaste/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/shortcutpaste/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/shortcutpaste/</guid>
       <description>fyne.ShortcutPaste# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type ShortcutPaste#type ShortcutPaste struct { 	Clipboard Clipboard } ShortcutPaste describes a shortcut paste action.
 func (*ShortcutPaste) ShortcutName#func (se *ShortcutPaste) ShortcutName() string ShortcutName returns the shortcut name</description>
     </item>
     
     <item>
       <title>fyne.ShortcutSelectAll</title>
-      <link>https://darcybook.github.io/fyne/docs/api/shortcutselectall/</link>
+      <link>http://localhost:1313/fyne/docs/api/shortcutselectall/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/shortcutselectall/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/shortcutselectall/</guid>
       <description>fyne.ShortcutSelectAll# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type ShortcutSelectAll#type ShortcutSelectAll struct{} ShortcutSelectAll describes a shortcut selectAll action.
 func (*ShortcutSelectAll) ShortcutName#func (se *ShortcutSelectAll) ShortcutName() string ShortcutName returns the shortcut name</description>
     </item>
     
     <item>
       <title>fyne.Size</title>
-      <link>https://darcybook.github.io/fyne/docs/api/size/</link>
+      <link>http://localhost:1313/fyne/docs/api/size/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/size/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/size/</guid>
       <description>fyne.Size# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Size#type Size struct { 	Width float32 // The number of units along the X axis. 	Height float32 // The number of units along the Y axis. } Size describes something with width and height.
 func MeasureText#func MeasureText(text string, size float32, style TextStyle) Size MeasureText uses the current driver to calculate the size of text when rendered.</description>
     </item>
     
     <item>
       <title>fyne.StaticResource</title>
-      <link>https://darcybook.github.io/fyne/docs/api/staticresource/</link>
+      <link>http://localhost:1313/fyne/docs/api/staticresource/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/staticresource/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/staticresource/</guid>
       <description>fyne.StaticResource# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type StaticResource#type StaticResource struct { 	StaticName string 	StaticContent []byte } StaticResource is a bundled resource compiled into the application. These resources are normally generated by the fyne_bundle command included in the Fyne toolkit.
 func NewStaticResource#func NewStaticResource(name string, content []byte) *StaticResource NewStaticResource returns a new static resource object with the specified name and content. Creating a new static resource in memory results in sharable binary data that may be serialised to the location returned by CachePath().</description>
     </item>
     
     <item>
       <title>fyne.Storage</title>
-      <link>https://darcybook.github.io/fyne/docs/api/storage/</link>
+      <link>http://localhost:1313/fyne/docs/api/storage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/storage/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/storage/</guid>
       <description>fyne.Storage# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Storage#type Storage interface { 	RootURI() URI  	Create(name string) (URIWriteCloser, error) 	Open(name string) (URIReadCloser, error) 	Save(name string) (URIWriteCloser, error) 	Remove(name string) error  	List() []string } Storage is used to manage file storage inside an application sandbox. The files managed by this interface are unique to the current application.</description>
     </item>
     
     <item>
       <title>fyne.StringValidator</title>
-      <link>https://darcybook.github.io/fyne/docs/api/stringvalidator/</link>
+      <link>http://localhost:1313/fyne/docs/api/stringvalidator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/stringvalidator/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/stringvalidator/</guid>
       <description>fyne.StringValidator# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type StringValidator#type StringValidator func(string) error StringValidator is a function signature for validating string inputs.
 Since: 1.4</description>
     </item>
     
     <item>
       <title>fyne.Tabbable</title>
-      <link>https://darcybook.github.io/fyne/docs/api/tabbable/</link>
+      <link>http://localhost:1313/fyne/docs/api/tabbable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/tabbable/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/tabbable/</guid>
       <description>fyne.Tabbable# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Tabbable#type Tabbable interface { 	// AcceptsTab() is a hook called by the key press handling logic. 	// If it returns true then the Tab key events will be sent using TypedKey. 	AcceptsTab() bool } Tabbable describes any object that needs to accept the Tab key presses.
 Since: 2.1</description>
     </item>
     
     <item>
       <title>fyne.Tappable</title>
-      <link>https://darcybook.github.io/fyne/docs/api/tappable/</link>
+      <link>http://localhost:1313/fyne/docs/api/tappable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/tappable/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/tappable/</guid>
       <description>fyne.Tappable# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Tappable#type Tappable interface { 	Tapped(*PointEvent) } Tappable describes any CanvasObject that can also be tapped. This should be implemented by buttons etc that wish to handle pointer interactions.</description>
     </item>
     
     <item>
       <title>fyne.TextAlign</title>
-      <link>https://darcybook.github.io/fyne/docs/api/textalign/</link>
+      <link>http://localhost:1313/fyne/docs/api/textalign/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/textalign/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/textalign/</guid>
       <description>fyne.TextAlign# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type TextAlign#type TextAlign int TextAlign represents the horizontal alignment of text within a widget or canvas object.
 const ( 	// TextAlignLeading specifies a left alignment for left-to-right languages. 	TextAlignLeading TextAlign = iota 	// TextAlignCenter places the text centrally within the available space. 	TextAlignCenter 	// TextAlignTrailing will align the text right for a left-to-right language.</description>
     </item>
     
     <item>
       <title>fyne.TextStyle</title>
-      <link>https://darcybook.github.io/fyne/docs/api/textstyle/</link>
+      <link>http://localhost:1313/fyne/docs/api/textstyle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/textstyle/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/textstyle/</guid>
       <description>fyne.TextStyle# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type TextStyle#type TextStyle struct { 	Bold bool // Should text be bold 	Italic bool // Should text be italic 	Monospace bool // Use the system monospace font instead of regular  	// Since: 2.1 	TabWidth int // Width of tabs in spaces } TextStyle represents the styles that can be applied to a text canvas object or text based widget.</description>
     </item>
     
     <item>
       <title>fyne.TextWrap</title>
-      <link>https://darcybook.github.io/fyne/docs/api/textwrap/</link>
+      <link>http://localhost:1313/fyne/docs/api/textwrap/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/textwrap/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/textwrap/</guid>
       <description>fyne.TextWrap# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type TextWrap#type TextWrap int TextWrap represents how text longer than the widget&amp;rsquo;s width will be wrapped.
 const ( 	// TextWrapOff extends the widget&amp;#39;s width to fit the text, no wrapping is applied. 	TextWrapOff TextWrap = iota 	// TextTruncate trims the text to the widget&amp;#39;s width, no wrapping is applied. 	// If an entry is asked to truncate it will provide scrolling capabilities.</description>
     </item>
     
     <item>
       <title>fyne.Theme</title>
-      <link>https://darcybook.github.io/fyne/docs/api/theme/</link>
+      <link>http://localhost:1313/fyne/docs/api/theme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/theme/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/theme/</guid>
       <description>fyne.Theme# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Theme#type Theme interface { 	Color(ThemeColorName, ThemeVariant) color.Color 	Font(TextStyle) Resource 	Icon(ThemeIconName) Resource 	Size(ThemeSizeName) float32 } Theme defines the method to look up colors, sizes and fonts that make up a Fyne theme.
 Since: 2.0</description>
     </item>
     
     <item>
       <title>fyne.ThemeColorName</title>
-      <link>https://darcybook.github.io/fyne/docs/api/themecolorname/</link>
+      <link>http://localhost:1313/fyne/docs/api/themecolorname/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/themecolorname/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/themecolorname/</guid>
       <description>fyne.ThemeColorName# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type ThemeColorName#type ThemeColorName string ThemeColorName is used to look up a colour based on its name.
 Since: 2.0</description>
     </item>
     
     <item>
       <title>fyne.ThemeIconName</title>
-      <link>https://darcybook.github.io/fyne/docs/api/themeiconname/</link>
+      <link>http://localhost:1313/fyne/docs/api/themeiconname/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/themeiconname/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/themeiconname/</guid>
       <description>fyne.ThemeIconName# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type ThemeIconName#type ThemeIconName string ThemeIconName is used to look up an icon based on its name.
 Since: 2.0</description>
     </item>
     
     <item>
       <title>fyne.ThemeSizeName</title>
-      <link>https://darcybook.github.io/fyne/docs/api/themesizename/</link>
+      <link>http://localhost:1313/fyne/docs/api/themesizename/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/themesizename/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/themesizename/</guid>
       <description>fyne.ThemeSizeName# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type ThemeSizeName#type ThemeSizeName string ThemeSizeName is used to look up a size based on its name.
 Since: 2.0</description>
     </item>
     
     <item>
       <title>fyne.ThemeVariant</title>
-      <link>https://darcybook.github.io/fyne/docs/api/themevariant/</link>
+      <link>http://localhost:1313/fyne/docs/api/themevariant/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/themevariant/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/themevariant/</guid>
       <description>fyne.ThemeVariant# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type ThemeVariant#type ThemeVariant uint ThemeVariant indicates a variation of a theme, such as light or dark.
 Since: 2.0</description>
     </item>
     
     <item>
       <title>fyne.URI</title>
-      <link>https://darcybook.github.io/fyne/docs/api/uri/</link>
+      <link>http://localhost:1313/fyne/docs/api/uri/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/uri/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/uri/</guid>
       <description>fyne.URI# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type URI#type URI interface { 	fmt.Stringer  	// Extension should return the file extension of the resource 	// referenced by the URI. For example, the Extension() of 	// &amp;#39;file://foo/bar.baz&amp;#39; is &amp;#39;baz&amp;#39;. May return an empty string if the 	// referenced resource has none. 	Extension() string  	// Name should return the base name of the item referenced by the URI.</description>
     </item>
     
     <item>
       <title>fyne.URIReadCloser</title>
-      <link>https://darcybook.github.io/fyne/docs/api/urireadcloser/</link>
+      <link>http://localhost:1313/fyne/docs/api/urireadcloser/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/urireadcloser/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/urireadcloser/</guid>
       <description>fyne.URIReadCloser# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type URIReadCloser#type URIReadCloser interface { 	io.ReadCloser  	URI() URI } URIReadCloser represents a cross platform data stream from a file or provider of data. It may refer to an item on a filesystem or data in another application that we have access to.</description>
     </item>
     
     <item>
       <title>fyne.URIWriteCloser</title>
-      <link>https://darcybook.github.io/fyne/docs/api/uriwritecloser/</link>
+      <link>http://localhost:1313/fyne/docs/api/uriwritecloser/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/uriwritecloser/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/uriwritecloser/</guid>
       <description>fyne.URIWriteCloser# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type URIWriteCloser#type URIWriteCloser interface { 	io.WriteCloser  	URI() URI } URIWriteCloser represents a cross platform data writer for a file resource. This will normally refer to a local file resource.</description>
     </item>
     
     <item>
       <title>fyne.Validatable</title>
-      <link>https://darcybook.github.io/fyne/docs/api/validatable/</link>
+      <link>http://localhost:1313/fyne/docs/api/validatable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/validatable/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/validatable/</guid>
       <description>fyne.Validatable# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Validatable#type Validatable interface { 	Validate() error  	// SetOnValidationChanged is used to set the callback that will be triggered when the validation state changes. 	// The function might be overwritten by a parent that cares about child validation (e.g. widget.Form). 	SetOnValidationChanged(func(error)) } Validatable is an interface for specifying if a widget is validatable.</description>
     </item>
     
     <item>
       <title>fyne.Vector2</title>
-      <link>https://darcybook.github.io/fyne/docs/api/vector2/</link>
+      <link>http://localhost:1313/fyne/docs/api/vector2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/vector2/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/vector2/</guid>
       <description>fyne.Vector2# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Vector2#type Vector2 interface { 	Components() (float32, float32) 	IsZero() bool } Vector2 marks geometry types that can operate as a coordinate vector.</description>
     </item>
     
     <item>
       <title>fyne.Widget</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/</guid>
       <description>fyne.Widget# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Widget#type Widget interface { 	CanvasObject  	// CreateRenderer returns a new WidgetRenderer for this widget. 	// This should not be called by regular code, it is used internally to render a widget. 	CreateRenderer() WidgetRenderer } Widget defines the standard behaviours of any widget. This extends the CanvasObject - a widget behaves in the same basic way but will encapsulate many child objects to create the rendered widget.</description>
     </item>
     
     <item>
       <title>fyne.WidgetRenderer</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widgetrenderer/</link>
+      <link>http://localhost:1313/fyne/docs/api/widgetrenderer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widgetrenderer/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widgetrenderer/</guid>
       <description>fyne.WidgetRenderer# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type WidgetRenderer#type WidgetRenderer interface { 	// Destroy is for internal use. 	Destroy() 	// Layout is a hook that is called if the widget needs to be laid out. 	// This should never call Refresh. 	Layout(Size) 	// MinSize returns the minimum size of the widget that is rendered by this renderer. 	MinSize() Size 	// Objects returns all objects that should be drawn.</description>
     </item>
     
     <item>
       <title>fyne.Window</title>
-      <link>https://darcybook.github.io/fyne/docs/api/window/</link>
+      <link>http://localhost:1313/fyne/docs/api/window/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/window/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/window/</guid>
       <description>fyne.Window# import &amp;#34;fyne.io/fyne/v2&amp;#34; Usage#type Window#type Window interface { 	// Title returns the current window title. 	// This is typically displayed in the window decorations. 	Title() string 	// SetTitle updates the current title of the window. 	SetTitle(string)  	// FullScreen returns whether or not this window is currently full screen. 	FullScreen() bool 	// SetFullScreen changes the requested fullScreen property 	// true for a fullScreen window and false to unset this.</description>
     </item>
     
     <item>
       <title>Upgrading to v2.1</title>
-      <link>https://darcybook.github.io/fyne/docs/api/upgrading/</link>
+      <link>http://localhost:1313/fyne/docs/api/upgrading/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/upgrading/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/upgrading/</guid>
       <description>The 2.1 release is fully backward compatible with 2.0.4 and earlier, so upgrading is as simple as updating the version of code you compile with. This is different depending on whether or not you use go modules.
 Modules#If your project has a go.mod file then you can edit the require line to use version v2.1.0, or you can execute the following command inside the directory:
 go get fyne.</description>

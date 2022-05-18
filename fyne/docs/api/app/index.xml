@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>app on Hugo Book</title>
-    <link>https://darcybook.github.io/fyne/docs/api/app/</link>
+    <link>http://localhost:1313/fyne/docs/api/app/</link>
     <description>Recent content in app on Hugo Book</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/fyne/docs/api/app/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://localhost:1313/fyne/docs/api/app/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>app</title>
-      <link>https://darcybook.github.io/fyne/docs/api/app/</link>
+      <link>http://localhost:1313/fyne/docs/api/app/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/app/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/app/</guid>
       <description>app# import &amp;#34;fyne.io/fyne/v2/app&amp;#34; Package app provides app implementations for working with Fyne graphical interfaces. The fastest way to get started is to call app.New() which will normally load a new desktop application. If the &amp;ldquo;ci&amp;rdquo; tag is passed to go (go run -tags ci myapp.go) it will run an in-memory application.
 Usage#func New#func New() fyne.App New returns a new application instance with the default driver and no unique ID</description>
     </item>
     
     <item>
       <title>app.SettingsSchema</title>
-      <link>https://darcybook.github.io/fyne/docs/api/app/settingsschema/</link>
+      <link>http://localhost:1313/fyne/docs/api/app/settingsschema/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/app/settingsschema/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/app/settingsschema/</guid>
       <description>app.SettingsSchema# import &amp;#34;fyne.io/fyne/v2/app&amp;#34; Usage#type SettingsSchema#type SettingsSchema struct { 	// these items are used for global settings load 	ThemeName string `json:&amp;#34;theme&amp;#34;` 	Scale float32 `json:&amp;#34;scale&amp;#34;` 	PrimaryColor string `json:&amp;#34;primary_color&amp;#34;` } SettingsSchema is used for loading and storing global settings
 func (*SettingsSchema) StoragePath#func (sc *SettingsSchema) StoragePath() string StoragePath returns the location of the settings storage</description>
     </item>

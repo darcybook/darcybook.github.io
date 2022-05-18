@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>theme on Hugo Book</title>
-    <link>https://darcybook.github.io/fyne/docs/api/widget/</link>
+    <link>http://localhost:1313/fyne/docs/api/widget/</link>
     <description>Recent content in theme on Hugo Book</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/fyne/docs/api/widget/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://localhost:1313/fyne/docs/api/widget/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>widget</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/</guid>
       <description>widget# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Package widget defines the UI widgets within the Fyne toolkit
 Usage#var ( 	// RichTextStyleBlockquote represents a quote presented in an indented block. 	// 	// Since: 2.1 	RichTextStyleBlockquote = RichTextStyle{ 	ColorName: theme.ColorNameForeground, 	Inline: false, 	SizeName: theme.SizeNameText, 	TextStyle: fyne.TextStyle{Italic: true}, 	} 	// RichTextStyleCodeBlock represents a code blog segment. 	// 	// Since: 2.</description>
     </item>
     
     <item>
       <title>widget.Accordion</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/accordion/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/accordion/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/accordion/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/accordion/</guid>
       <description>widget.Accordion# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type Accordion#type Accordion struct { 	BaseWidget 	Items []*AccordionItem 	MultiOpen bool } Accordion displays a list of AccordionItems. Each item is represented by a button that reveals a detailed view when tapped.
 func NewAccordion#func NewAccordion(items ...*AccordionItem) *Accordion NewAccordion creates a new accordion widget.
 func (*Accordion) Append#func (a *Accordion) Append(item *AccordionItem) Append adds the given item to this Accordion.</description>
@@ -28,20 +28,20 @@ func (*Accordion) Append#func (a *Accordion) Append(item *AccordionItem) Appe
     
     <item>
       <title>widget.AccordionItem</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/accordionitem/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/accordionitem/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/accordionitem/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/accordionitem/</guid>
       <description>widget.AccordionItem# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type AccordionItem#type AccordionItem struct { 	Title string 	Detail fyne.CanvasObject 	Open bool } AccordionItem represents a single item in an Accordion.
 func NewAccordionItem#func NewAccordionItem(title string, detail fyne.CanvasObject) *AccordionItem NewAccordionItem creates a new item for an Accordion.</description>
     </item>
     
     <item>
       <title>widget.BaseWidget</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/basewidget/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/basewidget/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/basewidget/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/basewidget/</guid>
       <description>widget.BaseWidget# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type BaseWidget#type BaseWidget struct { 	Hidden bool } BaseWidget provides a helper that handles basic widget behaviours.
 func (*BaseWidget) ExtendBaseWidget#func (w *BaseWidget) ExtendBaseWidget(wid fyne.Widget) ExtendBaseWidget is used by an extending widget to make use of BaseWidget functionality.
 func (*BaseWidget) Hide#func (w *BaseWidget) Hide() Hide this widget so it is no longer visible</description>
@@ -49,88 +49,88 @@ func (*BaseWidget) Hide#func (w *BaseWidget) Hide() Hide this widget so it is
     
     <item>
       <title>widget.Button</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/button/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/button/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/button/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/button/</guid>
       <description>widget.Button# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type Button#type Button struct { 	DisableableWidget 	Text string 	Icon fyne.Resource 	// Specify how prominent the button should be, High will highlight the button and Low will remove some decoration. 	// 	// Since: 1.4 	Importance ButtonImportance 	Alignment ButtonAlign 	IconPlacement ButtonIconPlacement  	OnTapped func() `json:&amp;#34;-&amp;#34;` } Button widget has a text label and triggers an event func when clicked</description>
     </item>
     
     <item>
       <title>widget.ButtonAlign</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/buttonalign/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/buttonalign/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/buttonalign/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/buttonalign/</guid>
       <description>widget.ButtonAlign# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type ButtonAlign#type ButtonAlign int ButtonAlign represents the horizontal alignment of a button.
 const ( 	// ButtonAlignCenter aligns the icon and the text centrally. 	ButtonAlignCenter ButtonAlign = iota 	// ButtonAlignLeading aligns the icon and the text with the leading edge. 	ButtonAlignLeading 	// ButtonAlignTrailing aligns the icon and the text with the trailing edge. 	ButtonAlignTrailing ) </description>
     </item>
     
     <item>
       <title>widget.ButtonIconPlacement</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/buttoniconplacement/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/buttoniconplacement/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/buttoniconplacement/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/buttoniconplacement/</guid>
       <description>widget.ButtonIconPlacement# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type ButtonIconPlacement#type ButtonIconPlacement int ButtonIconPlacement represents the ordering of icon &amp;amp; text within a button.
 const ( 	// ButtonIconLeadingText aligns the icon on the leading edge of the text. 	ButtonIconLeadingText ButtonIconPlacement = iota 	// ButtonIconTrailingText aligns the icon on the trailing edge of the text. 	ButtonIconTrailingText ) </description>
     </item>
     
     <item>
       <title>widget.ButtonImportance</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/buttonimportance/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/buttonimportance/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/buttonimportance/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/buttonimportance/</guid>
       <description>widget.ButtonImportance# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type ButtonImportance#type ButtonImportance int ButtonImportance represents how prominent the button should appear
 Since: 1.4const ( 	// MediumImportance applies a standard appearance. 	MediumImportance ButtonImportance = iota 	// HighImportance applies a prominent appearance. 	HighImportance 	// LowImportance applies a subtle appearance. 	LowImportance ) </description>
     </item>
     
     <item>
       <title>widget.ButtonStyle</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/buttonstyle/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/buttonstyle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/buttonstyle/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/buttonstyle/</guid>
       <description>widget.ButtonStyle# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type ButtonStyle#type ButtonStyle int ButtonStyle determines the behaviour and rendering of a button.</description>
     </item>
     
     <item>
       <title>widget.Card</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/card/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/card/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/card/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/card/</guid>
       <description>widget.Card# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type Card#type Card struct { 	BaseWidget 	Title, Subtitle string 	Image *canvas.Image 	Content fyne.CanvasObject } Card widget groups title, subtitle with content and a header image
 Since: 1.4func NewCard#func NewCard(title, subtitle string, content fyne.CanvasObject) *Card NewCard creates a new card widget with the specified title, subtitle and content (all optional).</description>
     </item>
     
     <item>
       <title>widget.Check</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/check/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/check/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/check/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/check/</guid>
       <description>widget.Check# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type Check#type Check struct { 	DisableableWidget 	Text string 	Checked bool  	OnChanged func(bool) `json:&amp;#34;-&amp;#34;` } Check widget has a text label and a checked (or unchecked) icon and triggers an event func when toggled
 func NewCheck#func NewCheck(label string, changed func(bool)) *Check NewCheck creates a new check widget with the set label and change handler</description>
     </item>
     
     <item>
       <title>widget.CheckGroup</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/checkgroup/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/checkgroup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/checkgroup/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/checkgroup/</guid>
       <description>widget.CheckGroup# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type CheckGroup#type CheckGroup struct { 	DisableableWidget 	Horizontal bool 	Required bool 	OnChanged func([]string) `json:&amp;#34;-&amp;#34;` 	Options []string 	Selected []string } CheckGroup widget has a list of text labels and checkbox icons next to each. Changing the selection (any number can be selected) will trigger the changed func.
 Since: 2.1func NewCheckGroup#func NewCheckGroup(options []string, changed func([]string)) *CheckGroup NewCheckGroup creates a new check group widget with the set options and change handler</description>
     </item>
     
     <item>
       <title>widget.CustomTextGridStyle</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/customtextgridstyle/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/customtextgridstyle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/customtextgridstyle/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/customtextgridstyle/</guid>
       <description>widget.CustomTextGridStyle# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type CustomTextGridStyle#type CustomTextGridStyle struct { 	FGColor, BGColor color.Color } CustomTextGridStyle is a utility type for those not wanting to define their own style types.
 func (*CustomTextGridStyle) BackgroundColor#func (c *CustomTextGridStyle) BackgroundColor() color.Color BackgroundColor is the color a cell should use for the background.
 func (*CustomTextGridStyle) TextColor#func (c *CustomTextGridStyle) TextColor() color.Color TextColor is the color a cell should use for the text.</description>
@@ -138,10 +138,10 @@ func (*CustomTextGridStyle) TextColor#func (c *CustomTextGridStyle) TextColor
     
     <item>
       <title>widget.DisableableWidget</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/disableablewidget/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/disableablewidget/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/disableablewidget/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/disableablewidget/</guid>
       <description>widget.DisableableWidget# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type DisableableWidget#type DisableableWidget struct { 	BaseWidget } DisableableWidget describes an extension to BaseWidget which can be disabled. Disabled widgets should have a visually distinct style when disabled, normally using theme.DisabledButtonColor.
 func (*DisableableWidget) Disable#func (w *DisableableWidget) Disable() Disable this widget so that it cannot be interacted with, updating any style appropriately.
 func (*DisableableWidget) Disabled#func (w *DisableableWidget) Disabled() bool Disabled returns true if this widget is currently disabled or false if it can currently be interacted with.</description>
@@ -149,19 +149,19 @@ func (*DisableableWidget) Disabled#func (w *DisableableWidget) Disabled() boo
     
     <item>
       <title>widget.Entry</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/entry/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/entry/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/entry/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/entry/</guid>
       <description>widget.Entry# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type Entry#type Entry struct { 	DisableableWidget  	Text string 	// Since: 2.0 	TextStyle fyne.TextStyle 	PlaceHolder string 	OnChanged func(string) `json:&amp;#34;-&amp;#34;` 	// Since: 2.0 	OnSubmitted func(string) `json:&amp;#34;-&amp;#34;` 	Password bool 	MultiLine bool 	Wrapping fyne.TextWrap  	// Set a validator that this entry will check against 	// Since: 1.4 	Validator fyne.</description>
     </item>
     
     <item>
       <title>widget.FileIcon</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/fileicon/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/fileicon/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/fileicon/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/fileicon/</guid>
       <description>widget.FileIcon# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type FileIcon#type FileIcon struct { 	BaseWidget  	Selected bool 	URI fyne.URI } FileIcon is an adaption of widget.Icon for showing files and folders
 Since: 1.4func NewFileIcon#func NewFileIcon(uri fyne.URI) *FileIcon NewFileIcon takes a filepath and creates an icon with an overlaid label using the detected mimetype and extension
 Since: 1.4func (*FileIcon) CreateRenderer#func (i *FileIcon) CreateRenderer() fyne.</description>
@@ -169,38 +169,38 @@ Since: 1.4func (*FileIcon) CreateRenderer#func (i *FileIcon) CreateRenderer
     
     <item>
       <title>widget.Form</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/form/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/form/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/form/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/form/</guid>
       <description>widget.Form# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type Form#type Form struct { 	BaseWidget  	Items []*FormItem 	OnSubmit func() 	OnCancel func() 	SubmitText string 	CancelText string } Form widget is two column grid where each row has a label and a widget (usually an input). The last row of the grid will contain the appropriate form control buttons if any should be shown.</description>
     </item>
     
     <item>
       <title>widget.FormItem</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/formitem/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/formitem/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/formitem/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/formitem/</guid>
       <description>widget.FormItem# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type FormItem#type FormItem struct { 	Text string 	Widget fyne.CanvasObject  	// Since: 2.0 	HintText string } FormItem provides the details for a row in a form
 func NewFormItem#func NewFormItem(text string, widget fyne.CanvasObject) *FormItem NewFormItem creates a new form item with the specified label text and input widget</description>
     </item>
     
     <item>
       <title>widget.Hyperlink</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/hyperlink/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/hyperlink/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/hyperlink/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/hyperlink/</guid>
       <description>widget.Hyperlink# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type Hyperlink#type Hyperlink struct { 	BaseWidget 	Text string 	URL *url.URL 	Alignment fyne.TextAlign // The alignment of the Text 	Wrapping fyne.TextWrap // The wrapping of the Text 	TextStyle fyne.TextStyle // The style of the hyperlink text } Hyperlink widget is a text component with appropriate padding and layout. When clicked, the default web browser should open with a URL</description>
     </item>
     
     <item>
       <title>widget.HyperlinkSegment</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/hyperlinksegment/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/hyperlinksegment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/hyperlinksegment/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/hyperlinksegment/</guid>
       <description>widget.HyperlinkSegment# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type HyperlinkSegment#type HyperlinkSegment struct { 	Alignment fyne.TextAlign 	Text string 	URL *url.URL } HyperlinkSegment represents a hyperlink within a rich text widget.
 Since: 2.1func (*HyperlinkSegment) Inline#func (h *HyperlinkSegment) Inline() bool Inline returns true as hyperlinks are inside other elements.
 func (*HyperlinkSegment) Select#func (h *HyperlinkSegment) Select(begin, end fyne.Position) Select tells the segment that the user is selecting the content between the two positions.</description>
@@ -208,10 +208,10 @@ func (*HyperlinkSegment) Select#func (h *HyperlinkSegment) Select(begin, end 
     
     <item>
       <title>widget.Icon</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/icon/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/icon/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/icon/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/icon/</guid>
       <description>widget.Icon# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type Icon#type Icon struct { 	BaseWidget  	Resource fyne.Resource // The resource for this icon } Icon widget is a basic image component that load&amp;rsquo;s its resource to match the theme.
 func NewIcon#func NewIcon(res fyne.Resource) *Icon NewIcon returns a new icon widget that displays a themed icon resource
 func (*Icon) CreateRenderer#func (i *Icon) CreateRenderer() fyne.</description>
@@ -219,38 +219,38 @@ func (*Icon) CreateRenderer#func (i *Icon) CreateRenderer() fyne.</descriptio
     
     <item>
       <title>widget.Label</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/label/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/label/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/label/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/label/</guid>
       <description>widget.Label# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type Label#type Label struct { 	BaseWidget 	Text string 	Alignment fyne.TextAlign // The alignment of the Text 	Wrapping fyne.TextWrap // The wrapping of the Text 	TextStyle fyne.TextStyle // The style of the label text } Label widget is a label component with appropriate padding and layout.
 func NewLabel#func NewLabel(text string) *Label NewLabel creates a new label widget with the set text content</description>
     </item>
     
     <item>
       <title>widget.List</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/list/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/list/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/list/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/list/</guid>
       <description>widget.List# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type List#type List struct { 	BaseWidget  	Length func() int 	CreateItem func() fyne.CanvasObject 	UpdateItem func(id ListItemID, item fyne.CanvasObject) 	OnSelected func(id ListItemID) 	OnUnselected func(id ListItemID) } List is a widget that pools list items for performance and lays the items out in a vertical direction inside of a scroller. List requires that all items are the same size.</description>
     </item>
     
     <item>
       <title>widget.ListItemID</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/listitemid/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/listitemid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/listitemid/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/listitemid/</guid>
       <description>widget.ListItemID# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type ListItemID#type ListItemID = int ListItemID uniquely identifies an item within a list.</description>
     </item>
     
     <item>
       <title>widget.ListSegment</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/listsegment/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/listsegment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/listsegment/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/listsegment/</guid>
       <description>widget.ListSegment# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type ListSegment#type ListSegment struct { 	Items []RichTextSegment 	Ordered bool } ListSegment includes an itemised list with the content set using the Items field.
 Since: 2.1func (*ListSegment) Inline#func (l *ListSegment) Inline() bool Inline returns false as a list should be in a block.
 func (*ListSegment) Segments#func (l *ListSegment) Segments() []RichTextSegment Segments returns the segments required to draw bullets before each item</description>
@@ -258,10 +258,10 @@ func (*ListSegment) Segments#func (l *ListSegment) Segments() []RichTextSegme
     
     <item>
       <title>widget.Menu</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/menu/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/menu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/menu/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/menu/</guid>
       <description>widget.Menu# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type Menu#type Menu struct { 	BaseWidget  	Items []fyne.CanvasObject 	OnDismiss func() } Menu is a widget for displaying a fyne.Menu.
 func NewMenu#func NewMenu(menu *fyne.Menu) *Menu NewMenu creates a new Menu.
 func (*Menu) ActivateLastSubmenu#func (m *Menu) ActivateLastSubmenu() bool ActivateLastSubmenu finds the last active menu item traversing through the open submenus and activates its submenu if any.</description>
@@ -269,40 +269,40 @@ func (*Menu) ActivateLastSubmenu#func (m *Menu) ActivateLastSubmenu() bool Ac
     
     <item>
       <title>widget.Orientation</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/orientation/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/orientation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/orientation/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/orientation/</guid>
       <description>widget.Orientation# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type Orientation#type Orientation int Orientation controls the horizontal/vertical layout of a widget
 const ( 	Horizontal Orientation = 0 	Vertical Orientation = 1 ) Orientation constants to control widget layout</description>
     </item>
     
     <item>
       <title>widget.ParagraphSegment</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/paragraphsegment/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/paragraphsegment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/paragraphsegment/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/paragraphsegment/</guid>
       <description>widget.ParagraphSegment# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type ParagraphSegment#type ParagraphSegment struct { 	Texts []RichTextSegment } ParagraphSegment wraps a number of text elements in a paragraph. It is similar to using a list of text elements when the final style is RichTextStyleParagraph.
 Since: 2.1func (*ParagraphSegment) Inline#func (p *ParagraphSegment) Inline() bool Inline returns false as a paragraph should be in a block.</description>
     </item>
     
     <item>
       <title>widget.PopUp</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/popup/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/popup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/popup/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/popup/</guid>
       <description>widget.PopUp# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type PopUp#type PopUp struct { 	BaseWidget  	Content fyne.CanvasObject 	Canvas fyne.Canvas } PopUp is a widget that can float above the user interface. It wraps any standard elements with padding and a shadow. If it is modal then the shadow will cover the entire canvas it hovers over and block interactions.
 func NewModalPopUp#func NewModalPopUp(content fyne.</description>
     </item>
     
     <item>
       <title>widget.PopUpMenu</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/popupmenu/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/popupmenu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/popupmenu/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/popupmenu/</guid>
       <description>widget.PopUpMenu# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type PopUpMenu#type PopUpMenu struct { 	*Menu } PopUpMenu is a Menu which displays itself in an OverlayContainer.
 func NewPopUpMenu#func NewPopUpMenu(menu *fyne.Menu, c fyne.Canvas) *PopUpMenu NewPopUpMenu creates a new, reusable popup menu. You can show it using ShowAtPosition.
 Since: 2.0func (*PopUpMenu) FocusGained#func (p *PopUpMenu) FocusGained() FocusGained is triggered when the object gained focus.</description>
@@ -310,88 +310,88 @@ Since: 2.0func (*PopUpMenu) FocusGained#func (p *PopUpMenu) FocusGained() F
     
     <item>
       <title>widget.ProgressBar</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/progressbar/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/progressbar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/progressbar/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/progressbar/</guid>
       <description>widget.ProgressBar# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type ProgressBar#type ProgressBar struct { 	BaseWidget  	Min, Max, Value float64  	// TextFormatter can be used to have a custom format of progress text. 	// If set, it overrides the percentage readout and runs each time the value updates. 	// 	// Since: 1.4 	TextFormatter func() string } ProgressBar widget creates a horizontal panel that indicates progress</description>
     </item>
     
     <item>
       <title>widget.ProgressBarInfinite</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/progressbarinfinite/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/progressbarinfinite/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/progressbarinfinite/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/progressbarinfinite/</guid>
       <description>widget.ProgressBarInfinite# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type ProgressBarInfinite#type ProgressBarInfinite struct { 	BaseWidget } ProgressBarInfinite widget creates a horizontal panel that indicates waiting indefinitely An infinite progress bar loops 0% -&amp;gt; 100% repeatedly until Stop() is called
 func NewProgressBarInfinite#func NewProgressBarInfinite() *ProgressBarInfinite NewProgressBarInfinite creates a new progress bar widget that loops indefinitely from 0% -&amp;gt; 100% SetValue() is not defined for infinite progress bar To stop the looping progress and set the progress bar to 100%, call ProgressBarInfinite.</description>
     </item>
     
     <item>
       <title>widget.RadioGroup</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/radiogroup/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/radiogroup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/radiogroup/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/radiogroup/</guid>
       <description>widget.RadioGroup# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type RadioGroup#type RadioGroup struct { 	DisableableWidget 	Horizontal bool 	Required bool 	OnChanged func(string) `json:&amp;#34;-&amp;#34;` 	Options []string 	Selected string } RadioGroup widget has a list of text labels and checks check icons next to each. Changing the selection (only one can be selected) will trigger the changed func.
 Since: 1.4func NewRadioGroup#func NewRadioGroup(options []string, changed func(string)) *RadioGroup NewRadioGroup creates a new radio group widget with the set options and change handler</description>
     </item>
     
     <item>
       <title>widget.RichText</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/richtext/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/richtext/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/richtext/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/richtext/</guid>
       <description>widget.RichText# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type RichText#type RichText struct { 	BaseWidget 	Segments []RichTextSegment 	Wrapping fyne.TextWrap 	Scroll widget.ScrollDirection } RichText represents the base element for a rich text-based widget.
 Since: 2.1func NewRichText#func NewRichText(segments ...RichTextSegment) *RichText NewRichText returns a new RichText widget that renders the given text and segments. If no segments are specified it will be converted to a single segment using the default text settings.</description>
     </item>
     
     <item>
       <title>widget.RichTextBlock</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/richtextblock/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/richtextblock/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/richtextblock/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/richtextblock/</guid>
       <description>widget.RichTextBlock# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type RichTextBlock#type RichTextBlock interface { 	Segments() []RichTextSegment } RichTextBlock is an extension of a text segment that contains other segments
 Since: 2.1</description>
     </item>
     
     <item>
       <title>widget.RichTextSegment</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/richtextsegment/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/richtextsegment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/richtextsegment/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/richtextsegment/</guid>
       <description>widget.RichTextSegment# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type RichTextSegment#type RichTextSegment interface { 	Inline() bool 	Textual() string 	Update(fyne.CanvasObject) 	Visual() fyne.CanvasObject  	Select(pos1, pos2 fyne.Position) 	SelectedText() string 	Unselect() } RichTextSegment describes any element that can be rendered in a RichText widget.
 Since: 2.1</description>
     </item>
     
     <item>
       <title>widget.RichTextStyle</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/richtextstyle/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/richtextstyle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/richtextstyle/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/richtextstyle/</guid>
       <description>widget.RichTextStyle# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type RichTextStyle#type RichTextStyle struct { 	Alignment fyne.TextAlign 	ColorName fyne.ThemeColorName 	Inline bool 	SizeName fyne.ThemeSizeName 	TextStyle fyne.TextStyle } RichTextStyle describes the details of a text object inside a RichText widget.
 Since: 2.1</description>
     </item>
     
     <item>
       <title>widget.Select</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/select/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/select/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/select/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/select/</guid>
       <description>widget.Select# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type Select#type Select struct { 	DisableableWidget  	// Alignment sets the text alignment of the select and its list of options. 	// 	// Since: 2.1 	Alignment fyne.TextAlign 	Selected string 	Options []string 	PlaceHolder string 	OnChanged func(string) `json:&amp;#34;-&amp;#34;` } Select widget has a list of options, with the current one shown, and triggers an event func when clicked</description>
     </item>
     
     <item>
       <title>widget.SelectEntry</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/selectentry/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/selectentry/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/selectentry/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/selectentry/</guid>
       <description>widget.SelectEntry# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type SelectEntry#type SelectEntry struct { 	Entry } SelectEntry is an input field which supports selecting from a fixed set of options.
 func NewSelectEntry#func NewSelectEntry(options []string) *SelectEntry NewSelectEntry creates a SelectEntry.
 func (*SelectEntry) CreateRenderer#func (e *SelectEntry) CreateRenderer() fyne.WidgetRenderer CreateRenderer returns a new renderer for this select entry.
@@ -400,10 +400,10 @@ Implements: fyne.Widgetfunc (*SelectEntry) Disable#func (e *SelectEntry) Di
     
     <item>
       <title>widget.Separator</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/separator/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/separator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/separator/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/separator/</guid>
       <description>widget.Separator# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type Separator#type Separator struct { 	BaseWidget } Separator is a widget for displaying a separator with themeable color.
 Since: 1.4func NewSeparator#func NewSeparator() *Separator NewSeparator creates a new separator.
 Since: 1.4func (*Separator) CreateRenderer#func (s *Separator) CreateRenderer() fyne.WidgetRenderer CreateRenderer returns a new renderer for the separator.
@@ -412,10 +412,10 @@ Implements: fyne.Widgetfunc (*Separator) MinSize#func (s *Separator) MinSiz
     
     <item>
       <title>widget.SeparatorSegment</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/separatorsegment/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/separatorsegment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/separatorsegment/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/separatorsegment/</guid>
       <description>widget.SeparatorSegment# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type SeparatorSegment#type SeparatorSegment struct { } SeparatorSegment includes a horizontal separator in a rich text widget.
 Since: 2.1func (*SeparatorSegment) Inline#func (s *SeparatorSegment) Inline() bool Inline returns false as a separator should be full width.
 func (*SeparatorSegment) Select#func (s *SeparatorSegment) Select(_, _ fyne.Position) Select does nothing for a separator.
@@ -424,10 +424,10 @@ func (*SeparatorSegment) SelectedText#func (s *SeparatorSegment) SelectedText
     
     <item>
       <title>widget.Slider</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/slider/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/slider/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/slider/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/slider/</guid>
       <description>widget.Slider# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type Slider#type Slider struct { 	BaseWidget  	Value float64 	Min float64 	Max float64 	Step float64  	Orientation Orientation 	OnChanged func(float64) } Slider is a widget that can slide between two fixed values.
 func NewSlider#func NewSlider(min, max float64) *Slider NewSlider returns a basic slider.
 func NewSliderWithData#func NewSliderWithData(min, max float64, data binding.</description>
@@ -435,66 +435,66 @@ func NewSliderWithData#func NewSliderWithData(min, max float64, data binding.
     
     <item>
       <title>widget.Table</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/table/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/table/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/table/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/table/</guid>
       <description>widget.Table# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type Table#type Table struct { 	BaseWidget  	Length func() (int, int) 	CreateCell func() fyne.CanvasObject 	UpdateCell func(id TableCellID, template fyne.CanvasObject) 	OnSelected func(id TableCellID) 	OnUnselected func(id TableCellID) } Table widget is a grid of items that can be scrolled and a cell selected. It&amp;rsquo;s performance is provided by caching cell templates created with CreateCell and re-using them with UpdateCell.</description>
     </item>
     
     <item>
       <title>widget.TableCellID</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/tablecellid/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/tablecellid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/tablecellid/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/tablecellid/</guid>
       <description>widget.TableCellID# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type TableCellID#type TableCellID struct { 	Row int 	Col int } TableCellID is a type that represents a cell&amp;rsquo;s position in a table based on it&amp;rsquo;s row and column location.</description>
     </item>
     
     <item>
       <title>widget.TextGrid</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/textgrid/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/textgrid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/textgrid/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/textgrid/</guid>
       <description>widget.TextGrid# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type TextGrid#type TextGrid struct { 	BaseWidget 	Rows []TextGridRow  	ShowLineNumbers bool 	ShowWhitespace bool 	TabWidth int // If set to 0 the fyne.DefaultTabWidth is used } TextGrid is a monospaced grid of characters. This is designed to be used by a text editor, code preview or terminal emulator.
 func NewTextGrid#func NewTextGrid() *TextGrid NewTextGrid creates a new empty TextGrid widget.</description>
     </item>
     
     <item>
       <title>widget.TextGridCell</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/textgridcell/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/textgridcell/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/textgridcell/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/textgridcell/</guid>
       <description>widget.TextGridCell# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type TextGridCell#type TextGridCell struct { 	Rune rune 	Style TextGridStyle } TextGridCell represents a single cell in a text grid. It has a rune for the text content and a style associated with it.</description>
     </item>
     
     <item>
       <title>widget.TextGridRow</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/textgridrow/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/textgridrow/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/textgridrow/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/textgridrow/</guid>
       <description>widget.TextGridRow# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type TextGridRow#type TextGridRow struct { 	Cells []TextGridCell 	Style TextGridStyle } TextGridRow represents a row of cells cell in a text grid. It contains the cells for the row and an optional style.</description>
     </item>
     
     <item>
       <title>widget.TextGridStyle</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/textgridstyle/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/textgridstyle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/textgridstyle/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/textgridstyle/</guid>
       <description>widget.TextGridStyle# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type TextGridStyle#type TextGridStyle interface { 	TextColor() color.Color 	BackgroundColor() color.Color } TextGridStyle defines a style that can be applied to a TextGrid cell.
 var ( 	// TextGridStyleDefault is a default style for test grid cells 	TextGridStyleDefault TextGridStyle 	// TextGridStyleWhitespace is the style used for whitespace characters, if enabled 	TextGridStyleWhitespace TextGridStyle ) </description>
     </item>
     
     <item>
       <title>widget.TextSegment</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/textsegment/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/textsegment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/textsegment/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/textsegment/</guid>
       <description>widget.TextSegment# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type TextSegment#type TextSegment struct { 	Style RichTextStyle 	Text string } TextSegment represents the styling for a segment of rich text.
 Since: 2.1func (*TextSegment) Inline#func (t *TextSegment) Inline() bool Inline should return true if this text can be included within other elements, or false if it creates a new block.
 func (*TextSegment) Select#func (t *TextSegment) Select(begin, end fyne.</description>
@@ -502,10 +502,10 @@ func (*TextSegment) Select#func (t *TextSegment) Select(begin, end fyne.</des
     
     <item>
       <title>widget.Toolbar</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/toolbar/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/toolbar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/toolbar/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/toolbar/</guid>
       <description>widget.Toolbar# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type Toolbar#type Toolbar struct { 	BaseWidget 	Items []ToolbarItem } Toolbar widget creates a horizontal list of tool buttons
 func NewToolbar#func NewToolbar(items ...ToolbarItem) *Toolbar NewToolbar creates a new toolbar widget.
 func (*Toolbar) Append#func (t *Toolbar) Append(item ToolbarItem) Append a new ToolbarItem to the end of this Toolbar
@@ -514,20 +514,20 @@ func (*Toolbar) CreateRenderer#func (t *Toolbar) CreateRenderer() fyne.</desc
     
     <item>
       <title>widget.ToolbarAction</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/toolbaraction/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/toolbaraction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/toolbaraction/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/toolbaraction/</guid>
       <description>widget.ToolbarAction# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type ToolbarAction#type ToolbarAction struct { 	Icon fyne.Resource 	OnActivated func() `json:&amp;#34;-&amp;#34;` } ToolbarAction is push button style of ToolbarItem
 func (*ToolbarAction) ToolbarObject#func (t *ToolbarAction) ToolbarObject() fyne.CanvasObject ToolbarObject gets a button to render this ToolbarAction</description>
     </item>
     
     <item>
       <title>widget.ToolbarItem</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/toolbaritem/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/toolbaritem/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/toolbaritem/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/toolbaritem/</guid>
       <description>widget.ToolbarItem# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type ToolbarItem#type ToolbarItem interface { 	ToolbarObject() fyne.CanvasObject } ToolbarItem represents any interface element that can be added to a toolbar
 func NewToolbarAction#func NewToolbarAction(icon fyne.Resource, onActivated func()) ToolbarItem NewToolbarAction returns a new push button style ToolbarItem
 func NewToolbarSeparator#func NewToolbarSeparator() ToolbarItem NewToolbarSeparator returns a new separator item for a Toolbar to assist with ToolbarItem grouping</description>
@@ -535,39 +535,39 @@ func NewToolbarSeparator#func NewToolbarSeparator() ToolbarItem NewToolbarSep
     
     <item>
       <title>widget.ToolbarSeparator</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/toolbarseparator/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/toolbarseparator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/toolbarseparator/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/toolbarseparator/</guid>
       <description>widget.ToolbarSeparator# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type ToolbarSeparator#type ToolbarSeparator struct { } ToolbarSeparator is a thin, visible divide that can be added to a Toolbar. This is typically used to assist visual grouping of ToolbarItems.
 func (*ToolbarSeparator) ToolbarObject#func (t *ToolbarSeparator) ToolbarObject() fyne.CanvasObject ToolbarObject gets the visible line object for this ToolbarSeparator</description>
     </item>
     
     <item>
       <title>widget.ToolbarSpacer</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/toolbarspacer/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/toolbarspacer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/toolbarspacer/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/toolbarspacer/</guid>
       <description>widget.ToolbarSpacer# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type ToolbarSpacer#type ToolbarSpacer struct { } ToolbarSpacer is a blank, stretchable space for a toolbar. This is typically used to assist layout if you wish some left and some right aligned items. Space will be split evebly amongst all the spacers on a toolbar.
 func (*ToolbarSpacer) ToolbarObject#func (t *ToolbarSpacer) ToolbarObject() fyne.CanvasObject ToolbarObject gets the actual spacer object for this ToolbarSpacer</description>
     </item>
     
     <item>
       <title>widget.Tree</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/tree/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/tree/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/tree/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/tree/</guid>
       <description>widget.Tree# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type Tree#type Tree struct { 	BaseWidget 	Root TreeNodeID  	ChildUIDs func(uid TreeNodeID) (c []TreeNodeID) // Return a sorted slice of Children TreeNodeIDs for the given Node TreeNodeID 	CreateNode func(branch bool) (o fyne.CanvasObject) // Return a CanvasObject that can represent a Branch (if branch is true), or a Leaf (if branch is false) 	IsBranch func(uid TreeNodeID) (ok bool) // Return true if the given TreeNodeID represents a Branch 	OnBranchClosed func(uid TreeNodeID) // Called when a Branch is closed 	OnBranchOpened func(uid TreeNodeID) // Called when a Branch is opened 	OnSelected func(uid TreeNodeID) // Called when the Node with the given TreeNodeID is selected.</description>
     </item>
     
     <item>
       <title>widget.TreeNodeID</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/treenodeid/</link>
+      <link>http://localhost:1313/fyne/docs/api/widget/treenodeid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/treenodeid/</guid>
+      <guid>http://localhost:1313/fyne/docs/api/widget/treenodeid/</guid>
       <description>widget.TreeNodeID# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type TreeNodeID#type TreeNodeID = string TreeNodeID represents the unique id of a tree node.</description>
     </item>
     

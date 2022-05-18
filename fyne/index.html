@@ -4,24 +4,25 @@
 	<meta name="generator" content="Hugo 0.99.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="fyne &ndash; golang gui界面#">
+<meta name="description" content="About#Fyne is an easy-to-use UI toolkit and app API written in Go. It is designed to build applications that run on desktop and mobile devices with a single codebase.
+Version 2.1 is the current release of the Fyne API, it introduced RichText and the DocTabs container, as well as the document storage API and FyneApp.toml metadata support. We are now working towards the next big release, codenamed bowmore and more news will follow in our news feeds and GitHub project.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="Introduction" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://darcybook.github.io/fyne/" />
+<meta property="og:url" content="http://localhost:1313/fyne/" />
 
 <title>Introduction | Hugo Book</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-  <link rel="alternate" hreflang="en" href="https://darcybook.github.io/" title="Introduction">
-  <link rel="alternate" hreflang="analects" href="https://darcybook.github.io/analects/" title="Hugo Book">
+  <link rel="alternate" hreflang="en" href="http://localhost:1313/" title="Introduction">
+  <link rel="alternate" hreflang="analects" href="http://localhost:1313/analects/" title="Hugo Book">
 <link rel="stylesheet" href="/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css" integrity="sha256-gsXb0jRHzuC0wqo&#43;0Izglh&#43;qQOH6Nw7uT4yfAuDUa18=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/fyne.search.min.1d99d935ee07d6824785b043437bd8a71a62e2a00d1b6141399574aedb9c88c6.js" integrity="sha256-HZnZNe4H1oJHhbBDQ3vYpxpi4qANG2FBOZV0rtuciMY=" crossorigin="anonymous"></script>
+  <script defer src="/fyne.search.min.f0bee1b08acd1bfd94b66d58f1f268232b2ea03d38267d62c43f1eb33e0dfd72.js" integrity="sha256-8L7hsIrNG/2Utm1Y8fJoIysuoD04Jn1ixD8esz4N/XI=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
-<link rel="alternate" type="application/rss+xml" href="https://darcybook.github.io/fyne/index.xml" title="Hugo Book" />
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/fyne/index.xml" title="Hugo Book" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -71,7 +72,7 @@ https://github.com/alex-shpak/hugo-book
     <input type="checkbox" id="languages" class="toggle" />
     <label for="languages" class="flex justify-between">
       <a role="button" class="flex align-center">
-        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        <img src="/svg/book.svg" class="book-icon" alt="Languages" />
         fyne
       </a>
     </label>
@@ -79,13 +80,13 @@ https://github.com/alex-shpak/hugo-book
     <ul>
       
       <li>
-        <a href="https://darcybook.github.io/">
+        <a href="http://localhost:1313/">
           fyne中文
         </a>
       </li>
       
       <li>
-        <a href="https://darcybook.github.io/analects/">
+        <a href="http://localhost:1313/analects/">
           论语
         </a>
       </li>
@@ -4615,7 +4616,25 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#fyne----golang-gui界面">fyne &ndash; golang gui界面</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#widget-demo">Widget demo</a></li>
+    <li><a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#run-in-mobile-simulation">Run in mobile simulation</a></li>
+      </ul>
+    </li>
+    <li><a href="#installing">Installing</a></li>
+    <li><a href="#packaging-for-mobile">Packaging for mobile</a></li>
+    <li><a href="#preparing-a-release">Preparing a release</a></li>
+    <li><a href="#documentation">Documentation</a></li>
+    <li><a href="#examples">Examples</a></li>
+    <li><a href="#shipping-the-fyne-toolkit">Shipping the Fyne Toolkit</a>
+      <ul>
+        <li><a href="#additional-apps">Additional apps</a></li>
+        <li><a href="#fynedesk-linux--bsd">FyneDesk (Linux / BSD)</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -4628,10 +4647,184 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="fyne----golang-gui界面">
-  fyne &ndash; golang gui界面
-  <a class="anchor" href="#fyne----golang-gui%e7%95%8c%e9%9d%a2">#</a>
+  <article class="markdown"><h1 id="about">
+  About
+  <a class="anchor" href="#about">#</a>
 </h1>
+<p>
+  <a href="https://fyne.io">Fyne</a> is an easy-to-use UI toolkit and app API written in Go.
+It is designed to build applications that run on desktop and mobile devices with a
+single codebase.</p>
+<p>Version 2.1 is the current release of the Fyne API, it introduced RichText
+and the DocTabs container, as well as the document storage API and FyneApp.toml
+metadata support.
+We are now working towards the next big release, codenamed 
+
+  <a href="https://github.com/fyne-io/fyne/milestone/15">bowmore</a>
+and more news will follow in our news feeds and GitHub project.</p>
+<h1 id="prerequisites">
+  Prerequisites
+  <a class="anchor" href="#prerequisites">#</a>
+</h1>
+<p>To develop apps using Fyne you will need Go version 1.14 or later, a C compiler and your system&rsquo;s development tools.
+If you&rsquo;re not sure if that&rsquo;s all installed or you don&rsquo;t know how then check out our
+
+  <a href="https://fyne.io/develop/">Getting Started</a> document.</p>
+<p>Using the standard go tools you can install Fyne&rsquo;s core library using:</p>
+<pre><code>$ go get fyne.io/fyne/v2
+</code></pre>
+<h1 id="widget-demo">
+  Widget demo
+  <a class="anchor" href="#widget-demo">#</a>
+</h1>
+<p>To run a showcase of the features of Fyne execute the following:</p>
+<pre><code>$ go get fyne.io/fyne/v2/cmd/fyne_demo/
+$ fyne_demo
+</code></pre>
+<p>And you should see something like this (after you click a few buttons):</p>
+<p>
+  <img src="/mk_img/_index-00-851-8.png" alt="图 1" /></p>
+<p>Or if you are using the light theme:</p>
+<p>
+  <img src="/mk_img/_index-01-458-4.png" alt="图 2" /></p>
+<p>And even running on a mobile device:</p>
+<p>
+  <img src="/mk_img/_index-01-729-6.png" alt="图 3" /></p>
+<h1 id="getting-started">
+  Getting Started
+  <a class="anchor" href="#getting-started">#</a>
+</h1>
+<p>Fyne is designed to be really easy to code with.
+If you have followed the prerequisite steps above then all you need is a
+Go IDE (or a text editor).</p>
+<p>Open a new file and you&rsquo;re ready to write your first app!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fyne.io/fyne/v2/app&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fyne.io/fyne/v2/container&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fyne.io/fyne/v2/widget&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">New</span>()
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">w</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">NewWindow</span>(<span style="color:#e6db74">&#34;Hello&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">hello</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">widget</span>.<span style="color:#a6e22e">NewLabel</span>(<span style="color:#e6db74">&#34;Hello Fyne!&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">SetContent</span>(<span style="color:#a6e22e">container</span>.<span style="color:#a6e22e">NewVBox</span>(
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">hello</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">widget</span>.<span style="color:#a6e22e">NewButton</span>(<span style="color:#e6db74">&#34;Hi!&#34;</span>, <span style="color:#66d9ef">func</span>() {
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">hello</span>.<span style="color:#a6e22e">SetText</span>(<span style="color:#e6db74">&#34;Welcome :)&#34;</span>)
+</span></span><span style="display:flex;"><span>		}),
+</span></span><span style="display:flex;"><span>	))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">ShowAndRun</span>()
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>And you can run that simply as:</p>
+<pre><code>$ go run main.go
+</code></pre>
+<p>It should look like this:</p>
+<p>
+  <img src="/mk_img/_index-01-675-4.png" alt="图 4" /></p>
+<blockquote>
+<p>Note that Windows applications load from a command prompt by default, which means if you click an icon you may see a command window.
+To fix this add the parameters <code>-ldflags -H=windowsgui</code> to your run or build commands.</p>
+</blockquote>
+<h2 id="run-in-mobile-simulation">
+  Run in mobile simulation
+  <a class="anchor" href="#run-in-mobile-simulation">#</a>
+</h2>
+<p>There is a helpful mobile simulation mode that gives a hint of how your app would work on a mobile device:</p>
+<pre><code>$ go run -tags mobile main.go
+</code></pre>
+<h1 id="installing">
+  Installing
+  <a class="anchor" href="#installing">#</a>
+</h1>
+<p>Using <code>go install</code> will copy the executable into your go <code>bin</code> dir.
+To install the application with icons etc into your operating system&rsquo;s standard
+application location you can use the fyne utility and the &ldquo;install&rdquo; subcommand.</p>
+<pre><code>$ go get fyne.io/fyne/v2/cmd/fyne
+$ fyne install
+</code></pre>
+<h1 id="packaging-for-mobile">
+  Packaging for mobile
+  <a class="anchor" href="#packaging-for-mobile">#</a>
+</h1>
+<p>To run on a mobile device it is necessary to package up the application.
+To do this we can use the fyne utility &ldquo;package&rdquo; subcommand.
+You will need to add appropriate parameters as prompted, but the basic command is shown below.
+Once packaged you can install using the platform development tools or the fyne &ldquo;install&rdquo; subcommand.</p>
+<pre><code>$ fyne package -os android -appID my.domain.appname
+$ fyne install -os android
+</code></pre>
+<h1 id="preparing-a-release">
+  Preparing a release
+  <a class="anchor" href="#preparing-a-release">#</a>
+</h1>
+<p>Using the fyne utility &ldquo;release&rdquo; subcommand you can package up your app for release
+to app stores and market places. Make sure you have the standard build tools installed
+and have followed the platform documentation for setting up accounts and signing.
+Then you can execute something like the following, notice the <code>-os ios</code> parameter allows
+building an iOS app from macOS computer. Other combinations work as well :)</p>
+<pre><code>$ fyne release -os ios -certificate &quot;Apple Distribution&quot; -profile &quot;My App Distribution&quot; -appID &quot;com.example.myapp&quot;
+</code></pre>
+<p>The above command will create a &lsquo;.ipa&rsquo; file that can then be uploaded to the iOS App Store.</p>
+<h1 id="documentation">
+  Documentation
+  <a class="anchor" href="#documentation">#</a>
+</h1>
+<p>More documentation is available at the 
+  <a href="https://developer.fyne.io/">Fyne developer website</a> or on 
+  <a href="https://pkg.go.dev/fyne.io/fyne/v2?tab=doc">pkg.go.dev</a>.</p>
+<h1 id="examples">
+  Examples
+  <a class="anchor" href="#examples">#</a>
+</h1>
+<p>You can find many example applications in the 
+  <a href="https://github.com/fyne-io/examples/">examples repository</a>.
+Alternatively a list of applications using fyne can be found at 
+  <a href="https://apps.fyne.io/">our website</a>.</p>
+<h1 id="shipping-the-fyne-toolkit">
+  Shipping the Fyne Toolkit
+  <a class="anchor" href="#shipping-the-fyne-toolkit">#</a>
+</h1>
+<p>All Fyne apps will work without pre-installed libraries, this is one reason the apps are so portable.
+However, if looking to support Fyne in a bigger way on your operating system then you can install some utilities that help to make a more complete experience.</p>
+<h2 id="additional-apps">
+  Additional apps
+  <a class="anchor" href="#additional-apps">#</a>
+</h2>
+<p>It is recommended that you install the following additional apps:</p>
+<table>
+<thead>
+<tr>
+<th>app</th>
+<th>go get</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fyne_settings</td>
+<td><code>fyne.io/fyne/v2/cmd/fyne_settings</code></td>
+<td>A GUI for managing your global Fyne settings like theme and scaling</td>
+</tr>
+<tr>
+<td>apps</td>
+<td><code>github.com/fyne-io/apps</code></td>
+<td>A graphical installer for the Fyne apps listed at 
+  <a href="https://apps.fyne.io">https://apps.fyne.io</a></td>
+</tr>
+</tbody>
+</table>
+<p>These are optional applications but can help to create a more complete desktop experience.</p>
+<h2 id="fynedesk-linux--bsd">
+  FyneDesk (Linux / BSD)
+  <a class="anchor" href="#fynedesk-linux--bsd">#</a>
+</h2>
+<p>To go all the way with Fyne on your desktop / laptop computer you could install 
+  <a href="https://github.com/fyne-io/fynedesk">FyneDesk</a> as well :)</p>
 </article>
  
       
@@ -4641,7 +4834,7 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://gitee.com/darcyjoven/hugo_gitee/commit/b727ecced999c6cc4f27b258cdb3ba327c063c5e" title='最后修改者 darcy | May 18, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://gitee.com/darcyjoven/hugo_gitee/commit/7a55773200098d30af32eed199ac63eaf8614771" title='最后修改者 darcybook | May 18, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>May 18, 2022</span>
     </a>
@@ -4686,7 +4879,25 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#fyne----golang-gui界面">fyne &ndash; golang gui界面</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#widget-demo">Widget demo</a></li>
+    <li><a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#run-in-mobile-simulation">Run in mobile simulation</a></li>
+      </ul>
+    </li>
+    <li><a href="#installing">Installing</a></li>
+    <li><a href="#packaging-for-mobile">Packaging for mobile</a></li>
+    <li><a href="#preparing-a-release">Preparing a release</a></li>
+    <li><a href="#documentation">Documentation</a></li>
+    <li><a href="#examples">Examples</a></li>
+    <li><a href="#shipping-the-fyne-toolkit">Shipping the Fyne Toolkit</a>
+      <ul>
+        <li><a href="#additional-apps">Additional apps</a></li>
+        <li><a href="#fynedesk-linux--bsd">FyneDesk (Linux / BSD)</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
