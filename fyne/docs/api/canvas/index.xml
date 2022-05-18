@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>canvas on Hugo Book</title>
+    <link>https://example.com/fyne/docs/api/canvas/</link>
+    <description>Recent content in canvas on Hugo Book</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/fyne/docs/api/canvas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>canvas</title>
+      <link>https://example.com/fyne/docs/api/canvas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/fyne/docs/api/canvas/</guid>
+      <description>canvas# import &amp;#34;fyne.io/fyne/v2/canvas&amp;#34; Package canvas contains all of the primitive CanvasObjects that make up a Fyne GUI
+The types implemented in this package are used as building blocks in order to build higher order functionality. These types are designed to be non-interactive, by design. If additional functonality is required, it&amp;rsquo;s usually a sign that this type should be used as part of a custom Widget.
+Usage#const ( 	// DurationStandard is the time a standard interface animation will run.</description>
+    </item>
+    
+    <item>
+      <title>canvas.Circle</title>
+      <link>https://example.com/fyne/docs/api/canvas/circle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/fyne/docs/api/canvas/circle/</guid>
+      <description>canvas.Circle# import &amp;#34;fyne.io/fyne/v2/canvas&amp;#34; Usage#type Circle#type Circle struct { 	Position1 fyne.Position // The current top-left position of the Circle 	Position2 fyne.Position // The current bottomright position of the Circle 	Hidden bool // Is this circle currently hidden  	FillColor color.Color // The circle fill color 	StrokeColor color.Color // The circle stroke color 	StrokeWidth float32 // The stroke width of the circle } Circle describes a colored circle primitive in a Fyne canvas</description>
+    </item>
+    
+    <item>
+      <title>canvas.Image</title>
+      <link>https://example.com/fyne/docs/api/canvas/image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/fyne/docs/api/canvas/image/</guid>
+      <description>canvas.Image# import &amp;#34;fyne.io/fyne/v2/canvas&amp;#34; Usage#type Image#type Image struct {  	// one of the following sources will provide our image data 	File string // Load the image from a file 	Resource fyne.Resource // Load the image from an in-memory resource 	Image image.Image // Specify a loaded image to use in this canvas object  	Translucency float64 // Set a translucency value &amp;gt; 0.</description>
+    </item>
+    
+    <item>
+      <title>canvas.ImageFill</title>
+      <link>https://example.com/fyne/docs/api/canvas/imagefill/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/fyne/docs/api/canvas/imagefill/</guid>
+      <description>canvas.ImageFill# import &amp;#34;fyne.io/fyne/v2/canvas&amp;#34; Usage#type ImageFill#type ImageFill int ImageFill defines the different type of ways an image can stretch to fill its space.
+const ( 	// ImageFillStretch will scale the image to match the Size() values. 	// This is the default and does not maintain aspect ratio. 	ImageFillStretch ImageFill = iota 	// ImageFillContain makes the image fit within the object Size(), 	// centrally and maintaining aspect ratio.</description>
+    </item>
+    
+    <item>
+      <title>canvas.ImageScale</title>
+      <link>https://example.com/fyne/docs/api/canvas/imagescale/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/fyne/docs/api/canvas/imagescale/</guid>
+      <description>canvas.ImageScale# import &amp;#34;fyne.io/fyne/v2/canvas&amp;#34; Usage#type ImageScale#type ImageScale int32 ImageScale defines the different scaling filters used to scaling images
+const ( 	// ImageScaleSmooth will scale the image using ApproxBiLinear filter (or GL equivalent) 	ImageScaleSmooth ImageScale = 0 	// ImageScalePixels will scale the image using NearestNeighbor filter (or GL equivalent) 	ImageScalePixels ImageScale = 1 	// ImageScaleFastest will scale the image using hardware GPU if available 	// 	// Since: 2.</description>
+    </item>
+    
+    <item>
+      <title>canvas.Line</title>
+      <link>https://example.com/fyne/docs/api/canvas/line/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/fyne/docs/api/canvas/line/</guid>
+      <description>canvas.Line# import &amp;#34;fyne.io/fyne/v2/canvas&amp;#34; Usage#type Line#type Line struct { 	Position1 fyne.Position // The current top-left position of the Line 	Position2 fyne.Position // The current bottomright position of the Line 	Hidden bool // Is this Line currently hidden  	StrokeColor color.Color // The line stroke color 	StrokeWidth float32 // The stroke width of the line } Line describes a colored line primitive in a Fyne canvas.</description>
+    </item>
+    
+    <item>
+      <title>canvas.LinearGradient</title>
+      <link>https://example.com/fyne/docs/api/canvas/lineargradient/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/fyne/docs/api/canvas/lineargradient/</guid>
+      <description>canvas.LinearGradient# import &amp;#34;fyne.io/fyne/v2/canvas&amp;#34; Usage#type LinearGradient#type LinearGradient struct { 	StartColor color.Color // The beginning color of the gradient 	EndColor color.Color // The end color of the gradient 	Angle float64 // The angle of the gradient (0/180 for vertical; 90/270 for horizontal) } LinearGradient defines a Gradient travelling straight at a given angle. The only supported values for the angle are 0.</description>
+    </item>
+    
+    <item>
+      <title>canvas.RadialGradient</title>
+      <link>https://example.com/fyne/docs/api/canvas/radialgradient/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/fyne/docs/api/canvas/radialgradient/</guid>
+      <description>canvas.RadialGradient# import &amp;#34;fyne.io/fyne/v2/canvas&amp;#34; Usage#type RadialGradient#type RadialGradient struct { 	StartColor color.Color // The beginning color of the gradient 	EndColor color.Color // The end color of the gradient 	// The offset of the center for generation of the gradient. 	// This is not a DP measure but relates to the width/height. 	// A value of 0.5 would move the center by the half width/height.</description>
+    </item>
+    
+    <item>
+      <title>canvas.Raster</title>
+      <link>https://example.com/fyne/docs/api/canvas/raster/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/fyne/docs/api/canvas/raster/</guid>
+      <description>canvas.Raster# import &amp;#34;fyne.io/fyne/v2/canvas&amp;#34; Usage#type Raster#type Raster struct {  	// Render the raster image from code 	Generator func(w, h int) image.Image  	// Set a translucency value &amp;gt; 0.0 to fade the raster 	Translucency float64 	// Specify the type of scaling interpolation applied to the raster if it is not full-size 	// Since: 1.4.1 	ScaleMode ImageScale } Raster describes a raster image area that can render in a Fyne canvas</description>
+    </item>
+    
+    <item>
+      <title>canvas.Rectangle</title>
+      <link>https://example.com/fyne/docs/api/canvas/rectangle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/fyne/docs/api/canvas/rectangle/</guid>
+      <description>canvas.Rectangle# import &amp;#34;fyne.io/fyne/v2/canvas&amp;#34; Usage#type Rectangle#type Rectangle struct { 	FillColor color.Color // The rectangle fill color 	StrokeColor color.Color // The rectangle stroke color 	StrokeWidth float32 // The stroke width of the rectangle } Rectangle describes a colored rectangle primitive in a Fyne canvas
+func NewRectangle#func NewRectangle(color color.Color) *Rectangle NewRectangle returns a new Rectangle instance
+func (*Rectangle) Hide#func (r *Rectangle) Hide() Hide will set this object to not be visible.</description>
+    </item>
+    
+    <item>
+      <title>canvas.Text</title>
+      <link>https://example.com/fyne/docs/api/canvas/text/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/fyne/docs/api/canvas/text/</guid>
+      <description>canvas.Text# import &amp;#34;fyne.io/fyne/v2/canvas&amp;#34; Usage#type Text#type Text struct { 	Alignment fyne.TextAlign // The alignment of the text content  	Color color.Color // The main text draw color 	Text string // The string content of this Text 	TextSize float32 // Size of the text - if the Canvas scale is 1.0 this will be equivalent to point size 	TextStyle fyne.</description>
+    </item>
+    
+  </channel>
+</rss>

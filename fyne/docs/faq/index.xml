@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Frequently Asked Questions on Hugo Book</title>
+    <link>https://example.com/fyne/docs/faq/</link>
+    <description>Recent content in Frequently Asked Questions on Hugo Book</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/fyne/docs/faq/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Layout and Widget Size</title>
+      <link>https://example.com/fyne/docs/faq/layout/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/fyne/docs/faq/layout/</guid>
+      <description>Intro
+Move and Resize#Q: How can I move my widget to a different position or resize it?
+A: The position and size of elements in a Fyne app are controlled by the layout of the container that they are within. If the elements of your UI are too small consider using a different layout or container.
+A new Window will expand whatever element is passed to SetContent() to fill it&amp;rsquo;s size.</description>
+    </item>
+    
+    <item>
+      <title>Theme and Customisation</title>
+      <link>https://example.com/fyne/docs/faq/theme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/fyne/docs/faq/theme/</guid>
+      <description>In this page we answer some common questions about the design of Fyne themes and widgets.
+Customisation#Q: How can I change the colour of text for a Label widget?
+A: All of the standard widgets use the current Theme definition to set the colour, font and sizes. To make changes to your application consider using a custom theme.
+If your application requires text that is a different colour you can use the canvas.</description>
+    </item>
+    
+    <item>
+      <title>Frequently Asked Questions</title>
+      <link>https://example.com/fyne/docs/faq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/fyne/docs/faq/</guid>
+      <description>As the Fyne toolkit presents a different approach to the traditional design of GUI tookits in some ways we have compiled this selection of answers to frequently asked questions. The content is grouped into the following areas.
+ Layout and widget size Theme and customisation   If you have more questions please get in touch.</description>
+    </item>
+    
+  </channel>
+</rss>

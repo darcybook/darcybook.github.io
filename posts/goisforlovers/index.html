@@ -10,16 +10,16 @@ This document is a brief primer on using Go templates.">
 <meta property="og:description" content="Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
 This document is a brief primer on using Go templates." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://darcybook.github.io/posts/goisforlovers/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://example.com/posts/goisforlovers/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2014-04-02T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-05-18T16:34:53+08:00" />
+<meta property="article:modified_time" content="2022-05-18T21:30:02+08:00" />
 
 <title>(Hu)go Template Primer | Hugo Book</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css" integrity="sha256-gsXb0jRHzuC0wqo&#43;0Izglh&#43;qQOH6Nw7uT4yfAuDUa18=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.6f9efab0db570548304557c612088cd7aaca97b89395faff1af44b1aa3020b33.js" integrity="sha256-b576sNtXBUgwRVfGEgiM16rKl7iTlfr/GvRLGqMCCzM=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.3a19df1a3f139dec5cfe84e2248c41c2da78d85bd7f720f50f4ec34e36541d76.js" integrity="sha256-OhnfGj8Tnexc/oTiJIxBwtp42FvX9yD1D07DTjZUHXY=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -75,13 +75,13 @@ https://github.com/alex-shpak/hugo-book
     <ul>
       
       <li>
-        <a href="https://darcybook.github.io/fyne/">
+        <a href="https://example.com/fyne/">
           fyne
         </a>
       </li>
       
       <li>
-        <a href="https://darcybook.github.io/analects/">
+        <a href="https://example.com/analects/">
           论语
         </a>
       </li>
@@ -337,9 +337,8 @@ functions.</p>
 </h2>
 <p>Each Go template has a struct (object) made available to it. In hugo each
 template is passed either a page or a node struct depending on which type of
-page you are rendering. More details are available on the
-
-  <a href="/layout/variables">variables</a> page.</p>
+page you are rendering. More details are available on the</p>
+<!-- [variables](/layout/variables) page. -->
 <p>A variable is accessed by referencing the variable name.</p>
 <pre><code>&lt;title&gt;{{ .Title }}&lt;/title&gt;
 </code></pre>
@@ -576,7 +575,7 @@ so, such as in this example:</p>
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://gitee.com/darcyjoven/hugo_gitee/commit/b727ecced999c6cc4f27b258cdb3ba327c063c5e" title='最后修改者 darcy | May 18, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://gitee.com/darcyjoven/hugo_gitee/commit/2f030d9f8b3523f6c3662fb95bacf444d42b41a3" title='最后修改者 darcybook | May 18, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>May 18, 2022</span>
     </a>

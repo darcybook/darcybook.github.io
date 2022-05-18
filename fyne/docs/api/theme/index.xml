@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>widget on Hugo Book</title>
+    <link>https://example.com/fyne/docs/api/theme/</link>
+    <description>Recent content in widget on Hugo Book</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/fyne/docs/api/theme/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>theme</title>
+      <link>https://example.com/fyne/docs/api/theme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/fyne/docs/api/theme/</guid>
+      <description>theme# import &amp;#34;fyne.io/fyne/v2/theme&amp;#34; Package theme defines how a Fyne app should look when rendered
+Usage#const ( 	// IconNameCancel is the name of theme lookup for cancel icon. 	// 	// Since: 2.0 	IconNameCancel fyne.ThemeIconName = &amp;#34;cancel&amp;#34;  	// IconNameConfirm is the name of theme lookup for confirm icon. 	// 	// Since: 2.0 	IconNameConfirm fyne.ThemeIconName = &amp;#34;confirm&amp;#34;  	// IconNameDelete is the name of theme lookup for delete icon.</description>
+    </item>
+    
+    <item>
+      <title>theme.DisabledResource</title>
+      <link>https://example.com/fyne/docs/api/theme/disabledresource/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/fyne/docs/api/theme/disabledresource/</guid>
+      <description>theme.DisabledResource# import &amp;#34;fyne.io/fyne/v2/theme&amp;#34; Usage#type DisabledResource#type DisabledResource struct { } DisabledResource is a resource wrapper that will return an appropriate resource colorized by the current theme&amp;rsquo;s DisabledIconColor color.
+func NewDisabledResource#func NewDisabledResource(res fyne.Resource) *DisabledResource NewDisabledResource creates a resource that adapts to the current theme&amp;rsquo;s DisabledIconColor setting.
+func (*DisabledResource) Content#func (res *DisabledResource) Content() []byte Content returns the disabled style content of the correct resource for the current theme</description>
+    </item>
+    
+    <item>
+      <title>theme.ErrorThemedResource</title>
+      <link>https://example.com/fyne/docs/api/theme/errorthemedresource/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/fyne/docs/api/theme/errorthemedresource/</guid>
+      <description>theme.ErrorThemedResource# import &amp;#34;fyne.io/fyne/v2/theme&amp;#34; Usage#type ErrorThemedResource#type ErrorThemedResource struct { } ErrorThemedResource is a resource wrapper that will return a version of the resource with the main color changed to indicate an error.
+func NewErrorThemedResource#func NewErrorThemedResource(orig fyne.Resource) *ErrorThemedResource NewErrorThemedResource creates a resource that adapts to the error color for the current theme.
+func (*ErrorThemedResource) Content#func (res *ErrorThemedResource) Content() []byte Content returns the underlying content of the resource adapted to the current background color.</description>
+    </item>
+    
+    <item>
+      <title>theme.InvertedThemedResource</title>
+      <link>https://example.com/fyne/docs/api/theme/invertedthemedresource/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/fyne/docs/api/theme/invertedthemedresource/</guid>
+      <description>theme.InvertedThemedResource# import &amp;#34;fyne.io/fyne/v2/theme&amp;#34; Usage#type InvertedThemedResource#type InvertedThemedResource struct { } InvertedThemedResource is a resource wrapper that will return a version of the resource with the main color changed for use over highlighted elements.
+func NewInvertedThemedResource#func NewInvertedThemedResource(orig fyne.Resource) *InvertedThemedResource NewInvertedThemedResource creates a resource that adapts to the current theme for use over highlighted elements.
+func (*InvertedThemedResource) Content#func (res *InvertedThemedResource) Content() []byte Content returns the underlying content of the resource adapted to the current background color.</description>
+    </item>
+    
+    <item>
+      <title>theme.PrimaryThemedResource</title>
+      <link>https://example.com/fyne/docs/api/theme/primarythemedresource/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/fyne/docs/api/theme/primarythemedresource/</guid>
+      <description>theme.PrimaryThemedResource# import &amp;#34;fyne.io/fyne/v2/theme&amp;#34; Usage#type PrimaryThemedResource#type PrimaryThemedResource struct { } PrimaryThemedResource is a resource wrapper that will return a version of the resource with the main color changed to the theme primary color.
+func NewPrimaryThemedResource#func NewPrimaryThemedResource(orig fyne.Resource) *PrimaryThemedResource NewPrimaryThemedResource creates a resource that adapts to the primary color for the current theme.
+func (*PrimaryThemedResource) Content#func (res *PrimaryThemedResource) Content() []byte Content returns the underlying content of the resource adapted to the current background color.</description>
+    </item>
+    
+    <item>
+      <title>theme.ThemedResource</title>
+      <link>https://example.com/fyne/docs/api/theme/themedresource/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/fyne/docs/api/theme/themedresource/</guid>
+      <description>theme.ThemedResource# import &amp;#34;fyne.io/fyne/v2/theme&amp;#34; Usage#type ThemedResource#type ThemedResource struct { } ThemedResource is a resource wrapper that will return a version of the resource with the main color changed for the currently selected theme.
+func NewThemedResource#func NewThemedResource(src fyne.Resource) *ThemedResource NewThemedResource creates a resource that adapts to the current theme setting.
+func (*ThemedResource) Content#func (res *ThemedResource) Content() []byte Content returns the underlying content of the resource adapted to the current text color.</description>
+    </item>
+    
+  </channel>
+</rss>

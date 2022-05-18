@@ -2,74 +2,74 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://darcybook.github.io/analects/categories/</loc>
+    <loc>https://example.com/analects/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://darcybook.github.io/categories/"
+                href="https://example.com/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
-                href="https://darcybook.github.io/fyne/categories/"
+                href="https://example.com/fyne/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="analects"
-                href="https://darcybook.github.io/analects/categories/"
+                href="https://example.com/analects/categories/"
                 />
   </url><url>
-    <loc>https://darcybook.github.io/analects/</loc>
+    <loc>https://example.com/analects/</loc>
     <lastmod>2022-05-18T16:34:53+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://darcybook.github.io/"
+                href="https://example.com/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
-                href="https://darcybook.github.io/fyne/"
+                href="https://example.com/fyne/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="analects"
-                href="https://darcybook.github.io/analects/"
+                href="https://example.com/analects/"
                 />
   </url><url>
-    <loc>https://darcybook.github.io/analects/tags/</loc>
+    <loc>https://example.com/analects/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://darcybook.github.io/tags/"
+                href="https://example.com/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
-                href="https://darcybook.github.io/fyne/tags/"
+                href="https://example.com/fyne/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="analects"
-                href="https://darcybook.github.io/analects/tags/"
+                href="https://example.com/analects/tags/"
                 />
   </url><url>
-    <loc>https://darcybook.github.io/analects/docs/</loc>
+    <loc>https://example.com/analects/docs/</loc>
     <lastmod>2022-05-18T16:34:53+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://darcybook.github.io/docs/"
+                href="https://example.com/docs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
-                href="https://darcybook.github.io/fyne/docs/"
+                href="https://example.com/fyne/docs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="analects"
-                href="https://darcybook.github.io/analects/docs/"
+                href="https://example.com/analects/docs/"
                 />
   </url>
 </urlset>
