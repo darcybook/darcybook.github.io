@@ -2,65 +2,65 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>go on Hugo Book</title>
-    <link>https://example.com/fyne/tags/go/</link>
+    <link>https://darcybook.github.io/fyne/tags/go/</link>
     <description>Recent content in go on Hugo Book</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 18 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/fyne/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://darcybook.github.io/fyne/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Canvas and CanvasObject</title>
-      <link>https://example.com/fyne/docs/explore/canvas/</link>
+      <link>https://darcybook.github.io/fyne/docs/explore/canvas/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/fyne/docs/explore/canvas/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/explore/canvas/</guid>
       <description>In Fyne a Canvas is the area which an application is drawn within. Each window has a canvas which you can access with Window.Canvas() but usually you will find functions on Window that avoid accessing the canvas.
 Everything that can be drawn in Fyne is a type of CanvasObject. The example here opens a new window and then shows different types of primitive graphical element by setting the content of the window canvas.</description>
     </item>
     
     <item>
       <title>Introduction</title>
-      <link>https://example.com/fyne/docs/started/introduction/</link>
+      <link>https://darcybook.github.io/fyne/docs/started/introduction/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/fyne/docs/started/introduction/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/started/introduction/</guid>
       <description>Getting Started#Using the Fyne toolkit to build cross platform applications is very simple but does require some tools to be installed before you can begin. If your computer is set up for development with Go then the following steps may not be required, but we advise reading the tips for your operating system just in case. If later steps in this tutorial fail then you should re-visit the prerequisites below.</description>
     </item>
     
     <item>
       <title>Container and Layouts</title>
-      <link>https://example.com/fyne/docs/explore/container/</link>
+      <link>https://darcybook.github.io/fyne/docs/explore/container/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/fyne/docs/explore/container/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/explore/container/</guid>
       <description>In the previous example we saw how to set a CanvasObject to the content of a Canvas, but it is not very useful to only show one visual element. To show more than one item we use the Container type.
 As the fyne.Container also is a fyne.CanvasObject, we can set it to be the content of a fyne.Canvas. In this example we create 3 text objects and then place them in a container using the container.</description>
     </item>
     
     <item>
       <title>Hello World</title>
-      <link>https://example.com/fyne/docs/started/helloword/</link>
+      <link>https://darcybook.github.io/fyne/docs/started/helloword/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/fyne/docs/started/helloword/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/started/helloword/</guid>
       <description>Create your first Fyne app# Having completed the steps in the getting started document you&amp;rsquo;re ready to build your first app. To illustrate the process we will build a simple hello world application.
 A simple app starts by creating an app instance with app.New() and then opening a window with app.NewWindow(). Then a widget tree is defined that is set as the main content with SetContent() on a window.</description>
     </item>
     
     <item>
       <title>Application and RunLoop</title>
-      <link>https://example.com/fyne/docs/started/apprun/</link>
+      <link>https://darcybook.github.io/fyne/docs/started/apprun/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/fyne/docs/started/apprun/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/started/apprun/</guid>
       <description>For a GUI application to work it needs to run an event loop (sometimes called a runloop) that processes user interactions and drawing events. In Fyne this is started using the App.Run() or Window.ShowAndRun() functions. One of these must be called from the end of your setup code in the main() function.
 An application should only have one runloop and so you should only call Run() once in your code. Calling it a second time will cause errors.</description>
     </item>
     
     <item>
       <title>Widget List</title>
-      <link>https://example.com/fyne/docs/explore/widgets/</link>
+      <link>https://darcybook.github.io/fyne/docs/explore/widgets/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/fyne/docs/explore/widgets/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/explore/widgets/</guid>
       <description>Standard Widgets (in widget package)# Accordion#Accordion displays a list of AccordionItems. Each item is represented by a button that reveals a detailed view when tapped.
 Button#Button widget has a text label and icon, both are optional.
 Card#Card widget groups elements with a header and subheader, all are optional.
@@ -69,30 +69,30 @@ An application should only have one runloop and so you should only call Run() on
     
     <item>
       <title>Layout List</title>
-      <link>https://example.com/fyne/docs/explore/layouts/</link>
+      <link>https://darcybook.github.io/fyne/docs/explore/layouts/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/fyne/docs/explore/layouts/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/explore/layouts/</guid>
       <description>Standard Layouts# Horizontal Box (HBox)#Horizontal Box arranges items in a horizontal row. Every element will have the same height (the height of the tallest item in the container) and objects will be left-aligned at their minimum width.
 Vertical Box (VBox)#Vertical Box arranges items in a vertical column. Every element will have the same width (the width of the widest item in the container) and objects will be top-aligned at their minimum height.</description>
     </item>
     
     <item>
       <title>Updating Content</title>
-      <link>https://example.com/fyne/docs/started/updating/</link>
+      <link>https://darcybook.github.io/fyne/docs/started/updating/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/fyne/docs/started/updating/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/started/updating/</guid>
       <description>Having completed the hello world tutorial or other examples you will have created a basic user interface. In this page we see how the content of a GUI can be updated from your code.
 The first step is to assign the widget you want to update to a variable. In the hello world tutorial we passed widget.NewLabel directly into SetContent(), to update it we change that to two different lines, such as:</description>
     </item>
     
     <item>
       <title>Dialog List</title>
-      <link>https://example.com/fyne/docs/explore/dialogs/</link>
+      <link>https://darcybook.github.io/fyne/docs/explore/dialogs/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/fyne/docs/explore/dialogs/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/explore/dialogs/</guid>
       <description>Standard Dialogs# Color#Allow users to pick a colour from a standard set (or any color in advanced mode).
 Confirm#Ask for conformation of an action.
 FileOpen#Present this to ask user to choose a file to use inside the app. The actual dialog displayed will depend on the current operating system.
@@ -101,109 +101,109 @@ The first step is to assign the widget you want to update to a variable. In the 
     
     <item>
       <title>Window Handling</title>
-      <link>https://example.com/fyne/docs/started/windows/</link>
+      <link>https://darcybook.github.io/fyne/docs/started/windows/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/fyne/docs/started/windows/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/started/windows/</guid>
       <description>Windows are created using App.NewWindow() and need to be shown using the Show() function. The helper method ShowAndRun() on fyne.Window allows you to show your window and run the application at the same time.
 By default a window will be the right size to show its content by checking the MinSize() function (more on that in later examples). You can set a larger size by calling the Window.Resize() method. Into this is passed a fyne.</description>
     </item>
     
     <item>
       <title>Adding Shortcuts to an App</title>
-      <link>https://example.com/fyne/docs/explore/shortcuts/</link>
+      <link>https://darcybook.github.io/fyne/docs/explore/shortcuts/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/fyne/docs/explore/shortcuts/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/explore/shortcuts/</guid>
       <description>Shortcuts are common tasks that can be triggered by keyboard combinations or context menus. Shortcuts, much like keyboard events, can be attached to a focused element or registered on the Canvas to always be available in a Window.
 Registering with a Canvas#There are many standard shortcuts defined (such as fyne.ShortcutCopy) which are connected to standard keyboard shortcuts and right-click menus. The first step to adding a new Shortcut is to define the shortcut.</description>
     </item>
     
     <item>
       <title>Testing Graphical Apps</title>
-      <link>https://example.com/fyne/docs/started/testing/</link>
+      <link>https://darcybook.github.io/fyne/docs/started/testing/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/fyne/docs/started/testing/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/started/testing/</guid>
       <description>Part of a good test suite is being able to quickly write tests and run them on a regular basis. Fyne&amp;rsquo;s API is designed to make testing applications easy. By separating component logic from it&amp;rsquo;s rendering definition we can load applications without actually displaying them and test the functionality completely.
 Example#We can demonstrate unit testing by extending our Hello World app to include space for users to input their name to be greeted.</description>
     </item>
     
     <item>
       <title>Packaging for Desktop</title>
-      <link>https://example.com/fyne/docs/started/packaging/</link>
+      <link>https://darcybook.github.io/fyne/docs/started/packaging/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/fyne/docs/started/packaging/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/started/packaging/</guid>
       <description>Packaging a graphical app for distribution can be complex. Graphical applications typically have icons and metadata associated with them as well as specific formats required to integrate with each environment. Windows executables need embedded icons, macOS apps are bundles and with Linux there are various metadata files that should get installed. What a hassle!
 Thankfully the &amp;ldquo;fyne&amp;rdquo; app has a &amp;ldquo;package&amp;rdquo; command that can handle this automatically. Just specifying the target OS and any required metadata (such as icon) will generate the appropriate package.</description>
     </item>
     
     <item>
       <title>Using the Preferences API</title>
-      <link>https://example.com/fyne/docs/explore/preferences/</link>
+      <link>https://darcybook.github.io/fyne/docs/explore/preferences/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/fyne/docs/explore/preferences/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/explore/preferences/</guid>
       <description>Storing user configurations and values is a common task for application developers, but implementing it across multiple platforms can be tedious and time-consuming. To make it easier, Fyne has an API for storing values on the filesystem in a clean and understandable way while the complex parts are handled for you.
 Lets start with the setup of the API. It is part of the Preferences interface where storage and loading functions exist for values of Bool, Float, Int and String.</description>
     </item>
     
     <item>
       <title>Compile Options</title>
-      <link>https://example.com/fyne/docs/explore/compiling/</link>
+      <link>https://darcybook.github.io/fyne/docs/explore/compiling/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/fyne/docs/explore/compiling/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/explore/compiling/</guid>
       <description>Build tags#Fyne will typically configure your application appropriately for the target platform by selecting the driver and configuration. The following build tags are supported and can help in your development. For example if you wish to simulate a mobile application whilst running on a desktop computer you could use the following command:
 go run -tags mobile main.go    Tag Description     gles Force use of embedded OpenGL (GLES) instead of full OpenGL.</description>
     </item>
     
     <item>
       <title>Data Binding</title>
-      <link>https://example.com/fyne/docs/explore/binding/</link>
+      <link>https://darcybook.github.io/fyne/docs/explore/binding/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/fyne/docs/explore/binding/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/explore/binding/</guid>
       <description>Data binding was introduced in Fyne v2.0.0 and makes it easier to connect many widgets to a data source that will update over time. the data/binding package has many helpful bindings that can manage most standard types that will be used in an application. A data binding can be managed using the binding API (for example NewString) or it can be connected to an external item of data like (`BindInt(*int)).</description>
     </item>
     
     <item>
       <title>Packaging Mobile Apps</title>
-      <link>https://example.com/fyne/docs/started/mobile/</link>
+      <link>https://darcybook.github.io/fyne/docs/started/mobile/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/fyne/docs/started/mobile/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/started/mobile/</guid>
       <description>Your Fyne app code will work out of the box as mobile apps, just as it did for desktop. However it is a little more complex to package the code for distribution. This page will explore the process to do just that to get your app on iOS and Android.
 Firstly you will need some more development tools installed for mobile packaging to complete. For Android builds you must have the Android SDK and NDK installed with appropriate environment set up so that the tools (such as adb) can be found on the command line.</description>
     </item>
     
     <item>
       <title>Distributing to App Stores</title>
-      <link>https://example.com/fyne/docs/started/distribution/</link>
+      <link>https://darcybook.github.io/fyne/docs/started/distribution/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/fyne/docs/started/distribution/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/started/distribution/</guid>
       <description>Packaging a graphical app as described in the Packaging page provides a file or bundle that could be directly shared or distributed. However signing and uploading to app stores and market places is an additional step that requires platform-specific configuration, which we will cover in this page.
 In each of these steps we will use a new tool that is part of the fyne command line utilities. The fyne release step handles the signing and preparation for each store, but the parameters vary per-platform, which we see below.</description>
     </item>
     
     <item>
       <title>App Metadata</title>
-      <link>https://example.com/fyne/docs/started/metadata/</link>
+      <link>https://darcybook.github.io/fyne/docs/started/metadata/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/fyne/docs/started/metadata/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/started/metadata/</guid>
       <description>App Metadata#Since release v2.1.0 of the fyne command we support a metadata file that allows you to store information about your application in the repository. This file is optional, but can help to avoid having to remember specific build parameters for each package and release command.
 The file should be named FyneApp.toml in the directory where you run the fyne command (this is normally the main package). The contents of the file are as follows:</description>
     </item>
     
     <item>
       <title>Cross Compiling</title>
-      <link>https://example.com/fyne/docs/started/cross-compiling/</link>
+      <link>https://darcybook.github.io/fyne/docs/started/cross-compiling/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/fyne/docs/started/cross-compiling/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/started/cross-compiling/</guid>
       <description>Compiling for different platforms# Cross compiling with Go is designed to be simple - we just set the environment variable GOOS for the target Operating System (and GOARCH if targeting a different architecture). Unfortunately when using native graphics calls the use of CGo in Fyne makes this a little harder.
 Compiling from a development computer#To cross-compile a Fyne application you will also have to set CGO_ENABLED=1 which tells go to enable the C compiler (this is normally turned off when the target platform is different to the current system).</description>
     </item>

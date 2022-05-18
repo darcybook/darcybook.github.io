@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Architecture on Hugo Book</title>
-    <link>https://example.com/fyne/docs/architecture/</link>
+    <link>https://darcybook.github.io/fyne/docs/architecture/</link>
     <description>Recent content in Architecture on Hugo Book</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/fyne/docs/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/fyne/docs/architecture/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Geometry</title>
-      <link>https://example.com/fyne/docs/architecture/geometry/</link>
+      <link>https://darcybook.github.io/fyne/docs/architecture/geometry/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/fyne/docs/architecture/geometry/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/architecture/geometry/</guid>
       <description>Fyne apps are based on 1 canvas per window. Each canvas has a root CanvasObject which can be a single widget or a Container for many sub-objects whose size and position are controlled by a Layout.
 Position# Each canvas has its origin at the top left (0, 0) every element of the UI may be scaled depending on the output device and so the API does not describe pixels or exact measurements.</description>
     </item>
     
     <item>
       <title>Scaling</title>
-      <link>https://example.com/fyne/docs/architecture/scaling/</link>
+      <link>https://darcybook.github.io/fyne/docs/architecture/scaling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/fyne/docs/architecture/scaling/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/architecture/scaling/</guid>
       <description>Fyne is built entirely using vector graphics, which means applications written with Fyne will scale to any size beautifully (not just whole number increments). This is a great benefit to the rising popularity of high density displays on mobile devices and high-end computers. The default scale value is calculated to match your operating system - on some systems this is user configuration and on others from your screen&amp;rsquo;s pixel density (DPI - dots per inch).</description>
     </item>
     
     <item>
       <title>Widgets</title>
-      <link>https://example.com/fyne/docs/architecture/widgets/</link>
+      <link>https://darcybook.github.io/fyne/docs/architecture/widgets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/fyne/docs/architecture/widgets/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/architecture/widgets/</guid>
       <description>Widgets in the Fyne toolkit are designed for a clean and pleasant user interaction, following a standard theme and supporting rapid app development, solid testing and easy maintenance. There are various design considerations that promote that ambition, we explore them in this page.
 Behaviour API# One thing that you will notice about the standard widgets is that the API is all about behaviour and state - but very little that controls the actual look of an element.</description>
     </item>
     
     <item>
       <title>Organisation and Packages</title>
-      <link>https://example.com/fyne/docs/architecture/organisation/</link>
+      <link>https://darcybook.github.io/fyne/docs/architecture/organisation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/fyne/docs/architecture/organisation/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/architecture/organisation/</guid>
       <description>The Fyne project is split into many packages, each providing different types of functionality. They are as follows:
  fyne.io/fyne/v2 This import provides the basic definitions common to all Fyne code including data types and interfaces. fyne.io/fyne/v2/app The app package provides the APIs that start a new application. Normally you only require app.New() or app.NewWithID(). fyne.io/fyne/v2/canvas The canvas package provides all of the drawing APIs within Fyne. The complete Fyne toolkit is made up of these primitive graphical types.</description>
     </item>

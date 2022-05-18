@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>software on Hugo Book</title>
-    <link>https://example.com/fyne/docs/api/driver/software/</link>
+    <link>https://darcybook.github.io/fyne/docs/api/driver/software/</link>
     <description>Recent content in software on Hugo Book</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/fyne/docs/api/driver/software/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/fyne/docs/api/driver/software/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>software</title>
-      <link>https://example.com/fyne/docs/api/driver/software/</link>
+      <link>https://darcybook.github.io/fyne/docs/api/driver/software/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/fyne/docs/api/driver/software/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/api/driver/software/</guid>
       <description>software# import &amp;#34;fyne.io/fyne/v2/driver/software&amp;#34; Usage#func NewCanvas#func NewCanvas() test.WindowlessCanvas NewCanvas creates a new canvas in memory that can render without hardware support
 func Render#func Render(obj fyne.CanvasObject, t fyne.Theme) image.Image Render takes a canvas object and renders it to a regular Go image using the provided Theme. The returned image will be set to the object&amp;rsquo;s minimum size. Use the theme.LightTheme() or theme.</description>
     </item>
