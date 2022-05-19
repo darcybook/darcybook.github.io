@@ -3,23 +3,24 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="widgetwidget#import &#34;fyne.io/fyne/v2/widget&#34; Package widget defines the UI widgets within the Fyne toolkit Usage#var ( // RichTextStyleBlockquote represents a quote presented in an indented block. // // Since: 2.1 RichTextStyleBlockquote = RichTextStyle{ ColorName: theme.ColorNameForeground, Inline: false, SizeName: theme.SizeNameText, TextStyle: fyne.TextStyle{Italic: true}, } // RichTextStyleCodeBlock represents a code blog segment. // // Since: 2.widget.Accordionwidget.Accordion#import &#34;fyne.io/fyne/v2/widget&#34; Usage#type Accordion#type Accordion struct { BaseWidget Items []*AccordionItem MultiOpen bool } Accordion displays a list of AccordionItems.">
+<meta name="description" content="widget# import &#34;fyne.io/fyne/v2/widget&#34; Package widget defines the UI widgets within the Fyne toolkit
+Usage#var ( 	// RichTextStyleBlockquote represents a quote presented in an indented block. 	// 	// Since: 2.1 	RichTextStyleBlockquote = RichTextStyle{ 	ColorName: theme.ColorNameForeground, 	Inline: false, 	SizeName: theme.SizeNameText, 	TextStyle: fyne.TextStyle{Italic: true}, 	} 	// RichTextStyleCodeBlock represents a code blog segment. 	// 	// Since: 2.">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="theme" />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="widget" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://darcybook.github.io/fyne/docs/api/widget/" />
 
-<title>theme | Hugo Book</title>
+<title>widget | darcy&#39;s</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-  <link rel="alternate" hreflang="en" href="https://darcybook.github.io/docs/api/widget/" title="theme">
+  <link rel="alternate" hreflang="en" href="https://darcybook.github.io/docs/api/widget/" title="widget">
 <link rel="stylesheet" href="/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css" integrity="sha256-gsXb0jRHzuC0wqo&#43;0Izglh&#43;qQOH6Nw7uT4yfAuDUa18=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/fyne.search.min.f0bee1b08acd1bfd94b66d58f1f268232b2ea03d38267d62c43f1eb33e0dfd72.js" integrity="sha256-8L7hsIrNG/2Utm1Y8fJoIysuoD04Jn1ixD8esz4N/XI=" crossorigin="anonymous"></script>
+  <script defer src="/fyne.search.min.7d259177da9ad47607995874381f8a2c0b94ed76303852deda608557730a87f7.js" integrity="sha256-fSWRd9qa1HYHmVh0OB&#43;KLAuU7XYwOFLe2mCFV3MKh/c=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
-<link rel="alternate" type="application/rss+xml" href="https://darcybook.github.io/fyne/docs/api/widget/index.xml" title="Hugo Book" />
+<link rel="alternate" type="application/rss+xml" href="https://darcybook.github.io/fyne/docs/api/widget/index.xml" title="darcy's" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -35,7 +36,7 @@ https://github.com/alex-shpak/hugo-book
         
   <nav>
 <h2 class="book-brand">
-  <a class="flex align-center" href="/fyne/"><span>Hugo Book</span>
+  <a class="flex align-center" href="/fyne/"><span>darcy&#39;s</span>
   </a>
 </h2>
 
@@ -116,7 +117,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-5f9d0aad26982a16f281c40bcafb6725" class="toggle"  />
     <label for="section-5f9d0aad26982a16f281c40bcafb6725" class="flex justify-between">
-      <a href="/fyne/docs/started/" class="">Getting Started</a>
+      <a role="button" class="">Getting Started</a>
     </label>
   
 
@@ -143,7 +144,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/fyne/docs/started/helloword/" class="">Hello World</a>
+    <a href="/fyne/docs/started/helloworld/" class="">Hello World</a>
   
 
         </li>
@@ -280,7 +281,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-81fa205a1bd0374005def1b00e6db049" class="toggle"  />
     <label for="section-81fa205a1bd0374005def1b00e6db049" class="flex justify-between">
-      <a href="/fyne/docs/explore/" class="">Exploring Fyne</a>
+      <a role="button" class="">Exploring Fyne</a>
     </label>
   
 
@@ -418,7 +419,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-b7dc623d78da4829531df9d42144303b" class="toggle"  />
     <label for="section-b7dc623d78da4829531df9d42144303b" class="flex justify-between">
-      <a href="/fyne/docs/canvas/" class="">Drawing and Animation</a>
+      <a role="button" class="">Drawing and Animation</a>
     </label>
   
 
@@ -543,7 +544,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-10dd021a58cb696b6cb4f79141ec5ddb" class="toggle"  />
     <label for="section-10dd021a58cb696b6cb4f79141ec5ddb" class="flex justify-between">
-      <a href="/fyne/docs/container/" class="">Containers and Layout</a>
+      <a role="button" class="">Containers and Layout</a>
     </label>
   
 
@@ -668,7 +669,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-0d0eb913881a0c154c75678ce9ea1b89" class="toggle"  />
     <label for="section-0d0eb913881a0c154c75678ce9ea1b89" class="flex justify-between">
-      <a href="/fyne/docs/widget/" class="">Widgets</a>
+      <a role="button" class="">Widgets</a>
     </label>
   
 
@@ -820,19 +821,6 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/fyne/docs/binding/" class="">Data Binding</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
     <a href="/fyne/docs/binding/simple/" class="">Binding Simple Widgets</a>
   
 
@@ -892,7 +880,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-8a572438ecae81fbb2ca87c17042611c" class="toggle"  />
     <label for="section-8a572438ecae81fbb2ca87c17042611c" class="flex justify-between">
-      <a href="/fyne/docs/extend/" class="">Extending Fyne</a>
+      <a role="button" class="">Extending Fyne</a>
     </label>
   
 
@@ -991,7 +979,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-01573ae56b57119294f09764e82a479c" class="toggle"  />
     <label for="section-01573ae56b57119294f09764e82a479c" class="flex justify-between">
-      <a href="/fyne/docs/architecture/" class="">Architecture</a>
+      <a role="button" class="">Architecture</a>
     </label>
   
 
@@ -1097,19 +1085,6 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/faq/" class="">Frequently Asked Questions</a>
-  
-
-        </li>
-      
-    
   </ul>
 
         </li>
@@ -1124,7 +1099,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-bf7b3283e3790c00c8caaa140299052b" class="toggle" checked />
     <label for="section-bf7b3283e3790c00c8caaa140299052b" class="flex justify-between">
-      <a href="/fyne/docs/api/" class="">API Documentation</a>
+      <a href="/fyne/docs/api/" class="">Api document</a>
     </label>
   
 
@@ -1146,19 +1121,6 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/app/" class="">app</a>
-  
-
-        </li>
-      
     
       
         <li>
@@ -1193,19 +1155,6 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/canvas/" class="">canvas</a>
-  
-
-        </li>
-      
     
       
         <li>
@@ -1365,19 +1314,6 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/fyne/docs/api/container/" class="">container</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
     <a href="/fyne/docs/api/container/apptabs/" class="">container.AppTabs</a>
   
 
@@ -1476,7 +1412,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-d29e4834325fd01218a5821838a25fec" class="toggle"  />
     <label for="section-d29e4834325fd01218a5821838a25fec" class="flex justify-between">
-      <a href="/fyne/docs/api/data/" class="">data</a>
+      <a role="button" class="">data</a>
     </label>
   
 
@@ -1498,19 +1434,6 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/data/binding/" class="">binding</a>
-  
-
-        </li>
-      
     
       
         <li>
@@ -1988,19 +1911,6 @@ https://github.com/alex-shpak/hugo-book
           
   <ul>
     
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/data/validation/" class="">validation</a>
-  
-
-        </li>
-      
-    
   </ul>
 
         </li>
@@ -2026,19 +1936,6 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/dialog/" class="">dialog</a>
-  
-
-        </li>
-      
     
       
         <li>
@@ -2145,7 +2042,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-7944afb9b17616a931df6a1f1588232a" class="toggle"  />
     <label for="section-7944afb9b17616a931df6a1f1588232a" class="flex justify-between">
-      <a href="/fyne/docs/api/driver/" class="">driver</a>
+      <a role="button" class="">driver</a>
     </label>
   
 
@@ -2167,19 +2064,6 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/driver/desktop/" class="">desktop</a>
-  
-
-        </li>
-      
     
       
         <li>
@@ -2365,19 +2249,6 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/fyne/docs/api/driver/mobile/" class="">mobile</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
     <a href="/fyne/docs/api/driver/mobile/device/" class="">mobile.Device</a>
   
 
@@ -2457,38 +2328,12 @@ https://github.com/alex-shpak/hugo-book
           
   <ul>
     
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/driver/software/" class="">software</a>
-  
-
-        </li>
-      
-    
   </ul>
 
         </li>
       
     
   </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/" class="">fyne</a>
-  
 
         </li>
       
@@ -3374,19 +3219,6 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/fyne/docs/api/layout/" class="">layout</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
     <a href="/fyne/docs/api/layout/spacer/" class="">layout.Spacer</a>
   
 
@@ -3436,7 +3268,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-bdfb1fb0260a7c8eb215aa46f6d3d0a1" class="toggle"  />
     <label for="section-bdfb1fb0260a7c8eb215aa46f6d3d0a1" class="flex justify-between">
-      <a href="/fyne/docs/api/storage/repository/" class="">repository</a>
+      <a href="/fyne/docs/api/storage/repository/" class="">repository&#34;</a>
     </label>
   
 
@@ -3534,33 +3366,7 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/storage/repository/" class="">repository&#34;</a>
-  
-
-        </li>
-      
-    
   </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/storage/" class="">storage</a>
-  
 
         </li>
       
@@ -3632,19 +3438,6 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/fyne/docs/api/test/" class="">test</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
     <a href="/fyne/docs/api/test/softwarepainter/" class="">test.SoftwarePainter</a>
   
 
@@ -3676,9 +3469,9 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-e5366419c90581ed58325e348966678f" class="toggle" checked />
-    <label for="section-e5366419c90581ed58325e348966678f" class="flex justify-between">
-      <a href="/fyne/docs/api/widget/" class="active">theme</a>
+    <input type="checkbox" id="section-1d17e3ea5a1ce532f15adb7d474a1c01" class="toggle"  />
+    <label for="section-1d17e3ea5a1ce532f15adb7d474a1c01" class="flex justify-between">
+      <a href="/fyne/docs/api/theme/" class="">theme</a>
     </label>
   
 
@@ -3692,11 +3485,97 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/fyne/docs/api/widget/" class="">widget</a>
+    <a href="/fyne/docs/api/theme/disabledresource/" class="">theme.DisabledResource</a>
   
 
         </li>
       
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/api/theme/errorthemedresource/" class="">theme.ErrorThemedResource</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/api/theme/invertedthemedresource/" class="">theme.InvertedThemedResource</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/api/theme/primarythemedresource/" class="">theme.PrimaryThemedResource</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/api/theme/themedresource/" class="">theme.ThemedResource</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/api/upgrading/" class="">Upgrading to v2.1</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e5366419c90581ed58325e348966678f" class="toggle" checked />
+    <label for="section-e5366419c90581ed58325e348966678f" class="flex justify-between">
+      <a href="/fyne/docs/api/widget/" class="active">widget</a>
+    </label>
+  
+
+          
+  <ul>
     
       
         <li>
@@ -4418,118 +4297,6 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/upgrading/" class="">Upgrading to v2.1</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-1d17e3ea5a1ce532f15adb7d474a1c01" class="toggle"  />
-    <label for="section-1d17e3ea5a1ce532f15adb7d474a1c01" class="flex justify-between">
-      <a href="/fyne/docs/api/theme/" class="">widget</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/theme/" class="">theme</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/theme/disabledresource/" class="">theme.DisabledResource</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/theme/errorthemedresource/" class="">theme.ErrorThemedResource</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/theme/invertedthemedresource/" class="">theme.InvertedThemedResource</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/theme/primarythemedresource/" class="">theme.PrimaryThemedResource</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/theme/themedresource/" class="">theme.ThemedResource</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
   </ul>
 
         </li>
@@ -4552,12 +4319,12 @@ https://github.com/alex-shpak/hugo-book
   
   <li>
     <a href="" target="_blank" rel="noopener">
-        --------------------------------------------------
+        ----------------------------------
       </a>
   </li>
   
   <li>
-    <a href="https://github.com/alex-shpak/hugo-book" target="_blank" rel="noopener">
+    <a href="https://github.com/darcybook" target="_blank" rel="noopener">
         Github
       </a>
   </li>
@@ -4595,7 +4362,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>theme</strong>
+  <strong>widget</strong>
 
   <label for="toc-control">
     
@@ -4609,7 +4376,19 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#widget">widget</a>
+      <ul>
+        <li><a href="#usage">Usage</a>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
 
@@ -4620,464 +4399,254 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><dl>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/">widget</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget# import &#34;fyne.io/fyne/v2/widget&#34; Package widget defines the UI widgets within the Fyne toolkit
-Usage#var ( 	// RichTextStyleBlockquote represents a quote presented in an indented block. 	// 	// Since: 2.1 	RichTextStyleBlockquote = RichTextStyle{ 	ColorName: theme.ColorNameForeground, 	Inline: false, 	SizeName: theme.SizeNameText, 	TextStyle: fyne.TextStyle{Italic: true}, 	} 	// RichTextStyleCodeBlock represents a code blog segment. 	// 	// Since: 2.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/accordion/">widget.Accordion</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.Accordion# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type Accordion#type Accordion struct { 	BaseWidget 	Items []*AccordionItem 	MultiOpen bool } Accordion displays a list of AccordionItems. Each item is represented by a button that reveals a detailed view when tapped.
-func NewAccordion#func NewAccordion(items ...*AccordionItem) *Accordion NewAccordion creates a new accordion widget.
-func (*Accordion) Append#func (a *Accordion) Append(item *AccordionItem) Append adds the given item to this Accordion.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/accordionitem/">widget.AccordionItem</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.AccordionItem# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type AccordionItem#type AccordionItem struct { 	Title string 	Detail fyne.CanvasObject 	Open bool } AccordionItem represents a single item in an Accordion.
-func NewAccordionItem#func NewAccordionItem(title string, detail fyne.CanvasObject) *AccordionItem NewAccordionItem creates a new item for an Accordion.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/basewidget/">widget.BaseWidget</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.BaseWidget# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type BaseWidget#type BaseWidget struct { 	Hidden bool } BaseWidget provides a helper that handles basic widget behaviours.
-func (*BaseWidget) ExtendBaseWidget#func (w *BaseWidget) ExtendBaseWidget(wid fyne.Widget) ExtendBaseWidget is used by an extending widget to make use of BaseWidget functionality.
-func (*BaseWidget) Hide#func (w *BaseWidget) Hide() Hide this widget so it is no longer visible
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/button/">widget.Button</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.Button# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type Button#type Button struct { 	DisableableWidget 	Text string 	Icon fyne.Resource 	// Specify how prominent the button should be, High will highlight the button and Low will remove some decoration. 	// 	// Since: 1.4 	Importance ButtonImportance 	Alignment ButtonAlign 	IconPlacement ButtonIconPlacement  	OnTapped func() `json:&#34;-&#34;` } Button widget has a text label and triggers an event func when clicked
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/buttonalign/">widget.ButtonAlign</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.ButtonAlign# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type ButtonAlign#type ButtonAlign int ButtonAlign represents the horizontal alignment of a button.
-const ( 	// ButtonAlignCenter aligns the icon and the text centrally. 	ButtonAlignCenter ButtonAlign = iota 	// ButtonAlignLeading aligns the icon and the text with the leading edge. 	ButtonAlignLeading 	// ButtonAlignTrailing aligns the icon and the text with the trailing edge. 	ButtonAlignTrailing ) 
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/buttoniconplacement/">widget.ButtonIconPlacement</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.ButtonIconPlacement# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type ButtonIconPlacement#type ButtonIconPlacement int ButtonIconPlacement represents the ordering of icon &amp; text within a button.
-const ( 	// ButtonIconLeadingText aligns the icon on the leading edge of the text. 	ButtonIconLeadingText ButtonIconPlacement = iota 	// ButtonIconTrailingText aligns the icon on the trailing edge of the text. 	ButtonIconTrailingText ) 
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/buttonimportance/">widget.ButtonImportance</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.ButtonImportance# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type ButtonImportance#type ButtonImportance int ButtonImportance represents how prominent the button should appear
-Since: 1.4const ( 	// MediumImportance applies a standard appearance. 	MediumImportance ButtonImportance = iota 	// HighImportance applies a prominent appearance. 	HighImportance 	// LowImportance applies a subtle appearance. 	LowImportance ) 
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/buttonstyle/">widget.ButtonStyle</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.ButtonStyle# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type ButtonStyle#type ButtonStyle int ButtonStyle determines the behaviour and rendering of a button.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/card/">widget.Card</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.Card# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type Card#type Card struct { 	BaseWidget 	Title, Subtitle string 	Image *canvas.Image 	Content fyne.CanvasObject } Card widget groups title, subtitle with content and a header image
-Since: 1.4func NewCard#func NewCard(title, subtitle string, content fyne.CanvasObject) *Card NewCard creates a new card widget with the specified title, subtitle and content (all optional).
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/check/">widget.Check</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.Check# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type Check#type Check struct { 	DisableableWidget 	Text string 	Checked bool  	OnChanged func(bool) `json:&#34;-&#34;` } Check widget has a text label and a checked (or unchecked) icon and triggers an event func when toggled
-func NewCheck#func NewCheck(label string, changed func(bool)) *Check NewCheck creates a new check widget with the set label and change handler
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/checkgroup/">widget.CheckGroup</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.CheckGroup# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type CheckGroup#type CheckGroup struct { 	DisableableWidget 	Horizontal bool 	Required bool 	OnChanged func([]string) `json:&#34;-&#34;` 	Options []string 	Selected []string } CheckGroup widget has a list of text labels and checkbox icons next to each. Changing the selection (any number can be selected) will trigger the changed func.
-Since: 2.1func NewCheckGroup#func NewCheckGroup(options []string, changed func([]string)) *CheckGroup NewCheckGroup creates a new check group widget with the set options and change handler
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/customtextgridstyle/">widget.CustomTextGridStyle</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.CustomTextGridStyle# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type CustomTextGridStyle#type CustomTextGridStyle struct { 	FGColor, BGColor color.Color } CustomTextGridStyle is a utility type for those not wanting to define their own style types.
-func (*CustomTextGridStyle) BackgroundColor#func (c *CustomTextGridStyle) BackgroundColor() color.Color BackgroundColor is the color a cell should use for the background.
-func (*CustomTextGridStyle) TextColor#func (c *CustomTextGridStyle) TextColor() color.Color TextColor is the color a cell should use for the text.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/disableablewidget/">widget.DisableableWidget</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.DisableableWidget# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type DisableableWidget#type DisableableWidget struct { 	BaseWidget } DisableableWidget describes an extension to BaseWidget which can be disabled. Disabled widgets should have a visually distinct style when disabled, normally using theme.DisabledButtonColor.
-func (*DisableableWidget) Disable#func (w *DisableableWidget) Disable() Disable this widget so that it cannot be interacted with, updating any style appropriately.
-func (*DisableableWidget) Disabled#func (w *DisableableWidget) Disabled() bool Disabled returns true if this widget is currently disabled or false if it can currently be interacted with.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/entry/">widget.Entry</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.Entry# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type Entry#type Entry struct { 	DisableableWidget  	Text string 	// Since: 2.0 	TextStyle fyne.TextStyle 	PlaceHolder string 	OnChanged func(string) `json:&#34;-&#34;` 	// Since: 2.0 	OnSubmitted func(string) `json:&#34;-&#34;` 	Password bool 	MultiLine bool 	Wrapping fyne.TextWrap  	// Set a validator that this entry will check against 	// Since: 1.4 	Validator fyne.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/fileicon/">widget.FileIcon</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.FileIcon# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type FileIcon#type FileIcon struct { 	BaseWidget  	Selected bool 	URI fyne.URI } FileIcon is an adaption of widget.Icon for showing files and folders
-Since: 1.4func NewFileIcon#func NewFileIcon(uri fyne.URI) *FileIcon NewFileIcon takes a filepath and creates an icon with an overlaid label using the detected mimetype and extension
-Since: 1.4func (*FileIcon) CreateRenderer#func (i *FileIcon) CreateRenderer() fyne.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/form/">widget.Form</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.Form# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type Form#type Form struct { 	BaseWidget  	Items []*FormItem 	OnSubmit func() 	OnCancel func() 	SubmitText string 	CancelText string } Form widget is two column grid where each row has a label and a widget (usually an input). The last row of the grid will contain the appropriate form control buttons if any should be shown.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/formitem/">widget.FormItem</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.FormItem# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type FormItem#type FormItem struct { 	Text string 	Widget fyne.CanvasObject  	// Since: 2.0 	HintText string } FormItem provides the details for a row in a form
-func NewFormItem#func NewFormItem(text string, widget fyne.CanvasObject) *FormItem NewFormItem creates a new form item with the specified label text and input widget
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/hyperlink/">widget.Hyperlink</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.Hyperlink# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type Hyperlink#type Hyperlink struct { 	BaseWidget 	Text string 	URL *url.URL 	Alignment fyne.TextAlign // The alignment of the Text 	Wrapping fyne.TextWrap // The wrapping of the Text 	TextStyle fyne.TextStyle // The style of the hyperlink text } Hyperlink widget is a text component with appropriate padding and layout. When clicked, the default web browser should open with a URL
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/hyperlinksegment/">widget.HyperlinkSegment</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.HyperlinkSegment# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type HyperlinkSegment#type HyperlinkSegment struct { 	Alignment fyne.TextAlign 	Text string 	URL *url.URL } HyperlinkSegment represents a hyperlink within a rich text widget.
-Since: 2.1func (*HyperlinkSegment) Inline#func (h *HyperlinkSegment) Inline() bool Inline returns true as hyperlinks are inside other elements.
-func (*HyperlinkSegment) Select#func (h *HyperlinkSegment) Select(begin, end fyne.Position) Select tells the segment that the user is selecting the content between the two positions.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/icon/">widget.Icon</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.Icon# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type Icon#type Icon struct { 	BaseWidget  	Resource fyne.Resource // The resource for this icon } Icon widget is a basic image component that load&rsquo;s its resource to match the theme.
-func NewIcon#func NewIcon(res fyne.Resource) *Icon NewIcon returns a new icon widget that displays a themed icon resource
-func (*Icon) CreateRenderer#func (i *Icon) CreateRenderer() fyne.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/label/">widget.Label</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.Label# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type Label#type Label struct { 	BaseWidget 	Text string 	Alignment fyne.TextAlign // The alignment of the Text 	Wrapping fyne.TextWrap // The wrapping of the Text 	TextStyle fyne.TextStyle // The style of the label text } Label widget is a label component with appropriate padding and layout.
-func NewLabel#func NewLabel(text string) *Label NewLabel creates a new label widget with the set text content
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/list/">widget.List</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.List# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type List#type List struct { 	BaseWidget  	Length func() int 	CreateItem func() fyne.CanvasObject 	UpdateItem func(id ListItemID, item fyne.CanvasObject) 	OnSelected func(id ListItemID) 	OnUnselected func(id ListItemID) } List is a widget that pools list items for performance and lays the items out in a vertical direction inside of a scroller. List requires that all items are the same size.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/listitemid/">widget.ListItemID</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.ListItemID# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type ListItemID#type ListItemID = int ListItemID uniquely identifies an item within a list.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/listsegment/">widget.ListSegment</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.ListSegment# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type ListSegment#type ListSegment struct { 	Items []RichTextSegment 	Ordered bool } ListSegment includes an itemised list with the content set using the Items field.
-Since: 2.1func (*ListSegment) Inline#func (l *ListSegment) Inline() bool Inline returns false as a list should be in a block.
-func (*ListSegment) Segments#func (l *ListSegment) Segments() []RichTextSegment Segments returns the segments required to draw bullets before each item
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/menu/">widget.Menu</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.Menu# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type Menu#type Menu struct { 	BaseWidget  	Items []fyne.CanvasObject 	OnDismiss func() } Menu is a widget for displaying a fyne.Menu.
-func NewMenu#func NewMenu(menu *fyne.Menu) *Menu NewMenu creates a new Menu.
-func (*Menu) ActivateLastSubmenu#func (m *Menu) ActivateLastSubmenu() bool ActivateLastSubmenu finds the last active menu item traversing through the open submenus and activates its submenu if any.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/orientation/">widget.Orientation</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.Orientation# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type Orientation#type Orientation int Orientation controls the horizontal/vertical layout of a widget
-const ( 	Horizontal Orientation = 0 	Vertical Orientation = 1 ) Orientation constants to control widget layout
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/paragraphsegment/">widget.ParagraphSegment</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.ParagraphSegment# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type ParagraphSegment#type ParagraphSegment struct { 	Texts []RichTextSegment } ParagraphSegment wraps a number of text elements in a paragraph. It is similar to using a list of text elements when the final style is RichTextStyleParagraph.
-Since: 2.1func (*ParagraphSegment) Inline#func (p *ParagraphSegment) Inline() bool Inline returns false as a paragraph should be in a block.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/popup/">widget.PopUp</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.PopUp# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type PopUp#type PopUp struct { 	BaseWidget  	Content fyne.CanvasObject 	Canvas fyne.Canvas } PopUp is a widget that can float above the user interface. It wraps any standard elements with padding and a shadow. If it is modal then the shadow will cover the entire canvas it hovers over and block interactions.
-func NewModalPopUp#func NewModalPopUp(content fyne.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/popupmenu/">widget.PopUpMenu</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.PopUpMenu# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type PopUpMenu#type PopUpMenu struct { 	*Menu } PopUpMenu is a Menu which displays itself in an OverlayContainer.
-func NewPopUpMenu#func NewPopUpMenu(menu *fyne.Menu, c fyne.Canvas) *PopUpMenu NewPopUpMenu creates a new, reusable popup menu. You can show it using ShowAtPosition.
-Since: 2.0func (*PopUpMenu) FocusGained#func (p *PopUpMenu) FocusGained() FocusGained is triggered when the object gained focus.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/progressbar/">widget.ProgressBar</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.ProgressBar# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type ProgressBar#type ProgressBar struct { 	BaseWidget  	Min, Max, Value float64  	// TextFormatter can be used to have a custom format of progress text. 	// If set, it overrides the percentage readout and runs each time the value updates. 	// 	// Since: 1.4 	TextFormatter func() string } ProgressBar widget creates a horizontal panel that indicates progress
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/progressbarinfinite/">widget.ProgressBarInfinite</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.ProgressBarInfinite# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type ProgressBarInfinite#type ProgressBarInfinite struct { 	BaseWidget } ProgressBarInfinite widget creates a horizontal panel that indicates waiting indefinitely An infinite progress bar loops 0% -&gt; 100% repeatedly until Stop() is called
-func NewProgressBarInfinite#func NewProgressBarInfinite() *ProgressBarInfinite NewProgressBarInfinite creates a new progress bar widget that loops indefinitely from 0% -&gt; 100% SetValue() is not defined for infinite progress bar To stop the looping progress and set the progress bar to 100%, call ProgressBarInfinite.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/radiogroup/">widget.RadioGroup</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.RadioGroup# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type RadioGroup#type RadioGroup struct { 	DisableableWidget 	Horizontal bool 	Required bool 	OnChanged func(string) `json:&#34;-&#34;` 	Options []string 	Selected string } RadioGroup widget has a list of text labels and checks check icons next to each. Changing the selection (only one can be selected) will trigger the changed func.
-Since: 1.4func NewRadioGroup#func NewRadioGroup(options []string, changed func(string)) *RadioGroup NewRadioGroup creates a new radio group widget with the set options and change handler
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/richtext/">widget.RichText</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.RichText# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type RichText#type RichText struct { 	BaseWidget 	Segments []RichTextSegment 	Wrapping fyne.TextWrap 	Scroll widget.ScrollDirection } RichText represents the base element for a rich text-based widget.
-Since: 2.1func NewRichText#func NewRichText(segments ...RichTextSegment) *RichText NewRichText returns a new RichText widget that renders the given text and segments. If no segments are specified it will be converted to a single segment using the default text settings.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/richtextblock/">widget.RichTextBlock</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.RichTextBlock# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type RichTextBlock#type RichTextBlock interface { 	Segments() []RichTextSegment } RichTextBlock is an extension of a text segment that contains other segments
-Since: 2.1
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/richtextsegment/">widget.RichTextSegment</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.RichTextSegment# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type RichTextSegment#type RichTextSegment interface { 	Inline() bool 	Textual() string 	Update(fyne.CanvasObject) 	Visual() fyne.CanvasObject  	Select(pos1, pos2 fyne.Position) 	SelectedText() string 	Unselect() } RichTextSegment describes any element that can be rendered in a RichText widget.
-Since: 2.1
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/richtextstyle/">widget.RichTextStyle</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.RichTextStyle# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type RichTextStyle#type RichTextStyle struct { 	Alignment fyne.TextAlign 	ColorName fyne.ThemeColorName 	Inline bool 	SizeName fyne.ThemeSizeName 	TextStyle fyne.TextStyle } RichTextStyle describes the details of a text object inside a RichText widget.
-Since: 2.1
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/select/">widget.Select</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.Select# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type Select#type Select struct { 	DisableableWidget  	// Alignment sets the text alignment of the select and its list of options. 	// 	// Since: 2.1 	Alignment fyne.TextAlign 	Selected string 	Options []string 	PlaceHolder string 	OnChanged func(string) `json:&#34;-&#34;` } Select widget has a list of options, with the current one shown, and triggers an event func when clicked
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/selectentry/">widget.SelectEntry</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.SelectEntry# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type SelectEntry#type SelectEntry struct { 	Entry } SelectEntry is an input field which supports selecting from a fixed set of options.
-func NewSelectEntry#func NewSelectEntry(options []string) *SelectEntry NewSelectEntry creates a SelectEntry.
-func (*SelectEntry) CreateRenderer#func (e *SelectEntry) CreateRenderer() fyne.WidgetRenderer CreateRenderer returns a new renderer for this select entry.
-Implements: fyne.Widgetfunc (*SelectEntry) Disable#func (e *SelectEntry) Disable() Disable this widget so that it cannot be interacted with, updating any style appropriately.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/separator/">widget.Separator</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.Separator# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type Separator#type Separator struct { 	BaseWidget } Separator is a widget for displaying a separator with themeable color.
-Since: 1.4func NewSeparator#func NewSeparator() *Separator NewSeparator creates a new separator.
-Since: 1.4func (*Separator) CreateRenderer#func (s *Separator) CreateRenderer() fyne.WidgetRenderer CreateRenderer returns a new renderer for the separator.
-Implements: fyne.Widgetfunc (*Separator) MinSize#func (s *Separator) MinSize() fyne.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/separatorsegment/">widget.SeparatorSegment</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.SeparatorSegment# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type SeparatorSegment#type SeparatorSegment struct { } SeparatorSegment includes a horizontal separator in a rich text widget.
-Since: 2.1func (*SeparatorSegment) Inline#func (s *SeparatorSegment) Inline() bool Inline returns false as a separator should be full width.
-func (*SeparatorSegment) Select#func (s *SeparatorSegment) Select(_, _ fyne.Position) Select does nothing for a separator.
-func (*SeparatorSegment) SelectedText#func (s *SeparatorSegment) SelectedText() string SelectedText returns the empty string for this separator.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/slider/">widget.Slider</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.Slider# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type Slider#type Slider struct { 	BaseWidget  	Value float64 	Min float64 	Max float64 	Step float64  	Orientation Orientation 	OnChanged func(float64) } Slider is a widget that can slide between two fixed values.
-func NewSlider#func NewSlider(min, max float64) *Slider NewSlider returns a basic slider.
-func NewSliderWithData#func NewSliderWithData(min, max float64, data binding.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/table/">widget.Table</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.Table# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type Table#type Table struct { 	BaseWidget  	Length func() (int, int) 	CreateCell func() fyne.CanvasObject 	UpdateCell func(id TableCellID, template fyne.CanvasObject) 	OnSelected func(id TableCellID) 	OnUnselected func(id TableCellID) } Table widget is a grid of items that can be scrolled and a cell selected. It&rsquo;s performance is provided by caching cell templates created with CreateCell and re-using them with UpdateCell.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/tablecellid/">widget.TableCellID</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.TableCellID# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type TableCellID#type TableCellID struct { 	Row int 	Col int } TableCellID is a type that represents a cell&rsquo;s position in a table based on it&rsquo;s row and column location.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/textgrid/">widget.TextGrid</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.TextGrid# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type TextGrid#type TextGrid struct { 	BaseWidget 	Rows []TextGridRow  	ShowLineNumbers bool 	ShowWhitespace bool 	TabWidth int // If set to 0 the fyne.DefaultTabWidth is used } TextGrid is a monospaced grid of characters. This is designed to be used by a text editor, code preview or terminal emulator.
-func NewTextGrid#func NewTextGrid() *TextGrid NewTextGrid creates a new empty TextGrid widget.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/textgridcell/">widget.TextGridCell</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.TextGridCell# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type TextGridCell#type TextGridCell struct { 	Rune rune 	Style TextGridStyle } TextGridCell represents a single cell in a text grid. It has a rune for the text content and a style associated with it.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/textgridrow/">widget.TextGridRow</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.TextGridRow# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type TextGridRow#type TextGridRow struct { 	Cells []TextGridCell 	Style TextGridStyle } TextGridRow represents a row of cells cell in a text grid. It contains the cells for the row and an optional style.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/textgridstyle/">widget.TextGridStyle</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.TextGridStyle# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type TextGridStyle#type TextGridStyle interface { 	TextColor() color.Color 	BackgroundColor() color.Color } TextGridStyle defines a style that can be applied to a TextGrid cell.
-var ( 	// TextGridStyleDefault is a default style for test grid cells 	TextGridStyleDefault TextGridStyle 	// TextGridStyleWhitespace is the style used for whitespace characters, if enabled 	TextGridStyleWhitespace TextGridStyle ) 
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/textsegment/">widget.TextSegment</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.TextSegment# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type TextSegment#type TextSegment struct { 	Style RichTextStyle 	Text string } TextSegment represents the styling for a segment of rich text.
-Since: 2.1func (*TextSegment) Inline#func (t *TextSegment) Inline() bool Inline should return true if this text can be included within other elements, or false if it creates a new block.
-func (*TextSegment) Select#func (t *TextSegment) Select(begin, end fyne.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/toolbar/">widget.Toolbar</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.Toolbar# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type Toolbar#type Toolbar struct { 	BaseWidget 	Items []ToolbarItem } Toolbar widget creates a horizontal list of tool buttons
-func NewToolbar#func NewToolbar(items ...ToolbarItem) *Toolbar NewToolbar creates a new toolbar widget.
-func (*Toolbar) Append#func (t *Toolbar) Append(item ToolbarItem) Append a new ToolbarItem to the end of this Toolbar
-func (*Toolbar) CreateRenderer#func (t *Toolbar) CreateRenderer() fyne.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/toolbaraction/">widget.ToolbarAction</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.ToolbarAction# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type ToolbarAction#type ToolbarAction struct { 	Icon fyne.Resource 	OnActivated func() `json:&#34;-&#34;` } ToolbarAction is push button style of ToolbarItem
-func (*ToolbarAction) ToolbarObject#func (t *ToolbarAction) ToolbarObject() fyne.CanvasObject ToolbarObject gets a button to render this ToolbarAction
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/toolbaritem/">widget.ToolbarItem</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.ToolbarItem# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type ToolbarItem#type ToolbarItem interface { 	ToolbarObject() fyne.CanvasObject } ToolbarItem represents any interface element that can be added to a toolbar
-func NewToolbarAction#func NewToolbarAction(icon fyne.Resource, onActivated func()) ToolbarItem NewToolbarAction returns a new push button style ToolbarItem
-func NewToolbarSeparator#func NewToolbarSeparator() ToolbarItem NewToolbarSeparator returns a new separator item for a Toolbar to assist with ToolbarItem grouping
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/toolbarseparator/">widget.ToolbarSeparator</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.ToolbarSeparator# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type ToolbarSeparator#type ToolbarSeparator struct { } ToolbarSeparator is a thin, visible divide that can be added to a Toolbar. This is typically used to assist visual grouping of ToolbarItems.
-func (*ToolbarSeparator) ToolbarObject#func (t *ToolbarSeparator) ToolbarObject() fyne.CanvasObject ToolbarObject gets the visible line object for this ToolbarSeparator
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/toolbarspacer/">widget.ToolbarSpacer</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.ToolbarSpacer# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type ToolbarSpacer#type ToolbarSpacer struct { } ToolbarSpacer is a blank, stretchable space for a toolbar. This is typically used to assist layout if you wish some left and some right aligned items. Space will be split evebly amongst all the spacers on a toolbar.
-func (*ToolbarSpacer) ToolbarObject#func (t *ToolbarSpacer) ToolbarObject() fyne.CanvasObject ToolbarObject gets the actual spacer object for this ToolbarSpacer
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/tree/">widget.Tree</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.Tree# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type Tree#type Tree struct { 	BaseWidget 	Root TreeNodeID  	ChildUIDs func(uid TreeNodeID) (c []TreeNodeID) // Return a sorted slice of Children TreeNodeIDs for the given Node TreeNodeID 	CreateNode func(branch bool) (o fyne.CanvasObject) // Return a CanvasObject that can represent a Branch (if branch is true), or a Leaf (if branch is false) 	IsBranch func(uid TreeNodeID) (ok bool) // Return true if the given TreeNodeID represents a Branch 	OnBranchClosed func(uid TreeNodeID) // Called when a Branch is closed 	OnBranchOpened func(uid TreeNodeID) // Called when a Branch is opened 	OnSelected func(uid TreeNodeID) // Called when the Node with the given TreeNodeID is selected.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/treenodeid/">widget.TreeNodeID</a>
-  </dt>
-  <dd class="markdown-inner">
-    widget.TreeNodeID# import &#34;fyne.io/fyne/v2/widget&#34; Usage#type TreeNodeID#type TreeNodeID = string TreeNodeID represents the unique id of a tree node.
-  </dd>
-
-</dl>
-
+  <article class="markdown"><h1 id="widget">
+  widget
+  <a class="anchor" href="#widget">#</a>
+</h1>
+<hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fyne.io/fyne/v2/widget&#34;</span>
+</span></span></code></pre></div><p>Package widget defines the UI widgets within the Fyne toolkit</p>
+<h2 id="usage">
+  Usage
+  <a class="anchor" href="#usage">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// RichTextStyleBlockquote represents a quote presented in an indented block.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// Since: 2.1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">RichTextStyleBlockquote</span> = <span style="color:#a6e22e">RichTextStyle</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">ColorName</span>: <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">ColorNameForeground</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Inline</span>:    <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">SizeName</span>:  <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">SizeNameText</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">TextStyle</span>: <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">TextStyle</span>{<span style="color:#a6e22e">Italic</span>: <span style="color:#66d9ef">true</span>},
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// RichTextStyleCodeBlock represents a code blog segment.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// Since: 2.1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">RichTextStyleCodeBlock</span> = <span style="color:#a6e22e">RichTextStyle</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">ColorName</span>: <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">ColorNameForeground</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Inline</span>:    <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">SizeName</span>:  <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">SizeNameText</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">TextStyle</span>: <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">TextStyle</span>{<span style="color:#a6e22e">Monospace</span>: <span style="color:#66d9ef">true</span>},
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// RichTextStyleCodeInline represents an inline code segment.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// Since: 2.1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">RichTextStyleCodeInline</span> = <span style="color:#a6e22e">RichTextStyle</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">ColorName</span>: <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">ColorNameForeground</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Inline</span>:    <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">SizeName</span>:  <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">SizeNameText</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">TextStyle</span>: <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">TextStyle</span>{<span style="color:#a6e22e">Monospace</span>: <span style="color:#66d9ef">true</span>},
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// RichTextStyleEmphasis represents regular text with emphasis.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// Since: 2.1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">RichTextStyleEmphasis</span> = <span style="color:#a6e22e">RichTextStyle</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">ColorName</span>: <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">ColorNameForeground</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Inline</span>:    <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">SizeName</span>:  <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">SizeNameText</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">TextStyle</span>: <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">TextStyle</span>{<span style="color:#a6e22e">Italic</span>: <span style="color:#66d9ef">true</span>},
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// RichTextStyleHeading represents a heading text that stands on its own line.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// Since: 2.1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">RichTextStyleHeading</span> = <span style="color:#a6e22e">RichTextStyle</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">ColorName</span>: <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">ColorNameForeground</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Inline</span>:    <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">SizeName</span>:  <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">SizeNameHeadingText</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">TextStyle</span>: <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">TextStyle</span>{<span style="color:#a6e22e">Bold</span>: <span style="color:#66d9ef">true</span>},
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// RichTextStyleInline represents standard text that can be surrounded by other elements.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// Since: 2.1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">RichTextStyleInline</span> = <span style="color:#a6e22e">RichTextStyle</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">ColorName</span>: <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">ColorNameForeground</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Inline</span>:    <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">SizeName</span>:  <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">SizeNameText</span>,
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// RichTextStyleParagraph represents standard text that should appear separate from other text.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// Since: 2.1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">RichTextStyleParagraph</span> = <span style="color:#a6e22e">RichTextStyle</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">ColorName</span>: <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">ColorNameForeground</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Inline</span>:    <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">SizeName</span>:  <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">SizeNameText</span>,
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// RichTextStylePassword represents standard sized text where the characters are obscured.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// Since: 2.1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">RichTextStylePassword</span> = <span style="color:#a6e22e">RichTextStyle</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">ColorName</span>: <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">ColorNameForeground</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Inline</span>:    <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">SizeName</span>:  <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">SizeNameText</span>,
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// RichTextStyleStrong represents regular text with a strong emphasis.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// Since: 2.1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">RichTextStyleStrong</span> = <span style="color:#a6e22e">RichTextStyle</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">ColorName</span>: <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">ColorNameForeground</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Inline</span>:    <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">SizeName</span>:  <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">SizeNameText</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">TextStyle</span>: <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">TextStyle</span>{<span style="color:#a6e22e">Bold</span>: <span style="color:#66d9ef">true</span>},
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// RichTextStyleSubHeading represents a sub-heading text that stands on its own line.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// Since: 2.1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">RichTextStyleSubHeading</span> = <span style="color:#a6e22e">RichTextStyle</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">ColorName</span>: <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">ColorNameForeground</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Inline</span>:    <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">SizeName</span>:  <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">SizeNameSubHeadingText</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">TextStyle</span>: <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">TextStyle</span>{<span style="color:#a6e22e">Bold</span>: <span style="color:#66d9ef">true</span>},
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><h4 id="func--newsimplerenderer">
+  func  NewSimpleRenderer
+  <a class="anchor" href="#func--newsimplerenderer">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">NewSimpleRenderer</span>(<span style="color:#a6e22e">object</span> <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">CanvasObject</span>) <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">WidgetRenderer</span>
+</span></span></code></pre></div><p>NewSimpleRenderer creates a new SimpleRenderer to render a widget using a single fyne.CanvasObject.</p>
+<div class="since">Since: <code>
+2.1</code></div>
+<h4 id="func--showmodalpopup">
+  func  ShowModalPopUp
+  <a class="anchor" href="#func--showmodalpopup">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">ShowModalPopUp</span>(<span style="color:#a6e22e">content</span> <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">CanvasObject</span>, <span style="color:#a6e22e">canvas</span> <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">Canvas</span>)
+</span></span></code></pre></div><p>ShowModalPopUp creates a new popUp for the specified content and displays it on the passed canvas. A modal PopUp blocks interactions with underlying elements, covered with a semi-transparent overlay.</p>
+<h4 id="func--showpopup">
+  func  ShowPopUp
+  <a class="anchor" href="#func--showpopup">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">ShowPopUp</span>(<span style="color:#a6e22e">content</span> <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">CanvasObject</span>, <span style="color:#a6e22e">canvas</span> <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">Canvas</span>)
+</span></span></code></pre></div><p>ShowPopUp creates a new popUp for the specified content and displays it on the passed canvas.</p>
+<h4 id="func--showpopupatposition">
+  func  ShowPopUpAtPosition
+  <a class="anchor" href="#func--showpopupatposition">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">ShowPopUpAtPosition</span>(<span style="color:#a6e22e">content</span> <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">CanvasObject</span>, <span style="color:#a6e22e">canvas</span> <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">Canvas</span>, <span style="color:#a6e22e">pos</span> <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">Position</span>)
+</span></span></code></pre></div><p>ShowPopUpAtPosition creates a new popUp for the specified content at the specified absolute position. It will then display the popup on the passed canvas.</p>
+<h4 id="func--showpopupmenuatposition">
+  func  ShowPopUpMenuAtPosition
+  <a class="anchor" href="#func--showpopupmenuatposition">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">ShowPopUpMenuAtPosition</span>(<span style="color:#a6e22e">menu</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">Menu</span>, <span style="color:#a6e22e">c</span> <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">Canvas</span>, <span style="color:#a6e22e">pos</span> <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">Position</span>)
+</span></span></code></pre></div><p>ShowPopUpMenuAtPosition creates a PopUp menu populated with items from the passed menu structure. It will automatically be positioned at the provided location and shown as an overlay on the specified canvas.</p>
+<h4 id="types">
+  types
+  <a class="anchor" href="#types">#</a>
+</h4>
+<ul>
+<li>
+  <a href="/fyne/docs/api/widget/accordion/">Accordion</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/accordionitem/">AccordionItem</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/basewidget/">BaseWidget</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/button/">Button</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/buttonalign/">ButtonAlign</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/buttoniconplacement/">ButtonIconPlacement</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/buttonimportance/">ButtonImportance</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/buttonstyle/">ButtonStyle</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/card/">Card</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/check/">Check</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/checkgroup/">CheckGroup</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/customtextgridstyle/">CustomTextGridStyle</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/disableablewidget/">DisableableWidget</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/entry/">Entry</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/fileicon/">FileIcon</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/form/">Form</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/formitem/">FormItem</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/hyperlink/">Hyperlink</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/hyperlinksegment/">HyperlinkSegment</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/icon/">Icon</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/label/">Label</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/list/">List</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/listitemid/">ListItemID</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/listsegment/">ListSegment</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/menu/">Menu</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/orientation/">Orientation</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/paragraphsegment/">ParagraphSegment</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/popup/">PopUp</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/popupmenu/">PopUpMenu</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/progressbar/">ProgressBar</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/progressbarinfinite/">ProgressBarInfinite</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/radiogroup/">RadioGroup</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/richtext/">RichText</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/richtextblock/">RichTextBlock</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/richtextsegment/">RichTextSegment</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/richtextstyle/">RichTextStyle</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/select/">Select</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/selectentry/">SelectEntry</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/separator/">Separator</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/separatorsegment/">SeparatorSegment</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/slider/">Slider</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/table/">Table</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/tablecellid/">TableCellID</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/textgrid/">TextGrid</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/textgridcell/">TextGridCell</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/textgridrow/">TextGridRow</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/textgridstyle/">TextGridStyle</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/textsegment/">TextSegment</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/toolbar/">Toolbar</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/toolbaraction/">ToolbarAction</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/toolbaritem/">ToolbarItem</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/toolbarseparator/">ToolbarSeparator</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/toolbarspacer/">ToolbarSpacer</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/tree/">Tree</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/treenodeid/">TreeNodeID</a></li>
+</ul>
 </article>
  
       
@@ -5087,16 +4656,16 @@ func (*ToolbarSpacer) ToolbarObject#func (t *ToolbarSpacer) ToolbarObject() f
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://gitee.com/darcyjoven/hugo_gitee/commit/2f030d9f8b3523f6c3662fb95bacf444d42b41a3" title='最后修改者 darcybook | May 18, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/darcybook/hugo/commit/3c2053fea979f99741da21532f920bdef2ae1357" title='最后修改者 darcy | May 19, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>May 18, 2022</span>
+      <span>May 19, 2022</span>
     </a>
   </div>
 
 
 
   <div>
-    <a class="flex align-center" href="https://gitee.com/darcyjoven/hugo_gitee/edit/main/exampleSite/content.fyne/docs/api/widget/_index.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/darcybook/hugo/blob/main/content.fyne/docs/api/widget/_index.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>编辑本页</span>
     </a>
@@ -5130,7 +4699,19 @@ func (*ToolbarSpacer) ToolbarObject#func (t *ToolbarSpacer) ToolbarObject() f
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#widget">widget</a>
+      <ul>
+        <li><a href="#usage">Usage</a>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
  

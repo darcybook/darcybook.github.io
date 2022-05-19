@@ -3,23 +3,25 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="appappapp#import &#34;fyne.io/fyne/v2/app&#34; Package app provides app implementations for working with Fyne graphical interfaces. The fastest way to get started is to call app.New() which will normally load a new desktop application. If the &ldquo;ci&rdquo; tag is passed to go (go run -tags ci myapp.go) it will run an in-memory application. Usage#func New#func New() fyne.App New returns a new application instance with the default driver and no unique IDapp.">
+<meta name="description" content="fyne# import &#34;fyne.io/fyne/v2&#34; Package fyne describes the objects and components available to any Fyne app. These can all be created, manipulated and tested without rendering (for speed). Your main package should use the app package to create an application with a default driver that will render your UI.
+A simple application may look like this:
+ package main   import &#34;fyne.io/fyne/v2/app&#34;  import &#34;fyne.io/fyne/v2/container&#34;  import &#34;fyne.">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="API Documentation" />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Api document" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://darcybook.github.io/fyne/docs/api/" />
 
-<title>API Documentation | Hugo Book</title>
+<title>Api document | darcy&#39;s</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-  <link rel="alternate" hreflang="en" href="https://darcybook.github.io/docs/api/" title="API Documentation">
+  <link rel="alternate" hreflang="en" href="https://darcybook.github.io/docs/api/" title="Api document">
 <link rel="stylesheet" href="/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css" integrity="sha256-gsXb0jRHzuC0wqo&#43;0Izglh&#43;qQOH6Nw7uT4yfAuDUa18=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/fyne.search.min.f0bee1b08acd1bfd94b66d58f1f268232b2ea03d38267d62c43f1eb33e0dfd72.js" integrity="sha256-8L7hsIrNG/2Utm1Y8fJoIysuoD04Jn1ixD8esz4N/XI=" crossorigin="anonymous"></script>
+  <script defer src="/fyne.search.min.7d259177da9ad47607995874381f8a2c0b94ed76303852deda608557730a87f7.js" integrity="sha256-fSWRd9qa1HYHmVh0OB&#43;KLAuU7XYwOFLe2mCFV3MKh/c=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
-<link rel="alternate" type="application/rss+xml" href="https://darcybook.github.io/fyne/docs/api/index.xml" title="Hugo Book" />
+<link rel="alternate" type="application/rss+xml" href="https://darcybook.github.io/fyne/docs/api/index.xml" title="darcy's" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -35,7 +37,7 @@ https://github.com/alex-shpak/hugo-book
         
   <nav>
 <h2 class="book-brand">
-  <a class="flex align-center" href="/fyne/"><span>Hugo Book</span>
+  <a class="flex align-center" href="/fyne/"><span>darcy&#39;s</span>
   </a>
 </h2>
 
@@ -116,7 +118,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-5f9d0aad26982a16f281c40bcafb6725" class="toggle"  />
     <label for="section-5f9d0aad26982a16f281c40bcafb6725" class="flex justify-between">
-      <a href="/fyne/docs/started/" class="">Getting Started</a>
+      <a role="button" class="">Getting Started</a>
     </label>
   
 
@@ -143,7 +145,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/fyne/docs/started/helloword/" class="">Hello World</a>
+    <a href="/fyne/docs/started/helloworld/" class="">Hello World</a>
   
 
         </li>
@@ -280,7 +282,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-81fa205a1bd0374005def1b00e6db049" class="toggle"  />
     <label for="section-81fa205a1bd0374005def1b00e6db049" class="flex justify-between">
-      <a href="/fyne/docs/explore/" class="">Exploring Fyne</a>
+      <a role="button" class="">Exploring Fyne</a>
     </label>
   
 
@@ -418,7 +420,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-b7dc623d78da4829531df9d42144303b" class="toggle"  />
     <label for="section-b7dc623d78da4829531df9d42144303b" class="flex justify-between">
-      <a href="/fyne/docs/canvas/" class="">Drawing and Animation</a>
+      <a role="button" class="">Drawing and Animation</a>
     </label>
   
 
@@ -543,7 +545,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-10dd021a58cb696b6cb4f79141ec5ddb" class="toggle"  />
     <label for="section-10dd021a58cb696b6cb4f79141ec5ddb" class="flex justify-between">
-      <a href="/fyne/docs/container/" class="">Containers and Layout</a>
+      <a role="button" class="">Containers and Layout</a>
     </label>
   
 
@@ -668,7 +670,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-0d0eb913881a0c154c75678ce9ea1b89" class="toggle"  />
     <label for="section-0d0eb913881a0c154c75678ce9ea1b89" class="flex justify-between">
-      <a href="/fyne/docs/widget/" class="">Widgets</a>
+      <a role="button" class="">Widgets</a>
     </label>
   
 
@@ -820,19 +822,6 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/fyne/docs/binding/" class="">Data Binding</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
     <a href="/fyne/docs/binding/simple/" class="">Binding Simple Widgets</a>
   
 
@@ -892,7 +881,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-8a572438ecae81fbb2ca87c17042611c" class="toggle"  />
     <label for="section-8a572438ecae81fbb2ca87c17042611c" class="flex justify-between">
-      <a href="/fyne/docs/extend/" class="">Extending Fyne</a>
+      <a role="button" class="">Extending Fyne</a>
     </label>
   
 
@@ -991,7 +980,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-01573ae56b57119294f09764e82a479c" class="toggle"  />
     <label for="section-01573ae56b57119294f09764e82a479c" class="flex justify-between">
-      <a href="/fyne/docs/architecture/" class="">Architecture</a>
+      <a role="button" class="">Architecture</a>
     </label>
   
 
@@ -1097,19 +1086,6 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/faq/" class="">Frequently Asked Questions</a>
-  
-
-        </li>
-      
-    
   </ul>
 
         </li>
@@ -1124,7 +1100,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-bf7b3283e3790c00c8caaa140299052b" class="toggle" checked />
     <label for="section-bf7b3283e3790c00c8caaa140299052b" class="flex justify-between">
-      <a href="/fyne/docs/api/" class="active">API Documentation</a>
+      <a href="/fyne/docs/api/" class="active">Api document</a>
     </label>
   
 
@@ -1146,19 +1122,6 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/app/" class="">app</a>
-  
-
-        </li>
-      
     
       
         <li>
@@ -1193,19 +1156,6 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/canvas/" class="">canvas</a>
-  
-
-        </li>
-      
     
       
         <li>
@@ -1365,19 +1315,6 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/fyne/docs/api/container/" class="">container</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
     <a href="/fyne/docs/api/container/apptabs/" class="">container.AppTabs</a>
   
 
@@ -1476,7 +1413,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-d29e4834325fd01218a5821838a25fec" class="toggle"  />
     <label for="section-d29e4834325fd01218a5821838a25fec" class="flex justify-between">
-      <a href="/fyne/docs/api/data/" class="">data</a>
+      <a role="button" class="">data</a>
     </label>
   
 
@@ -1498,19 +1435,6 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/data/binding/" class="">binding</a>
-  
-
-        </li>
-      
     
       
         <li>
@@ -1988,19 +1912,6 @@ https://github.com/alex-shpak/hugo-book
           
   <ul>
     
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/data/validation/" class="">validation</a>
-  
-
-        </li>
-      
-    
   </ul>
 
         </li>
@@ -2026,19 +1937,6 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/dialog/" class="">dialog</a>
-  
-
-        </li>
-      
     
       
         <li>
@@ -2145,7 +2043,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-7944afb9b17616a931df6a1f1588232a" class="toggle"  />
     <label for="section-7944afb9b17616a931df6a1f1588232a" class="flex justify-between">
-      <a href="/fyne/docs/api/driver/" class="">driver</a>
+      <a role="button" class="">driver</a>
     </label>
   
 
@@ -2167,19 +2065,6 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/driver/desktop/" class="">desktop</a>
-  
-
-        </li>
-      
     
       
         <li>
@@ -2365,19 +2250,6 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/fyne/docs/api/driver/mobile/" class="">mobile</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
     <a href="/fyne/docs/api/driver/mobile/device/" class="">mobile.Device</a>
   
 
@@ -2457,38 +2329,12 @@ https://github.com/alex-shpak/hugo-book
           
   <ul>
     
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/driver/software/" class="">software</a>
-  
-
-        </li>
-      
-    
   </ul>
 
         </li>
       
     
   </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/" class="">fyne</a>
-  
 
         </li>
       
@@ -3374,19 +3220,6 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/fyne/docs/api/layout/" class="">layout</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
     <a href="/fyne/docs/api/layout/spacer/" class="">layout.Spacer</a>
   
 
@@ -3436,7 +3269,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-bdfb1fb0260a7c8eb215aa46f6d3d0a1" class="toggle"  />
     <label for="section-bdfb1fb0260a7c8eb215aa46f6d3d0a1" class="flex justify-between">
-      <a href="/fyne/docs/api/storage/repository/" class="">repository</a>
+      <a href="/fyne/docs/api/storage/repository/" class="">repository&#34;</a>
     </label>
   
 
@@ -3534,33 +3367,7 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/storage/repository/" class="">repository&#34;</a>
-  
-
-        </li>
-      
-    
   </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/storage/" class="">storage</a>
-  
 
         </li>
       
@@ -3632,19 +3439,6 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/fyne/docs/api/test/" class="">test</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
     <a href="/fyne/docs/api/test/softwarepainter/" class="">test.SoftwarePainter</a>
   
 
@@ -3676,9 +3470,9 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-e5366419c90581ed58325e348966678f" class="toggle"  />
-    <label for="section-e5366419c90581ed58325e348966678f" class="flex justify-between">
-      <a href="/fyne/docs/api/widget/" class="">theme</a>
+    <input type="checkbox" id="section-1d17e3ea5a1ce532f15adb7d474a1c01" class="toggle"  />
+    <label for="section-1d17e3ea5a1ce532f15adb7d474a1c01" class="flex justify-between">
+      <a href="/fyne/docs/api/theme/" class="">theme</a>
     </label>
   
 
@@ -3692,11 +3486,97 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/fyne/docs/api/widget/" class="">widget</a>
+    <a href="/fyne/docs/api/theme/disabledresource/" class="">theme.DisabledResource</a>
   
 
         </li>
       
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/api/theme/errorthemedresource/" class="">theme.ErrorThemedResource</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/api/theme/invertedthemedresource/" class="">theme.InvertedThemedResource</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/api/theme/primarythemedresource/" class="">theme.PrimaryThemedResource</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/api/theme/themedresource/" class="">theme.ThemedResource</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/fyne/docs/api/upgrading/" class="">Upgrading to v2.1</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e5366419c90581ed58325e348966678f" class="toggle"  />
+    <label for="section-e5366419c90581ed58325e348966678f" class="flex justify-between">
+      <a href="/fyne/docs/api/widget/" class="">widget</a>
+    </label>
+  
+
+          
+  <ul>
     
       
         <li>
@@ -4418,118 +4298,6 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/upgrading/" class="">Upgrading to v2.1</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <input type="checkbox" id="section-1d17e3ea5a1ce532f15adb7d474a1c01" class="toggle"  />
-    <label for="section-1d17e3ea5a1ce532f15adb7d474a1c01" class="flex justify-between">
-      <a href="/fyne/docs/api/theme/" class="">widget</a>
-    </label>
-  
-
-          
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/theme/" class="">theme</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/theme/disabledresource/" class="">theme.DisabledResource</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/theme/errorthemedresource/" class="">theme.ErrorThemedResource</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/theme/invertedthemedresource/" class="">theme.InvertedThemedResource</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/theme/primarythemedresource/" class="">theme.PrimaryThemedResource</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/fyne/docs/api/theme/themedresource/" class="">theme.ThemedResource</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-        </li>
-      
-    
   </ul>
 
         </li>
@@ -4552,12 +4320,12 @@ https://github.com/alex-shpak/hugo-book
   
   <li>
     <a href="" target="_blank" rel="noopener">
-        --------------------------------------------------
+        ----------------------------------
       </a>
   </li>
   
   <li>
-    <a href="https://github.com/alex-shpak/hugo-book" target="_blank" rel="noopener">
+    <a href="https://github.com/darcybook" target="_blank" rel="noopener">
         Github
       </a>
   </li>
@@ -4595,7 +4363,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>API Documentation</strong>
+  <strong>Api document</strong>
 
   <label for="toc-control">
     
@@ -4609,7 +4377,19 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#fyne">fyne</a>
+      <ul>
+        <li><a href="#usage">Usage</a>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
 
@@ -4620,597 +4400,234 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><dl>
-
-  <dt>
-    <a href="/fyne/docs/api/app/">app</a>
-  </dt>
-  <dd class="markdown-inner">
-    appapp#import &#34;fyne.io/fyne/v2/app&#34; Package app provides app implementations for working with Fyne graphical interfaces. The fastest way to get started is to call app.New() which will normally load a new desktop application. If the &ldquo;ci&rdquo; tag is passed to go (go run -tags ci myapp.go) it will run an in-memory application. Usage#func New#func New() fyne.App New returns a new application instance with the default driver and no unique IDapp.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/canvas/">canvas</a>
-  </dt>
-  <dd class="markdown-inner">
-    canvascanvas#import &#34;fyne.io/fyne/v2/canvas&#34; Package canvas contains all of the primitive CanvasObjects that make up a Fyne GUI The types implemented in this package are used as building blocks in order to build higher order functionality. These types are designed to be non-interactive, by design. If additional functonality is required, it&rsquo;s usually a sign that this type should be used as part of a custom Widget. Usage#const ( // DurationStandard is the time a standard interface animation will run.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/container/">container</a>
-  </dt>
-  <dd class="markdown-inner">
-    containercontainer#import &#34;fyne.io/fyne/v2/container&#34; Package container provides container widgets that are used to lay out and organise applications Usage#const ( // ScrollBoth supports horizontal and vertical scrolling. ScrollBoth ScrollDirection = widget.ScrollBoth // ScrollHorizontalOnly specifies the scrolling should only happen left to right. ScrollHorizontalOnly = widget.ScrollHorizontalOnly // ScrollVerticalOnly specifies the scrolling should only happen top to bottom. ScrollVerticalOnly = widget.ScrollVerticalOnly // ScrollNone turns off scrolling for this container.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/data/">data</a>
-  </dt>
-  <dd class="markdown-inner">
-    bindingbindingbinding#import &#34;fyne.io/fyne/v2/data/binding&#34; Usage#types#Bool BoolList DataItem DataList DataListener DataMap ExternalBool ExternalBoolList ExternalFloat ExternalFloatList ExternalInt ExternalIntList ExternalRune ExternalRuneList ExternalString ExternalStringList ExternalURI ExternalURIList ExternalUntyped ExternalUntypedList ExternalUntypedMap Float FloatList Int IntList Rune RuneList String StringList Struct URI URIList Untyped UntypedList UntypedMap binding.Boolbinding.Bool#import &#34;fyne.io/fyne/v2/data/binding&#34; Usage#type Bool#type Bool interface { DataItem Get() (bool, error) Set(bool) error } Bool supports binding a bool value.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/dialog/">dialog</a>
-  </dt>
-  <dd class="markdown-inner">
-    dialogdialog#import &#34;fyne.io/fyne/v2/dialog&#34; Package dialog defines standard dialog windows for application GUIs. Usage#func ShowColorPicker#func ShowColorPicker(title, message string, callback func(c color.Color), parent fyne.Window) ShowColorPicker creates and shows a color dialog. The callback is triggered when the user selects a color. Since: 1.4func ShowConfirm#func ShowConfirm(title, message string, callback func(bool), parent fyne.Window) ShowConfirm shows a dialog over the specified window for a user confirmation.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/driver/">driver</a>
-  </dt>
-  <dd class="markdown-inner">
-    desktopdesktopdesktop#import &#34;fyne.io/fyne/v2/driver/desktop&#34; Package desktop provides desktop specific driver functionality. Usage#const ( // KeyNone represents no key KeyNone fyne.KeyName = &#34;&#34; // KeyShiftLeft represents the left shift key KeyShiftLeft fyne.KeyName = &#34;LeftShift&#34; // KeyShiftRight represents the right shift key KeyShiftRight fyne.KeyName = &#34;RightShift&#34; // KeyControlLeft represents the left control key KeyControlLeft fyne.KeyName = &#34;LeftControl&#34; // KeyControlRight represents the right control key KeyControlRight fyne.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/">fyne</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne# import &#34;fyne.io/fyne/v2&#34; Package fyne describes the objects and components available to any Fyne app. These can all be created, manipulated and tested without rendering (for speed). Your main package should use the app package to create an application with a default driver that will render your UI.
-A simple application may look like this:
- package main   import &#34;fyne.io/fyne/v2/app&#34;  import &#34;fyne.io/fyne/v2/container&#34;  import &#34;fyne.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/animation/">fyne.Animation</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Animation# import &#34;fyne.io/fyne/v2&#34; Usage#type Animation#type Animation struct { 	AutoReverse bool 	Curve AnimationCurve 	Duration time.Duration 	RepeatCount int 	Tick func(float32) } Animation represents an animated element within a Fyne canvas. These animations may control individual objects or entire scenes.
-Since: 2.0func NewAnimation#func NewAnimation(d time.Duration, fn func(float32)) *Animation NewAnimation creates a very basic animation where the callback function will be called for every rendered frame between time.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/animationcurve/">fyne.AnimationCurve</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.AnimationCurve# import &#34;fyne.io/fyne/v2&#34; Usage#type AnimationCurve#type AnimationCurve func(float32) float32 AnimationCurve represents an animation algorithm for calculating the progress through a timeline. Custom animations can be provided by implementing the &ldquo;func(float32) float32&rdquo; definition. The input parameter will start at 0.0 when an animation starts and travel up to 1.0 at which point it will end. A linear animation would return the same output value as is passed in.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/app/">fyne.App</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.App# import &#34;fyne.io/fyne/v2&#34; Usage#type App#type App interface { 	// Create a new window for the application. 	// The first window to open is considered the &#34;master&#34; and when closed 	// the application will exit. 	NewWindow(title string) Window  	// Open a URL in the default browser application. 	OpenURL(url *url.URL) error  	// Icon returns the application icon, this is used in various ways 	// depending on operating system.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/buildtype/">fyne.BuildType</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.BuildType# import &#34;fyne.io/fyne/v2&#34; Usage#type BuildType#type BuildType int BuildType defines different modes that an application can be built using.
-const ( 	// BuildStandard is the normal build mode - it is not debug, test or release mode. 	BuildStandard BuildType = iota 	// BuildDebug is used when a developer would like more information and visual output for app debugging. 	BuildDebug 	// BuildRelease is a final production build, it is like BuildStandard but will use distribution certificates.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/canvas/">fyne.Canvas</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Canvas# import &#34;fyne.io/fyne/v2&#34; Usage#type Canvas#type Canvas interface { 	Content() CanvasObject 	SetContent(CanvasObject)  	Refresh(CanvasObject)  	// Focus makes the provided item focused. 	// The item has to be added to the contents of the canvas before calling this. 	Focus(Focusable) 	// FocusNext focuses the next focusable item. 	// If no item is currently focused, the first focusable item is focused.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/canvasobject/">fyne.CanvasObject</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.CanvasObject# import &#34;fyne.io/fyne/v2&#34; Usage#type CanvasObject#type CanvasObject interface {  	// MinSize returns the minimum size this object needs to be drawn. 	MinSize() Size 	// Move moves this object to the given position relative to its parent. 	// This should only be called if your object is not in a container with a layout manager. 	Move(Position) 	// Position returns the current position of the object relative to its parent.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/clipboard/">fyne.Clipboard</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Clipboard# import &#34;fyne.io/fyne/v2&#34; Usage#type Clipboard#type Clipboard interface { 	// Content returns the clipboard content 	Content() string 	// SetContent sets the clipboard content 	SetContent(content string) } Clipboard represents the system clipboard interface
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/container/">fyne.Container</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Container# import &#34;fyne.io/fyne/v2&#34; Usage#type Container#type Container struct { 	Hidden bool // Is this Container hidden  	Layout Layout // The Layout algorithm for arranging child CanvasObjects 	Objects []CanvasObject // The set of CanvasObjects this container holds } Container is a CanvasObject that contains a collection of child objects. The layout of the children is set by the specified Layout.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/delta/">fyne.Delta</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Delta# import &#34;fyne.io/fyne/v2&#34; Usage#type Delta#type Delta struct { 	DX, DY float32 } Delta is a generic X, Y coordinate, size or movement representation.
-func NewDelta#func NewDelta(dx float32, dy float32) Delta NewDelta returns a newly allocated Delta representing a movement in the X and Y axis.
-func (Delta) Components#func (v Delta) Components() (float32, float32) Components returns the X and Y elements of this Delta.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/device/">fyne.Device</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Device# import &#34;fyne.io/fyne/v2&#34; Usage#type Device#type Device interface { 	Orientation() DeviceOrientation 	IsMobile() bool 	HasKeyboard() bool 	SystemScaleForWindow(Window) float32 } Device provides information about the devices the code is running on
-func CurrentDevice#func CurrentDevice() Device CurrentDevice returns the device information for the current hardware (via the driver)
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/deviceorientation/">fyne.DeviceOrientation</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.DeviceOrientation# import &#34;fyne.io/fyne/v2&#34; Usage#type DeviceOrientation#type DeviceOrientation int DeviceOrientation represents the different ways that a mobile device can be held
-const ( 	// OrientationVertical is the default vertical orientation 	OrientationVertical DeviceOrientation = iota 	// OrientationVerticalUpsideDown is the portrait orientation held upside down 	OrientationVerticalUpsideDown 	// OrientationHorizontalLeft is used to indicate a landscape orientation with the top to the left 	OrientationHorizontalLeft 	// OrientationHorizontalRight is used to indicate a landscape orientation with the top to the right 	OrientationHorizontalRight ) 
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/disableable/">fyne.Disableable</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Disableable# import &#34;fyne.io/fyne/v2&#34; Usage#type Disableable#type Disableable interface { 	Enable() 	Disable() 	Disabled() bool } Disableable describes any CanvasObject that can be disabled. This is primarily used with objects that also implement the Tappable interface.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/doubletappable/">fyne.DoubleTappable</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.DoubleTappable# import &#34;fyne.io/fyne/v2&#34; Usage#type DoubleTappable#type DoubleTappable interface { 	DoubleTapped(*PointEvent) } DoubleTappable describes any CanvasObject that can also be double tapped.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/dragevent/">fyne.DragEvent</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.DragEvent# import &#34;fyne.io/fyne/v2&#34; Usage#type DragEvent#type DragEvent struct { 	PointEvent 	Dragged Delta } DragEvent defines the parameters of a pointer or other drag event. The DraggedX and DraggedY fields show how far the item was dragged since the last event.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/draggable/">fyne.Draggable</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Draggable# import &#34;fyne.io/fyne/v2&#34; Usage#type Draggable#type Draggable interface { 	Dragged(*DragEvent) 	DragEnd() } Draggable indicates that a CanvasObject can be dragged. This is used for any item that the user has indicated should be moved across the screen.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/driver/">fyne.Driver</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Driver# import &#34;fyne.io/fyne/v2&#34; Usage#type Driver#type Driver interface { 	// CreateWindow creates a new UI Window. 	CreateWindow(string) Window 	// AllWindows returns a slice containing all app windows. 	AllWindows() []Window  	// RenderedTextSize returns the size required to render the given string of specified 	// font size and style. It also returns the height to text baseline, measured from the top.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/focusable/">fyne.Focusable&#34;</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Focusable# import &#34;fyne.io/fyne/v2&#34; Usage#type Focusable#type Focusable interface { 	// FocusGained is a hook called by the focus handling logic after this object gained the focus. 	FocusGained() 	// FocusLost is a hook called by the focus handling logic after this object lost the focus. 	FocusLost()  	// TypedRune is a hook called by the input handling logic on text input events if this object is focused.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/hardwarekey/">fyne.HardwareKey</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.HardwareKey# import &#34;fyne.io/fyne/v2&#34; Usage#type HardwareKey#type HardwareKey struct { 	// ScanCode represents a hardware ID for (normally desktop) keyboard events. 	ScanCode int } HardwareKey contains information associated with physical key events Most applications should use KeyName for cross-platform compatibility.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/keyevent/">fyne.KeyEvent</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.KeyEvent# import &#34;fyne.io/fyne/v2&#34; Usage#type KeyEvent#type KeyEvent struct { 	// Name describes the keyboard event that is consistent across platforms. 	Name KeyName 	// Physical is a platform specific field that reports the hardware information of physical keyboard events. 	Physical HardwareKey } KeyEvent describes a keyboard input event.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/keyname/">fyne.KeyName</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.KeyName# import &#34;fyne.io/fyne/v2&#34; Usage#type KeyName#type KeyName string KeyName represents the name of a key that has been pressed
-const ( 	// KeyEscape is the &#34;esc&#34; key 	KeyEscape KeyName = &#34;Escape&#34; 	// KeyReturn is the carriage return (main keyboard) 	KeyReturn KeyName = &#34;Return&#34; 	// KeyTab is the tab advance key 	KeyTab KeyName = &#34;Tab&#34; 	// KeyBackspace is the delete-before-cursor key 	KeyBackspace KeyName = &#34;BackSpace&#34; 	// KeyInsert is the insert mode key 	KeyInsert KeyName = &#34;Insert&#34; 	// KeyDelete is the delete-after-cursor key 	KeyDelete KeyName = &#34;Delete&#34; 	// KeyRight is the right arrow key 	KeyRight KeyName = &#34;Right&#34; 	// KeyLeft is the left arrow key 	KeyLeft KeyName = &#34;Left&#34; 	// KeyDown is the down arrow key 	KeyDown KeyName = &#34;Down&#34; 	// KeyUp is the up arrow key 	KeyUp KeyName = &#34;Up&#34; 	// KeyPageUp is the page up num-pad key 	KeyPageUp KeyName = &#34;Prior&#34; 	// KeyPageDown is the page down num-pad key 	KeyPageDown KeyName = &#34;Next&#34; 	// KeyHome is the line-home key 	KeyHome KeyName = &#34;Home&#34; 	// KeyEnd is the line-end key 	KeyEnd KeyName = &#34;End&#34;  	// KeyF1 is the first function key 	KeyF1 KeyName = &#34;F1&#34; 	// KeyF2 is the second function key 	KeyF2 KeyName = &#34;F2&#34; 	// KeyF3 is the third function key 	KeyF3 KeyName = &#34;F3&#34; 	// KeyF4 is the fourth function key 	KeyF4 KeyName = &#34;F4&#34; 	// KeyF5 is the fifth function key 	KeyF5 KeyName = &#34;F5&#34; 	// KeyF6 is the sixth function key 	KeyF6 KeyName = &#34;F6&#34; 	// KeyF7 is the seventh function key 	KeyF7 KeyName = &#34;F7&#34; 	// KeyF8 is the eighth function key 	KeyF8 KeyName = &#34;F8&#34; 	// KeyF9 is the ninth function key 	KeyF9 KeyName = &#34;F9&#34; 	// KeyF10 is the tenth function key 	KeyF10 KeyName = &#34;F10&#34; 	// KeyF11 is the eleventh function key 	KeyF11 KeyName = &#34;F11&#34; 	// KeyF12 is the twelfth function key 	KeyF12 KeyName = &#34;F12&#34;  	// KeyEnter is the enter/ return key (keypad) 	KeyEnter KeyName = &#34;KP_Enter&#34;  	// Key0 represents the key 0 	Key0 KeyName = &#34;0&#34; 	// Key1 represents the key 1 	Key1 KeyName = &#34;1&#34; 	// Key2 represents the key 2 	Key2 KeyName = &#34;2&#34; 	// Key3 represents the key 3 	Key3 KeyName = &#34;3&#34; 	// Key4 represents the key 4 	Key4 KeyName = &#34;4&#34; 	// Key5 represents the key 5 	Key5 KeyName = &#34;5&#34; 	// Key6 represents the key 6 	Key6 KeyName = &#34;6&#34; 	// Key7 represents the key 7 	Key7 KeyName = &#34;7&#34; 	// Key8 represents the key 8 	Key8 KeyName = &#34;8&#34; 	// Key9 represents the key 9 	Key9 KeyName = &#34;9&#34; 	// KeyA represents the key A 	KeyA KeyName = &#34;A&#34; 	// KeyB represents the key B 	KeyB KeyName = &#34;B&#34; 	// KeyC represents the key C 	KeyC KeyName = &#34;C&#34; 	// KeyD represents the key D 	KeyD KeyName = &#34;D&#34; 	// KeyE represents the key E 	KeyE KeyName = &#34;E&#34; 	// KeyF represents the key F 	KeyF KeyName = &#34;F&#34; 	// KeyG represents the key G 	KeyG KeyName = &#34;G&#34; 	// KeyH represents the key H 	KeyH KeyName = &#34;H&#34; 	// KeyI represents the key I 	KeyI KeyName = &#34;I&#34; 	// KeyJ represents the key J 	KeyJ KeyName = &#34;J&#34; 	// KeyK represents the key K 	KeyK KeyName = &#34;K&#34; 	// KeyL represents the key L 	KeyL KeyName = &#34;L&#34; 	// KeyM represents the key M 	KeyM KeyName = &#34;M&#34; 	// KeyN represents the key N 	KeyN KeyName = &#34;N&#34; 	// KeyO represents the key O 	KeyO KeyName = &#34;O&#34; 	// KeyP represents the key P 	KeyP KeyName = &#34;P&#34; 	// KeyQ represents the key Q 	KeyQ KeyName = &#34;Q&#34; 	// KeyR represents the key R 	KeyR KeyName = &#34;R&#34; 	// KeyS represents the key S 	KeyS KeyName = &#34;S&#34; 	// KeyT represents the key T 	KeyT KeyName = &#34;T&#34; 	// KeyU represents the key U 	KeyU KeyName = &#34;U&#34; 	// KeyV represents the key V 	KeyV KeyName = &#34;V&#34; 	// KeyW represents the key W 	KeyW KeyName = &#34;W&#34; 	// KeyX represents the key X 	KeyX KeyName = &#34;X&#34; 	// KeyY represents the key Y 	KeyY KeyName = &#34;Y&#34; 	// KeyZ represents the key Z 	KeyZ KeyName = &#34;Z&#34;  	// KeySpace is the space key 	KeySpace KeyName = &#34;Space&#34; 	// KeyApostrophe is the key &#34;&#39;&#34; 	KeyApostrophe KeyName = &#34;&#39;&#34; 	// KeyComma is the key &#34;,&#34; 	KeyComma KeyName = &#34;,&#34; 	// KeyMinus is the key &#34;-&#34; 	KeyMinus KeyName = &#34;-&#34; 	// KeyPeriod is the key &#34;.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/layout/">fyne.Layout</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Layout# import &#34;fyne.io/fyne/v2&#34; Usage#type Layout#type Layout interface { 	// Layout will manipulate the listed CanvasObjects Size and Position 	// to fit within the specified size. 	Layout([]CanvasObject, Size) 	// MinSize calculates the smallest size that will fit the listed 	// CanvasObjects using this Layout algorithm. 	MinSize(objects []CanvasObject) Size } Layout defines how CanvasObjects may be laid out in a specified Size.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/legacytheme/">fyne.LegacyTheme</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.LegacyTheme# import &#34;fyne.io/fyne/v2&#34; Usage#type LegacyTheme#type LegacyTheme interface { 	BackgroundColor() color.Color 	ButtonColor() color.Color 	DisabledButtonColor() color.Color 	TextColor() color.Color 	DisabledTextColor() color.Color 	PlaceHolderColor() color.Color 	PrimaryColor() color.Color 	HoverColor() color.Color 	FocusColor() color.Color 	ScrollBarColor() color.Color 	ShadowColor() color.Color  	TextSize() int 	TextFont() Resource 	TextBoldFont() Resource 	TextItalicFont() Resource 	TextBoldItalicFont() Resource 	TextMonospaceFont() Resource  	Padding() int 	IconInlineSize() int 	ScrollBarSize() int 	ScrollBarSmallSize() int } LegacyTheme defines the requirements of any Fyne theme.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/lifecycle/">fyne.Lifecycle</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Lifecycle# import &#34;fyne.io/fyne/v2&#34; Usage#type Lifecycle#type Lifecycle interface { 	// SetOnEnteredForeground hooks into the app becoming foreground and gaining focus. 	SetOnEnteredForeground(func()) 	// SetOnExitedForeground hooks into the app losing input focus and going into the background. 	SetOnExitedForeground(func()) 	// SetOnStarted hooks into an event that says the app is now running. 	SetOnStarted(func()) 	// SetOnStopped hooks into an event that says the app is no longer running.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/listableuri/">fyne.ListableURI</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.ListableURI# import &#34;fyne.io/fyne/v2&#34; Usage#type ListableURI#type ListableURI interface { 	URI  	// List returns a list of child URIs of this URI. 	List() ([]URI, error) } ListableURI represents a URI that can have child items, most commonly a directory on disk in the native filesystem.
-Since: 1.4
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/mainmenu/">fyne.MainMenu</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.MainMenu# import &#34;fyne.io/fyne/v2&#34; Usage#type MainMenu#type MainMenu struct { 	Items []*Menu } MainMenu defines the data required to show a menu bar (desktop) or other appropriate top level menu.
-func NewMainMenu#func NewMainMenu(items ...*Menu) *MainMenu NewMainMenu creates a top level menu structure used by fyne.Window for displaying a menubar (or appropriate equivalent).
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/menu/">fyne.Menu</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Menu# import &#34;fyne.io/fyne/v2&#34; Usage#type Menu#type Menu struct { 	Label string 	Items []*MenuItem } Menu stores the information required for a standard menu. A menu can pop down from a MainMenu or could be a pop out menu.
-func NewMenu#func NewMenu(label string, items ...*MenuItem) *Menu NewMenu creates a new menu given the specified label (to show in a MainMenu) and list of items to display.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/menuitem/">fyne.MenuItem</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.MenuItem# import &#34;fyne.io/fyne/v2&#34; Usage#type MenuItem#type MenuItem struct { 	ChildMenu *Menu 	// Since: 2.1 	IsQuit bool 	IsSeparator bool 	Label string 	Action func() 	// Since: 2.1 	Disabled bool 	// Since: 2.1 	Checked bool } MenuItem is a single item within any menu, it contains a display Label and Action function that is called when tapped.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/notification/">fyne.Notification</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Notification# import &#34;fyne.io/fyne/v2&#34; Usage#type Notification#type Notification struct { 	Title, Content string } Notification represents a user notification that can be sent to the operating system.
-func NewNotification#func NewNotification(title, content string) *Notification NewNotification creates a notification that can be passed to App.SendNotification.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/overlaystack/">fyne.OverlayStack</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.OverlayStack# import &#34;fyne.io/fyne/v2&#34; Usage#type OverlayStack#type OverlayStack interface { 	// Add adds an overlay on the top of the overlay stack. 	Add(overlay CanvasObject) 	// List returns the overlays currently on the overlay stack. 	List() []CanvasObject 	// Remove removes the given object and all objects above it from the overlay stack. 	Remove(overlay CanvasObject) 	// Top returns the top-most object of the overlay stack.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/pointevent/">fyne.PointEvent</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.PointEvent# import &#34;fyne.io/fyne/v2&#34; Usage#type PointEvent#type PointEvent struct { 	AbsolutePosition Position // The absolute position of the event 	Position Position // The relative position of the event } PointEvent describes a pointer input event. The position is relative to the top-left of the CanvasObject this is triggered on.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/position/">fyne.Position</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Position# import &#34;fyne.io/fyne/v2&#34; Usage#type Position#type Position struct { 	X float32 // The position from the parent&#39;s left edge 	Y float32 // The position from the parent&#39;s top edge } Position describes a generic X, Y coordinate relative to a parent Canvas or CanvasObject.
-func NewPos#func NewPos(x float32, y float32) Position NewPos returns a newly allocated Position representing the specified coordinates.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/preferences/">fyne.Preferences</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Preferences# import &#34;fyne.io/fyne/v2&#34; Usage#type Preferences#type Preferences interface { 	// Bool looks up a boolean value for the key 	Bool(key string) bool 	// BoolWithFallback looks up a boolean value and returns the given fallback if not found 	BoolWithFallback(key string, fallback bool) bool 	// SetBool saves a boolean value for the given key 	SetBool(key string, value bool)  	// Float looks up a float64 value for the key 	Float(key string) float64 	// FloatWithFallback looks up a float64 value and returns the given fallback if not found 	FloatWithFallback(key string, fallback float64) float64 	// SetFloat saves a float64 value for the given key 	SetFloat(key string, value float64)  	// Int looks up an integer value for the key 	Int(key string) int 	// IntWithFallback looks up an integer value and returns the given fallback if not found 	IntWithFallback(key string, fallback int) int 	// SetInt saves an integer value for the given key 	SetInt(key string, value int)  	// String looks up a string value for the key 	String(key string) string 	// StringWithFallback looks up a string value and returns the given fallback if not found 	StringWithFallback(key, fallback string) string 	// SetString saves a string value for the given key 	SetString(key string, value string)  	// RemoveValue removes a value for the given key (not currently supported on iOS) 	RemoveValue(key string)  	// AddChangeListener allows code to be notified when some preferences change.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/resource/">fyne.Resource</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Resource# import &#34;fyne.io/fyne/v2&#34; Usage#type Resource#type Resource interface { 	Name() string 	Content() []byte } Resource represents a single binary resource, such as an image or font. A resource has an identifying name and byte array content. The serialised path of a resource can be obtained which may result in a blocking filesystem write operation.
-func LoadResourceFromPath#func LoadResourceFromPath(path string) (Resource, error) LoadResourceFromPath creates a new StaticResource in memory using the contents of the specified file.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/scrollable/">fyne.Scrollable</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Scrollable# import &#34;fyne.io/fyne/v2&#34; Usage#type Scrollable#type Scrollable interface { 	Scrolled(*ScrollEvent) } Scrollable describes any CanvasObject that can also be scrolled. This is mostly used to implement the widget.ScrollContainer.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/scrollevent/">fyne.ScrollEvent</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.ScrollEvent# import &#34;fyne.io/fyne/v2&#34; Usage#type ScrollEvent#type ScrollEvent struct { 	PointEvent 	Scrolled Delta } ScrollEvent defines the parameters of a pointer or other scroll event. The DeltaX and DeltaY represent how large the scroll was in two dimensions.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/secondarytappable/">fyne.SecondaryTappable</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.SecondaryTappable# import &#34;fyne.io/fyne/v2&#34; Usage#type SecondaryTappable#type SecondaryTappable interface { 	TappedSecondary(*PointEvent) } SecondaryTappable describes a CanvasObject that can be right-clicked or long-tapped.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/settings/">fyne.Settings</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Settings# import &#34;fyne.io/fyne/v2&#34; Usage#type Settings#type Settings interface { 	Theme() Theme 	SetTheme(Theme) 	// ThemeVariant defines which preferred version of a theme should be used (i.e. light or dark) 	// 	// Since: 2.0 	ThemeVariant() ThemeVariant 	Scale() float32 	// PrimaryColor indicates a user preference for a named primary color 	// 	// Since: 1.4 	PrimaryColor() string  	AddChangeListener(chan Settings) 	BuildType() BuildType } Settings describes the application configuration available.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/shortcut/">fyne.Shortcut</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Shortcut# import &#34;fyne.io/fyne/v2&#34; Usage#type Shortcut#type Shortcut interface { 	ShortcutName() string } Shortcut is the interface used to describe a shortcut action
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/shortcutable/">fyne.Shortcutable</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Shortcutable# import &#34;fyne.io/fyne/v2&#34; Usage#type Shortcutable#type Shortcutable interface { 	TypedShortcut(Shortcut) } Shortcutable describes any CanvasObject that can respond to shortcut commands (quit, cut, copy, and paste).
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/shortcutcopy/">fyne.ShortcutCopy</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.ShortcutCopy# import &#34;fyne.io/fyne/v2&#34; Usage#type ShortcutCopy#type ShortcutCopy struct { 	Clipboard Clipboard } ShortcutCopy describes a shortcut copy action.
-func (*ShortcutCopy) ShortcutName#func (se *ShortcutCopy) ShortcutName() string ShortcutName returns the shortcut name
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/shortcutcut/">fyne.ShortcutCut</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.ShortcutCut# import &#34;fyne.io/fyne/v2&#34; Usage#type ShortcutCut#type ShortcutCut struct { 	Clipboard Clipboard } ShortcutCut describes a shortcut cut action.
-func (*ShortcutCut) ShortcutName#func (se *ShortcutCut) ShortcutName() string ShortcutName returns the shortcut name
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/shortcuthandler/">fyne.ShortcutHandler</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.ShortcutHandler# import &#34;fyne.io/fyne/v2&#34; Usage#type ShortcutHandler#type ShortcutHandler struct { } ShortcutHandler is a default implementation of the shortcut handler for the canvasObject
-func (*ShortcutHandler) AddShortcut#func (sh *ShortcutHandler) AddShortcut(shortcut Shortcut, handler func(shortcut Shortcut)) AddShortcut register an handler to be executed when the shortcut action is triggered
-func (*ShortcutHandler) RemoveShortcut#func (sh *ShortcutHandler) RemoveShortcut(shortcut Shortcut) RemoveShortcut removes a registered shortcut
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/shortcutpaste/">fyne.ShortcutPaste</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.ShortcutPaste# import &#34;fyne.io/fyne/v2&#34; Usage#type ShortcutPaste#type ShortcutPaste struct { 	Clipboard Clipboard } ShortcutPaste describes a shortcut paste action.
-func (*ShortcutPaste) ShortcutName#func (se *ShortcutPaste) ShortcutName() string ShortcutName returns the shortcut name
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/shortcutselectall/">fyne.ShortcutSelectAll</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.ShortcutSelectAll# import &#34;fyne.io/fyne/v2&#34; Usage#type ShortcutSelectAll#type ShortcutSelectAll struct{} ShortcutSelectAll describes a shortcut selectAll action.
-func (*ShortcutSelectAll) ShortcutName#func (se *ShortcutSelectAll) ShortcutName() string ShortcutName returns the shortcut name
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/size/">fyne.Size</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Size# import &#34;fyne.io/fyne/v2&#34; Usage#type Size#type Size struct { 	Width float32 // The number of units along the X axis. 	Height float32 // The number of units along the Y axis. } Size describes something with width and height.
-func MeasureText#func MeasureText(text string, size float32, style TextStyle) Size MeasureText uses the current driver to calculate the size of text when rendered.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/staticresource/">fyne.StaticResource</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.StaticResource# import &#34;fyne.io/fyne/v2&#34; Usage#type StaticResource#type StaticResource struct { 	StaticName string 	StaticContent []byte } StaticResource is a bundled resource compiled into the application. These resources are normally generated by the fyne_bundle command included in the Fyne toolkit.
-func NewStaticResource#func NewStaticResource(name string, content []byte) *StaticResource NewStaticResource returns a new static resource object with the specified name and content. Creating a new static resource in memory results in sharable binary data that may be serialised to the location returned by CachePath().
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/storage/">fyne.Storage</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Storage# import &#34;fyne.io/fyne/v2&#34; Usage#type Storage#type Storage interface { 	RootURI() URI  	Create(name string) (URIWriteCloser, error) 	Open(name string) (URIReadCloser, error) 	Save(name string) (URIWriteCloser, error) 	Remove(name string) error  	List() []string } Storage is used to manage file storage inside an application sandbox. The files managed by this interface are unique to the current application.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/stringvalidator/">fyne.StringValidator</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.StringValidator# import &#34;fyne.io/fyne/v2&#34; Usage#type StringValidator#type StringValidator func(string) error StringValidator is a function signature for validating string inputs.
-Since: 1.4
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/tabbable/">fyne.Tabbable</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Tabbable# import &#34;fyne.io/fyne/v2&#34; Usage#type Tabbable#type Tabbable interface { 	// AcceptsTab() is a hook called by the key press handling logic. 	// If it returns true then the Tab key events will be sent using TypedKey. 	AcceptsTab() bool } Tabbable describes any object that needs to accept the Tab key presses.
-Since: 2.1
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/tappable/">fyne.Tappable</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Tappable# import &#34;fyne.io/fyne/v2&#34; Usage#type Tappable#type Tappable interface { 	Tapped(*PointEvent) } Tappable describes any CanvasObject that can also be tapped. This should be implemented by buttons etc that wish to handle pointer interactions.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/textalign/">fyne.TextAlign</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.TextAlign# import &#34;fyne.io/fyne/v2&#34; Usage#type TextAlign#type TextAlign int TextAlign represents the horizontal alignment of text within a widget or canvas object.
-const ( 	// TextAlignLeading specifies a left alignment for left-to-right languages. 	TextAlignLeading TextAlign = iota 	// TextAlignCenter places the text centrally within the available space. 	TextAlignCenter 	// TextAlignTrailing will align the text right for a left-to-right language.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/textstyle/">fyne.TextStyle</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.TextStyle# import &#34;fyne.io/fyne/v2&#34; Usage#type TextStyle#type TextStyle struct { 	Bold bool // Should text be bold 	Italic bool // Should text be italic 	Monospace bool // Use the system monospace font instead of regular  	// Since: 2.1 	TabWidth int // Width of tabs in spaces } TextStyle represents the styles that can be applied to a text canvas object or text based widget.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/textwrap/">fyne.TextWrap</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.TextWrap# import &#34;fyne.io/fyne/v2&#34; Usage#type TextWrap#type TextWrap int TextWrap represents how text longer than the widget&rsquo;s width will be wrapped.
-const ( 	// TextWrapOff extends the widget&#39;s width to fit the text, no wrapping is applied. 	TextWrapOff TextWrap = iota 	// TextTruncate trims the text to the widget&#39;s width, no wrapping is applied. 	// If an entry is asked to truncate it will provide scrolling capabilities.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/theme/">fyne.Theme</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Theme# import &#34;fyne.io/fyne/v2&#34; Usage#type Theme#type Theme interface { 	Color(ThemeColorName, ThemeVariant) color.Color 	Font(TextStyle) Resource 	Icon(ThemeIconName) Resource 	Size(ThemeSizeName) float32 } Theme defines the method to look up colors, sizes and fonts that make up a Fyne theme.
-Since: 2.0
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/themecolorname/">fyne.ThemeColorName</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.ThemeColorName# import &#34;fyne.io/fyne/v2&#34; Usage#type ThemeColorName#type ThemeColorName string ThemeColorName is used to look up a colour based on its name.
-Since: 2.0
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/themeiconname/">fyne.ThemeIconName</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.ThemeIconName# import &#34;fyne.io/fyne/v2&#34; Usage#type ThemeIconName#type ThemeIconName string ThemeIconName is used to look up an icon based on its name.
-Since: 2.0
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/themesizename/">fyne.ThemeSizeName</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.ThemeSizeName# import &#34;fyne.io/fyne/v2&#34; Usage#type ThemeSizeName#type ThemeSizeName string ThemeSizeName is used to look up a size based on its name.
-Since: 2.0
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/themevariant/">fyne.ThemeVariant</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.ThemeVariant# import &#34;fyne.io/fyne/v2&#34; Usage#type ThemeVariant#type ThemeVariant uint ThemeVariant indicates a variation of a theme, such as light or dark.
-Since: 2.0
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/uri/">fyne.URI</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.URI# import &#34;fyne.io/fyne/v2&#34; Usage#type URI#type URI interface { 	fmt.Stringer  	// Extension should return the file extension of the resource 	// referenced by the URI. For example, the Extension() of 	// &#39;file://foo/bar.baz&#39; is &#39;baz&#39;. May return an empty string if the 	// referenced resource has none. 	Extension() string  	// Name should return the base name of the item referenced by the URI.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/urireadcloser/">fyne.URIReadCloser</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.URIReadCloser# import &#34;fyne.io/fyne/v2&#34; Usage#type URIReadCloser#type URIReadCloser interface { 	io.ReadCloser  	URI() URI } URIReadCloser represents a cross platform data stream from a file or provider of data. It may refer to an item on a filesystem or data in another application that we have access to.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/uriwritecloser/">fyne.URIWriteCloser</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.URIWriteCloser# import &#34;fyne.io/fyne/v2&#34; Usage#type URIWriteCloser#type URIWriteCloser interface { 	io.WriteCloser  	URI() URI } URIWriteCloser represents a cross platform data writer for a file resource. This will normally refer to a local file resource.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/validatable/">fyne.Validatable</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Validatable# import &#34;fyne.io/fyne/v2&#34; Usage#type Validatable#type Validatable interface { 	Validate() error  	// SetOnValidationChanged is used to set the callback that will be triggered when the validation state changes. 	// The function might be overwritten by a parent that cares about child validation (e.g. widget.Form). 	SetOnValidationChanged(func(error)) } Validatable is an interface for specifying if a widget is validatable.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/vector2/">fyne.Vector2</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Vector2# import &#34;fyne.io/fyne/v2&#34; Usage#type Vector2#type Vector2 interface { 	Components() (float32, float32) 	IsZero() bool } Vector2 marks geometry types that can operate as a coordinate vector.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/">fyne.Widget</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Widget# import &#34;fyne.io/fyne/v2&#34; Usage#type Widget#type Widget interface { 	CanvasObject  	// CreateRenderer returns a new WidgetRenderer for this widget. 	// This should not be called by regular code, it is used internally to render a widget. 	CreateRenderer() WidgetRenderer } Widget defines the standard behaviours of any widget. This extends the CanvasObject - a widget behaves in the same basic way but will encapsulate many child objects to create the rendered widget.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widgetrenderer/">fyne.WidgetRenderer</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.WidgetRenderer# import &#34;fyne.io/fyne/v2&#34; Usage#type WidgetRenderer#type WidgetRenderer interface { 	// Destroy is for internal use. 	Destroy() 	// Layout is a hook that is called if the widget needs to be laid out. 	// This should never call Refresh. 	Layout(Size) 	// MinSize returns the minimum size of the widget that is rendered by this renderer. 	MinSize() Size 	// Objects returns all objects that should be drawn.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/window/">fyne.Window</a>
-  </dt>
-  <dd class="markdown-inner">
-    fyne.Window# import &#34;fyne.io/fyne/v2&#34; Usage#type Window#type Window interface { 	// Title returns the current window title. 	// This is typically displayed in the window decorations. 	Title() string 	// SetTitle updates the current title of the window. 	SetTitle(string)  	// FullScreen returns whether or not this window is currently full screen. 	FullScreen() bool 	// SetFullScreen changes the requested fullScreen property 	// true for a fullScreen window and false to unset this.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/layout/">layout</a>
-  </dt>
-  <dd class="markdown-inner">
-    layoutlayout#import &#34;fyne.io/fyne/v2/layout&#34; Package layout defines the various layouts available to Fyne apps Usage#func NewAdaptiveGridLayout#func NewAdaptiveGridLayout(rowcols int) fyne.Layout NewAdaptiveGridLayout returns a new grid layout which uses columns when horizontal but rows when vertical. func NewBorderLayout#func NewBorderLayout(top, bottom, left, right fyne.CanvasObject) fyne.Layout NewBorderLayout creates a new BorderLayout instance with top, bottom, left and right objects set. All other items in the container will fill the centre spacelayout.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/storage/">storage</a>
-  </dt>
-  <dd class="markdown-inner">
-    repositoryrepository.CopyableRepository&#34;repository.CopyableRepository#import &#34;fyne.io/fyne/v2/storage/repository&#34; Usage#type CopyableRepository#type CopyableRepository interface { Repository // Copy will be used to implement calls to storage.Copy() for the // registered scheme of this repository. // // A generic implementation is provided by GenericCopy(). // // NOTE: the first parameter is the source, the second is the // destination. // // NOTE: if storage.repository.CustomURIRepository&#34;repository.CustomURIRepository#import &#34;fyne.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/test/">test</a>
-  </dt>
-  <dd class="markdown-inner">
-    testtest#import &#34;fyne.io/fyne/v2/test&#34; Package test provides utility drivers for running UI tests without rendering Usage#func ApplyTheme#func ApplyTheme(t *testing.T, theme fyne.Theme) ApplyTheme sets the given theme and waits for it to be applied to the current app. func AssertCanvasTappableAt#func AssertCanvasTappableAt(t *testing.T, c fyne.Canvas, pos fyne.Position) bool AssertCanvasTappableAt asserts that the canvas is tappable at the given position. func AssertImageMatches#func AssertImageMatches(t *testing.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/widget/">theme</a>
-  </dt>
-  <dd class="markdown-inner">
-    widgetwidget#import &#34;fyne.io/fyne/v2/widget&#34; Package widget defines the UI widgets within the Fyne toolkit Usage#var ( // RichTextStyleBlockquote represents a quote presented in an indented block. // // Since: 2.1 RichTextStyleBlockquote = RichTextStyle{ ColorName: theme.ColorNameForeground, Inline: false, SizeName: theme.SizeNameText, TextStyle: fyne.TextStyle{Italic: true}, } // RichTextStyleCodeBlock represents a code blog segment. // // Since: 2.widget.Accordionwidget.Accordion#import &#34;fyne.io/fyne/v2/widget&#34; Usage#type Accordion#type Accordion struct { BaseWidget Items []*AccordionItem MultiOpen bool } Accordion displays a list of AccordionItems.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/upgrading/">Upgrading to v2.1</a>
-  </dt>
-  <dd class="markdown-inner">
-    The 2.1 release is fully backward compatible with 2.0.4 and earlier, so upgrading is as simple as updating the version of code you compile with. This is different depending on whether or not you use go modules.
-Modules#If your project has a go.mod file then you can edit the require line to use version v2.1.0, or you can execute the following command inside the directory:
-go get fyne.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/api/theme/">widget</a>
-  </dt>
-  <dd class="markdown-inner">
-    themetheme#import &#34;fyne.io/fyne/v2/theme&#34; Package theme defines how a Fyne app should look when rendered Usage#const ( // IconNameCancel is the name of theme lookup for cancel icon. // // Since: 2.0 IconNameCancel fyne.ThemeIconName = &#34;cancel&#34; // IconNameConfirm is the name of theme lookup for confirm icon. // // Since: 2.0 IconNameConfirm fyne.ThemeIconName = &#34;confirm&#34; // IconNameDelete is the name of theme lookup for delete icon.
-  </dd>
-
-</dl>
-
+  <article class="markdown"><h1 id="fyne">
+  fyne
+  <a class="anchor" href="#fyne">#</a>
+</h1>
+<hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fyne.io/fyne/v2&#34;</span>
+</span></span></code></pre></div><p>Package fyne describes the objects and components available to any Fyne app. These can all be created, manipulated and tested without rendering (for speed). Your main package should use the app package to create an application with a default driver that will render your UI.</p>
+<p>A simple application may look like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>    <span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fyne.io/fyne/v2/app&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fyne.io/fyne/v2/container&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fyne.io/fyne/v2/widget&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    	<span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">New</span>()
+</span></span><span style="display:flex;"><span>    	<span style="color:#a6e22e">w</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">NewWindow</span>(<span style="color:#e6db74">&#34;Hello&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    	<span style="color:#a6e22e">hello</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">widget</span>.<span style="color:#a6e22e">NewLabel</span>(<span style="color:#e6db74">&#34;Hello Fyne!&#34;</span>)
+</span></span><span style="display:flex;"><span>    	<span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">SetContent</span>(<span style="color:#a6e22e">container</span>.<span style="color:#a6e22e">NewVBox</span>(
+</span></span><span style="display:flex;"><span>    		<span style="color:#a6e22e">hello</span>,
+</span></span><span style="display:flex;"><span>    		<span style="color:#a6e22e">widget</span>.<span style="color:#a6e22e">NewButton</span>(<span style="color:#e6db74">&#34;Hi!&#34;</span>, <span style="color:#66d9ef">func</span>() {
+</span></span><span style="display:flex;"><span>    			<span style="color:#a6e22e">hello</span>.<span style="color:#a6e22e">SetText</span>(<span style="color:#e6db74">&#34;Welcome :)&#34;</span>)
+</span></span><span style="display:flex;"><span>    		}),
+</span></span><span style="display:flex;"><span>    	))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    	<span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">ShowAndRun</span>()
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h2 id="usage">
+  Usage
+  <a class="anchor" href="#usage">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">AnimationRepeatForever</span> = <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><p>AnimationRepeatForever is an AnimationCount value that indicates it should not stop looping.</p>
+<div class="since">Since: <code>
+2.0</code></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// AnimationEaseInOut is the default easing, it starts slowly, accelerates to the middle and slows to the end.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// Since: 2.0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">AnimationEaseInOut</span> = <span style="color:#a6e22e">animationEaseInOut</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// AnimationEaseIn starts slowly and accelerates to the end.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// Since: 2.0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">AnimationEaseIn</span> = <span style="color:#a6e22e">animationEaseIn</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// AnimationEaseOut starts at speed and slows to the end.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// Since: 2.0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">AnimationEaseOut</span> = <span style="color:#a6e22e">animationEaseOut</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// AnimationLinear is a linear mapping for animations that progress uniformly through their duration.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// Since: 2.0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">AnimationLinear</span> = <span style="color:#a6e22e">animationLinear</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><h4 id="func--ishorizontal">
+  func  IsHorizontal
+  <a class="anchor" href="#func--ishorizontal">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">IsHorizontal</span>(<span style="color:#a6e22e">orient</span> <span style="color:#a6e22e">DeviceOrientation</span>) <span style="color:#66d9ef">bool</span>
+</span></span></code></pre></div><p>IsHorizontal is a helper utility that determines if a passed orientation is horizontal</p>
+<h4 id="func--isvertical">
+  func  IsVertical
+  <a class="anchor" href="#func--isvertical">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">IsVertical</span>(<span style="color:#a6e22e">orient</span> <span style="color:#a6e22e">DeviceOrientation</span>) <span style="color:#66d9ef">bool</span>
+</span></span></code></pre></div><p>IsVertical is a helper utility that determines if a passed orientation is vertical</p>
+<h4 id="func--logerror">
+  func  LogError
+  <a class="anchor" href="#func--logerror">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">LogError</span>(<span style="color:#a6e22e">reason</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">err</span> <span style="color:#66d9ef">error</span>)
+</span></span></code></pre></div><p>LogError reports an error to the command line with the specified err cause, if not nil. The function also reports basic information about the code location.</p>
+<h4 id="func--max">
+  func  Max
+  <a class="anchor" href="#func--max">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Max</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span> <span style="color:#66d9ef">float32</span>) <span style="color:#66d9ef">float32</span>
+</span></span></code></pre></div><p>Max returns the larger of the passed values.</p>
+<h4 id="func--min">
+  func  Min
+  <a class="anchor" href="#func--min">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Min</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span> <span style="color:#66d9ef">float32</span>) <span style="color:#66d9ef">float32</span>
+</span></span></code></pre></div><p>Min returns the smaller of the passed values.</p>
+<h4 id="func--setcurrentapp">
+  func  SetCurrentApp
+  <a class="anchor" href="#func--setcurrentapp">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">SetCurrentApp</span>(<span style="color:#a6e22e">current</span> <span style="color:#a6e22e">App</span>)
+</span></span></code></pre></div><p>SetCurrentApp is an internal function to set the app instance currently running.</p>
+<h4 id="types">
+  types
+  <a class="anchor" href="#types">#</a>
+</h4>
+<ul>
+<li>
+  <a href="/fyne/docs/api/animation/">Animation</a></li>
+<li>
+  <a href="/fyne/docs/api/animationcurve/">AnimationCurve</a></li>
+<li>
+  <a href="/fyne/docs/api/app/">App</a></li>
+<li>
+  <a href="/fyne/docs/api/buildtype/">BuildType</a></li>
+<li>
+  <a href="/fyne/docs/api/canvas/">Canvas</a></li>
+<li>
+  <a href="/fyne/docs/api/canvasobject/">CanvasObject</a></li>
+<li>
+  <a href="/fyne/docs/api/clipboard/">Clipboard</a></li>
+<li>
+  <a href="/fyne/docs/api/container/">Container</a></li>
+<li>
+  <a href="/fyne/docs/api/delta/">Delta</a></li>
+<li>
+  <a href="/fyne/docs/api/device/">Device</a></li>
+<li>
+  <a href="/fyne/docs/api/deviceorientation/">DeviceOrientation</a></li>
+<li>
+  <a href="/fyne/docs/api/disableable/">Disableable</a></li>
+<li>
+  <a href="/fyne/docs/api/doubletappable/">DoubleTappable</a></li>
+<li>
+  <a href="/fyne/docs/api/dragevent/">DragEvent</a></li>
+<li>
+  <a href="/fyne/docs/api/draggable/">Draggable</a></li>
+<li>
+  <a href="/fyne/docs/api/driver/">Driver</a></li>
+<li>
+  <a href="/fyne/docs/api/focusable/">Focusable</a></li>
+<li>
+  <a href="/fyne/docs/api/hardwarekey/">HardwareKey</a></li>
+<li>
+  <a href="/fyne/docs/api/keyevent/">KeyEvent</a></li>
+<li>
+  <a href="/fyne/docs/api/keyname/">KeyName</a></li>
+<li>
+  <a href="/fyne/docs/api/layout/">Layout</a></li>
+<li>
+  <a href="/fyne/docs/api/legacytheme/">LegacyTheme</a></li>
+<li>
+  <a href="/fyne/docs/api/lifecycle/">Lifecycle</a></li>
+<li>
+  <a href="/fyne/docs/api/listableuri/">ListableURI</a></li>
+<li>
+  <a href="/fyne/docs/api/mainmenu/">MainMenu</a></li>
+<li>
+  <a href="/fyne/docs/api/menu/">Menu</a></li>
+<li>
+  <a href="/fyne/docs/api/menuitem/">MenuItem</a></li>
+<li>
+  <a href="/fyne/docs/api/notification/">Notification</a></li>
+<li>
+  <a href="/fyne/docs/api/overlaystack/">OverlayStack</a></li>
+<li>
+  <a href="/fyne/docs/api/pointevent/">PointEvent</a></li>
+<li>
+  <a href="/fyne/docs/api/position/">Position</a></li>
+<li>
+  <a href="/fyne/docs/api/preferences/">Preferences</a></li>
+<li>
+  <a href="/fyne/docs/api/resource/">Resource</a></li>
+<li>
+  <a href="/fyne/docs/api/scrollevent/">ScrollEvent</a></li>
+<li>
+  <a href="/fyne/docs/api/scrollable/">Scrollable</a></li>
+<li>
+  <a href="/fyne/docs/api/secondarytappable/">SecondaryTappable</a></li>
+<li>
+  <a href="/fyne/docs/api/settings/">Settings</a></li>
+<li>
+  <a href="/fyne/docs/api/shortcut/">Shortcut</a></li>
+<li>
+  <a href="/fyne/docs/api/shortcutcopy/">ShortcutCopy</a></li>
+<li>
+  <a href="/fyne/docs/api/shortcutcut/">ShortcutCut</a></li>
+<li>
+  <a href="/fyne/docs/api/shortcuthandler/">ShortcutHandler</a></li>
+<li>
+  <a href="/fyne/docs/api/shortcutpaste/">ShortcutPaste</a></li>
+<li>
+  <a href="/fyne/docs/api/shortcutselectall/">ShortcutSelectAll</a></li>
+<li>
+  <a href="/fyne/docs/api/shortcutable/">Shortcutable</a></li>
+<li>
+  <a href="/fyne/docs/api/size/">Size</a></li>
+<li>
+  <a href="/fyne/docs/api/staticresource/">StaticResource</a></li>
+<li>
+  <a href="/fyne/docs/api/storage/">Storage</a></li>
+<li>
+  <a href="/fyne/docs/api/stringvalidator/">StringValidator</a></li>
+<li>
+  <a href="/fyne/docs/api/tabbable/">Tabbable</a></li>
+<li>
+  <a href="/fyne/docs/api/tappable/">Tappable</a></li>
+<li>
+  <a href="/fyne/docs/api/textalign/">TextAlign</a></li>
+<li>
+  <a href="/fyne/docs/api/textstyle/">TextStyle</a></li>
+<li>
+  <a href="/fyne/docs/api/textwrap/">TextWrap</a></li>
+<li>
+  <a href="/fyne/docs/api/theme/">Theme</a></li>
+<li>
+  <a href="/fyne/docs/api/themecolorname/">ThemeColorName</a></li>
+<li>
+  <a href="/fyne/docs/api/themeiconname/">ThemeIconName</a></li>
+<li>
+  <a href="/fyne/docs/api/themesizename/">ThemeSizeName</a></li>
+<li>
+  <a href="/fyne/docs/api/themevariant/">ThemeVariant</a></li>
+<li>
+  <a href="/fyne/docs/api/uri/">URI</a></li>
+<li>
+  <a href="/fyne/docs/api/urireadcloser/">URIReadCloser</a></li>
+<li>
+  <a href="/fyne/docs/api/uriwritecloser/">URIWriteCloser</a></li>
+<li>
+  <a href="/fyne/docs/api/validatable/">Validatable</a></li>
+<li>
+  <a href="/fyne/docs/api/vector2/">Vector2</a></li>
+<li>
+  <a href="/fyne/docs/api/widget/">Widget</a></li>
+<li>
+  <a href="/fyne/docs/api/widgetrenderer/">WidgetRenderer</a></li>
+<li>
+  <a href="/fyne/docs/api/window/">Window</a></li>
+</ul>
 </article>
  
       
@@ -5220,16 +4637,16 @@ go get fyne.
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://gitee.com/darcyjoven/hugo_gitee/commit/2f030d9f8b3523f6c3662fb95bacf444d42b41a3" title='最后修改者 darcybook | May 18, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/darcybook/hugo/commit/3c2053fea979f99741da21532f920bdef2ae1357" title='最后修改者 darcy | May 19, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>May 18, 2022</span>
+      <span>May 19, 2022</span>
     </a>
   </div>
 
 
 
   <div>
-    <a class="flex align-center" href="https://gitee.com/darcyjoven/hugo_gitee/edit/main/exampleSite/content.fyne/docs/api/_index.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/darcybook/hugo/blob/main/content.fyne/docs/api/_index.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>编辑本页</span>
     </a>
@@ -5263,7 +4680,19 @@ go get fyne.
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#fyne">fyne</a>
+      <ul>
+        <li><a href="#usage">Usage</a>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
  

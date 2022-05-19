@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>golang on Hugo Book</title>
+    <title>golang on darcy&#39;s</title>
     <link>https://darcybook.github.io/categories/golang/</link>
-    <description>Recent content in golang on Hugo Book</description>
+    <description>Recent content in golang on darcy&#39;s</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 18 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://darcybook.github.io/categories/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Canvas and CanvasObject</title>
+      <title>Canvas 和 CanvasObject</title>
       <link>https://darcybook.github.io/docs/explore/canvas/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/explore/canvas/</guid>
-      <description>In Fyne a Canvas is the area which an application is drawn within. Each window has a canvas which you can access with Window.Canvas() but usually you will find functions on Window that avoid accessing the canvas.
-Everything that can be drawn in Fyne is a type of CanvasObject. The example here opens a new window and then shows different types of primitive graphical element by setting the content of the window canvas.</description>
+      <description>Canvas 和 CanvasObject# 在 Fyne 中，Canvas是绘制应用程序的区域。每个窗口都有一个画布，您可以使用Window.Canvas()进行访问，但通常您会在Window上找到避免直接访问画布的功能。
+在Fyne中可以绘制的所有内容都是一种CanvasObject。 下面这个示例通过在canvas设置原始图形元素的却别。
+可以通过多种方式自定义每种类型的对象，如文本和圆圈示例所示。 就像Canvas.SetContent()改变content显示，它也会改变当前看视图。你可以将FillColour改为rectangle，你可以使用rect.Refresh()请求刷新。
+package main  import ( 	&amp;#34;image/color&amp;#34; 	&amp;#34;time&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Canvas&amp;#34;) 	myCanvas := myWindow.Canvas()  	blue := color.NRGBA{R: 0, G: 0, B: 180, A: 255} 	rect := canvas.NewRectangle(blue) 	myCanvas.SetContent(rect)  	go func() { 	time.</description>
     </item>
     
     <item>
@@ -30,209 +32,253 @@ windows# 从下载下载页面Go并按照说明进行操作 为Windows安装
     </item>
     
     <item>
-      <title>Container and Layouts</title>
+      <title>Hello World</title>
+      <link>https://darcybook.github.io/docs/started/helloworld/</link>
+      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/started/helloworld/</guid>
+      <description>开始你的第一个app# 完成入门文档中的步骤后，即可开始构建您的第一个应用。为了说明这个过程，我们将构建一个简单的 hello world 应用程序。
+用app.New()建立一个简单的app，然后用app.NewWindow()打开一个窗口。用SetContent()将控件数添加到窗口上。最后利用ShowAndRun()运行你的app UI就会显示了
+package main  import ( 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	a := app.New() 	w := a.NewWindow(&amp;#34;Hello World&amp;#34;)  	w.SetContent(widget.NewLabel(&amp;#34;Hello World!&amp;#34;)) 	w.ShowAndRun() } ShowAndRun()可以使用该命令生成上述代码，然后通过运行go build .该命令或双击图标来执行该代码。您也可以绕过编译步骤，直接使用go run .运行代码。
+这两种方法都会显示一个窗口，如下所示：
+如果您更喜欢浅色主题，那么只需设置环境变量FYNE_THEME=light，您将获得：
+这就是入门的全部内容。要了解更多信息，您可以阅读完整的API文档。</description>
+    </item>
+    
+    <item>
+      <title>容器和布局</title>
       <link>https://darcybook.github.io/docs/explore/container/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/explore/container/</guid>
-      <description>In the previous example we saw how to set a CanvasObject to the content of a Canvas, but it is not very useful to only show one visual element. To show more than one item we use the Container type.
-As the fyne.Container also is a fyne.CanvasObject, we can set it to be the content of a fyne.Canvas. In this example we create 3 text objects and then place them in a container using the container.</description>
+      <description>容器和布局# 在前面的示例中，我们看到了如何将CanvasObject设置为Canvas的内容，但通常我们不仅需要显示一个视图。要显示多个项目，我们使用类型Container（容器）。
+由于fyne.Container也是一个fyne.CanvasObject，我们可以将其设置为fyne.Canvas的content。 在此示例中，我们创建 3 个文本对象，然后使用该函数将它们放在Container中。由于没有布局，我们可以像您看到text2.Move()的那样移动元素。
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	//&amp;#34;fyne.io/fyne/v2/layout&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Container&amp;#34;) 	green := color.NRGBA{R: 0, G: 180, B: 0, A: 255}  	text1 := canvas.NewText(&amp;#34;Hello&amp;#34;, green) 	text2 := canvas.NewText(&amp;#34;There&amp;#34;, green) 	text2.Move(fyne.NewPos(20, 20)) 	content := container.NewWithoutLayout(text1, text2) 	// content := container.</description>
     </item>
     
     <item>
-      <title>Hello World</title>
-      <link>https://darcybook.github.io/docs/started/helloword/</link>
-      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/started/helloword/</guid>
-      <description>Create your first Fyne app# Having completed the steps in the getting started document you&amp;rsquo;re ready to build your first app. To illustrate the process we will build a simple hello world application.
-A simple app starts by creating an app instance with app.New() and then opening a window with app.NewWindow(). Then a widget tree is defined that is set as the main content with SetContent() on a window.</description>
-    </item>
-    
-    <item>
-      <title>Application and RunLoop</title>
+      <title>应用程序与循环运行</title>
       <link>https://darcybook.github.io/docs/started/apprun/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/started/apprun/</guid>
-      <description>For a GUI application to work it needs to run an event loop (sometimes called a runloop) that processes user interactions and drawing events. In Fyne this is started using the App.Run() or Window.ShowAndRun() functions. One of these must be called from the end of your setup code in the main() function.
-An application should only have one runloop and so you should only call Run() once in your code. Calling it a second time will cause errors.</description>
+      <description>应用程序与循环运行# 要使 GUI 应用程序正常工作，它需要运行一个事件循环（有时称为 runloop）来处理用户交互和绘制事件。在 Fyne 中，这是使用App.Run()或 Window.ShowAndRun()函数启动的。这两个命令只能再你的设置代码main()函数中调用。 一个应用只能由一个事件循环，所以你的代码中只能调用一次Run()，调用第二次会导致错误。
+package main  import ( 	&amp;#34;fmt&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Hello&amp;#34;) 	myWindow.SetContent(widget.NewLabel(&amp;#34;Hello&amp;#34;))  	myWindow.Show() 	myApp.Run() 	tidyUp() }  func tidyUp() { 	fmt.Println(&amp;#34;Exited&amp;#34;) } 对于桌面运行时，可以通过调用直接退出应用（移动应用不支持此功能） - 通常开发人员代码中不需要写。关闭所有窗口后，应用程序也将退出。 所以说Run()之后执行的安徽念书,再应用退出前不会调用。</description>
     </item>
     
     <item>
-      <title>Widget List</title>
+      <title>组件清单</title>
       <link>https://darcybook.github.io/docs/explore/widgets/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/explore/widgets/</guid>
-      <description>Standard Widgets (in widget package)# Accordion#Accordion displays a list of AccordionItems. Each item is represented by a button that reveals a detailed view when tapped.
-Button#Button widget has a text label and icon, both are optional.
-Card#Card widget groups elements with a header and subheader, all are optional.
-Check#Check widget has a text label and a checked (or unchecked) icon.</description>
+      <description>组件清单# 标准组件 (widget包中)# Accordion#可折叠控件（Accordion）显示项目列表，每个项目都由一个按钮表示，点击该按钮时会显示详细视图。
+Button#按钮空间由有一个文本和图标，两者都是可选的。
+Card#卡片控件是标题副标题的合计，都是可选的。
+Check#单选框 有一个文本和单选（未选中）按钮。
+Entry#输入框空间触发时允许录入简单文本。
+密码输入框隐藏输入内容，还有一个控制它显示的按钮。
+FileIcon#文件图标未不同文件提供标准图标。 将文件显示未不同的图标，并显示文件的扩展名。
+Form#表单是两列网格，其中每行都有一个标签和一个小部件（通常是输入）。网格的最后一行将包含相应的窗体控件按钮（如果有）。
+Hyperlink#超链接构件是具有适当填充和布局的文本组件。单击后，URL 将在默认 Web 浏览器中打开。
+Icon#图标小部件是一个基本的图像组件，可加载其资源以匹配主题。
+Label#标签是具有适当填充和布局的标签组件。
+Progress bar#进度条提供一个横条，显示进度。</description>
     </item>
     
     <item>
-      <title>Layout List</title>
+      <title>布局清单</title>
       <link>https://darcybook.github.io/docs/explore/layouts/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/explore/layouts/</guid>
-      <description>Standard Layouts# Horizontal Box (HBox)#Horizontal Box arranges items in a horizontal row. Every element will have the same height (the height of the tallest item in the container) and objects will be left-aligned at their minimum width.
-Vertical Box (VBox)#Vertical Box arranges items in a vertical column. Every element will have the same width (the width of the widest item in the container) and objects will be top-aligned at their minimum height.</description>
+      <description>布局清单# 标准布局# Horizontal Box (HBox)#HBox在水平行排列子元素。 每个子元素有相同的高（容器中最高的元素）并保持最小宽度左对齐。
+Vertical Box (VBox)#VBox在垂直列排列子元素。 每个子元素有相同的宽（容器中最宽的元素）并保持最小高度，顶对齐。
+Center#居中布局将所有元素放在容器中心。 每个对象设置为最小尺寸。
+Form#表单布局按对进行布局，第一列宽度最小。 对在表单中标签很有用，标签位于第一列，其它对象位于第二列。 此布局需要每次添加偶数个元素。
+Grid#网格布局在可用空间内平局排列元素。 元素水平排放，直到达到指定的列数后自动换行。 所有对象都有相同的尺寸，宽度为宽/列数，高度为高/所需行数。上述计算需要减去padding。
+GridWrap#网格环绕布局横向排列元素，如果空间不足，就换行。 所有对象都将设置为相同尺寸。 此布局可能不遵循MinSize来管理此统一布局。通常用于文件管理器或图像缩略图列表。
+Border#边框布局支持将元素定位在可用空间外部。
+Max#最大布局将所有容器元素填充可用空间。 所有对象都是全尺寸的，并按照添加顺序绘制（最后一个在顶部）。
+Padded#填充布局定位所有容器元素类似最大布局，但在外部哟一个padding填充。
+Combining Layouts#通过使用不同布局可以构建更为复杂的布局结构。 每个容器可以拥有不同的布局，且每一个可以嵌套不同的标准布局。 例如，一个水平HBox作为header，一个垂直VBox作为左侧边栏面板，一个网格布局作为内容域 &amp;ndash; 所有容器都使用边框布局。如下图所示的结果：</description>
     </item>
     
     <item>
-      <title>Updating Content</title>
+      <title>更新 content</title>
       <link>https://darcybook.github.io/docs/started/updating/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/started/updating/</guid>
-      <description>Having completed the hello world tutorial or other examples you will have created a basic user interface. In this page we see how the content of a GUI can be updated from your code.
-The first step is to assign the widget you want to update to a variable. In the hello world tutorial we passed widget.NewLabel directly into SetContent(), to update it we change that to two different lines, such as:</description>
+      <description>更新 content# 完成hello world教程或其他示例后，您将创建一个基本的用户界面。在此页面中，我们将了解如何从代码中更新 GUI 的content。
+第一步是将要更新的小部件分配给变量。在 hello world 教程中，我们直接传入 widget.NewLabel 到 SetContent()，为了更新它，我们将其更改为两行不同的行，例如：
+	clock := widget.NewLabel(&amp;#34;&amp;#34;) 	w.SetContent(clock) 只要content被分配给变量，我们就可以调用类似SetText(&amp;quot;new text&amp;quot;)。对于我们的示例，我们将在Time.Format的帮助下将标签的content设置为当前时间。
+	formatted := time.Now().Format(&amp;#34;Time: 03:04:05&amp;#34;) 	clock.SetText(formatted) 这就是我们需要去改变可见元素的content的全部操作（有关完整代码，请参见下文）。 但是,我们可以更进一步的定期更新content。
+后台背景执行#大多数应用程序都需要具有在后台运行的进程，例如下载数据或响应事件。为了模拟这一点，我们将扩展上面的代码以每秒运行一次。
+与大多数go代码一样，我们可以创建一个goroutine（使用go关键字）并在那里运行我们的代码。如果我们将文本更新代码移动到新函数，则可以在初始显示和计时器上调用它以进行定期更新。通过将 goroutine 和内部time.Tick 循环组合在一起，我们可以每秒更新一次label。
+	go func() { 	for range time.Tick(time.Second) { 	updateTime(clock) 	} 	}() 注意,将此代码放在ShowAndRun 或 Run调用之前，因为它们在应用程序关闭之前不会return。最终运行结果，代码将每秒运行并更新用户界面，从而创建一个基本的时钟小部件。完整代码如下：
+package main  import ( 	&amp;#34;time&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.</description>
     </item>
     
     <item>
-      <title>Dialog List</title>
+      <title>对话框</title>
       <link>https://darcybook.github.io/docs/explore/dialogs/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/explore/dialogs/</guid>
-      <description>Standard Dialogs# Color#Allow users to pick a colour from a standard set (or any color in advanced mode).
-Confirm#Ask for conformation of an action.
-FileOpen#Present this to ask user to choose a file to use inside the app. The actual dialog displayed will depend on the current operating system.
-Form#Get various input elements in a dialog, with validation.</description>
+      <description>对话框# 标准对话框# Color#允许用户从标准集中选择颜色（或在高级模式下选择任何颜色）。
+Confirm#要求去确认一个动作。
+FileOpen#用户在应用内询问选择一个文件。 实际的对话框显示，根据当前的操作系统有所不同。
+Form#对话框中可以输入不容的元素，进行验证。
+Information#一个向用户展示消息的简单途径。
+Custom#展示可以放在对话容器中的所有内容。
+</description>
     </item>
     
     <item>
-      <title>Window Handling</title>
+      <title>窗口处理</title>
       <link>https://darcybook.github.io/docs/started/windows/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/started/windows/</guid>
-      <description>Windows are created using App.NewWindow() and need to be shown using the Show() function. The helper method ShowAndRun() on fyne.Window allows you to show your window and run the application at the same time.
-By default a window will be the right size to show its content by checking the MinSize() function (more on that in later examples). You can set a larger size by calling the Window.Resize() method. Into this is passed a fyne.</description>
+      <description>窗口处理# Windows 是使用App.NewWindow()函数创建的，需要使用Show()函数进行显示。fyne.Window上ShowAndRun()的协助你同时显示并运行你的应用。
+默认情况下，在通过MinSize()函数，窗口大小是正好可以显示content。
+窗口的尺寸将是正确的，可以通过检查函数来显示其内容（后面的示例可以了解更多）。通过Window.Resize()可以设置一个更大的尺寸。函数需要传递具有长宽属性（基于设备无关像素，它在不同设备上将是相同的）的fyne.Size，例如默认情况下，要使用正方形，我们可以：
+	w.Resize(fyne.NewSize(100, 100)) 要注意的是，桌面环境可能会显示窗口导致比实际的小。移动设备通常会忽略这一点，一般以全屏显示。
+如果你向显示第二个窗口，你只需调用Show()。如果你的应用程序启动时，要打开多个窗口，那么将Window.Show() 和App.Run()分开是个不错的选择。下面的例子，介绍了怎么运行时打开两个窗口：
+package main  import ( 	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	a := app.New() 	w := a.NewWindow(&amp;#34;Hello World&amp;#34;)  	w.SetContent(widget.NewLabel(&amp;#34;Hello World!&amp;#34;)) 	w.Show()  	w2 := a.NewWindow(&amp;#34;Larger&amp;#34;) 	w2.SetContent(widget.NewLabel(&amp;#34;More content&amp;#34;)) 	w2.Resize(fyne.NewSize(100, 100)) 	w2.Show()  	a.Run() } 上述应用程序将在两个窗口都关闭时退出。 如果你向将应用设为一个主窗口，一个是附属窗口，你可以将主窗口设置master，这样主窗口关闭时，其它窗口也会关闭。在Window上调用SetMaster()，可以完成设置。
+Windows可以随时创建，我们可以修改上面的代码，新增一个窗口（w2），点击一个按钮可以打开新窗口。你可以从更复杂的工作流中加载窗口，但要注意新窗口通常显示在当前活动content的上方。
+	w2.SetContent(widget.NewButton(&amp;#34;Open new&amp;#34;, func() { 	w3 := a.</description>
     </item>
     
     <item>
-      <title>Adding Shortcuts to an App</title>
-      <link>https://darcybook.github.io/docs/explore/shortcuts/</link>
-      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/explore/shortcuts/</guid>
-      <description>Shortcuts are common tasks that can be triggered by keyboard combinations or context menus. Shortcuts, much like keyboard events, can be attached to a focused element or registered on the Canvas to always be available in a Window.
-Registering with a Canvas#There are many standard shortcuts defined (such as fyne.ShortcutCopy) which are connected to standard keyboard shortcuts and right-click menus. The first step to adding a new Shortcut is to define the shortcut.</description>
-    </item>
-    
-    <item>
-      <title>Testing Graphical Apps</title>
+      <title>单元测试</title>
       <link>https://darcybook.github.io/docs/started/testing/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/started/testing/</guid>
-      <description>Part of a good test suite is being able to quickly write tests and run them on a regular basis. Fyne&amp;rsquo;s API is designed to make testing applications easy. By separating component logic from it&amp;rsquo;s rendering definition we can load applications without actually displaying them and test the functionality completely.
-Example#We can demonstrate unit testing by extending our Hello World app to include space for users to input their name to be greeted.</description>
+      <description>测试图形应用# 一个好的测试组件应该时能快速写测试单元并定期运行。 Fyne 的 API非常容易写测试。将组件逻辑和渲染逻辑分离，我们可以加载程序的时候不用显示它们来进行测试功能。
+示例#我们可以通过扩展我们的Hello World应用程序来演示单元测试，增加让用户输入他们姓名的控件。 我们用Label录入姓名，一个Entry来显示欢迎词。我们用container.NewVBox将一个显示在另一个上面。 更新的用户界面如下：
+func makeUI() (*widget.Label, *widget.Entry) { 	return widget.NewLabel(&amp;#34;Hello world!&amp;#34;), 	widget.NewEntry() }  func main() { 	a := app.New() 	w := a.NewWindow(&amp;#34;Hello Person&amp;#34;)  	w.SetContent(container.NewVBox(makeUI())) 	w.ShowAndRun() } 为了测试此输入动作，我们创建一个包含TestGreeter测试函数的的新文件（名称结尾需要是_test.go，才会识别位测试文件）。
+package main  import (  &amp;#34;testing&amp;#34; )  func TestGreeting(t *testing.T) { } 我们可以添加一个验证初始状态的初始测试，为此，我们断言Label的Text返回的字段，如果测试不正确，则抛出一个错误。将以下代码添加到测试方法中：
+	out, in := makeUI()  	if out.</description>
     </item>
     
     <item>
-      <title>Packaging for Desktop</title>
+      <title>快捷键</title>
+      <link>https://darcybook.github.io/docs/explore/shortcuts/</link>
+      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/explore/shortcuts/</guid>
+      <description>快捷键# 在应用上增加快捷键# 快捷键是利用组合键触发的常见任务。 快捷键和键盘事件非常相似，可以附加到一个触发的元素或者注册到Canvas使它在Window一直有效。
+通过Canvas注册#有需要标准的快捷键和鼠标右键菜单已经定义了（例如fyne.ShortcutCopy）。 添加Shortcut的第一步就是定义一个shortcut。大多数用途是作为桌面扩展的快捷键。 我们用desktop.CustomShortcut去实现，比如用Tab键和Control你可以参照下面这样做：
+	ctrlTab := desktop.CustomShortcut{KeyName: fyne.KeyTab, Modifier: desktop.ControlModifier} 要注意的是快捷键是可以重复使用的，这样你就可以将它增加到其它元素或菜单上。 比如说我们想要它一直有效，我们可以这样在Canvas上注册。
+	ctrlTab := desktop.CustomShortcut{KeyName: fyne.KeyTab, Modifier: desktop.ControlModifier} 	w.Canvas().AddShortcut(&amp;amp;ctrlTab, func(shortcut fyne.Shortcut) { 	log.Println(&amp;#34;We tapped Ctrl+Tab&amp;#34;) 	}) 如你所见，这种方式注册快捷键有两个步骤 &amp;ndash; 快捷键定义和一个回调函数。 如果用户用户按下了快捷键，函数就会调用，并输出打印内容。
+输入框增加快捷键#只有当前元素获得焦点时才触发快捷键也是很有用的。 任何可以聚焦的空间都可以使用，添加一个TypedShortcut扩展来管理快捷键。 和增加一个键盘时间很像，除了它的参数是一个fyne.Shortcut。
+type myEntry struct { 	widget.Entry }  func (m *myEntry) TypedShortcut(s fyne.Shortcut) { 	if _, ok := s.</description>
+    </item>
+    
+    <item>
+      <title>打包</title>
       <link>https://darcybook.github.io/docs/started/packaging/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/started/packaging/</guid>
-      <description>Packaging a graphical app for distribution can be complex. Graphical applications typically have icons and metadata associated with them as well as specific formats required to integrate with each environment. Windows executables need embedded icons, macOS apps are bundles and with Linux there are various metadata files that should get installed. What a hassle!
-Thankfully the &amp;ldquo;fyne&amp;rdquo; app has a &amp;ldquo;package&amp;rdquo; command that can handle this automatically. Just specifying the target OS and any required metadata (such as icon) will generate the appropriate package.</description>
+      <description>打包# 桌面程序打包# 打包图形应用程序以进行分发可能很复杂。图形应用程序通常具有与其关联的图标和元数据，以及与每个环境集成所需的特定格式。Windows可执行文件需要嵌入式图标，macOS应用程序是捆绑包，Linux应该安装各种元数据文件。真是麻烦！
+值得庆幸的是，fyne应用程序具有可以自动处理此情况的package命令。只需指定目标操作系统和任何所需的元数据（如 icon）即可生成相应的程序包。图标转换将自动完成.icns或.ico因此只需提供.png文件 :) 即可。您所需要的只是已经为目标平台构建了应用程序&amp;hellip;
+go install fyne.io/fyne/v2/cmd/fyne@latest fyne package -os darwin -icon myapp.png 如果您使用的是较旧版本的 Go （&amp;lt;1.16），则应使用go get命令安装
+go get fyne.io/fyne/v2/cmd/fyne fyne package -os darwin -icon myapp.png 将创建 myapp.app，这是一个完整的捆绑包结构，用于分发给macOS用户。然后，您也可以构建Linux和Windows版本&amp;hellip;
+fyne package -os linux -icon myapp.pngfyne package -os windows -icon myapp.png 这些命令将创建：
+ myapp.tar.gz包含一个从 usr/local/ 开始的文件夹结构，Linux 用户可以扩展到其系统的根目录。 myapp.exe（在第二次生成之后，这是 windows 包所必需的）将嵌入图标和应用元数据。  如果您只想在自己的计算机上安装桌面应用程序，则可以使用有用的安装子命令。例如，要在系统范围内安装当前应用程序，您只需执行以下操作：
+fyne install -icon myapp.png 所有这些命令还支持Icon.png的默认图标文件，以便您可以避免为每次执行键入参数。从Fyne 2.1开始，还有一个元数据文件文件，您可以在其中为项目设置默认选项。
+当然，如果您愿意，您仍然可以使用标准的Go工具运行应用程序。</description>
     </item>
     
     <item>
-      <title>Using the Preferences API</title>
+      <title>首选项API</title>
       <link>https://darcybook.github.io/docs/explore/preferences/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/explore/preferences/</guid>
-      <description>Storing user configurations and values is a common task for application developers, but implementing it across multiple platforms can be tedious and time-consuming. To make it easier, Fyne has an API for storing values on the filesystem in a clean and understandable way while the complex parts are handled for you.
-Lets start with the setup of the API. It is part of the Preferences interface where storage and loading functions exist for values of Bool, Float, Int and String.</description>
+      <description>首选项API# 使用首选项API# 保存用户的配置是开发人员的常见任务，跨平台实现时非常复杂耗时。 为了简化这个工作，Fyne使用一个API可以简单易懂的方式在文件系统上保存值，同时接管比较复杂的部分。
+让我们从API设置开始。 它时首选项界面的一部分，首选项是用来保存和加载以后的不同类型的值，值包括bool、浮点、整型和字符串。 它们每个都有三个不同函数：加载、带有回退值的加载和一个保存值。 下面可以看到字符串类型的三个函数和它使用示例：
+// String looks up a string value for the key String(key string) string // StringWithFallback looks up a string value and returns the given fallback if not found StringWithFallback(key, fallback string) string // SetString saves a string value for the given key SetString(key string, value string) 创建应用变量和调用Preferences()可以访问这些函数。 注意有必要使用唯一ID（类似一个颠倒的url com.baidu.www）建立应用。 要使用app.NewWithID()来使用创建应用，以便申请应用存储位置。
+a := app.NewWithID(&amp;#34;com.example.tutorial.preferences&amp;#34;) [...] a.Preferences().SetBool(&amp;#34;Boolean&amp;#34;, true) number := a.</description>
     </item>
     
     <item>
-      <title>Compile Options</title>
-      <link>https://darcybook.github.io/docs/explore/compiling/</link>
-      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/explore/compiling/</guid>
-      <description>Build tags#Fyne will typically configure your application appropriately for the target platform by selecting the driver and configuration. The following build tags are supported and can help in your development. For example if you wish to simulate a mobile application whilst running on a desktop computer you could use the following command:
-go run -tags mobile main.go    Tag Description     gles Force use of embedded OpenGL (GLES) instead of full OpenGL.</description>
-    </item>
-    
-    <item>
-      <title>Data Binding</title>
+      <title>数据绑定</title>
       <link>https://darcybook.github.io/docs/explore/binding/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/explore/binding/</guid>
-      <description>Data binding was introduced in Fyne v2.0.0 and makes it easier to connect many widgets to a data source that will update over time. the data/binding package has many helpful bindings that can manage most standard types that will be used in an application. A data binding can be managed using the binding API (for example NewString) or it can be connected to an external item of data like (`BindInt(*int)).</description>
+      <description>数据绑定# 数据绑定在Fyne v2.0.0中引入，这可以使组件和数据源更好的关联起来。 data/binding 包有许多有用的绑定，可以用来管理应用中用到的几乎所有标准类型。 数据绑定可以通过绑定API管理（例如NewString），也可以关联到外部的数据元素（BindInt(*int)）。
+支持绑定的组件通常有一个...WithData构造函数，在创建组件时可以设置绑定的数据。 当然你还可以调用Bind()或者Unbind()来管理组件绑定的数据。
+下面这个示例展示了如何String数据绑定到Label控件：
+package main  import ( 	&amp;#34;time&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	a := app.New() 	w := a.NewWindow(&amp;#34;Hello&amp;#34;)  	str := binding.NewString() 	go func() { 	dots := &amp;#34;.....&amp;#34; 	for i := 5; i &amp;gt;= 0; i-- { 	str.Set(&amp;#34;Count down&amp;#34; + dots[:i]) 	time.Sleep(time.Second) 	} 	str.</description>
     </item>
     
     <item>
-      <title>Packaging Mobile Apps</title>
+      <title>移动端打包</title>
       <link>https://darcybook.github.io/docs/started/mobile/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/started/mobile/</guid>
-      <description>Your Fyne app code will work out of the box as mobile apps, just as it did for desktop. However it is a little more complex to package the code for distribution. This page will explore the process to do just that to get your app on iOS and Android.
-Firstly you will need some more development tools installed for mobile packaging to complete. For Android builds you must have the Android SDK and NDK installed with appropriate environment set up so that the tools (such as adb) can be found on the command line.</description>
+      <description>移动端打包# 你的 Fyne 应用代码将作为移动应用开箱即用，就像它在桌面上一样。但是，打包代码以进行分发会稍微复杂一些。此页面将探讨执行此操作以在iOS和Android上获取应用程序的过程。
+首先，您需要安装更多的开发工具才能完成移动打包。对于 Android 版本，您必须安装 Android SDK 和 NDK 并设置适当的环境，以便在命令行上找到这些工具（如adb）。要构建iOS应用程序，您需要在macOS计算机上安装Xcode以及命令行工具可选包。
+一旦你有了一个工作开发环境，打包就很简单了。要为Android和iOS构建应用程序，以下命令将为您完成所有操作。请确保具有唯一的应用程序标识符，因为在首次发布后不要轻易更改这些标识符。
+fyne package -os android -appID com.example.myapp -icon mobileIcon.pngfyne package -os ios -appID com.example.myapp -icon mobileIcon.png 完成这些命令后（首次编译可能需要一些时间），您将在目录中看到两个新文件，myapp.apk以及 myapp.app。您将看到后者与darwin应用程序包具有相同的名称 &amp;ndash; 不要被它们迷惑了，因为它们在darwin上不起作用。 要在手机或模拟器上安装Android应用程序，只需运行：
+To install the android app on your phone or a simulator simply call:
+adb install myapp.apk 要在设备上安装iOS，请打开Xcode，然后在“窗口”菜单中选择“设备和模拟器”菜单项。然后找到你的手机并将myapp.app图标拖到你的应用列表上。要在模拟器上安装，可以使用命令行工具，如下所示：
+xcrun simctl install booted myapp.app </description>
     </item>
     
     <item>
-      <title>Distributing to App Stores</title>
+      <title>编译选项</title>
+      <link>https://darcybook.github.io/docs/explore/compiling/</link>
+      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/explore/compiling/</guid>
+      <description>编译选项# Build tags#Fyne会选择驱动程序和设置来自动配置你的应用。 下面的build tags可以帮助。 例如，你希望在桌面计算机上模拟移动应用，可以使用下面命令：
+	go run -tags mobile main.go    Tag Description     gles 强制使用嵌入式 OpenGL （GLES） 而不是完整的 OpenGL。这通常由目标设备控制，通常不需要。   hints 显示开发人员提示以进行改进或优化。使用hints运行，会记录您的应用程序不遵循材料设计或其他建议。   mobile 此标记在模拟的移动窗口中运行应用程序。当您想要在移动平台上预览应用程序而无需编译和安装到设备时非常有用。   no_native_menus 此标志专门用于 macOS，指示应用程序不应使用 macOS 本机菜单。相反，菜单将显示在应用程序窗口内。对于在 macOS 上测试应用程序以模拟 Windows 或 Linux 上的行为最有用。    </description>
+    </item>
+    
+    <item>
+      <title>分发到应用商店</title>
       <link>https://darcybook.github.io/docs/started/distribution/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/started/distribution/</guid>
-      <description>Packaging a graphical app as described in the Packaging page provides a file or bundle that could be directly shared or distributed. However signing and uploading to app stores and market places is an additional step that requires platform-specific configuration, which we will cover in this page.
-In each of these steps we will use a new tool that is part of the fyne command line utilities. The fyne release step handles the signing and preparation for each store, but the parameters vary per-platform, which we see below.</description>
+      <description>分发# 分发到应用商店# 按照打包页面中所述打包图形应用程序可提供可直接共享或分发的文件或捆绑包。但是，签名并上传到应用商店和市场是需要特定于平台的配置的额外步骤，我们将在此页面中介绍。
+在每个步骤中，我们将使用一个新工具，该工具是 fyne 命令行实用程序的一部分。该fyne release步骤处理每个商店的签名和准备工作，但参数因平台而异，如下所示。
+macOS App Store (since fyne 1.4.2)#实现准备:
+ 运行 macOS 和 Xcode的Apple mac Apple 开发账号 Mac App Store 应用证书 Mac App Store 安装证书 App Store的Apple Transporter 程序    设置您的应用程序/版本，以便为在AppStore Connect上传构建版本做好准备。
+  捆绑完成的应用程序以进行发布：
+  $ fyne release -appID com.example.myapp -appVersion 1.0 -appBuild 1 -category games  将拖动到Deliver上，然后点击.pkg。
+  返回 AppStore Connect 网站，选择您的版本以供发布，然后提交以供审核。</description>
     </item>
     
     <item>
-      <title>App Metadata</title>
+      <title>元数据</title>
       <link>https://darcybook.github.io/docs/started/metadata/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/started/metadata/</guid>
-      <description>App Metadata#Since release v2.1.0 of the fyne command we support a metadata file that allows you to store information about your application in the repository. This file is optional, but can help to avoid having to remember specific build parameters for each package and release command.
-The file should be named FyneApp.toml in the directory where you run the fyne command (this is normally the main package). The contents of the file are as follows:</description>
+      <description>元数据# App 元数据# fyne自v2.1.0 版本起，我们支持元数据文件，该文件允许您在存储库中存储有关应用程序的信息。此文件是可选的，但有助于避免必须记住每个包和 release 命令的特定生成参数。
+文件需要命名为FyneApp.toml，目录为你运行的fyne目录，（通常是main包位置）。 文件内容如下所示：
+Website = &amp;#34;https://example.com&amp;#34;  [Details] Icon = &amp;#34;Icon.png&amp;#34; Name = &amp;#34;My App&amp;#34; ID = &amp;#34;com.example.app&amp;#34; Version = &amp;#34;1.0.0&amp;#34; Build = 1 该文件的顶部是元数据，如果将应用上传到 https://apps.fyne.io 列表页面，将使用元数据，因此它是可选的。[详细信息] 部分包含其他应用商店和操作系统在发布过程中使用的有关应用程序的数据。如果找到此文件，fyne 工具将使用该文件，如果元数据存在，则不需要许多必需的命令参数。您仍然可以使用命令行参数覆盖这些值。</description>
     </item>
     
     <item>
-      <title>Cross Compiling</title>
+      <title>交叉编译</title>
       <link>https://darcybook.github.io/docs/started/cross-compiling/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/started/cross-compiling/</guid>
-      <description>Compiling for different platforms# Cross compiling with Go is designed to be simple - we just set the environment variable GOOS for the target Operating System (and GOARCH if targeting a different architecture). Unfortunately when using native graphics calls the use of CGo in Fyne makes this a little harder.
-Compiling from a development computer#To cross-compile a Fyne application you will also have to set CGO_ENABLED=1 which tells go to enable the C compiler (this is normally turned off when the target platform is different to the current system).</description>
-    </item>
-    
-    <item>
-      <title>(Hu)go Template Primer</title>
-      <link>https://darcybook.github.io/posts/goisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/posts/goisforlovers/</guid>
-      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
-This document is a brief primer on using Go templates.</description>
-    </item>
-    
-    <item>
-      <title>Getting Started with Hugo</title>
-      <link>https://darcybook.github.io/posts/hugoisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/posts/hugoisforlovers/</guid>
-      <description>Step 1. Install Hugo#Go to Hugo releases and download the appropriate version for your OS and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at Install Hugo
-Step 2. Build the Docs#Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:</description>
+      <description>交叉编译# 不同平台交叉编译# 使用Go进行交叉编译的设计很简单 &amp;ndash; 我们只需为目标操作系统设置环境变量GOOS（GOARCH如果面向不同的体系结构）。不幸的是，当使用原生图形的时候调用时，在Fyne中使用CGo会使这变得更加困难。
+从开发计算机编译#要交叉编译Fyne应用程序，您还必须设置CGO_ENABLED=1告诉go启用C编译器（当目标平台与当前系统不同时，通常会关闭）。不幸的是，这样做意味着您必须为要编译的目标平台提供一个C编译器。安装适当的编译器后，您还需要设置环境变量CC以告知 Go 要使用哪个编译器。
+有许多方法可以安装所需的工具 - 以及可以使用的不同工具。Fyne 开发人员推荐的配置是
+   GOOS (target) CC provider download notes     darwin o32-clang osxcross from github.com 您还需要安装 macOS SDK (instructions at the download link)   windows x86_64-w64-mingw64-gcc mingw64 package manager 对于 macOS，请使用homebrew   linux gcc or x86_64-linux-musl-gcc gcc or musl-cross cygwin or package manager musl-cross 可以从 homebrew 获得，以提供 linux gcc。您还需要安装 X11 和 mesa 标头进行编译。    设置上述环境变量后，您应该能够以通常的方式进行编译。如果发生进一步的错误，则可能是由于缺少包。某些目标平台需要安装其他库或头文件才能成功编译。</description>
     </item>
     
   </channel>

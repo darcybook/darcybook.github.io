@@ -1,98 +1,118 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Widgets on Hugo Book</title>
+    <title>组件 on darcy&#39;s</title>
     <link>https://darcybook.github.io/docs/widget/</link>
-    <description>Recent content in Widgets on Hugo Book</description>
+    <description>Recent content in 组件 on darcy&#39;s</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/docs/widget/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Label</title>
+      <title>标签</title>
       <link>https://darcybook.github.io/docs/widget/label/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/widget/label/</guid>
-      <description>Widgets are the main components of a Fyne application GUI, they can be used in any place that a basic fyne.CanvasObject can. They manage user interactions and will always match the current theme.
-The Label widget is the simplest of them - it presents text to the user. Unlike canvas.Text it can handle some simple formatting (such as \n) and wrapping (by setting the Wrapping field). You can create a label by calling widget.</description>
+      <description>组件是Fyne应用程序GUI的主要组件，它们可以在基本可以fyne.CanvasObject的任何地方使用。它们管理用户交互，并将始终与当前主题匹配。fyne.CanvasObject
+标签组件是其中最简单的 &amp;ndash; 它向用户显示文本。 和canvas.Text不同，它可以处理一些转义（such as \n）和一些换行（通过Wrapping设置）。 你可以通过调用widget.NewLabel(&amp;quot;some text&amp;quot;)来创建标签，可以分配一个变量或者直接传给容器。
+package main  import ( 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Label Widget&amp;#34;)  	content := widget.NewLabel(&amp;#34;text&amp;#34;)  	myWindow.SetContent(content) 	myWindow.ShowAndRun() } </description>
     </item>
     
     <item>
-      <title>Button</title>
+      <title>按钮</title>
       <link>https://darcybook.github.io/docs/widget/button/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/widget/button/</guid>
-      <description>The button widget can contain text, an icon or both, the constructor functions are widget.NewButton() and widget.NewButtonWithIcon(). To create a text button there are just 2 parameters, the string content and a 0 parameter func() that will be called when the button is tapped. See the example for how that can be created.
-The button constructor with an icon includes an additional parameter which is the fyne.Resource which contains the icon data.</description>
+      <description>按钮# 按钮组件可以包含文本，图标或者都有，可通过widget.NewButton()和widget.NewButtonWithIcon()构造。 创建一个文本按钮许哟啊2个参数，一个string 内容额一个没有参数的回调函数，点击按钮时会调用此函数。
+带图标按钮构造函数包括一个额外参数fyne.Resource，参数从包含图标资料。 theme包中有内建的图标，在切换主题时候会自动切换。你可以传递自己的图片 &amp;ndash; 通过fyne.LoadResourceFromPath()可以帮助加载为resource资源，尽可能的打包资源。
+widget.NewButtonWithIcon()只传递空字符串，可以建立一个只有图标的按钮。
+package main  import ( 	&amp;#34;log&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; 	//&amp;#34;fyne.io/fyne/v2/theme&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Button Widget&amp;#34;)  	content := widget.NewButton(&amp;#34;click me&amp;#34;, func() { 	log.Println(&amp;#34;tapped&amp;#34;) 	})  	//content := widget.NewButtonWithIcon(&amp;#34;Home&amp;#34;, theme.HomeIcon(), func() { 	//	log.Println(&amp;#34;tapped home&amp;#34;) 	//})  	myWindow.SetContent(content) 	myWindow.</description>
     </item>
     
     <item>
-      <title>Entry</title>
+      <title>输入框</title>
       <link>https://darcybook.github.io/docs/widget/entry/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/widget/entry/</guid>
-      <description>The entry widget is used for user input of simple text content. An entry can be created with a simple widget.NewEntry() constructing function. When you create the widget keep a reference so that you can access its Text field later. It is also possible to use the OnChanged callback function to be notified every time the content changes.
-Entry widgets can also have validation for verifying the text input typed into it.</description>
+      <description>输入框#用户通过输入可以输入一些简单的文本内容。 widget.NewEntry()可以建立一个输入框。 当你建立组件时要记住名称，方便之后访问Text属性。 OnChanged回调函数，可以在每次内容修改后触发。
+输入空间还可以验证输入的内容类型 &amp;ndash; Validator属性设置一个fyne.StringValidator。PlaceHolder、MultiLine都是可以设置的。
+package main  import ( 	&amp;#34;log&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Entry Widget&amp;#34;)  	input := widget.NewEntry() 	input.SetPlaceHolder(&amp;#34;Enter text...&amp;#34;)  	content := container.NewVBox(input, widget.NewButton(&amp;#34;Save&amp;#34;, func() { 	log.Println(&amp;#34;Content was:&amp;#34;, input.Text) 	}))  	myWindow.SetContent(content) 	myWindow.ShowAndRun() } NewPasswordEntry()可以设置一个密码输入框（输入的内容会遮蔽）。</description>
     </item>
     
     <item>
-      <title>Choices</title>
+      <title>选择组件</title>
       <link>https://darcybook.github.io/docs/widget/choices/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/widget/choices/</guid>
-      <description>There are various widgets available to present the user with a choice, these include a checkbox, radio group and select popup.
-The widget.Check provides a simple yes/no choice and is created using a string label. Each of these widgets also takes a &amp;ldquo;changed&amp;rdquo; func(...) where the parameter is of the appropriate type. widget.NewCheck(..) therefore takes a string parameter for the label and a func(bool) param for the change handler. You can also use the Checked field to get the boolean value.</description>
+      <description>选择组件# 有各种不同组件可以让客户进行一个选择，例如单选框、多选框、和下拉框。
+widget.Check 单选框创建时使用一个字符串标签，提供一个是/否选择。 每一个组件都有一个&amp;quot;changed&amp;quot;func(...)有对应的参数。 widget.NewCheck(..)有一个string参数，有一个func(bool)参数作为改变监听事件。 你还可以使用Checked字段获取当前值。
+多选框也是类似的，但是第一个参数是一个string数组，用来标识每个子元素。 更改函数要求这次有一个string参数返回当前选定的值。调用widget.NewRadioGroup(...)以构造单选按钮组小部件，以后可以使用此引用来读取Selected字段，而不是使用更改回调。
+下拉框组件和多选框有相同的参数。调用widget.NewSelect(...)会显示一个按钮，点击时出现弹窗，用户可以从中选择。 对于列表使用这个更好。
+package main  import ( 	&amp;#34;log&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Choice Widgets&amp;#34;)  	check := widget.NewCheck(&amp;#34;Optional&amp;#34;, func(value bool) { 	log.Println(&amp;#34;Check set to&amp;#34;, value) 	}) 	radio := widget.NewRadioGroup([]string{&amp;#34;Option 1&amp;#34;, &amp;#34;Option 2&amp;#34;}, func(value string) { 	log.Println(&amp;#34;Radio set to&amp;#34;, value) 	}) 	combo := widget.</description>
     </item>
     
     <item>
-      <title>Form</title>
+      <title>表单</title>
       <link>https://darcybook.github.io/docs/widget/form/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/widget/form/</guid>
-      <description>The form widget is used to lay out many input fields with labels and optional cancel and submit buttons. In its most bare form it aligns labels to the left of each input widget. By setting OnCancel or OnSubmit the form will add a button bar with the specified handlers called when appropriate.
-The widget can be created with widget.NewForm(...) passing a list of widget.FormItems, or by using the &amp;amp;widget.Form{} syntax illustrated in the example.</description>
+      <description>表单# 表单组件可以展示需要带有标签的输入框，并提供一个可选的取消或提交按钮。 没有修饰的表单，每个标签对其到输入框左侧。 设置OnCancel或OnSubmit可以增加一个按钮栏，并可以通过回调函数触发。
+使用多个widget.FormItem参数传给widget.NewForm(...)建立一个表单，或者示例中&amp;amp;widget.Form{}方式。 Form.Append(label, widget)也可以用来构造表单。
+在下面示例中，我们建立了两个输入框，其中一个是多行的（类似HTML中的TextArea）。 有一个提交事件去在应用关闭前打印信息（）。
+package main  import ( 	&amp;#34;log&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Form Widget&amp;#34;)  	entry := widget.NewEntry() 	textArea := widget.NewMultiLineEntry()  	form := &amp;amp;widget.Form{ 	Items: []*widget.FormItem{ // we can specify items in the constructor 	{Text: &amp;#34;Entry&amp;#34;, Widget: entry}}, 	OnSubmit: func() { // optional, handle form submission 	log.</description>
     </item>
     
     <item>
-      <title>ProgressBar</title>
+      <title>进度条</title>
       <link>https://darcybook.github.io/docs/widget/progressbar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/widget/progressbar/</guid>
-      <description>The progress bar widget has two forms, the standard progress bar shows the user which Value has been reached, from Min to Max. The default min is 0.0 and the max defaults to 1.0. To use the default values just call widget.NewProgressBar(). After creating you can set the Value field.
-To set up a custom range you can set Min and Max fields manually. The label will always show the percentage completion.</description>
+      <description>进度条# 进度条组件有两种样式，一种显示已经到达Value，从Min到Max。 默认最小值为0.0最大值为1.0。 调用widget.NewProgressBar()直接使用默认值创建组件。 创建之后你可以设置当前Value。
+设置自定义的范围，你可以手动设置Min 和 Max字段。标签始终显示的是完成的百分比。
+另一种形式是无限进度条，这个版本进度条左右来回往复。 调用widget.NewProgressBarInfinite() 创建，并会立即动起来。
+package main  import ( 	&amp;#34;time&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;ProgressBar Widget&amp;#34;)  	progress := widget.NewProgressBar() 	infinite := widget.NewProgressBarInfinite()  	go func() { 	for i := 0.0; i &amp;lt;= 1.0; i += 0.1 { 	time.Sleep(time.Millisecond * 250) 	progress.</description>
     </item>
     
     <item>
-      <title>Toolbar</title>
+      <title>工具栏</title>
       <link>https://darcybook.github.io/docs/widget/toolbar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/widget/toolbar/</guid>
-      <description>The toolbar widget creates a row of action buttons using icons to represent each. The widget.NewToolbar(...) constructor function takes a list of widget.ToolbarItem parameters. The builtin types of toolbar items are action, separator and spacer.
-The most used item is an action that is created using the widget.NewToolbarItemAction(..) function. An action takes two parameters, first being the icon resource to draw and the latter is the func() to call when tapped.</description>
+      <description>工具栏# 工具栏组件用不同图标建立一行操作按钮。widget.NewToolbar(...)函数可以传一个widget.ToolbarItem数组。内建的组件类型有操作按钮、分隔符、和间隔符。
+widget.NewToolbarItemAction(..)创建一个最常用的操作。一个操作包含两个参数，一个是图标资源，另一个是func()回调函数。
+widget.NewToolbarSeparator()创建一个分隔符（通常是垂直的线）在工具栏中分割action。可以使用widget.NewToolbarSpacer()灵活的在action之间创建空间。
+一个工具栏应该使用在区域最上面，通常使用layout.BorderLayout加到 fyne.Container容器中。
+package main  import ( 	&amp;#34;log&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/theme&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Toolbar Widget&amp;#34;)  	toolbar := widget.NewToolbar( 	widget.NewToolbarAction(theme.DocumentCreateIcon(), func() { 	log.Println(&amp;#34;New document&amp;#34;) 	}), 	widget.NewToolbarSeparator(), 	widget.NewToolbarAction(theme.ContentCutIcon(), func() {}), 	widget.NewToolbarAction(theme.ContentCopyIcon(), func() {}), 	widget.NewToolbarAction(theme.ContentPasteIcon(), func() {}), 	widget.NewToolbarSpacer(), 	widget.</description>
     </item>
     
     <item>
-      <title>List</title>
+      <title>列表</title>
       <link>https://darcybook.github.io/docs/widget/list/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/widget/list/</guid>
-      <description>The List widget is one of the toolkit&amp;rsquo;s collection widgets. These widgets are designed to help build really performant interfaces when lots of data is being presented. You can also see the Table and Tree widgets which have a similar API. Because of this design they are a little more complicated to use.
-The List uses callback functions to ask for data when it is required. There are 3 main callbacks, Length, CreateItem and UpdateItem.</description>
+      <description>列表# 列表组件时工具包的聚合组件之一。这些组件能够高性能的呈现大量数据。 你可以看到Table和Tree 组件有类似的API。 由于这种设计，用起来比较复杂。
+列表需要数据时使用回调函数请求。有3各主要的回调函数，Length、CreateItem 和 UpdateItem。 长度回调（参数1）时最简单的，呈现数据中有多少个项目。 其他的和模板有关 &amp;ndash; 图形元素如何创建、缓存和重用。
+CreateItem 回调函数范围一个模板对象。实际数据会和模板对象一起显示。 MinSize字段会影响列表的最小尺寸。
+最后UpdateItem被调用时会将数据线缓存。可以用来设置内容可供显示。
+package main  import ( 	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  var data = []string{&amp;#34;a&amp;#34;, &amp;#34;string&amp;#34;, &amp;#34;list&amp;#34;}  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;List Widget&amp;#34;)  	list := widget.NewList( 	func() int { 	return len(data) 	}, 	func() fyne.CanvasObject { 	return widget.</description>
     </item>
     
     <item>
-      <title>Table</title>
+      <title>表格</title>
       <link>https://darcybook.github.io/docs/widget/table/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/widget/table/</guid>
-      <description>The Table widget is like the List widget (another of the toolkit&amp;rsquo;s collection widgets) with a two-dimensional index. Like List this is designed to help build really performant interfaces when lots of data is being presented. Because of this the widget is not created with all the data embedded, but instead calls out to the data source when needed.
-The Table uses callback functions to ask for data when it is required.</description>
+      <description>表格# 表格组件和像一个二维的列表（另一个聚合组件）。 也是设计来高性能展示大量数据。 因此组件不会引用所有数据，在需要时才引用。
+表格在需要数据时调用回调函数。 有三个回调函数，Length、CreateCell和UpdateCell。 长度回调（参数1）时最简单的，范围需要呈现项目数量，它返回两个整数表示行和列数。 两外两个和实际使用的模板有关。
+CreateCell回调范围一个新模板对象，就像列表一样。 区别在于，MinSize会定义每个单元格的标准此村，和表格最小尺寸（至少显示一个单元格）。
+就像前面说的， UpdateCell 调用用来缓存数据源模板。索引(row, col)和数量一致。
+package main  import ( 	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  var data = [][]string{[]string{&amp;#34;top left&amp;#34;, &amp;#34;top right&amp;#34;}, 	[]string{&amp;#34;bottom left&amp;#34;, &amp;#34;bottom right&amp;#34;}}  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Table Widget&amp;#34;)  	list := widget.NewTable( 	func() (int, int) { 	return len(data), len(data[0]) 	}, 	func() fyne.</description>
     </item>
     
   </channel>

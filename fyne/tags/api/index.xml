@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>api on Hugo Book</title>
+    <title>api on darcy&#39;s</title>
     <link>https://darcybook.github.io/fyne/tags/api/</link>
-    <description>Recent content in api on Hugo Book</description>
+    <description>Recent content in api on darcy&#39;s</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/fyne/tags/api/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>app</title>
@@ -771,17 +771,6 @@ Deprecated: Create a new custom dialog with a widget.ProgressBar() inside.func 
       <guid>https://darcybook.github.io/fyne/docs/api/dialog/progressinfinitedialog/</guid>
       <description>dialog.ProgressInfiniteDialog# import &amp;#34;fyne.io/fyne/v2/dialog&amp;#34; Usage#type ProgressInfiniteDialog#type ProgressInfiniteDialog struct { } ProgressInfiniteDialog is a simple dialog window that displays text and a infinite progress bar.
 Deprecated: Create a new custom dialog with a widget.ProgressBarInfinite() inside.func NewProgressInfinite#func NewProgressInfinite(title, message string, parent fyne.Window) *ProgressInfiniteDialog NewProgressInfinite creates a infinite progress dialog and returns the handle. Using the returned type you should call Show().</description>
-    </item>
-    
-    <item>
-      <title>fyne</title>
-      <link>https://darcybook.github.io/fyne/docs/api/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/fyne/docs/api/</guid>
-      <description>fyne# import &amp;#34;fyne.io/fyne/v2&amp;#34; Package fyne describes the objects and components available to any Fyne app. These can all be created, manipulated and tested without rendering (for speed). Your main package should use the app package to create an application with a default driver that will render your UI.
-A simple application may look like this:
- package main   import &amp;#34;fyne.io/fyne/v2/app&amp;#34;  import &amp;#34;fyne.io/fyne/v2/container&amp;#34;  import &amp;#34;fyne.</description>
     </item>
     
     <item>

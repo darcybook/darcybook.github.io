@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Development on Hugo Book</title>
+    <title>Development on darcy&#39;s</title>
     <link>https://darcybook.github.io/fyne/categories/Development/</link>
-    <description>Recent content in Development on Hugo Book</description>
+    <description>Recent content in Development on darcy&#39;s</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 18 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://darcybook.github.io/fyne/categories/Development/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -37,10 +37,10 @@ As the fyne.Container also is a fyne.CanvasObject, we can set it to be the conte
     
     <item>
       <title>Hello World</title>
-      <link>https://darcybook.github.io/fyne/docs/started/helloword/</link>
+      <link>https://darcybook.github.io/fyne/docs/started/helloworld/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/fyne/docs/started/helloword/</guid>
+      <guid>https://darcybook.github.io/fyne/docs/started/helloworld/</guid>
       <description>Create your first Fyne app# Having completed the steps in the getting started document you&amp;rsquo;re ready to build your first app. To illustrate the process we will build a simple hello world application.
 A simple app starts by creating an app instance with app.New() and then opening a window with app.NewWindow(). Then a widget tree is defined that is set as the main content with SetContent() on a window.</description>
     </item>
