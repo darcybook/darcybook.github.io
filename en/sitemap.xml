@@ -60,19 +60,6 @@
                 href="https://darcybook.github.io/docs/extend/custom-layout/"
                 />
   </url><url>
-    <loc>https://darcybook.github.io/docs/binding/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fyne"
-                href="https://darcybook.github.io/fyne/docs/binding/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://darcybook.github.io/docs/binding/"
-                />
-  </url><url>
     <loc>https://darcybook.github.io/docs/architecture/geometry/</loc>
     <lastmod>2022-05-18T21:52:14+08:00</lastmod>
     <xhtml:link
@@ -633,7 +620,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/binding/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
+    <lastmod>2022-05-19T15:31:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -867,7 +854,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/faq/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
+    <lastmod>2022-05-19T15:31:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -906,7 +893,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/api/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
+    <lastmod>2022-05-19T15:31:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -976,7 +963,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/</loc>
-    <lastmod>2022-05-19T14:39:06+08:00</lastmod>
+    <lastmod>2022-05-19T15:31:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -1059,7 +1046,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/tags/</loc>
-    <lastmod>2022-05-19T14:39:06+08:00</lastmod>
+    <lastmod>2022-05-19T15:31:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -1089,7 +1076,7 @@
     <lastmod>2022-05-18T21:30:02+08:00</lastmod>
   </url><url>
     <loc>https://darcybook.github.io/tags/api/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
+    <lastmod>2022-05-19T15:31:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -1102,20 +1089,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/api/app/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fyne"
-                href="https://darcybook.github.io/fyne/docs/api/app/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://darcybook.github.io/docs/api/app/"
-                />
-  </url><url>
-    <loc>https://darcybook.github.io/docs/api/app/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
+    <lastmod>2022-05-19T15:31:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -1141,20 +1115,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/api/data/binding/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fyne"
-                href="https://darcybook.github.io/fyne/docs/api/data/binding/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://darcybook.github.io/docs/api/data/binding/"
-                />
-  </url><url>
-    <loc>https://darcybook.github.io/docs/api/data/binding/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
+    <lastmod>2022-05-19T15:31:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -1625,20 +1586,7 @@
     <lastmod>2022-05-18T16:34:53+08:00</lastmod>
   </url><url>
     <loc>https://darcybook.github.io/docs/api/canvas/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fyne"
-                href="https://darcybook.github.io/fyne/docs/api/canvas/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://darcybook.github.io/docs/api/canvas/"
-                />
-  </url><url>
-    <loc>https://darcybook.github.io/docs/api/canvas/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
+    <lastmod>2022-05-19T15:31:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -1781,20 +1729,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/api/container/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fyne"
-                href="https://darcybook.github.io/fyne/docs/api/container/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://darcybook.github.io/docs/api/container/"
-                />
-  </url><url>
-    <loc>https://darcybook.github.io/docs/api/container/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
+    <lastmod>2022-05-19T15:31:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -1898,7 +1833,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/api/data/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
+    <lastmod>2022-05-19T15:31:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -1911,20 +1846,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/api/driver/desktop/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fyne"
-                href="https://darcybook.github.io/fyne/docs/api/driver/desktop/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://darcybook.github.io/docs/api/driver/desktop/"
-                />
-  </url><url>
-    <loc>https://darcybook.github.io/docs/api/driver/desktop/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
+    <lastmod>2022-05-19T15:31:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -2093,20 +2015,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/api/dialog/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fyne"
-                href="https://darcybook.github.io/fyne/docs/api/dialog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://darcybook.github.io/docs/api/dialog/"
-                />
-  </url><url>
-    <loc>https://darcybook.github.io/docs/api/dialog/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
+    <lastmod>2022-05-19T15:31:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -2210,7 +2119,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/api/driver/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
+    <lastmod>2022-05-19T15:31:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -2233,32 +2142,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://darcybook.github.io/docs/extend/extending-widgets/"
-                />
-  </url><url>
-    <loc>https://darcybook.github.io/docs/faq/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fyne"
-                href="https://darcybook.github.io/fyne/docs/faq/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://darcybook.github.io/docs/faq/"
-                />
-  </url><url>
-    <loc>https://darcybook.github.io/docs/api/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fyne"
-                href="https://darcybook.github.io/fyne/docs/api/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://darcybook.github.io/docs/api/"
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/api/animation/</loc>
@@ -3138,20 +3021,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/api/layout/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fyne"
-                href="https://darcybook.github.io/fyne/docs/api/layout/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://darcybook.github.io/docs/api/layout/"
-                />
-  </url><url>
-    <loc>https://darcybook.github.io/docs/api/layout/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
+    <lastmod>2022-05-19T15:31:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -3190,20 +3060,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/api/driver/mobile/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fyne"
-                href="https://darcybook.github.io/fyne/docs/api/driver/mobile/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://darcybook.github.io/docs/api/driver/mobile/"
-                />
-  </url><url>
-    <loc>https://darcybook.github.io/docs/api/driver/mobile/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
+    <lastmod>2022-05-19T15:31:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -3278,19 +3135,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://darcybook.github.io/docs/api/driver/mobile/touchevent/"
-                />
-  </url><url>
-    <loc>https://darcybook.github.io/docs/api/storage/repository/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fyne"
-                href="https://darcybook.github.io/fyne/docs/api/storage/repository/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://darcybook.github.io/docs/api/storage/repository/"
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/api/storage/repository/copyablerepository/</loc>
@@ -3385,7 +3229,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/api/storage/repository/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
+    <lastmod>2022-05-19T15:31:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -3398,20 +3242,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/api/driver/software/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fyne"
-                href="https://darcybook.github.io/fyne/docs/api/driver/software/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://darcybook.github.io/docs/api/driver/software/"
-                />
-  </url><url>
-    <loc>https://darcybook.github.io/docs/api/driver/software/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
+    <lastmod>2022-05-19T15:31:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -3424,20 +3255,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/api/storage/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fyne"
-                href="https://darcybook.github.io/fyne/docs/api/storage/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://darcybook.github.io/docs/api/storage/"
-                />
-  </url><url>
-    <loc>https://darcybook.github.io/docs/api/storage/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
+    <lastmod>2022-05-19T15:31:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -3489,20 +3307,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/api/test/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fyne"
-                href="https://darcybook.github.io/fyne/docs/api/test/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://darcybook.github.io/docs/api/test/"
-                />
-  </url><url>
-    <loc>https://darcybook.github.io/docs/api/test/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
+    <lastmod>2022-05-19T15:31:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -3541,7 +3346,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/api/theme/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
+    <lastmod>2022-05-19T15:31:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -3551,19 +3356,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://darcybook.github.io/docs/api/theme/"
-                />
-  </url><url>
-    <loc>https://darcybook.github.io/docs/api/widget/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fyne"
-                href="https://darcybook.github.io/fyne/docs/api/widget/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://darcybook.github.io/docs/api/widget/"
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/api/theme/disabledresource/</loc>
@@ -3645,7 +3437,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/api/data/validation/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
+    <lastmod>2022-05-19T15:31:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -3655,36 +3447,10 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://darcybook.github.io/docs/api/data/validation/"
-                />
-  </url><url>
-    <loc>https://darcybook.github.io/docs/api/data/validation/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fyne"
-                href="https://darcybook.github.io/fyne/docs/api/data/validation/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://darcybook.github.io/docs/api/data/validation/"
-                />
-  </url><url>
-    <loc>https://darcybook.github.io/docs/api/theme/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fyne"
-                href="https://darcybook.github.io/fyne/docs/api/theme/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://darcybook.github.io/docs/api/theme/"
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/api/widget/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
+    <lastmod>2022-05-19T15:31:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"

@@ -6,17 +6,6 @@
     <description>Recent content in layout on darcy&#39;s</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/fyne/docs/api/layout/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>layout</title>
-      <link>https://darcybook.github.io/fyne/docs/api/layout/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/fyne/docs/api/layout/</guid>
-      <description>layout# import &amp;#34;fyne.io/fyne/v2/layout&amp;#34; Package layout defines the various layouts available to Fyne apps
-Usage#func NewAdaptiveGridLayout#func NewAdaptiveGridLayout(rowcols int) fyne.Layout NewAdaptiveGridLayout returns a new grid layout which uses columns when horizontal but rows when vertical.
-func NewBorderLayout#func NewBorderLayout(top, bottom, left, right fyne.CanvasObject) fyne.Layout NewBorderLayout creates a new BorderLayout instance with top, bottom, left and right objects set. All other items in the container will fill the centre space</description>
-    </item>
-    
-    <item>
       <title>layout.Spacer</title>
       <link>https://darcybook.github.io/fyne/docs/api/layout/spacer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

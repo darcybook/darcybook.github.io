@@ -46,16 +46,6 @@ type Layout interface { 	Layout([]CanvasObject, Size) 	MinSize(objects []CanvasO
     </item>
     
     <item>
-      <title>Data Binding</title>
-      <link>https://darcybook.github.io/fyne/docs/binding/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/fyne/docs/binding/</guid>
-      <description>Data binding is a powerful new addition to the Fyne toolkit that was introduced in version v2.0.0. By using data binding we can avoid manually managing many standard objects like Labels, Buttons and Lists.
-The builtin bindings support many primitive types (like Int, String, Float etc), lists (such as StringList, BoolList) as well as Map and Struct bindings. Each of these types can be created using a simple constructor function. For example to create a new string binding with a zero value you can use binding.</description>
-    </item>
-    
-    <item>
       <title>Geometry</title>
       <link>https://darcybook.github.io/fyne/docs/architecture/geometry/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -622,16 +612,6 @@ Compiling from a development computer#To cross-compile a Fyne application you
     </item>
     
     <item>
-      <title>app</title>
-      <link>https://darcybook.github.io/fyne/docs/api/app/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/fyne/docs/api/app/</guid>
-      <description>app# import &amp;#34;fyne.io/fyne/v2/app&amp;#34; Package app provides app implementations for working with Fyne graphical interfaces. The fastest way to get started is to call app.New() which will normally load a new desktop application. If the &amp;ldquo;ci&amp;rdquo; tag is passed to go (go run -tags ci myapp.go) it will run an in-memory application.
-Usage#func New#func New() fyne.App New returns a new application instance with the default driver and no unique ID</description>
-    </item>
-    
-    <item>
       <title>app.SettingsSchema</title>
       <link>https://darcybook.github.io/fyne/docs/api/app/settingsschema/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -639,15 +619,6 @@ Usage#func New#func New() fyne.App New returns a new application instance 
       <guid>https://darcybook.github.io/fyne/docs/api/app/settingsschema/</guid>
       <description>app.SettingsSchema# import &amp;#34;fyne.io/fyne/v2/app&amp;#34; Usage#type SettingsSchema#type SettingsSchema struct { 	// these items are used for global settings load 	ThemeName string `json:&amp;#34;theme&amp;#34;` 	Scale float32 `json:&amp;#34;scale&amp;#34;` 	PrimaryColor string `json:&amp;#34;primary_color&amp;#34;` } SettingsSchema is used for loading and storing global settings
 func (*SettingsSchema) StoragePath#func (sc *SettingsSchema) StoragePath() string StoragePath returns the location of the settings storage</description>
-    </item>
-    
-    <item>
-      <title>binding</title>
-      <link>https://darcybook.github.io/fyne/docs/api/data/binding/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/fyne/docs/api/data/binding/</guid>
-      <description>binding# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#types# Bool BoolList DataItem DataList DataListener DataMap ExternalBool ExternalBoolList ExternalFloat ExternalFloatList ExternalInt ExternalIntList ExternalRune ExternalRuneList ExternalString ExternalStringList ExternalURI ExternalURIList ExternalUntyped ExternalUntypedList ExternalUntypedMap Float FloatList Int IntList Rune RuneList String StringList Struct URI URIList Untyped UntypedList UntypedMap  </description>
     </item>
     
     <item>
@@ -1004,17 +975,6 @@ Since: 2.1func NewURIList#func NewURIList() URIList NewURIList returns a bi
     </item>
     
     <item>
-      <title>canvas</title>
-      <link>https://darcybook.github.io/fyne/docs/api/canvas/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/fyne/docs/api/canvas/</guid>
-      <description>canvas# import &amp;#34;fyne.io/fyne/v2/canvas&amp;#34; Package canvas contains all of the primitive CanvasObjects that make up a Fyne GUI
-The types implemented in this package are used as building blocks in order to build higher order functionality. These types are designed to be non-interactive, by design. If additional functonality is required, it&amp;rsquo;s usually a sign that this type should be used as part of a custom Widget.
-Usage#const ( 	// DurationStandard is the time a standard interface animation will run.</description>
-    </item>
-    
-    <item>
       <title>canvas.Circle</title>
       <link>https://darcybook.github.io/fyne/docs/api/canvas/circle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1109,16 +1069,6 @@ func (*Rectangle) Hide#func (r *Rectangle) Hide() Hide will set this object t
     </item>
     
     <item>
-      <title>container</title>
-      <link>https://darcybook.github.io/fyne/docs/api/container/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/fyne/docs/api/container/</guid>
-      <description>container# import &amp;#34;fyne.io/fyne/v2/container&amp;#34; Package container provides container widgets that are used to lay out and organise applications
-Usage#const ( 	// ScrollBoth supports horizontal and vertical scrolling. 	ScrollBoth ScrollDirection = widget.ScrollBoth 	// ScrollHorizontalOnly specifies the scrolling should only happen left to right. 	ScrollHorizontalOnly = widget.ScrollHorizontalOnly 	// ScrollVerticalOnly specifies the scrolling should only happen top to bottom. 	ScrollVerticalOnly = widget.ScrollVerticalOnly 	// ScrollNone turns off scrolling for this container.</description>
-    </item>
-    
-    <item>
       <title>container.AppTabs</title>
       <link>https://darcybook.github.io/fyne/docs/api/container/apptabs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1184,16 +1134,6 @@ Since: 1.4func NewTabItem#func NewTabItem(text string, content fyne.CanvasO
       <guid>https://darcybook.github.io/fyne/docs/api/container/tablocation/</guid>
       <description>container.TabLocation# import &amp;#34;fyne.io/fyne/v2/container&amp;#34; Usage#type TabLocation#type TabLocation int TabLocation is the location where the tabs of a tab container should be rendered
 Since: 1.4const ( 	TabLocationTop TabLocation = iota 	TabLocationLeading 	TabLocationBottom 	TabLocationTrailing ) TabLocation values</description>
-    </item>
-    
-    <item>
-      <title>desktop</title>
-      <link>https://darcybook.github.io/fyne/docs/api/driver/desktop/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/fyne/docs/api/driver/desktop/</guid>
-      <description>desktop# import &amp;#34;fyne.io/fyne/v2/driver/desktop&amp;#34; Package desktop provides desktop specific driver functionality.
-Usage#const ( 	// KeyNone represents no key 	KeyNone fyne.KeyName = &amp;#34;&amp;#34; 	// KeyShiftLeft represents the left shift key 	KeyShiftLeft fyne.KeyName = &amp;#34;LeftShift&amp;#34; 	// KeyShiftRight represents the right shift key 	KeyShiftRight fyne.KeyName = &amp;#34;RightShift&amp;#34; 	// KeyControlLeft represents the left control key 	KeyControlLeft fyne.KeyName = &amp;#34;LeftControl&amp;#34; 	// KeyControlRight represents the right control key 	KeyControlRight fyne.</description>
     </item>
     
     <item>
@@ -1309,17 +1249,6 @@ Since: 2.0const ( 	// DefaultCursor is the default cursor typically an arrow 	
     </item>
     
     <item>
-      <title>dialog</title>
-      <link>https://darcybook.github.io/fyne/docs/api/dialog/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/fyne/docs/api/dialog/</guid>
-      <description>dialog# import &amp;#34;fyne.io/fyne/v2/dialog&amp;#34; Package dialog defines standard dialog windows for application GUIs.
-Usage#func ShowColorPicker#func ShowColorPicker(title, message string, callback func(c color.Color), parent fyne.Window) ShowColorPicker creates and shows a color dialog. The callback is triggered when the user selects a color.
-Since: 1.4func ShowConfirm#func ShowConfirm(title, message string, callback func(bool), parent fyne.Window) ShowConfirm shows a dialog over the specified window for a user confirmation.</description>
-    </item>
-    
-    <item>
       <title>dialog.ColorPickerDialog</title>
       <link>https://darcybook.github.io/fyne/docs/api/dialog/colorpickerdialog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1397,27 +1326,6 @@ Deprecated: Create a new custom dialog with a widget.ProgressBarInfinite() insid
       <guid>https://darcybook.github.io/fyne/docs/extend/extending-widgets/</guid>
       <description>The standard Fyne widgets provide the minimum functionality and customisation to support most use-cases. It may be required at certain times to have more advanced functionality. Rather than have developers build their own widgets it is possible to extend the existing ones.
 For example we will extend the icon widget to support being tapped. To do this we declare a new struct that embeds the widget.Icon type. We create a constructor function that calls the important ExtendBaseWidget function.</description>
-    </item>
-    
-    <item>
-      <title>Frequently Asked Questions</title>
-      <link>https://darcybook.github.io/fyne/docs/faq/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/fyne/docs/faq/</guid>
-      <description>As the Fyne toolkit presents a different approach to the traditional design of GUI tookits in some ways we have compiled this selection of answers to frequently asked questions. The content is grouped into the following areas.
- Layout and widget size Theme and customisation   If you have more questions please get in touch.</description>
-    </item>
-    
-    <item>
-      <title>fyne</title>
-      <link>https://darcybook.github.io/fyne/docs/api/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/fyne/docs/api/</guid>
-      <description>fyne# import &amp;#34;fyne.io/fyne/v2&amp;#34; Package fyne describes the objects and components available to any Fyne app. These can all be created, manipulated and tested without rendering (for speed). Your main package should use the app package to create an application with a default driver that will render your UI.
-A simple application may look like this:
- package main   import &amp;#34;fyne.io/fyne/v2/app&amp;#34;  import &amp;#34;fyne.io/fyne/v2/container&amp;#34;  import &amp;#34;fyne.</description>
     </item>
     
     <item>
@@ -2045,17 +1953,6 @@ Since: 2.0</description>
     </item>
     
     <item>
-      <title>layout</title>
-      <link>https://darcybook.github.io/fyne/docs/api/layout/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/fyne/docs/api/layout/</guid>
-      <description>layout# import &amp;#34;fyne.io/fyne/v2/layout&amp;#34; Package layout defines the various layouts available to Fyne apps
-Usage#func NewAdaptiveGridLayout#func NewAdaptiveGridLayout(rowcols int) fyne.Layout NewAdaptiveGridLayout returns a new grid layout which uses columns when horizontal but rows when vertical.
-func NewBorderLayout#func NewBorderLayout(top, bottom, left, right fyne.CanvasObject) fyne.Layout NewBorderLayout creates a new BorderLayout instance with top, bottom, left and right objects set. All other items in the container will fill the centre space</description>
-    </item>
-    
-    <item>
       <title>layout.Spacer</title>
       <link>https://darcybook.github.io/fyne/docs/api/layout/spacer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2073,16 +1970,6 @@ func (*Spacer) ExpandVertical#func (s *Spacer) ExpandVertical() bool ExpandVe
       
       <guid>https://darcybook.github.io/fyne/docs/api/layout/spacerobject/</guid>
       <description>layout.SpacerObject# import &amp;#34;fyne.io/fyne/v2/layout&amp;#34; Usage#type SpacerObject#type SpacerObject interface { 	ExpandVertical() bool 	ExpandHorizontal() bool } SpacerObject is any object that can be used to space out child objects</description>
-    </item>
-    
-    <item>
-      <title>mobile</title>
-      <link>https://darcybook.github.io/fyne/docs/api/driver/mobile/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/fyne/docs/api/driver/mobile/</guid>
-      <description>mobile# import &amp;#34;fyne.io/fyne/v2/driver/mobile&amp;#34; Package mobile provides mobile specific driver functionality.
-Usage#types# Device KeyboardType Keyboardable TouchEvent Touchable  </description>
     </item>
     
     <item>
@@ -2195,39 +2082,6 @@ const ( 	// DefaultKeyboard is the keyboard with default input style and &amp;#3
     </item>
     
     <item>
-      <title>repository&#34;</title>
-      <link>https://darcybook.github.io/fyne/docs/api/storage/repository/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/fyne/docs/api/storage/repository/</guid>
-      <description>repository# import &amp;#34;fyne.io/fyne/v2/storage/repository&amp;#34; Usage#var ( 	// ErrOperationNotSupported may be thrown by certain functions in the storage 	// or repository packages which operate on URIs if an operation is attempted 	// that is not supported for the scheme relevant to the URI, normally because 	// the underlying repository has either not implemented the relevant function, 	// or has explicitly returned this error.</description>
-    </item>
-    
-    <item>
-      <title>software</title>
-      <link>https://darcybook.github.io/fyne/docs/api/driver/software/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/fyne/docs/api/driver/software/</guid>
-      <description>software# import &amp;#34;fyne.io/fyne/v2/driver/software&amp;#34; Usage#func NewCanvas#func NewCanvas() test.WindowlessCanvas NewCanvas creates a new canvas in memory that can render without hardware support
-func Render#func Render(obj fyne.CanvasObject, t fyne.Theme) image.Image Render takes a canvas object and renders it to a regular Go image using the provided Theme. The returned image will be set to the object&amp;rsquo;s minimum size. Use the theme.LightTheme() or theme.</description>
-    </item>
-    
-    <item>
-      <title>storage</title>
-      <link>https://darcybook.github.io/fyne/docs/api/storage/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/fyne/docs/api/storage/</guid>
-      <description>storage# import &amp;#34;fyne.io/fyne/v2/storage&amp;#34; Package storage provides storage access and management functionality.
-Usage#var URIRootError = repository.ErrURIRoot URIRootError is a wrapper for repository.URIRootError
-Deprecated - use repository.ErrURIRoot instead
-func CanList#func CanList(u fyne.URI) (bool, error) CanList will determine if the URI is listable or not.
-This method may fail in several ways:
- Different permissions or credentials are required to check if the   URI supports listing.</description>
-    </item>
-    
-    <item>
       <title>storage.ExtensionFileFilter</title>
       <link>https://darcybook.github.io/fyne/docs/api/storage/extensionfilefilter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2259,18 +2113,6 @@ func (*MimeTypeFileFilter) Matches#func (mt *MimeTypeFileFilter) Matches(uri 
     </item>
     
     <item>
-      <title>test</title>
-      <link>https://darcybook.github.io/fyne/docs/api/test/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/fyne/docs/api/test/</guid>
-      <description>test# import &amp;#34;fyne.io/fyne/v2/test&amp;#34; Package test provides utility drivers for running UI tests without rendering
-Usage#func ApplyTheme#func ApplyTheme(t *testing.T, theme fyne.Theme) ApplyTheme sets the given theme and waits for it to be applied to the current app.
-func AssertCanvasTappableAt#func AssertCanvasTappableAt(t *testing.T, c fyne.Canvas, pos fyne.Position) bool AssertCanvasTappableAt asserts that the canvas is tappable at the given position.
-func AssertImageMatches#func AssertImageMatches(t *testing.</description>
-    </item>
-    
-    <item>
       <title>test.SoftwarePainter</title>
       <link>https://darcybook.github.io/fyne/docs/api/test/softwarepainter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2288,16 +2130,6 @@ func AssertImageMatches#func AssertImageMatches(t *testing.</description>
       <description>test.WindowlessCanvas# import &amp;#34;fyne.io/fyne/v2/test&amp;#34; Usage#type WindowlessCanvas#type WindowlessCanvas interface { 	fyne.Canvas  	Padded() bool 	Resize(fyne.Size) 	SetPadded(bool) 	SetScale(float32) } WindowlessCanvas provides functionality for a canvas to operate without a window
 func NewCanvas#func NewCanvas() WindowlessCanvas NewCanvas returns a single use in-memory canvas used for testing
 func NewCanvasWithPainter#func NewCanvasWithPainter(painter SoftwarePainter) WindowlessCanvas NewCanvasWithPainter allows creation of an in-memory canvas with a specific painter.</description>
-    </item>
-    
-    <item>
-      <title>theme</title>
-      <link>https://darcybook.github.io/fyne/docs/api/theme/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/fyne/docs/api/theme/</guid>
-      <description>theme# import &amp;#34;fyne.io/fyne/v2/theme&amp;#34; Package theme defines how a Fyne app should look when rendered
-Usage#const ( 	// IconNameCancel is the name of theme lookup for cancel icon. 	// 	// Since: 2.0 	IconNameCancel fyne.ThemeIconName = &amp;#34;cancel&amp;#34;  	// IconNameConfirm is the name of theme lookup for confirm icon. 	// 	// Since: 2.0 	IconNameConfirm fyne.ThemeIconName = &amp;#34;confirm&amp;#34;  	// IconNameDelete is the name of theme lookup for delete icon.</description>
     </item>
     
     <item>
@@ -2364,27 +2196,6 @@ func (*ThemedResource) Content#func (res *ThemedResource) Content() []byte Co
       <description>The 2.1 release is fully backward compatible with 2.0.4 and earlier, so upgrading is as simple as updating the version of code you compile with. This is different depending on whether or not you use go modules.
 Modules#If your project has a go.mod file then you can edit the require line to use version v2.1.0, or you can execute the following command inside the directory:
 go get fyne.</description>
-    </item>
-    
-    <item>
-      <title>validation</title>
-      <link>https://darcybook.github.io/fyne/docs/api/data/validation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/fyne/docs/api/data/validation/</guid>
-      <description>validation# import &amp;#34;fyne.io/fyne/v2/data/validation&amp;#34; Package validation provides validation for data inside widgets
-Usage#func NewRegexp#func NewRegexp(regexpstr, reason string) fyne.StringValidator NewRegexp creates a new validator that uses regular expression parsing. The validator will return nil if valid, otherwise returns an error with a reason text.
-Since: 1.4func NewTime#func NewTime(format string) fyne.StringValidator NewTime creates a new validator that verifies times using time.</description>
-    </item>
-    
-    <item>
-      <title>widget</title>
-      <link>https://darcybook.github.io/fyne/docs/api/widget/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/fyne/docs/api/widget/</guid>
-      <description>widget# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Package widget defines the UI widgets within the Fyne toolkit
-Usage#var ( 	// RichTextStyleBlockquote represents a quote presented in an indented block. 	// 	// Since: 2.1 	RichTextStyleBlockquote = RichTextStyle{ 	ColorName: theme.ColorNameForeground, 	Inline: false, 	SizeName: theme.SizeNameText, 	TextStyle: fyne.TextStyle{Italic: true}, 	} 	// RichTextStyleCodeBlock represents a code blog segment. 	// 	// Since: 2.</description>
     </item>
     
     <item>

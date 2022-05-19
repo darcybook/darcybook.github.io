@@ -6,15 +6,6 @@
     <description>Recent content in binding on darcy&#39;s</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/fyne/docs/api/data/binding/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>binding</title>
-      <link>https://darcybook.github.io/fyne/docs/api/data/binding/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/fyne/docs/api/data/binding/</guid>
-      <description>binding# import &amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; Usage#types# Bool BoolList DataItem DataList DataListener DataMap ExternalBool ExternalBoolList ExternalFloat ExternalFloatList ExternalInt ExternalIntList ExternalRune ExternalRuneList ExternalString ExternalStringList ExternalURI ExternalURIList ExternalUntyped ExternalUntypedList ExternalUntypedMap Float FloatList Int IntList Rune RuneList String StringList Struct URI URIList Untyped UntypedList UntypedMap  </description>
-    </item>
-    
-    <item>
       <title>binding.Bool</title>
       <link>https://darcybook.github.io/fyne/docs/api/data/binding/bool/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

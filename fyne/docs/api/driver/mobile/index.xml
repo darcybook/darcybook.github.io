@@ -6,16 +6,6 @@
     <description>Recent content in mobile on darcy&#39;s</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/fyne/docs/api/driver/mobile/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>mobile</title>
-      <link>https://darcybook.github.io/fyne/docs/api/driver/mobile/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/fyne/docs/api/driver/mobile/</guid>
-      <description>mobile# import &amp;#34;fyne.io/fyne/v2/driver/mobile&amp;#34; Package mobile provides mobile specific driver functionality.
-Usage#types# Device KeyboardType Keyboardable TouchEvent Touchable  </description>
-    </item>
-    
-    <item>
       <title>mobile.Device</title>
       <link>https://darcybook.github.io/fyne/docs/api/driver/mobile/device/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

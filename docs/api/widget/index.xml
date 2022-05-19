@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>theme on darcy&#39;s</title>
+    <title>widget on darcy&#39;s</title>
     <link>https://darcybook.github.io/docs/api/widget/</link>
-    <description>Recent content in theme on darcy&#39;s</description>
+    <description>Recent content in widget on darcy&#39;s</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/docs/api/widget/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>widget</title>
-      <link>https://darcybook.github.io/docs/api/widget/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/api/widget/</guid>
-      <description>widget# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Package widget defines the UI widgets within the Fyne toolkit
-Usage#var ( 	// RichTextStyleBlockquote represents a quote presented in an indented block. 	// 	// Since: 2.1 	RichTextStyleBlockquote = RichTextStyle{ 	ColorName: theme.ColorNameForeground, 	Inline: false, 	SizeName: theme.SizeNameText, 	TextStyle: fyne.TextStyle{Italic: true}, 	} 	// RichTextStyleCodeBlock represents a code blog segment. 	// 	// Since: 2.</description>
-    </item>
-    
     <item>
       <title>widget.Accordion</title>
       <link>https://darcybook.github.io/docs/api/widget/accordion/</link>

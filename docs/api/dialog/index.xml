@@ -6,17 +6,6 @@
     <description>Recent content in dialog on darcy&#39;s</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/docs/api/dialog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>dialog</title>
-      <link>https://darcybook.github.io/docs/api/dialog/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/api/dialog/</guid>
-      <description>dialog# import &amp;#34;fyne.io/fyne/v2/dialog&amp;#34; Package dialog defines standard dialog windows for application GUIs.
-Usage#func ShowColorPicker#func ShowColorPicker(title, message string, callback func(c color.Color), parent fyne.Window) ShowColorPicker creates and shows a color dialog. The callback is triggered when the user selects a color.
-Since: 1.4func ShowConfirm#func ShowConfirm(title, message string, callback func(bool), parent fyne.Window) ShowConfirm shows a dialog over the specified window for a user confirmation.</description>
-    </item>
-    
-    <item>
       <title>dialog.ColorPickerDialog</title>
       <link>https://darcybook.github.io/docs/api/dialog/colorpickerdialog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -6,16 +6,6 @@
     <description>Recent content in desktop on darcy&#39;s</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/docs/api/driver/desktop/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>desktop</title>
-      <link>https://darcybook.github.io/docs/api/driver/desktop/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/api/driver/desktop/</guid>
-      <description>desktop# import &amp;#34;fyne.io/fyne/v2/driver/desktop&amp;#34; Package desktop provides desktop specific driver functionality.
-Usage#const ( 	// KeyNone represents no key 	KeyNone fyne.KeyName = &amp;#34;&amp;#34; 	// KeyShiftLeft represents the left shift key 	KeyShiftLeft fyne.KeyName = &amp;#34;LeftShift&amp;#34; 	// KeyShiftRight represents the right shift key 	KeyShiftRight fyne.KeyName = &amp;#34;RightShift&amp;#34; 	// KeyControlLeft represents the left control key 	KeyControlLeft fyne.KeyName = &amp;#34;LeftControl&amp;#34; 	// KeyControlRight represents the right control key 	KeyControlRight fyne.</description>
-    </item>
-    
-    <item>
       <title>desktop.Canvas</title>
       <link>https://darcybook.github.io/docs/api/driver/desktop/canvas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

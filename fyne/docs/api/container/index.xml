@@ -6,16 +6,6 @@
     <description>Recent content in container on darcy&#39;s</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/fyne/docs/api/container/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>container</title>
-      <link>https://darcybook.github.io/fyne/docs/api/container/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/fyne/docs/api/container/</guid>
-      <description>container# import &amp;#34;fyne.io/fyne/v2/container&amp;#34; Package container provides container widgets that are used to lay out and organise applications
-Usage#const ( 	// ScrollBoth supports horizontal and vertical scrolling. 	ScrollBoth ScrollDirection = widget.ScrollBoth 	// ScrollHorizontalOnly specifies the scrolling should only happen left to right. 	ScrollHorizontalOnly = widget.ScrollHorizontalOnly 	// ScrollVerticalOnly specifies the scrolling should only happen top to bottom. 	ScrollVerticalOnly = widget.ScrollVerticalOnly 	// ScrollNone turns off scrolling for this container.</description>
-    </item>
-    
-    <item>
       <title>container.AppTabs</title>
       <link>https://darcybook.github.io/fyne/docs/api/container/apptabs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -6,20 +6,6 @@
     <description>Recent content in storage on darcy&#39;s</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/docs/api/storage/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>storage</title>
-      <link>https://darcybook.github.io/docs/api/storage/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/api/storage/</guid>
-      <description>storage# import &amp;#34;fyne.io/fyne/v2/storage&amp;#34; Package storage provides storage access and management functionality.
-Usage#var URIRootError = repository.ErrURIRoot URIRootError is a wrapper for repository.URIRootError
-Deprecated - use repository.ErrURIRoot instead
-func CanList#func CanList(u fyne.URI) (bool, error) CanList will determine if the URI is listable or not.
-This method may fail in several ways:
- Different permissions or credentials are required to check if the   URI supports listing.</description>
-    </item>
-    
-    <item>
       <title>storage.ExtensionFileFilter</title>
       <link>https://darcybook.github.io/docs/api/storage/extensionfilefilter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

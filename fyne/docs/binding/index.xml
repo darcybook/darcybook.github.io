@@ -6,16 +6,6 @@
     <description>Recent content in Data Binding on darcy&#39;s</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/fyne/docs/binding/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Data Binding</title>
-      <link>https://darcybook.github.io/fyne/docs/binding/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/fyne/docs/binding/</guid>
-      <description>Data binding is a powerful new addition to the Fyne toolkit that was introduced in version v2.0.0. By using data binding we can avoid manually managing many standard objects like Labels, Buttons and Lists.
-The builtin bindings support many primitive types (like Int, String, Float etc), lists (such as StringList, BoolList) as well as Map and Struct bindings. Each of these types can be created using a simple constructor function. For example to create a new string binding with a zero value you can use binding.</description>
-    </item>
-    
-    <item>
       <title>Binding Simple Widgets</title>
       <link>https://darcybook.github.io/fyne/docs/binding/simple/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

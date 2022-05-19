@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>repository on darcy&#39;s</title>
+    <title>repository&#34; on darcy&#39;s</title>
     <link>https://darcybook.github.io/fyne/docs/api/storage/repository/</link>
-    <description>Recent content in repository on darcy&#39;s</description>
+    <description>Recent content in repository&#34; on darcy&#39;s</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/fyne/docs/api/storage/repository/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>repository.CopyableRepository&#34;</title>
@@ -66,15 +66,6 @@
       
       <guid>https://darcybook.github.io/fyne/docs/api/storage/repository/writablerepository/</guid>
       <description>repository.WritableRepository# import &amp;#34;fyne.io/fyne/v2/storage/repository&amp;#34; Usage#type WritableRepository#type WritableRepository interface { 	Repository  	// Writer will be used to implement calls to storage.WriterTo() for 	// the registered scheme of this repository. 	// 	// Since: 2.0 	Writer(u fyne.URI) (fyne.URIWriteCloser, error)  	// CanWrite will be used to implement calls to storage.CanWrite() for 	// the registered scheme of this repository.</description>
-    </item>
-    
-    <item>
-      <title>repository&#34;</title>
-      <link>https://darcybook.github.io/fyne/docs/api/storage/repository/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/fyne/docs/api/storage/repository/</guid>
-      <description>repository# import &amp;#34;fyne.io/fyne/v2/storage/repository&amp;#34; Usage#var ( 	// ErrOperationNotSupported may be thrown by certain functions in the storage 	// or repository packages which operate on URIs if an operation is attempted 	// that is not supported for the scheme relevant to the URI, normally because 	// the underlying repository has either not implemented the relevant function, 	// or has explicitly returned this error.</description>
     </item>
     
   </channel>
