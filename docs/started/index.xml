@@ -20,10 +20,10 @@ windows# 从下载下载页面Go并按照说明进行操作 为Windows安装
     
     <item>
       <title>Hello World</title>
-      <link>https://darcybook.github.io/docs/started/helloword/</link>
+      <link>https://darcybook.github.io/docs/started/helloworld/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/docs/started/helloword/</guid>
+      <guid>https://darcybook.github.io/docs/started/helloworld/</guid>
       <description>开始你的第一个app# 完成入门文档中的步骤后，即可开始构建您的第一个应用。为了说明这个过程，我们将构建一个简单的 hello world 应用程序。
 用app.New()建立一个简单的app，然后用app.NewWindow()打开一个窗口。用SetContent()将控件数添加到窗口上。最后利用ShowAndRun()运行你的app UI就会显示了
 package main  import ( 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	a := app.New() 	w := a.NewWindow(&amp;#34;Hello World&amp;#34;)  	w.SetContent(widget.NewLabel(&amp;#34;Hello World!&amp;#34;)) 	w.ShowAndRun() } ShowAndRun()可以使用该命令生成上述代码，然后通过运行go build .该命令或双击图标来执行该代码。您也可以绕过编译步骤，直接使用go run .运行代码。

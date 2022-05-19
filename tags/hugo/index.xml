@@ -33,10 +33,10 @@ windows# 从下载下载页面Go并按照说明进行操作 为Windows安装
     
     <item>
       <title>Hello World</title>
-      <link>https://darcybook.github.io/docs/started/helloword/</link>
+      <link>https://darcybook.github.io/docs/started/helloworld/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://darcybook.github.io/docs/started/helloword/</guid>
+      <guid>https://darcybook.github.io/docs/started/helloworld/</guid>
       <description>开始你的第一个app# 完成入门文档中的步骤后，即可开始构建您的第一个应用。为了说明这个过程，我们将构建一个简单的 hello world 应用程序。
 用app.New()建立一个简单的app，然后用app.NewWindow()打开一个窗口。用SetContent()将控件数添加到窗口上。最后利用ShowAndRun()运行你的app UI就会显示了
 package main  import ( 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	a := app.New() 	w := a.NewWindow(&amp;#34;Hello World&amp;#34;)  	w.SetContent(widget.NewLabel(&amp;#34;Hello World!&amp;#34;)) 	w.ShowAndRun() } ShowAndRun()可以使用该命令生成上述代码，然后通过运行go build .该命令或双击图标来执行该代码。您也可以绕过编译步骤，直接使用go run .运行代码。
@@ -279,19 +279,6 @@ Website = &amp;#34;https://example.com&amp;#34;  [Details] Icon = &amp;#34;Icon.
 从开发计算机编译#要交叉编译Fyne应用程序，您还必须设置CGO_ENABLED=1告诉go启用C编译器（当目标平台与当前系统不同时，通常会关闭）。不幸的是，这样做意味着您必须为要编译的目标平台提供一个C编译器。安装适当的编译器后，您还需要设置环境变量CC以告知 Go 要使用哪个编译器。
 有许多方法可以安装所需的工具 - 以及可以使用的不同工具。Fyne 开发人员推荐的配置是
    GOOS (target) CC provider download notes     darwin o32-clang osxcross from github.com 您还需要安装 macOS SDK (instructions at the download link)   windows x86_64-w64-mingw64-gcc mingw64 package manager 对于 macOS，请使用homebrew   linux gcc or x86_64-linux-musl-gcc gcc or musl-cross cygwin or package manager musl-cross 可以从 homebrew 获得，以提供 linux gcc。您还需要安装 X11 和 mesa 标头进行编译。    设置上述环境变量后，您应该能够以通常的方式进行编译。如果发生进一步的错误，则可能是由于缺少包。某些目标平台需要安装其他库或头文件才能成功编译。</description>
-    </item>
-    
-    <item>
-      <title>Getting Started with Hugo</title>
-      <link>https://darcybook.github.io/posts/hugoisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/posts/hugoisforlovers/</guid>
-      <description>Step 1. Install Hugo#Go to Hugo releases and download the appropriate version for your OS and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at Install Hugo
-Step 2. Build the Docs#Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:</description>
     </item>
     
   </channel>
