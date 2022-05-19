@@ -107,7 +107,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/started/</loc>
-    <lastmod>2022-05-18T22:36:50+08:00</lastmod>
+    <lastmod>2022-05-19T16:06:24+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -224,7 +224,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/explore/</loc>
-    <lastmod>2022-05-19T14:39:06+08:00</lastmod>
+    <lastmod>2022-05-19T16:06:24+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -273,19 +273,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://darcybook.github.io/docs/extend/bundle/"
-                />
-  </url><url>
-    <loc>https://darcybook.github.io/docs/canvas/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fyne"
-                href="https://darcybook.github.io/fyne/docs/canvas/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://darcybook.github.io/docs/canvas/"
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/widget/entry/</loc>
@@ -351,6 +338,19 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://darcybook.github.io/docs/architecture/widgets/"
+                />
+  </url><url>
+    <loc>https://darcybook.github.io/docs/canvas/</loc>
+    <lastmod>2022-05-19T16:06:24+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fyne"
+                href="https://darcybook.github.io/fyne/docs/canvas/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://darcybook.github.io/docs/canvas/"
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/explore/layouts/</loc>
@@ -419,7 +419,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/container/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
+    <lastmod>2022-05-19T16:06:24+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -549,7 +549,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/widget/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
+    <lastmod>2022-05-19T16:06:24+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -705,7 +705,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/extend/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
+    <lastmod>2022-05-19T16:06:24+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -809,7 +809,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/architecture/</loc>
-    <lastmod>2022-05-18T21:52:14+08:00</lastmod>
+    <lastmod>2022-05-19T16:06:24+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"
@@ -957,7 +957,7 @@
                 />
   </url><url>
     <loc>https://darcybook.github.io/docs/</loc>
-    <lastmod>2022-05-19T15:44:04+08:00</lastmod>
+    <lastmod>2022-05-19T16:06:24+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fyne"

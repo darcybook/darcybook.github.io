@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="LabelWidgets are the main components of a Fyne application GUI, they can be used in any place that a basic fyne.CanvasObject can. They manage user interactions and will always match the current theme. The Label widget is the simplest of them - it presents text to the user. Unlike canvas.Text it can handle some simple formatting (such as \n) and wrapping (by setting the Wrapping field). You can create a label by calling widget.">
+<meta name="description" content="">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="Widgets" />
 <meta property="og:description" content="" />
@@ -16,7 +16,7 @@
   <link rel="alternate" hreflang="en" href="https://darcybook.github.io/docs/widget/" title="Widgets">
 <link rel="stylesheet" href="/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css" integrity="sha256-gsXb0jRHzuC0wqo&#43;0Izglh&#43;qQOH6Nw7uT4yfAuDUa18=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/fyne.search.min.69e8b3b3784b604ace225d6fcbd92e6c0004af3b0860aa8c21c06db9031a277e.js" integrity="sha256-aeizs3hLYErOIl1vy9kubAAErzsIYKqMIcBtuQMaJ34=" crossorigin="anonymous"></script>
+  <script defer src="/fyne.search.min.7d259177da9ad47607995874381f8a2c0b94ed76303852deda608557730a87f7.js" integrity="sha256-fSWRd9qa1HYHmVh0OB&#43;KLAuU7XYwOFLe2mCFV3MKh/c=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://darcybook.github.io/fyne/docs/widget/index.xml" title="darcy's" />
@@ -116,7 +116,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-5f9d0aad26982a16f281c40bcafb6725" class="toggle"  />
     <label for="section-5f9d0aad26982a16f281c40bcafb6725" class="flex justify-between">
-      <a href="/fyne/docs/started/" class="">Getting Started</a>
+      <a role="button" class="">Getting Started</a>
     </label>
   
 
@@ -280,7 +280,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-81fa205a1bd0374005def1b00e6db049" class="toggle"  />
     <label for="section-81fa205a1bd0374005def1b00e6db049" class="flex justify-between">
-      <a href="/fyne/docs/explore/" class="">Exploring Fyne</a>
+      <a role="button" class="">Exploring Fyne</a>
     </label>
   
 
@@ -418,7 +418,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-b7dc623d78da4829531df9d42144303b" class="toggle"  />
     <label for="section-b7dc623d78da4829531df9d42144303b" class="flex justify-between">
-      <a href="/fyne/docs/canvas/" class="">Drawing and Animation</a>
+      <a role="button" class="">Drawing and Animation</a>
     </label>
   
 
@@ -543,7 +543,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-10dd021a58cb696b6cb4f79141ec5ddb" class="toggle"  />
     <label for="section-10dd021a58cb696b6cb4f79141ec5ddb" class="flex justify-between">
-      <a href="/fyne/docs/container/" class="">Containers and Layout</a>
+      <a role="button" class="">Containers and Layout</a>
     </label>
   
 
@@ -668,7 +668,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-0d0eb913881a0c154c75678ce9ea1b89" class="toggle" checked />
     <label for="section-0d0eb913881a0c154c75678ce9ea1b89" class="flex justify-between">
-      <a href="/fyne/docs/widget/" class="active">Widgets</a>
+      <a role="button" class="active">Widgets</a>
     </label>
   
 
@@ -879,7 +879,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-8a572438ecae81fbb2ca87c17042611c" class="toggle"  />
     <label for="section-8a572438ecae81fbb2ca87c17042611c" class="flex justify-between">
-      <a href="/fyne/docs/extend/" class="">Extending Fyne</a>
+      <a role="button" class="">Extending Fyne</a>
     </label>
   
 
@@ -978,7 +978,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-01573ae56b57119294f09764e82a479c" class="toggle"  />
     <label for="section-01573ae56b57119294f09764e82a479c" class="flex justify-between">
-      <a href="/fyne/docs/architecture/" class="">Architecture</a>
+      <a role="button" class="">Architecture</a>
     </label>
   
 
@@ -4386,83 +4386,7 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><dl>
-
-  <dt>
-    <a href="/fyne/docs/widget/label/">Label</a>
-  </dt>
-  <dd class="markdown-inner">
-    Widgets are the main components of a Fyne application GUI, they can be used in any place that a basic fyne.CanvasObject can. They manage user interactions and will always match the current theme.
-The Label widget is the simplest of them - it presents text to the user. Unlike canvas.Text it can handle some simple formatting (such as \n) and wrapping (by setting the Wrapping field). You can create a label by calling widget.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/widget/button/">Button</a>
-  </dt>
-  <dd class="markdown-inner">
-    The button widget can contain text, an icon or both, the constructor functions are widget.NewButton() and widget.NewButtonWithIcon(). To create a text button there are just 2 parameters, the string content and a 0 parameter func() that will be called when the button is tapped. See the example for how that can be created.
-The button constructor with an icon includes an additional parameter which is the fyne.Resource which contains the icon data.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/widget/entry/">Entry</a>
-  </dt>
-  <dd class="markdown-inner">
-    The entry widget is used for user input of simple text content. An entry can be created with a simple widget.NewEntry() constructing function. When you create the widget keep a reference so that you can access its Text field later. It is also possible to use the OnChanged callback function to be notified every time the content changes.
-Entry widgets can also have validation for verifying the text input typed into it.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/widget/choices/">Choices</a>
-  </dt>
-  <dd class="markdown-inner">
-    There are various widgets available to present the user with a choice, these include a checkbox, radio group and select popup.
-The widget.Check provides a simple yes/no choice and is created using a string label. Each of these widgets also takes a &ldquo;changed&rdquo; func(...) where the parameter is of the appropriate type. widget.NewCheck(..) therefore takes a string parameter for the label and a func(bool) param for the change handler. You can also use the Checked field to get the boolean value.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/widget/form/">Form</a>
-  </dt>
-  <dd class="markdown-inner">
-    The form widget is used to lay out many input fields with labels and optional cancel and submit buttons. In its most bare form it aligns labels to the left of each input widget. By setting OnCancel or OnSubmit the form will add a button bar with the specified handlers called when appropriate.
-The widget can be created with widget.NewForm(...) passing a list of widget.FormItems, or by using the &amp;widget.Form{} syntax illustrated in the example.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/widget/progressbar/">ProgressBar</a>
-  </dt>
-  <dd class="markdown-inner">
-    The progress bar widget has two forms, the standard progress bar shows the user which Value has been reached, from Min to Max. The default min is 0.0 and the max defaults to 1.0. To use the default values just call widget.NewProgressBar(). After creating you can set the Value field.
-To set up a custom range you can set Min and Max fields manually. The label will always show the percentage completion.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/widget/toolbar/">Toolbar</a>
-  </dt>
-  <dd class="markdown-inner">
-    The toolbar widget creates a row of action buttons using icons to represent each. The widget.NewToolbar(...) constructor function takes a list of widget.ToolbarItem parameters. The builtin types of toolbar items are action, separator and spacer.
-The most used item is an action that is created using the widget.NewToolbarItemAction(..) function. An action takes two parameters, first being the icon resource to draw and the latter is the func() to call when tapped.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/widget/list/">List</a>
-  </dt>
-  <dd class="markdown-inner">
-    The List widget is one of the toolkit&rsquo;s collection widgets. These widgets are designed to help build really performant interfaces when lots of data is being presented. You can also see the Table and Tree widgets which have a similar API. Because of this design they are a little more complicated to use.
-The List uses callback functions to ask for data when it is required. There are 3 main callbacks, Length, CreateItem and UpdateItem.
-  </dd>
-
-  <dt>
-    <a href="/fyne/docs/widget/table/">Table</a>
-  </dt>
-  <dd class="markdown-inner">
-    The Table widget is like the List widget (another of the toolkit&rsquo;s collection widgets) with a two-dimensional index. Like List this is designed to help build really performant interfaces when lots of data is being presented. Because of this the widget is not created with all the data embedded, but instead calls out to the data source when needed.
-The Table uses callback functions to ask for data when it is required.
-  </dd>
-
-</dl>
-
-</article>
+  <article class="markdown"></article>
  
       
 
@@ -4471,9 +4395,9 @@ The Table uses callback functions to ask for data when it is required.
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/darcybook/hugo/commit/2f030d9f8b3523f6c3662fb95bacf444d42b41a3" title='最后修改者 darcybook | May 18, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/darcybook/hugo/commit/ce9b5047068c00d36ad7bd45f8385536c4f3a631" title='最后修改者 darcy | May 19, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>May 18, 2022</span>
+      <span>May 19, 2022</span>
     </a>
   </div>
 
@@ -4499,10 +4423,6 @@ The Table uses callback functions to ask for data when it is required.
       </footer>
 
       
-  
-  <div class="book-comments">
-
-</div>
   
  
 
