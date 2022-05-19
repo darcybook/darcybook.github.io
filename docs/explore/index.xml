@@ -1,101 +1,132 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Exploring Fyne on Hugo Book</title>
+    <title>探索 Fyne on Hugo Book</title>
     <link>https://darcybook.github.io/docs/explore/</link>
-    <description>Recent content in Exploring Fyne on Hugo Book</description>
+    <description>Recent content in 探索 Fyne on Hugo Book</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/docs/explore/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Canvas and CanvasObject</title>
+      <title>Canvas 和 CanvasObject</title>
       <link>https://darcybook.github.io/docs/explore/canvas/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/explore/canvas/</guid>
-      <description>In Fyne a Canvas is the area which an application is drawn within. Each window has a canvas which you can access with Window.Canvas() but usually you will find functions on Window that avoid accessing the canvas.
-Everything that can be drawn in Fyne is a type of CanvasObject. The example here opens a new window and then shows different types of primitive graphical element by setting the content of the window canvas.</description>
+      <description>Canvas 和 CanvasObject# 在 Fyne 中，Canvas是绘制应用程序的区域。每个窗口都有一个画布，您可以使用Window.Canvas()进行访问，但通常您会在Window上找到避免直接访问画布的功能。
+在Fyne中可以绘制的所有内容都是一种CanvasObject。 下面这个示例通过在canvas设置原始图形元素的却别。
+可以通过多种方式自定义每种类型的对象，如文本和圆圈示例所示。 就像Canvas.SetContent()改变content显示，它也会改变当前看视图。你可以将FillColour改为rectangle，你可以使用rect.Refresh()请求刷新。
+package main  import ( 	&amp;#34;image/color&amp;#34; 	&amp;#34;time&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Canvas&amp;#34;) 	myCanvas := myWindow.Canvas()  	blue := color.NRGBA{R: 0, G: 0, B: 180, A: 255} 	rect := canvas.NewRectangle(blue) 	myCanvas.SetContent(rect)  	go func() { 	time.</description>
     </item>
     
     <item>
-      <title>Container and Layouts</title>
+      <title>容器和布局</title>
       <link>https://darcybook.github.io/docs/explore/container/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/explore/container/</guid>
-      <description>In the previous example we saw how to set a CanvasObject to the content of a Canvas, but it is not very useful to only show one visual element. To show more than one item we use the Container type.
-As the fyne.Container also is a fyne.CanvasObject, we can set it to be the content of a fyne.Canvas. In this example we create 3 text objects and then place them in a container using the container.</description>
+      <description>容器和布局# 在前面的示例中，我们看到了如何将CanvasObject设置为Canvas的内容，但通常我们不仅需要显示一个视图。要显示多个项目，我们使用类型Container（容器）。
+由于fyne.Container也是一个fyne.CanvasObject，我们可以将其设置为fyne.Canvas的content。 在此示例中，我们创建 3 个文本对象，然后使用该函数将它们放在Container中。由于没有布局，我们可以像您看到text2.Move()的那样移动元素。
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	//&amp;#34;fyne.io/fyne/v2/layout&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Container&amp;#34;) 	green := color.NRGBA{R: 0, G: 180, B: 0, A: 255}  	text1 := canvas.NewText(&amp;#34;Hello&amp;#34;, green) 	text2 := canvas.NewText(&amp;#34;There&amp;#34;, green) 	text2.Move(fyne.NewPos(20, 20)) 	content := container.NewWithoutLayout(text1, text2) 	// content := container.</description>
     </item>
     
     <item>
-      <title>Widget List</title>
+      <title>组件清单</title>
       <link>https://darcybook.github.io/docs/explore/widgets/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/explore/widgets/</guid>
-      <description>Standard Widgets (in widget package)# Accordion#Accordion displays a list of AccordionItems. Each item is represented by a button that reveals a detailed view when tapped.
-Button#Button widget has a text label and icon, both are optional.
-Card#Card widget groups elements with a header and subheader, all are optional.
-Check#Check widget has a text label and a checked (or unchecked) icon.</description>
+      <description>组件清单# 标准组件 (widget包中)# Accordion#可折叠控件（Accordion）显示项目列表，每个项目都由一个按钮表示，点击该按钮时会显示详细视图。
+Button#按钮空间由有一个文本和图标，两者都是可选的。
+Card#卡片控件是标题副标题的合计，都是可选的。
+Check#单选框 有一个文本和单选（未选中）按钮。
+Entry#输入框空间触发时允许录入简单文本。
+密码输入框隐藏输入内容，还有一个控制它显示的按钮。
+FileIcon#文件图标未不同文件提供标准图标。 将文件显示未不同的图标，并显示文件的扩展名。
+Form#表单是两列网格，其中每行都有一个标签和一个小部件（通常是输入）。网格的最后一行将包含相应的窗体控件按钮（如果有）。
+Hyperlink#超链接构件是具有适当填充和布局的文本组件。单击后，URL 将在默认 Web 浏览器中打开。
+Icon#图标小部件是一个基本的图像组件，可加载其资源以匹配主题。
+Label#标签是具有适当填充和布局的标签组件。
+Progress bar#进度条提供一个横条，显示进度。</description>
     </item>
     
     <item>
-      <title>Layout List</title>
+      <title>布局清单</title>
       <link>https://darcybook.github.io/docs/explore/layouts/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/explore/layouts/</guid>
-      <description>Standard Layouts# Horizontal Box (HBox)#Horizontal Box arranges items in a horizontal row. Every element will have the same height (the height of the tallest item in the container) and objects will be left-aligned at their minimum width.
-Vertical Box (VBox)#Vertical Box arranges items in a vertical column. Every element will have the same width (the width of the widest item in the container) and objects will be top-aligned at their minimum height.</description>
+      <description>布局清单# 标准布局# Horizontal Box (HBox)#HBox在水平行排列子元素。 每个子元素有相同的高（容器中最高的元素）并保持最小宽度左对齐。
+Vertical Box (VBox)#VBox在垂直列排列子元素。 每个子元素有相同的宽（容器中最宽的元素）并保持最小高度，顶对齐。
+Center#居中布局将所有元素放在容器中心。 每个对象设置为最小尺寸。
+Form#表单布局按对进行布局，第一列宽度最小。 对在表单中标签很有用，标签位于第一列，其它对象位于第二列。 此布局需要每次添加偶数个元素。
+Grid#网格布局在可用空间内平局排列元素。 元素水平排放，直到达到指定的列数后自动换行。 所有对象都有相同的尺寸，宽度为宽/列数，高度为高/所需行数。上述计算需要减去padding。
+GridWrap#网格环绕布局横向排列元素，如果空间不足，就换行。 所有对象都将设置为相同尺寸。 此布局可能不遵循MinSize来管理此统一布局。通常用于文件管理器或图像缩略图列表。
+Border#边框布局支持将元素定位在可用空间外部。
+Max#最大布局将所有容器元素填充可用空间。 所有对象都是全尺寸的，并按照添加顺序绘制（最后一个在顶部）。
+Padded#填充布局定位所有容器元素类似最大布局，但在外部哟一个padding填充。
+Combining Layouts#通过使用不同布局可以构建更为复杂的布局结构。 每个容器可以拥有不同的布局，且每一个可以嵌套不同的标准布局。 例如，一个水平HBox作为header，一个垂直VBox作为左侧边栏面板，一个网格布局作为内容域 &amp;ndash; 所有容器都使用边框布局。如下图所示的结果：</description>
     </item>
     
     <item>
-      <title>Dialog List</title>
+      <title>对话框</title>
       <link>https://darcybook.github.io/docs/explore/dialogs/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/explore/dialogs/</guid>
-      <description>Standard Dialogs# Color#Allow users to pick a colour from a standard set (or any color in advanced mode).
-Confirm#Ask for conformation of an action.
-FileOpen#Present this to ask user to choose a file to use inside the app. The actual dialog displayed will depend on the current operating system.
-Form#Get various input elements in a dialog, with validation.</description>
+      <description>对话框# 标准对话框# Color#允许用户从标准集中选择颜色（或在高级模式下选择任何颜色）。
+Confirm#要求去确认一个动作。
+FileOpen#用户在应用内询问选择一个文件。 实际的对话框显示，根据当前的操作系统有所不同。
+Form#对话框中可以输入不容的元素，进行验证。
+Information#一个向用户展示消息的简单途径。
+Custom#展示可以放在对话容器中的所有内容。
+</description>
     </item>
     
     <item>
-      <title>Adding Shortcuts to an App</title>
+      <title>快捷键</title>
       <link>https://darcybook.github.io/docs/explore/shortcuts/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/explore/shortcuts/</guid>
-      <description>Shortcuts are common tasks that can be triggered by keyboard combinations or context menus. Shortcuts, much like keyboard events, can be attached to a focused element or registered on the Canvas to always be available in a Window.
-Registering with a Canvas#There are many standard shortcuts defined (such as fyne.ShortcutCopy) which are connected to standard keyboard shortcuts and right-click menus. The first step to adding a new Shortcut is to define the shortcut.</description>
+      <description>快捷键# 在应用上增加快捷键# 快捷键是利用组合键触发的常见任务。 快捷键和键盘事件非常相似，可以附加到一个触发的元素或者注册到Canvas使它在Window一直有效。
+通过Canvas注册#有需要标准的快捷键和鼠标右键菜单已经定义了（例如fyne.ShortcutCopy）。 添加Shortcut的第一步就是定义一个shortcut。大多数用途是作为桌面扩展的快捷键。 我们用desktop.CustomShortcut去实现，比如用Tab键和Control你可以参照下面这样做：
+	ctrlTab := desktop.CustomShortcut{KeyName: fyne.KeyTab, Modifier: desktop.ControlModifier} 要注意的是快捷键是可以重复使用的，这样你就可以将它增加到其它元素或菜单上。 比如说我们想要它一直有效，我们可以这样在Canvas上注册。
+	ctrlTab := desktop.CustomShortcut{KeyName: fyne.KeyTab, Modifier: desktop.ControlModifier} 	w.Canvas().AddShortcut(&amp;amp;ctrlTab, func(shortcut fyne.Shortcut) { 	log.Println(&amp;#34;We tapped Ctrl+Tab&amp;#34;) 	}) 如你所见，这种方式注册快捷键有两个步骤 &amp;ndash; 快捷键定义和一个回调函数。 如果用户用户按下了快捷键，函数就会调用，并输出打印内容。
+输入框增加快捷键#只有当前元素获得焦点时才触发快捷键也是很有用的。 任何可以聚焦的空间都可以使用，添加一个TypedShortcut扩展来管理快捷键。 和增加一个键盘时间很像，除了它的参数是一个fyne.Shortcut。
+type myEntry struct { 	widget.Entry }  func (m *myEntry) TypedShortcut(s fyne.Shortcut) { 	if _, ok := s.</description>
     </item>
     
     <item>
-      <title>Using the Preferences API</title>
+      <title>首选项API</title>
       <link>https://darcybook.github.io/docs/explore/preferences/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/explore/preferences/</guid>
-      <description>Storing user configurations and values is a common task for application developers, but implementing it across multiple platforms can be tedious and time-consuming. To make it easier, Fyne has an API for storing values on the filesystem in a clean and understandable way while the complex parts are handled for you.
-Lets start with the setup of the API. It is part of the Preferences interface where storage and loading functions exist for values of Bool, Float, Int and String.</description>
+      <description>首选项API# 使用首选项API# 保存用户的配置是开发人员的常见任务，跨平台实现时非常复杂耗时。 为了简化这个工作，Fyne使用一个API可以简单易懂的方式在文件系统上保存值，同时接管比较复杂的部分。
+让我们从API设置开始。 它时首选项界面的一部分，首选项是用来保存和加载以后的不同类型的值，值包括bool、浮点、整型和字符串。 它们每个都有三个不同函数：加载、带有回退值的加载和一个保存值。 下面可以看到字符串类型的三个函数和它使用示例：
+// String looks up a string value for the key String(key string) string // StringWithFallback looks up a string value and returns the given fallback if not found StringWithFallback(key, fallback string) string // SetString saves a string value for the given key SetString(key string, value string) 创建应用变量和调用Preferences()可以访问这些函数。 注意有必要使用唯一ID（类似一个颠倒的url com.baidu.www）建立应用。 要使用app.NewWithID()来使用创建应用，以便申请应用存储位置。
+a := app.NewWithID(&amp;#34;com.example.tutorial.preferences&amp;#34;) [...] a.Preferences().SetBool(&amp;#34;Boolean&amp;#34;, true) number := a.</description>
     </item>
     
     <item>
-      <title>Compile Options</title>
-      <link>https://darcybook.github.io/docs/explore/compiling/</link>
-      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/explore/compiling/</guid>
-      <description>Build tags#Fyne will typically configure your application appropriately for the target platform by selecting the driver and configuration. The following build tags are supported and can help in your development. For example if you wish to simulate a mobile application whilst running on a desktop computer you could use the following command:
-go run -tags mobile main.go    Tag Description     gles Force use of embedded OpenGL (GLES) instead of full OpenGL.</description>
-    </item>
-    
-    <item>
-      <title>Data Binding</title>
+      <title>数据绑定</title>
       <link>https://darcybook.github.io/docs/explore/binding/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/explore/binding/</guid>
-      <description>Data binding was introduced in Fyne v2.0.0 and makes it easier to connect many widgets to a data source that will update over time. the data/binding package has many helpful bindings that can manage most standard types that will be used in an application. A data binding can be managed using the binding API (for example NewString) or it can be connected to an external item of data like (`BindInt(*int)).</description>
+      <description>数据绑定# 数据绑定在Fyne v2.0.0中引入，这可以使组件和数据源更好的关联起来。 data/binding 包有许多有用的绑定，可以用来管理应用中用到的几乎所有标准类型。 数据绑定可以通过绑定API管理（例如NewString），也可以关联到外部的数据元素（BindInt(*int)）。
+支持绑定的组件通常有一个...WithData构造函数，在创建组件时可以设置绑定的数据。 当然你还可以调用Bind()或者Unbind()来管理组件绑定的数据。
+下面这个示例展示了如何String数据绑定到Label控件：
+package main  import ( 	&amp;#34;time&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	a := app.New() 	w := a.NewWindow(&amp;#34;Hello&amp;#34;)  	str := binding.NewString() 	go func() { 	dots := &amp;#34;.....&amp;#34; 	for i := 5; i &amp;gt;= 0; i-- { 	str.Set(&amp;#34;Count down&amp;#34; + dots[:i]) 	time.Sleep(time.Second) 	} 	str.</description>
+    </item>
+    
+    <item>
+      <title>编译选项</title>
+      <link>https://darcybook.github.io/docs/explore/compiling/</link>
+      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/explore/compiling/</guid>
+      <description>编译选项# Build tags#Fyne会选择驱动程序和设置来自动配置你的应用。 下面的build tags可以帮助。 例如，你希望在桌面计算机上模拟移动应用，可以使用下面命令：
+	go run -tags mobile main.go    Tag Description     gles 强制使用嵌入式 OpenGL （GLES） 而不是完整的 OpenGL。这通常由目标设备控制，通常不需要。   hints 显示开发人员提示以进行改进或优化。使用hints运行，会记录您的应用程序不遵循材料设计或其他建议。   mobile 此标记在模拟的移动窗口中运行应用程序。当您想要在移动平台上预览应用程序而无需编译和安装到设备时非常有用。   no_native_menus 此标志专门用于 macOS，指示应用程序不应使用 macOS 本机菜单。相反，菜单将显示在应用程序窗口内。对于在 macOS 上测试应用程序以模拟 Windows 或 Linux 上的行为最有用。    </description>
     </item>
     
   </channel>
