@@ -6,6 +6,20 @@
     <description>Recent content in Introduction on darcy&#39;s</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>介绍</title>
+      <link>https://darcybook.github.io/docs/binding/introduction/</link>
+      <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/binding/introduction/</guid>
+      <description>数据绑定# 数据绑定是 Fyne 工具包的强大新增功能，该工具包在版本中引入。通过使用数据绑定，我们可以避免手动管理许多标准对象，如s，s和s。
+数据绑定是Fyne v2.0.0引入的强大功能。 使用数据绑定，我们可以省去手动管理一些标准对象，例如：Labels、Buttons 和 Lists。
+内建的绑定支持许多基本类型（Int、String、Float 等），数组、Map和结构体一样支持。 每个类型都可以通过简单构造函数建立。 例如用binding.NewString()建立一个空新字符串绑定。 可以用Get 和 Set方法操作它的值。
+也可以用Bind开头函数绑定已有的变更了，接受一个指向类型的指针。 例如用binding.BindInt(&amp;amp;myInt)绑定有已有的整形。
+使用指定类型指针而不是原始的变量，我们可以设置组件和函数在数据变化时自动做出反应。 如果你直接改变了外部变量，调用Reload()确保绑定功能正常读取到值。
+package main  import ( 	&amp;#34;log&amp;#34;  	&amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; )  func main() { 	boundString := binding.NewString() 	s, _ := boundString.Get() 	log.Printf(&amp;#34;Bound = &amp;#39;%s&amp;#39;&amp;#34;, s)  	myInt := 5 	boundInt := binding.BindInt(&amp;amp;myInt) 	i, _ := boundInt.Get() 	log.Printf(&amp;#34;Source = %d, bound = %d&amp;#34;, myInt, i) } 下面我面学习组件怎么绑定简单值。</description>
+    </item>
+    
+    <item>
       <title>Canvas 和 CanvasObject</title>
       <link>https://darcybook.github.io/docs/explore/canvas/</link>
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
@@ -31,27 +45,6 @@ windows# 从下载下载页面Go并按照说明进行操作 为Windows安装
     </item>
     
     <item>
-      <title>Box</title>
-      <link>https://darcybook.github.io/docs/container/box/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/container/box/</guid>
-      <description>As discussed in Container and Layouts elements within a container can be arranged using a layout. This section explores the builtin layouts and how to use them.
-The most commonly used layout is layout.BoxLayout and it has two variants, horizontal and vertical. A box layout arranges all elements in a single row or column with optional spaces to assist alignment.
-A horizontal box layout, created with layout.NewHBoxLayout() creates an arrangement of items in a single row.</description>
-    </item>
-    
-    <item>
-      <title>Building a Custom Layout</title>
-      <link>https://darcybook.github.io/docs/extend/custom-layout/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/extend/custom-layout/</guid>
-      <description>In a Fyne application each Container arranges it&amp;rsquo;s child elements using a simple layout algorithm. Fyne defines many layouts available in the fyne.io/fyne/v2/layout package. If you look at the code you will see that they all implement the Layout interface.
-type Layout interface { 	Layout([]CanvasObject, Size) 	MinSize(objects []CanvasObject) Size } Any application can provide a custom layout to arrange widgets in a non-standard manner. To do this you need to implement the interface above in your own code.</description>
-    </item>
-    
-    <item>
       <title>Geometry</title>
       <link>https://darcybook.github.io/docs/architecture/geometry/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -59,16 +52,6 @@ type Layout interface { 	Layout([]CanvasObject, Size) 	MinSize(objects []CanvasO
       <guid>https://darcybook.github.io/docs/architecture/geometry/</guid>
       <description>Fyne apps are based on 1 canvas per window. Each canvas has a root CanvasObject which can be a single widget or a Container for many sub-objects whose size and position are controlled by a Layout.
 Position# Each canvas has its origin at the top left (0, 0) every element of the UI may be scaled depending on the output device and so the API does not describe pixels or exact measurements.</description>
-    </item>
-    
-    <item>
-      <title>Label</title>
-      <link>https://darcybook.github.io/docs/widget/label/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/widget/label/</guid>
-      <description>Widgets are the main components of a Fyne application GUI, they can be used in any place that a basic fyne.CanvasObject can. They manage user interactions and will always match the current theme.
-The Label widget is the simplest of them - it presents text to the user. Unlike canvas.Text it can handle some simple formatting (such as \n) and wrapping (by setting the Wrapping field). You can create a label by calling widget.</description>
     </item>
     
     <item>
@@ -84,14 +67,54 @@ A new Window will expand whatever element is passed to SetContent() to fill it&a
     </item>
     
     <item>
-      <title>Rectangle</title>
+      <title>标签</title>
+      <link>https://darcybook.github.io/docs/widget/label/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/widget/label/</guid>
+      <description>组件是Fyne应用程序GUI的主要组件，它们可以在基本可以fyne.CanvasObject的任何地方使用。它们管理用户交互，并将始终与当前主题匹配。fyne.CanvasObject
+标签组件是其中最简单的 &amp;ndash; 它向用户显示文本。 和canvas.Text不同，它可以处理一些转义（such as \n）和一些换行（通过Wrapping设置）。 你可以通过调用widget.NewLabel(&amp;quot;some text&amp;quot;)来创建标签，可以分配一个变量或者直接传给容器。
+package main  import ( 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Label Widget&amp;#34;)  	content := widget.NewLabel(&amp;#34;text&amp;#34;)  	myWindow.SetContent(content) 	myWindow.ShowAndRun() } </description>
+    </item>
+    
+    <item>
+      <title>盒布局</title>
+      <link>https://darcybook.github.io/docs/container/box/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/container/box/</guid>
+      <description>盒布局# 如容器和布局的描述一样，容器内的元素可以使用布局进行排列。本节探讨内置布局以及如何使用它们。
+最常用的布局是layout.BoxLayout，它有两种变体，水平和垂直。Box局将所有元素排列在单个行或列中，并带有可选空间以帮助对齐。
+水平Box布局，使用layout.NewHBoxLayout()创建单行中的项排列。Box中每个项目的宽度都将设置为MinSize().Width宽度，并且所有项目的高度都相等 &amp;ndash; MinSize().Height中最大的值。 布局可以在容器中使用，或者你可以使用widget.NewHBox()box控件。
+垂直框布局类似，但它在列中排列项目。每个项目的高度将设置为最小值，并且所有宽度将相等，设置为最小宽度中的最大宽度。
+添加一个layout.NewSpacer()在元素之前创建一个可扩展空间（例如，是某些元素左对齐，其他）。 一个间隔将会填充所有可用的空间。 在一个垂直box开始增加一个间隔会导致所有元素底对齐。你可以在水平Box的开始和结束添加一个间隔创建一个居中布局。
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/layout&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Box Layout&amp;#34;)  	text1 := canvas.NewText(&amp;#34;Hello&amp;#34;, color.White) 	text2 := canvas.NewText(&amp;#34;There&amp;#34;, color.White) 	text3 := canvas.NewText(&amp;#34;(right)&amp;#34;, color.White) 	content := container.New(layout.NewHBoxLayout(), text1, text2, layout.NewSpacer(), text3)  	text4 := canvas.</description>
+    </item>
+    
+    <item>
+      <title>矩形</title>
       <link>https://darcybook.github.io/docs/canvas/rectangle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/canvas/rectangle/</guid>
-      <description>canvas.Rectangle is the simplest canvas object in Fyne. It displays a block of the specified colour. You can also set the colour using the FillColor field.
-In this example the rectangle fills the window as it is the only content element.
-package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; )  func main() { 	myApp := app.New() 	w := myApp.NewWindow(&amp;#34;Rectangle&amp;#34;)  	rect := canvas.</description>
+      <description>矩形# canvas.Rectangle是Fyne中最简单的画布对象。 它显示一个指定颜色的区域，您还可以使用FillColor设置颜色。 在下面示例中，只有一个矩形，它会填充整个窗口。
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; )  func main() { 	myApp := app.New() 	w := myApp.NewWindow(&amp;#34;Rectangle&amp;#34;)  	rect := canvas.NewRectangle(color.White) 	w.SetContent(rect)  	w.Resize(fyne.NewSize(150, 100)) 	w.ShowAndRun() } 其它fyne.CanvaObject类型有更多设置，下一步查看。
+其他类型有更多配置，下一步。
+Other fyne.CanvaObject types have more configuration, let us look next at canvas.Text.</description>
+    </item>
+    
+    <item>
+      <title>自定义布局</title>
+      <link>https://darcybook.github.io/docs/extend/custom-layout/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/extend/custom-layout/</guid>
+      <description>自定义布局# 在 Fyne 应用程序中，每个元素都使用简单的布局算法排列其子元素。Fyne 定义了包中可用的许多布局。如果你看一下代码，你会发现它们都实现了接口。 Fyne每个容器都使用简单的布局算法排列元素。 fyne.io/fyne/v2/layout包中定义了需要布局变量。 如果你看了源码会发现它们都实现了Layout接口。
+type Layout interface { 	Layout([]CanvasObject, Size) 	MinSize(objects []CanvasObject) Size } 为了说明这一点，我们将创建一个新的布局，该布局以对角线排列元素，并排列在其容器的左下角
+首先，我们将定义一个新类型，并定义它的最小大小。要计算这一点，我们只需将所有子元素的宽度和高度（指定为 参数）
+任何应用都可以用自定义布局用非标准方式排列组件，实现上面接口就可以自定义。 为了说明这一点，我们将创建一个新的布局，该布局以对角线排列元素，并排列在其容器的左下角
+首先顶一个一个新类型diagonal，定义它的最小尺寸。 要计算尺寸，我们只需要给所有子元素增加宽和高（指定[]fyne.CanvasObject为MinSize参数）。
+import &amp;#34;fyne.io/fyne/v2&amp;#34;  type diagonal struct { }  func (d *diagonal) MinSize(objects []fyne.CanvasObject) fyne.Size { 	w, h := float32(0), float32(0) 	for _, o := range objects { 	childSize := o.MinSize()  	w += childSize.Width 	h += childSize.</description>
     </item>
     
     <item>
@@ -120,53 +143,12 @@ package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2
     </item>
     
     <item>
-      <title>Binding Simple Widgets</title>
-      <link>https://darcybook.github.io/docs/binding/simple/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/binding/simple/</guid>
-      <description>The simplest form of binding a widget is to pass it a bound item as a value instead of a static value. Many widgets provide a WithData constructor that will accept a typed data binding item. To set up the binding all you need to do is pass the right type in.
-Although this may not look like much of a benefit in the initial code you can then see how it ensures that the displayed content is always up to date with the source of the data.</description>
-    </item>
-    
-    <item>
-      <title>Button</title>
-      <link>https://darcybook.github.io/docs/widget/button/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/widget/button/</guid>
-      <description>The button widget can contain text, an icon or both, the constructor functions are widget.NewButton() and widget.NewButtonWithIcon(). To create a text button there are just 2 parameters, the string content and a 0 parameter func() that will be called when the button is tapped. See the example for how that can be created.
-The button constructor with an icon includes an additional parameter which is the fyne.Resource which contains the icon data.</description>
-    </item>
-    
-    <item>
-      <title>Grid</title>
-      <link>https://darcybook.github.io/docs/container/grid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/container/grid/</guid>
-      <description>The grid layout lays out the elements of a container in a grid pattern with a fixed number of columns. Items will fill a single row until the number of columns is met, after this a new row will be created. Vertical space will be split equally between each of the rows of objects.
-You create a grid layout using layout.NewGridLayout(cols) where cols is the number of items (columns) you wish to have in each row.</description>
-    </item>
-    
-    <item>
       <title>Scaling</title>
       <link>https://darcybook.github.io/docs/architecture/scaling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/architecture/scaling/</guid>
       <description>Fyne is built entirely using vector graphics, which means applications written with Fyne will scale to any size beautifully (not just whole number increments). This is a great benefit to the rising popularity of high density displays on mobile devices and high-end computers. The default scale value is calculated to match your operating system - on some systems this is user configuration and on others from your screen&amp;rsquo;s pixel density (DPI - dots per inch).</description>
-    </item>
-    
-    <item>
-      <title>Text</title>
-      <link>https://darcybook.github.io/docs/canvas/text/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/canvas/text/</guid>
-      <description>canvas.Text is used for all text rendering within Fyne. It is created by specifying the text and colour for the text. Text is rendered using the default font, specified by the current theme.
-The text object allows certain configuration like the Alignment and TextStyle field. as illustrated in the example here. To use a monospaced font instead you can specify fyne.TextStyle{Monospace: true}.
-package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.</description>
     </item>
     
     <item>
@@ -179,6 +161,53 @@ package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.</descript
 Customisation#Q: How can I change the colour of text for a Label widget?
 A: All of the standard widgets use the current Theme definition to set the colour, font and sizes. To make changes to your application consider using a custom theme.
 If your application requires text that is a different colour you can use the canvas.</description>
+    </item>
+    
+    <item>
+      <title>按钮</title>
+      <link>https://darcybook.github.io/docs/widget/button/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/widget/button/</guid>
+      <description>按钮# 按钮组件可以包含文本，图标或者都有，可通过widget.NewButton()和widget.NewButtonWithIcon()构造。 创建一个文本按钮许哟啊2个参数，一个string 内容额一个没有参数的回调函数，点击按钮时会调用此函数。
+带图标按钮构造函数包括一个额外参数fyne.Resource，参数从包含图标资料。 theme包中有内建的图标，在切换主题时候会自动切换。你可以传递自己的图片 &amp;ndash; 通过fyne.LoadResourceFromPath()可以帮助加载为resource资源，尽可能的打包资源。
+widget.NewButtonWithIcon()只传递空字符串，可以建立一个只有图标的按钮。
+package main  import ( 	&amp;#34;log&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; 	//&amp;#34;fyne.io/fyne/v2/theme&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Button Widget&amp;#34;)  	content := widget.NewButton(&amp;#34;click me&amp;#34;, func() { 	log.Println(&amp;#34;tapped&amp;#34;) 	})  	//content := widget.NewButtonWithIcon(&amp;#34;Home&amp;#34;, theme.HomeIcon(), func() { 	//	log.Println(&amp;#34;tapped home&amp;#34;) 	//})  	myWindow.SetContent(content) 	myWindow.</description>
+    </item>
+    
+    <item>
+      <title>文本</title>
+      <link>https://darcybook.github.io/docs/canvas/text/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/canvas/text/</guid>
+      <description>文本#Fyne所有文本都用canvas.Text呈现。创建时需要指定文本和颜色。 文本由当前主题默认字体呈现。
+文本对象允许设置Alignment和TextStyle这些值。 例如下列示例，指定了等宽字体fyne.TextStyle{Monospace: true}：
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; )  func main() { 	myApp := app.New() 	w := myApp.NewWindow(&amp;#34;Text&amp;#34;)  	text := canvas.NewText(&amp;#34;Text Object&amp;#34;, color.White) 	text.Alignment = fyne.TextAlignTrailing 	text.TextStyle = fyne.TextStyle{Italic: true} 	w.SetContent(text)  	w.ShowAndRun() } 通过FYNE_FONT可以设定环境变量字体。 使用此方式设定一个.ttf文件，替代Fyne工具包或当前主题提供的字体。</description>
+    </item>
+    
+    <item>
+      <title>绑定简单组件</title>
+      <link>https://darcybook.github.io/docs/binding/simple/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/binding/simple/</guid>
+      <description>绑定简单组件# 绑定小部件的最简单形式使用绑定元素而不是静态值。 许多组件提供WithData构造函数接受一个数据类型绑定。 要设置绑定，您需要做的就是传入正确的类型。
+尽管这在初始代码中可能看起来不是很大的好处，但您可以看到它如何确保显示的内容始终与数据源保持同步。您会注意到我们不需要调用小部件，甚至不需要保留对它的引用，但它会相应地更新。
+一开始可能在代码中看它没有什么用处，但你能看到显示内容怎么和数据源保持同步的。 你可以看到我们不需要用Refresh()刷新Label，label可以自己更新。
+package main  import ( 	&amp;#34;time&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	myApp := app.New() 	w := myApp.NewWindow(&amp;#34;Simple&amp;#34;)  	str := binding.NewString() 	str.Set(&amp;#34;Initial value&amp;#34;)  	text := widget.NewLabelWithData(str) 	w.SetContent(text)  	go func() { 	time.Sleep(time.Second * 2) 	str.Set(&amp;#34;A new string&amp;#34;) 	}()  	w.ShowAndRun() } 下一步我们介绍如何设置双向绑定。</description>
+    </item>
+    
+    <item>
+      <title>网格布局</title>
+      <link>https://darcybook.github.io/docs/container/grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/container/grid/</guid>
+      <description>网格布局# 网格布局以网格模式对容器的元素进行布局，网格模式具有固定数量的列。项将填充一行，直到达到列数，在此之后将创建一个新行。垂直空间将在每行对象之间平均分配。
+用layout.NewGridLayout(cols)建立网格布局，你希望每行的列数。 这将作为container.New(...)的第一个参数。
+如果调整容器的尺寸，则每个单元格都将平均调整大小共享空间。
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/layout&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Grid Layout&amp;#34;)  	text1 := canvas.NewText(&amp;#34;1&amp;#34;, color.White) 	text2 := canvas.NewText(&amp;#34;2&amp;#34;, color.White) 	text3 := canvas.NewText(&amp;#34;3&amp;#34;, color.White) 	grid := container.New(layout.NewGridLayout(2), text1, text2, text3) 	myWindow.SetContent(grid) 	myWindow.ShowAndRun() } </description>
     </item>
     
     <item>
@@ -212,54 +241,6 @@ package main  import ( 	&amp;#34;fmt&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp
     </item>
     
     <item>
-      <title>Bundling resources</title>
-      <link>https://darcybook.github.io/docs/extend/bundle/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/extend/bundle/</guid>
-      <description>Go based applications are usually built as a single binary executable, and this is the same for Fyne applications. A single file makes it easier to distribute install our software. Unfortunately GUI applications typically require additional resources to render the user interface. To manage this challenge a Go application can bundle assets into the binary itself. The Fyne toolkit prefers the use of &amp;ldquo;fyne bundle&amp;rdquo; as it has various benefits that we will explore below.</description>
-    </item>
-    
-    <item>
-      <title>Entry</title>
-      <link>https://darcybook.github.io/docs/widget/entry/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/widget/entry/</guid>
-      <description>The entry widget is used for user input of simple text content. An entry can be created with a simple widget.NewEntry() constructing function. When you create the widget keep a reference so that you can access its Text field later. It is also possible to use the OnChanged callback function to be notified every time the content changes.
-Entry widgets can also have validation for verifying the text input typed into it.</description>
-    </item>
-    
-    <item>
-      <title>Grid Wrap</title>
-      <link>https://darcybook.github.io/docs/container/gridwrap/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/container/gridwrap/</guid>
-      <description>Like the previous grid layout, the grid wrap layout creates an arrangement of elements in a grid pattern. However this grid does not have a set number of columns, instead it uses a fixed size for each cell and then flows the content to as many rows as is needed to display the items.
-You create a grid wrap layout using layout.NewGridWrapLayout(size) where size specifies the size to apply to all child elements.</description>
-    </item>
-    
-    <item>
-      <title>Line</title>
-      <link>https://darcybook.github.io/docs/canvas/line/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/canvas/line/</guid>
-      <description>The canvas.Line object draws a line from the Position1 (default is top, left) to Position2 (default is bottom, right). You specify its colour and can vary the stroke width which otherwise defaults to 1.
-A line position can be manipulated using the Position1 or Position2 fields or by using the Move() and Resize() functions. For example a 0 width area will show a vertical line whereas 0 height would be horizontal.</description>
-    </item>
-    
-    <item>
-      <title>Two-Way Binding</title>
-      <link>https://darcybook.github.io/docs/binding/twoway/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/binding/twoway/</guid>
-      <description>So far we have looked at data binding as a way of keeping our user interface elements up to date. Far more common, however, is the need to update values from the UI widgets and keep the data up to date everywhere. Thankfully the bindings provided in Fyne are &amp;ldquo;two-way&amp;rdquo; which means that values can be pushed into them as well as read out. The change in data will be communicated to all connected code without any additional code.</description>
-    </item>
-    
-    <item>
       <title>Widgets</title>
       <link>https://darcybook.github.io/docs/architecture/widgets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -267,6 +248,69 @@ A line position can be manipulated using the Position1 or Position2 fields or by
       <guid>https://darcybook.github.io/docs/architecture/widgets/</guid>
       <description>Widgets in the Fyne toolkit are designed for a clean and pleasant user interaction, following a standard theme and supporting rapid app development, solid testing and easy maintenance. There are various design considerations that promote that ambition, we explore them in this page.
 Behaviour API# One thing that you will notice about the standard widgets is that the API is all about behaviour and state - but very little that controls the actual look of an element.</description>
+    </item>
+    
+    <item>
+      <title>双向绑定</title>
+      <link>https://darcybook.github.io/docs/binding/twoway/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/binding/twoway/</guid>
+      <description>双向绑定# 目前为止，我们看到用户界面可以随着数据绑定保持最新。 更常见的是，需要让变量保持和UI组件的值保持一致。 幸好Fyne提供了双向绑定功能，可以将值推送到变量中读取。 数据的改变自动传达到所有连接的代码，而无需增加代码。
+实现这个我们建立一个包含Label和Entry的应用，并绑定到同一个值。 修改输入框的值会看到标签同样改变，我们也没有在代码中调用刷新或引用组件。
+将代码迁移到数据绑定，所有组件的指针可以不再保存。 取而代之，使用到绑定值，你的用户界面可以完全分离。 更易读和管理。
+package main  import ( 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	myApp := app.New() 	w := myApp.NewWindow(&amp;#34;Two Way&amp;#34;)  	str := binding.NewString() 	str.Set(&amp;#34;Hi!&amp;#34;)  	w.SetContent(container.NewVBox( 	widget.NewLabelWithData(str), 	widget.NewEntryWithData(str), 	))  	w.ShowAndRun() } 下一步，将介绍如何为数据增加conversions</description>
+    </item>
+    
+    <item>
+      <title>线</title>
+      <link>https://darcybook.github.io/docs/canvas/line/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/canvas/line/</guid>
+      <description>线# canvas.Line对象从Position1（默认top,left）到Position1（默认bottom,right）绘制一条线。 你可以指定它的颜色和笔画粗细，默认粗细为1。
+线的位置可以通过Position1或Position2或者通过Move()和Resize()函数操作。 例如宽度为0的区域会显示一条垂直线，0高度将显示水平线。
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; )  func main() { 	myApp := app.New() 	w := myApp.NewWindow(&amp;#34;Line&amp;#34;)  	line := canvas.NewLine(color.White) 	line.StrokeWidth = 5 	w.SetContent(line)  	w.Resize(fyne.NewSize(100, 100)) 	w.ShowAndRun() } 线条通常在自定义布局中使用或手动控制。与文本不同，它们没有自然（最小）大小，但可以在复杂的布局中使用。</description>
+    </item>
+    
+    <item>
+      <title>网格环绕</title>
+      <link>https://darcybook.github.io/docs/container/gridwrap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/container/gridwrap/</guid>
+      <description>Grid Wrap# 与网格布局一样，网格环绕布局在表格布局中排列元素。 但是网格环绕没有固定列数，用固定大小确认每个单元格的宽，然后在构建的时候指定所需行数。
+用layout.NewGridWrapLayout(size)命令建立网格环绕布局，并指定所有元素的尺寸，并作为container.New(...)的第一个参数传递。 行列数会根据当前的容器自动进行计算。
+一开始，网格环绕布局只有一列，如果调整尺寸（如下面示例），子元素将自动排列。
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/layout&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Grid Wrap Layout&amp;#34;)  	text1 := canvas.NewText(&amp;#34;1&amp;#34;, color.White) 	text2 := canvas.NewText(&amp;#34;2&amp;#34;, color.White) 	text3 := canvas.NewText(&amp;#34;3&amp;#34;, color.White) 	grid := container.New(layout.NewGridWrapLayout(fyne.NewSize(50, 50)), 	text1, text2, text3) 	myWindow.SetContent(grid)  	// myWindow.</description>
+    </item>
+    
+    <item>
+      <title>资源绑定</title>
+      <link>https://darcybook.github.io/docs/extend/bundle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/extend/bundle/</guid>
+      <description>资源绑定# 基于 Go 的应用程序通常构建为单个二进制可执行文件，对于 Fyne 应用程序也是如此。单个文件可以更轻松地分发安装我们的软件。遗憾的是，GUI 应用程序通常需要额外的资源来呈现用户界面。为了管理这一挑战，Go应用程序可以将资产捆绑到二进制文件本身中。Fyne 工具包更喜欢使用“fyne 捆绑包”，因为它具有各种好处，我们将在下面探讨。
+和go的其它应用一样，Fyne也通常打包为一个二进制可执行文件。 单个文件可以简单的分发我们的软件，但是一个GUI应用需要额外的资源显示用户界面。 go应用可以将资源绑定到二进制文件中。Fyne可以使用&amp;quot;fyne bundle&amp;quot;，因为它有很多好处，下面我们会探讨一下。
+绑定资源的基础命令时&amp;quot;fyne bundle&amp;quot;。 这个工具用各种参数可以自定义输出，下面基本命令，可以将文件转化为go源代码。
+$ ls image.png	main.go $ fyne bundle image.png &amp;gt;&amp;gt; bundled.go $ ls bundled.go	image.png	main.go $ bundled.go 中有一个资源变量的数组，我们可以在代码中使用这些变量。 例如上面的代码中会产生类型下面的文件：
+var resourceImagePng = &amp;amp;fyne.StaticResource{ 	StaticName: &amp;#34;image.png&amp;#34;, 	StaticContent: []byte{ ... 	}} 如你所见默认的名称时&amp;quot;resource&amp;lt;Name&amp;gt;.&amp;lt;Ext&amp;gt;&amp;quot;。文件和包的名称也可以自定义。 之后我们就可以在画布中加载图像：
+img := canvas.NewImageFromResource(resourceImagePng) fyne 资源只是具有唯一名称的字节的集合，因此这可能是字体、声音文件或您希望加载的任何其他数据。您还可以使用该参数将许多资源捆绑到单个文件中。如果要捆绑许多文件，建议将命令保存在shell脚本中，例如此文件：
+fyne资源只是唯一标识的字节集合，因此它可以时一个字体、声音文件或者任何你需要加载的文件。 -append 参数允许你将多个资源绑定到单一文件。
+如果你要绑定多个资源建议将命令写到脚本中，例如下面的gen.sh：
+#!/bin/bash fyne bundle image1.png &amp;gt; bundled.go fyne bundle -append image2.</description>
+    </item>
+    
+    <item>
+      <title>输入框</title>
+      <link>https://darcybook.github.io/docs/widget/entry/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/widget/entry/</guid>
+      <description>输入框#用户通过输入可以输入一些简单的文本内容。 widget.NewEntry()可以建立一个输入框。 当你建立组件时要记住名称，方便之后访问Text属性。 OnChanged回调函数，可以在每次内容修改后触发。
+输入空间还可以验证输入的内容类型 &amp;ndash; Validator属性设置一个fyne.StringValidator。PlaceHolder、MultiLine都是可以设置的。
+package main  import ( 	&amp;#34;log&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Entry Widget&amp;#34;)  	input := widget.NewEntry() 	input.SetPlaceHolder(&amp;#34;Enter text...&amp;#34;)  	content := container.NewVBox(input, widget.NewButton(&amp;#34;Save&amp;#34;, func() { 	log.Println(&amp;#34;Content was:&amp;#34;, input.Text) 	}))  	myWindow.SetContent(content) 	myWindow.ShowAndRun() } NewPasswordEntry()可以设置一个密码输入框（输入的内容会遮蔽）。</description>
     </item>
     
     <item>
@@ -309,48 +353,10 @@ package main  import ( 	&amp;#34;time&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&am
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/container/border/</guid>
-      <description>The border layout is possibly the most widely used to construct user interfaces as it allows the positioning of items around a central element which will expand to fill the space. To create a border layout you need to pass the fyne.CanvasObjects that should be positioned in a border position to the layout (as well as the container as usual). This syntax is a little different to the other layouts but is basically just layout.</description>
-    </item>
-    
-    <item>
-      <title>Choices</title>
-      <link>https://darcybook.github.io/docs/widget/choices/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/widget/choices/</guid>
-      <description>There are various widgets available to present the user with a choice, these include a checkbox, radio group and select popup.
-The widget.Check provides a simple yes/no choice and is created using a string label. Each of these widgets also takes a &amp;ldquo;changed&amp;rdquo; func(...) where the parameter is of the appropriate type. widget.NewCheck(..) therefore takes a string parameter for the label and a func(bool) param for the change handler. You can also use the Checked field to get the boolean value.</description>
-    </item>
-    
-    <item>
-      <title>Circle</title>
-      <link>https://darcybook.github.io/docs/canvas/circle/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/canvas/circle/</guid>
-      <description>canvas.Circle defines a circle shape filled by the specified colour. You may also set a StrokeWidth and therefore a different StrokeColor as shown in this example.
-The circle will fill the space specified by calling Resize() or by the layout it is controlled by. As the example sets the circle as the window content it will resize to fill the window, within a basic padding (controlled by the theme).
-package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.</description>
-    </item>
-    
-    <item>
-      <title>Creating a Custom Theme</title>
-      <link>https://darcybook.github.io/docs/extend/custom-theme/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/extend/custom-theme/</guid>
-      <description>Applications are able to load custom themes that can apply small changes to the standard theme or provide a completely unique look. A theme will need to implement the functions of fyne.Theme interface, which is defined as follows:
-type Theme interface { 	Color(ThemeColorName, ThemeVariant) color.Color 	Font(TextStyle) Resource 	Icon(ThemeIconName) Resource 	Size(ThemeSizeName) float32 } To apply our theme changes we will first define a new type that that implements this interface.</description>
-    </item>
-    
-    <item>
-      <title>Data Conversion</title>
-      <link>https://darcybook.github.io/docs/binding/conversion/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/binding/conversion/</guid>
-      <description>So far we have used data binding where the type of data matches the output type (for example String and Label or Entry). Often it will be desirable to present data that is not already in the correct format. To do this the binding package provides a number of helpful conversion functions.
-Most commonly this will be used to convert different types of data into strings for displaying in Label or Entry widgets.</description>
+      <description>Border#Border 框布局可能是在构建用户界面时最长使用的方式，它可以将项目定位在中央元素周围，中央元素会扩展填充空间。 使用fyne.CanvasObject建立框布局，它需要指定边框位置（就像往常一样）。
+语法和其他布局有些不一样，但是基本layout.NewBorderLayout(top, bottom, left, right)和下面示例一下。
+传递到布局且没有指定位置的项目都会排列到中心区域，并自动填充。 还可以将nil传给布局，让位置为空。
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/layout&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Border Layout&amp;#34;)  	top := canvas.NewText(&amp;#34;top bar&amp;#34;, color.White) 	left := canvas.NewText(&amp;#34;left&amp;#34;, color.White) 	middle := canvas.NewText(&amp;#34;content&amp;#34;, color.White) 	content := container.New(layout.NewBorderLayout(top, nil, left, nil), 	top, left, middle) 	myWindow.</description>
     </item>
     
     <item>
@@ -361,6 +367,57 @@ Most commonly this will be used to convert different types of data into strings 
       <guid>https://darcybook.github.io/docs/architecture/organisation/</guid>
       <description>The Fyne project is split into many packages, each providing different types of functionality. They are as follows:
  fyne.io/fyne/v2 This import provides the basic definitions common to all Fyne code including data types and interfaces. fyne.io/fyne/v2/app The app package provides the APIs that start a new application. Normally you only require app.New() or app.NewWithID(). fyne.io/fyne/v2/canvas The canvas package provides all of the drawing APIs within Fyne. The complete Fyne toolkit is made up of these primitive graphical types.</description>
+    </item>
+    
+    <item>
+      <title>创建自定义主题</title>
+      <link>https://darcybook.github.io/docs/extend/custom-theme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/extend/custom-theme/</guid>
+      <description>创建自定义主题# 应用可以自己加载自定义主题，这些主题可能修改一个小部分，也可能完全不一样。主题需要实现fyne.Theme接口：
+type Theme interface { 	Color(ThemeColorName, ThemeVariant) color.Color 	Font(TextStyle) Resource 	Icon(ThemeIconName) Resource 	Size(ThemeSizeName) float32 } 要应用我们的主题更改，我们将首先定义一个实现此接口的新类型。
+定义主题#我们首先定义一个新类型，它将是我们的主题，一个简单的空结构就可以了：
+type myTheme struct {} 最好断言我们实现了一个接口，这样编译器错误就更靠近类型定义。
+var _ fyne.Theme = (*myTheme)(nil) 在这里你可以看到编译错误，因为我们还没实现接口，我们从颜色开始改变。
+自定义颜色#接口中定义的函数要求我们定义命名颜色，并为用户所需的变体（例如或 ）提供提示。在我们的主题中，我们将返回自定义背景颜色 - 使用不同的浅色和深色值。 Theme接口中定义了一个Color函数，我们可以定义一个客户想要的颜色（例如theme.VariantLight或theme.VariantDark）。在我们的主题中，我们返回一个自定义的颜色 &amp;ndash; 区分light和dark。
+func (m myTheme) Color(name fyne.ThemeColorName, variant fyne.ThemeVariant) color.Color { 	if name == theme.ColorNameBackground { 	if variant == theme.VariantLight { 	return color.</description>
+    </item>
+    
+    <item>
+      <title>圆</title>
+      <link>https://darcybook.github.io/docs/canvas/circle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/canvas/circle/</guid>
+      <description>圆# canvas.Circle定义一个指定颜色的圆形。 你可以设置一个StrokeWidth或者StrokeColor设置不同的圆形。
+圆形通过Resize()调整填充的小时。 由于该示例将圆圈设置为窗口content，因此它将填充真个窗口，有一个基础padding（由主题控制）。
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; )  func main() { 	myApp := app.New() 	w := myApp.NewWindow(&amp;#34;Circle&amp;#34;)  	circle := canvas.NewCircle(color.White) 	circle.StrokeColor = color.Gray{0x99} 	circle.StrokeWidth = 5 	w.SetContent(circle)  	w.Resize(fyne.NewSize(100, 100)) 	w.ShowAndRun() } 所有这些都是基本类型，可以由我们的驱动程序呈现，而无需其他信息。接下来，我们将从 Image 开始查看更复杂的类型。</description>
+    </item>
+    
+    <item>
+      <title>数据转换</title>
+      <link>https://darcybook.github.io/docs/binding/conversion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/binding/conversion/</guid>
+      <description>数据转换# 目前，我们已经用到了一些输出类型的数据绑定（String 和 Label 或 Entry）。 通常我们希望展现的不是实际的格式。因此binding包提供了一系列转换的函数。
+在代码中查看如何将 a 转换为 using 。可以通过移动滑块来编辑原始值。每次数据更改时，它都会运行转换代码并更新任何连接的小部件。 最常见的是将不同数据类型转化为字符串再Label或Entry显示。 下面示例用binding.FloatToString将Float转化为String。 原始的数据通过滑块调整，每次值改变都会自动转化并关联组件。
+还可以格式化字符串让用户界面看起来更自然。 你可以看下使用WithFormat可以传递一个字符串格式化后（类似fmt包）再输出。
+package main  import ( 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	myApp := app.New() 	w := myApp.NewWindow(&amp;#34;Conversion&amp;#34;)  	f := binding.NewFloat() 	str := binding.FloatToString(f) 	short := binding.FloatToStringWithFormat(f, &amp;#34;%0.0f%%&amp;#34;) 	f.Set(25.0)  	w.SetContent(container.NewVBox( 	widget.NewSliderWithData(0, 100.0, f), 	widget.</description>
+    </item>
+    
+    <item>
+      <title>选择组件</title>
+      <link>https://darcybook.github.io/docs/widget/choices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/widget/choices/</guid>
+      <description>选择组件# 有各种不同组件可以让客户进行一个选择，例如单选框、多选框、和下拉框。
+widget.Check 单选框创建时使用一个字符串标签，提供一个是/否选择。 每一个组件都有一个&amp;quot;changed&amp;quot;func(...)有对应的参数。 widget.NewCheck(..)有一个string参数，有一个func(bool)参数作为改变监听事件。 你还可以使用Checked字段获取当前值。
+多选框也是类似的，但是第一个参数是一个string数组，用来标识每个子元素。 更改函数要求这次有一个string参数返回当前选定的值。调用widget.NewRadioGroup(...)以构造单选按钮组小部件，以后可以使用此引用来读取Selected字段，而不是使用更改回调。
+下拉框组件和多选框有相同的参数。调用widget.NewSelect(...)会显示一个按钮，点击时出现弹窗，用户可以从中选择。 对于列表使用这个更好。
+package main  import ( 	&amp;#34;log&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Choice Widgets&amp;#34;)  	check := widget.NewCheck(&amp;#34;Optional&amp;#34;, func(value bool) { 	log.Println(&amp;#34;Check set to&amp;#34;, value) 	}) 	radio := widget.NewRadioGroup([]string{&amp;#34;Option 1&amp;#34;, &amp;#34;Option 2&amp;#34;}, func(value string) { 	log.Println(&amp;#34;Radio set to&amp;#34;, value) 	}) 	combo := widget.</description>
     </item>
     
     <item>
@@ -395,45 +452,6 @@ Windows可以随时创建，我们可以修改上面的代码，新增一个窗�
     </item>
     
     <item>
-      <title>Form</title>
-      <link>https://darcybook.github.io/docs/container/form/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/container/form/</guid>
-      <description>The layout.FormLayout is like a 2 column grid layout but tweaked to lay out forms in an application. The height of each item will be the larger of the two minimum heights in each row. The width of the left item will be the largest minimum width of all items in the first column whilst the second item in each row will expand to fill the space.
-This layout is more typically used within the widget.</description>
-    </item>
-    
-    <item>
-      <title>Form</title>
-      <link>https://darcybook.github.io/docs/widget/form/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/widget/form/</guid>
-      <description>The form widget is used to lay out many input fields with labels and optional cancel and submit buttons. In its most bare form it aligns labels to the left of each input widget. By setting OnCancel or OnSubmit the form will add a button bar with the specified handlers called when appropriate.
-The widget can be created with widget.NewForm(...) passing a list of widget.FormItems, or by using the &amp;amp;widget.Form{} syntax illustrated in the example.</description>
-    </item>
-    
-    <item>
-      <title>Image</title>
-      <link>https://darcybook.github.io/docs/canvas/image/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/canvas/image/</guid>
-      <description>A canvas.Image represents a scalable image resource in Fyne. It can be loaded from a resource (as shown in the example), from an image file, from a URI location containing an image, from an io.Reader, or from a Go image.Image in memory.
-The default image fill mode is canvas.ImageFillStretch which will cause it to fill the space specified (through Resize() or layout). Alternatively you could use canvas.ImageFillContain to ensure that the aspect ratio is maintained and the image is within the bounds.</description>
-    </item>
-    
-    <item>
-      <title>List Data</title>
-      <link>https://darcybook.github.io/docs/binding/list/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/binding/list/</guid>
-      <description>To demonstrate how more complex types can be connected we will look at the List widget and how data binding can make it easier to use. Firstly we create a StringList data binding, which is a list of String data type. Once we have a data of list type we can connect this to the standard List widget. To do so we use the widget.NewListWithData constructor, much like other widgets.</description>
-    </item>
-    
-    <item>
       <title>Writing a Custom Widget</title>
       <link>https://darcybook.github.io/docs/extend/custom-widget/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -441,6 +459,53 @@ The default image fill mode is canvas.ImageFillStretch which will cause it to fi
       <guid>https://darcybook.github.io/docs/extend/custom-widget/</guid>
       <description>The standard widgets included with Fyne are designed to support standard user interactions and requirements. As a GUI often has to provide custom functionality it may be necessary to write a custom widget. This article outlines how.
 A widget is split into two areas - each implementing a standard interface - the fyne.Widget and the fyne.WidgetRenderer. The widget defines behaviour and state, with the renderer being used to define how it should be drawn to screen.</description>
+    </item>
+    
+    <item>
+      <title>图形</title>
+      <link>https://darcybook.github.io/docs/canvas/image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/canvas/image/</guid>
+      <description>图形# canvas.Image是Fyne中可缩放的图形资源。 它可以从资源（像示例中一样）、图像文件、包含图像的url，或者从内存中的io.Reader对象或image.Image。
+默认图形填充方式是canvas.ImageFillStretch，可以让它填充指定的空间（通过Resize()或者layout布局）。 或者，可以使用canvas.ImageFillContain来确保图形的纵横比例在指定范围内。 进一步，可以使用canvas.ImageFillOriginal（例如下例），确保纵横比例的同时确保一个最小尺寸。
+package main  import ( 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; 	&amp;#34;fyne.io/fyne/v2/theme&amp;#34; )  func main() { 	myApp := app.New() 	w := myApp.NewWindow(&amp;#34;Image&amp;#34;)  	image := canvas.NewImageFromResource(theme.FyneLogo()) 	// image := canvas.NewImageFromURI(uri) 	// image := canvas.NewImageFromImage(src) 	// image := canvas.NewImageFromReader(reader, name) 	// image := canvas.NewImageFromFile(fileName) 	image.FillMode = canvas.ImageFillOriginal 	w.SetContent(image)  	w.ShowAndRun() } 图像可以基于位图（如 PNG 和 JPEG）或基于矢量（如 SVG）。 在可能的情况下，我们建议使用矢量图像，因为它们会随着尺寸的变化而继续很好地呈现。 使用原始图像大小时要小心，因为它们在使用不同的用户界面比例时可能无法完全按照预期运行。由于Fyne允许整个用户界面缩放25px图像文件，因此可能与25高度fyne对象的高度不同。</description>
+    </item>
+    
+    <item>
+      <title>数组</title>
+      <link>https://darcybook.github.io/docs/binding/list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/binding/list/</guid>
+      <description>数组# 我们用列表组件演示怎么能更简单绑定一个复杂类型。 我们先创建一个字符串数组的数据绑定。 有个数组类型我们可以关联到标准列表组件，像其它组件一样，widget.NewListWithData可以绑定数据。
+使用此回调结构时，我们应该使用模板标签小部件，而不是调用 。这意味着，如果数据源中的任何字符串发生更改，则表的每个受影响的行都将刷新。
+和list教程比较一下，主要有2个地方变了，第一个是我们第一个参数传递数组而不是长度回调函数。 第二个是最后参数UpdateItem回调函数。 改进的版本使用binding.DataItem而不是widget.ListIndexID。
+当我们使用回调结构时，我们Bind模板标签组件而不是调用SetText。 这意味着，如果数据源中任何字符串改变，表中每个受到影响的行都会刷新。
+package main  import ( 	&amp;#34;fmt&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;List Data&amp;#34;)  	data := binding.BindStringList( 	&amp;amp;[]string{&amp;#34;Item 1&amp;#34;, &amp;#34;Item 2&amp;#34;, &amp;#34;Item 3&amp;#34;}, 	)  	list := widget.NewListWithData(data, 	func() fyne.CanvasObject { 	return widget.</description>
+    </item>
+    
+    <item>
+      <title>表单</title>
+      <link>https://darcybook.github.io/docs/widget/form/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/widget/form/</guid>
+      <description>表单# 表单组件可以展示需要带有标签的输入框，并提供一个可选的取消或提交按钮。 没有修饰的表单，每个标签对其到输入框左侧。 设置OnCancel或OnSubmit可以增加一个按钮栏，并可以通过回调函数触发。
+使用多个widget.FormItem参数传给widget.NewForm(...)建立一个表单，或者示例中&amp;amp;widget.Form{}方式。 Form.Append(label, widget)也可以用来构造表单。
+在下面示例中，我们建立了两个输入框，其中一个是多行的（类似HTML中的TextArea）。 有一个提交事件去在应用关闭前打印信息（）。
+package main  import ( 	&amp;#34;log&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Form Widget&amp;#34;)  	entry := widget.NewEntry() 	textArea := widget.NewMultiLineEntry()  	form := &amp;amp;widget.Form{ 	Items: []*widget.FormItem{ // we can specify items in the constructor 	{Text: &amp;#34;Entry&amp;#34;, Widget: entry}}, 	OnSubmit: func() { // optional, handle form submission 	log.</description>
+    </item>
+    
+    <item>
+      <title>表单布局</title>
+      <link>https://darcybook.github.io/docs/container/form/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/container/form/</guid>
+      <description>表单布局# layout.FormLayout表单布局类似一个两列的表格布局，调整成一个适合表单的样式。 每个元素的高是每两者最小高度中最高的，左侧的宽度是第一列中每项的最小宽度中最大的，第二列的元素展开自动填充。
+这个布局通常用在widget.Form部件，但也可以利用layout.NewFormLayout()传给container.New(...)。
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/layout&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Form Layout&amp;#34;)  	label1 := canvas.NewText(&amp;#34;Label 1&amp;#34;, color.Black) 	value1 := canvas.NewText(&amp;#34;Value&amp;#34;, color.White) 	label2 := canvas.NewText(&amp;#34;Label 2&amp;#34;, color.Black) 	value2 := canvas.NewText(&amp;#34;Something&amp;#34;, color.White) 	grid := container.New(layout.NewFormLayout(), label1, value1, label2, value2) 	myWindow.</description>
     </item>
     
     <item>
@@ -471,44 +536,54 @@ type myEntry struct { 	widget.Entry }  func (m *myEntry) TypedShortcut(s fyne.Sh
     </item>
     
     <item>
-      <title>Center</title>
-      <link>https://darcybook.github.io/docs/container/center/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/container/center/</guid>
-      <description>layout.CenterLayout organises all items in its container to be centered in the available space. The objects will be drawn in the order they are passed to the container, with the last being drawn top-most.
-package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/layout&amp;#34; 	&amp;#34;fyne.io/fyne/v2/theme&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Center Layout&amp;#34;)  	img := canvas.</description>
-    </item>
-    
-    <item>
-      <title>Numerical Entry</title>
-      <link>https://darcybook.github.io/docs/extend/numerical-entry/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/extend/numerical-entry/</guid>
-      <description>In the traditional sense, GUI programs have used callbacks to customize actions for widgets. Fyne does not expose inserting custom callbacks to capture events on widgets, but it does not need to. The Go language is plenty extensible to make this work.
-Instead we can simply use Type Embedding and extend the widget to only make it possible to enter numerical values.
-First create a new type struct, we will call it numericalEntry.</description>
-    </item>
-    
-    <item>
-      <title>ProgressBar</title>
-      <link>https://darcybook.github.io/docs/widget/progressbar/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/widget/progressbar/</guid>
-      <description>The progress bar widget has two forms, the standard progress bar shows the user which Value has been reached, from Min to Max. The default min is 0.0 and the max defaults to 1.0. To use the default values just call widget.NewProgressBar(). After creating you can set the Value field.
-To set up a custom range you can set Min and Max fields manually. The label will always show the percentage completion.</description>
-    </item>
-    
-    <item>
       <title>Raster</title>
       <link>https://darcybook.github.io/docs/canvas/raster/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/canvas/raster/</guid>
-      <description>The canvas.Raster is like an image but draws exactly one spot for each pixel on the screen. This means that as a user interface scales or the image resizes more pixels will be requested to fill the space. To do this we use a Generator function as illustrated in this example - it will be used to return the colour of each pixel.
-The generator functions can be pixel based (as in this example where we generate a new random colour for each pixel) or based on full images.</description>
+      <description>光栅# canvas.Raster就像一个图像，为屏幕每个像素只绘制一个点。 随之用户界面尺寸或图形尺寸调整，会请求更多像素填充。 我们使用Generator函数 &amp;ndash; 它将返回每个像素的颜色。
+Generator函数可以基础像素（在下面例子中我们为每个像素生产随机颜色），也可以基础完整图像。 生产完整图像（使用canvas.NewRaster()）更有效，但有时直接控制像素更方便。
+package main  import ( 	&amp;#34;image/color&amp;#34; 	&amp;#34;math/rand&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; )  func main() { 	myApp := app.New() 	w := myApp.NewWindow(&amp;#34;Raster&amp;#34;)  	raster := canvas.NewRasterWithPixels( 	func(_, _, w, h int) color.Color { 	return color.RGBA{uint8(rand.Intn(255)), 	uint8(rand.Intn(255)), 	uint8(rand.Intn(255)), 0xff} 	}) 	// raster := canvas.NewRasterFromImage() 	w.SetContent(raster) 	w.</description>
+    </item>
+    
+    <item>
+      <title>中央布局</title>
+      <link>https://darcybook.github.io/docs/container/center/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/container/center/</guid>
+      <description>中央布局# layout.CenterLayout中央布局排列所有项目到空间中心。 对象按照传递的顺序绘制，最后的排列在最上面。
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/layout&amp;#34; 	&amp;#34;fyne.io/fyne/v2/theme&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Center Layout&amp;#34;)  	img := canvas.NewImageFromResource(theme.FyneLogo()) 	img.FillMode = canvas.ImageFillOriginal 	text := canvas.NewText(&amp;#34;Overlay&amp;#34;, color.Black) 	content := container.New(layout.NewCenterLayout(), img, text)  	myWindow.SetContent(content) 	myWindow.ShowAndRun() } 中央布局是所有元素保持最小大小，如果希望展开项目填充，可参阅layout.MaxLayout.</description>
+    </item>
+    
+    <item>
+      <title>数字输入框</title>
+      <link>https://darcybook.github.io/docs/extend/numerical-entry/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/extend/numerical-entry/</guid>
+      <description>数字输入框# 传统意义上，GUI程序在组件上使用调用回调和自定义操作。 Fyne不会暴露回调函数来捕获小部件上的事件，但它不需要这样做。 Go语言具有丰富的扩展来实现。
+相反，我们可以简单地使用类型嵌入并扩展小部件，使其只能输入数值。
+首先创建一个新的类型结构，我们将它称为numericalEntry。
+type numericalEntry struct {  widget.Entry } 如扩展组件中所述，我们遵循实用练习并创建一个构造函数并扩展BaseWidget。
+func newNumericalEntry() *numericalEntry {  entry := &amp;amp;numericalEntry{}  entry.ExtendBaseWidget(entry)  return entry } 如果没有，我们就忽略输入。此实现将仅允许输入整数，但可以在将来根据需要轻松扩展以检查其他键。
+现在我们只需要让输入框值接受数字。 重写fyne.Focusable的部门方法TypedRune(rune)来实现。 这允许我们拦截标准输入处理，处理我们键入的内容，并只允许录入我们想要的。
+在此方法中，我们将使用条件来检查内容是否与0到9之间的任何数字匹配。 如果匹配到了，我们将内容委派到TypedRune(rune)方法中。 如果没有匹配到，我们就忽略输入，这个实现仅仅允许整数输入，但是后面我们有其他需求也可以轻松扩展。
+func (e *numericalEntry) TypedRune(r rune) { 	switch r { 	case &amp;#39;0&amp;#39;, &amp;#39;1&amp;#39;, &amp;#39;2&amp;#39;, &amp;#39;3&amp;#39;, &amp;#39;4&amp;#39;, &amp;#39;5&amp;#39;, &amp;#39;6&amp;#39;, &amp;#39;7&amp;#39;, &amp;#39;8&amp;#39;, &amp;#39;9&amp;#39;: 	e.Entry.TypedRune(r) 	} } 如果我们想更新实现以允许十进制数字，我们可以简单地添加并允许的符文列表（某些语言使用逗号而不是点作为十进制表示法）。
+如果我们允许小数，我们可以只增加.和,到列表就可以录入（有些语言使用逗号表示小数点）。
+func (e *numericalEntry) TypedRune(r rune) { 	switch r { 	case &amp;#39;0&amp;#39;, &amp;#39;1&amp;#39;, &amp;#39;2&amp;#39;, &amp;#39;3&amp;#39;, &amp;#39;4&amp;#39;, &amp;#39;5&amp;#39;, &amp;#39;6&amp;#39;, &amp;#39;7&amp;#39;, &amp;#39;8&amp;#39;, &amp;#39;9&amp;#39;, &amp;#39;.</description>
+    </item>
+    
+    <item>
+      <title>进度条</title>
+      <link>https://darcybook.github.io/docs/widget/progressbar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/widget/progressbar/</guid>
+      <description>进度条# 进度条组件有两种样式，一种显示已经到达Value，从Min到Max。 默认最小值为0.0最大值为1.0。 调用widget.NewProgressBar()直接使用默认值创建组件。 创建之后你可以设置当前Value。
+设置自定义的范围，你可以手动设置Min 和 Max字段。标签始终显示的是完成的百分比。
+另一种形式是无限进度条，这个版本进度条左右来回往复。 调用widget.NewProgressBarInfinite() 创建，并会立即动起来。
+package main  import ( 	&amp;#34;time&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;ProgressBar Widget&amp;#34;)  	progress := widget.NewProgressBar() 	infinite := widget.NewProgressBarInfinite()  	go func() { 	for i := 0.0; i &amp;lt;= 1.0; i += 0.1 { 	time.Sleep(time.Millisecond * 250) 	progress.</description>
     </item>
     
     <item>
@@ -540,43 +615,50 @@ a := app.NewWithID(&amp;#34;com.example.tutorial.preferences&amp;#34;) [...] a.P
     </item>
     
     <item>
-      <title>Animation</title>
+      <title>动画</title>
       <link>https://darcybook.github.io/docs/canvas/animation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/canvas/animation/</guid>
-      <description>Fyne includes an animation framework that allows you to smoothly transition canvas properties from one value to another over time. An animation can contain any code which means that any types of object attributes can be managed, however there are builtin animations for size, position and color.
-Animations are normally created using the builtin helpers of the canvas package, such as NewSizeAnimation, and calling Start() on the created animation. You can set animations to repeat or auto reverse, as we will see below.</description>
+      <description>Fyne 包含一个动画框架，允许您随着时间的推移将画布属性从一个值平滑地过渡到另一个值。动画可以包含任何代码，这意味着可以管理任何类型的对象属性，但是只能有针对大小，位置和颜色的内置动画。
+动画通常使用画布包内置工具（NewSizeAnimation）创建，运行Start()调用创建的动画。您可以将动画设置为重复或自动反转，如下图所示。
+首先用矩形演示一下颜色渐变的动画。 在下面示例代码中，我们设置一个矩形画布，就像哦我们之前的代码一样。 最大的不同是动画在显示窗口之前。动画用NewColorRGBAAnimation创建，它可使颜色从red变为blue，并且中间有2秒（指定的持续时间）的过度时间。
+package main  import ( 	&amp;#34;image/color&amp;#34; 	&amp;#34;time&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; )  func main() { 	a := app.New() 	w := a.NewWindow(&amp;#34;Hello&amp;#34;)  	obj := canvas.NewRectangle(color.Black) 	obj.Resize(fyne.NewSize(50, 50)) 	w.SetContent(container.NewWithoutLayout(obj))  	red := color.NRGBA{R:0xff, A:0xff} 	blue := color.NRGBA{B:0xff, A:0xff} 	canvas.NewColorRGBAAnimation(red, blue, time.Second*2, func(c color.Color) { 	obj.FillColor = c 	canvas.</description>
     </item>
     
     <item>
-      <title>Gradient</title>
-      <link>https://darcybook.github.io/docs/canvas/gradient/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/canvas/gradient/</guid>
-      <description>The last canvas primitive type is Gradient, available as canvas.LinearGradient and canvas.RadialGradient which is used to draw a gradient from one colour to another in various patterns. You can create gradients using NewHorizontalGradient(), NewVerticalGradient() or NewRadialGradient().
-To create a gradient you need a start and end colour - every colour in between is calculated by the canvas. In this example we use color.Transparent to show how a gradient (or any other type) could use an alpha value to be semi-transparent over the content behind.</description>
-    </item>
-    
-    <item>
-      <title>Max</title>
-      <link>https://darcybook.github.io/docs/container/max/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/container/max/</guid>
-      <description>The layout.MaxLayout is the simplest layout, it sets all items in the container to be the same size as the container. This is not often useful in general containers but can be suitable when composing widgets.
-The max layout will expand the container to be at least the size of the largest item&amp;rsquo;s minimum size. The objects will be drawn in the order the are passed to the container, with the last being drawn top-most.</description>
-    </item>
-    
-    <item>
-      <title>Toolbar</title>
+      <title>工具栏</title>
       <link>https://darcybook.github.io/docs/widget/toolbar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/widget/toolbar/</guid>
-      <description>The toolbar widget creates a row of action buttons using icons to represent each. The widget.NewToolbar(...) constructor function takes a list of widget.ToolbarItem parameters. The builtin types of toolbar items are action, separator and spacer.
-The most used item is an action that is created using the widget.NewToolbarItemAction(..) function. An action takes two parameters, first being the icon resource to draw and the latter is the func() to call when tapped.</description>
+      <description>工具栏# 工具栏组件用不同图标建立一行操作按钮。widget.NewToolbar(...)函数可以传一个widget.ToolbarItem数组。内建的组件类型有操作按钮、分隔符、和间隔符。
+widget.NewToolbarItemAction(..)创建一个最常用的操作。一个操作包含两个参数，一个是图标资源，另一个是func()回调函数。
+widget.NewToolbarSeparator()创建一个分隔符（通常是垂直的线）在工具栏中分割action。可以使用widget.NewToolbarSpacer()灵活的在action之间创建空间。
+一个工具栏应该使用在区域最上面，通常使用layout.BorderLayout加到 fyne.Container容器中。
+package main  import ( 	&amp;#34;log&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/theme&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Toolbar Widget&amp;#34;)  	toolbar := widget.NewToolbar( 	widget.NewToolbarAction(theme.DocumentCreateIcon(), func() { 	log.Println(&amp;#34;New document&amp;#34;) 	}), 	widget.NewToolbarSeparator(), 	widget.NewToolbarAction(theme.ContentCutIcon(), func() {}), 	widget.NewToolbarAction(theme.ContentCopyIcon(), func() {}), 	widget.NewToolbarAction(theme.ContentPasteIcon(), func() {}), 	widget.NewToolbarSpacer(), 	widget.</description>
+    </item>
+    
+    <item>
+      <title>最大布局</title>
+      <link>https://darcybook.github.io/docs/container/max/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/container/max/</guid>
+      <description>最大布局# layout.MaxLayout最大布局时最简单的布局，将所有元素设置和容器一样大小。这在一般容器中没啥用，但在编写小部件的时候很合适。
+最大布局会将容器扩展为至少元素的最小尺寸。 按照传递的顺序绘制，最后一个对象在最上面。
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/layout&amp;#34; 	&amp;#34;fyne.io/fyne/v2/theme&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Max Layout&amp;#34;)  	img := canvas.NewImageFromResource(theme.FyneLogo()) 	text := canvas.NewText(&amp;#34;Overlay&amp;#34;, color.Black) 	content := container.New(layout.NewMaxLayout(), img, text)  	myWindow.SetContent(content) 	myWindow.ShowAndRun() } </description>
+    </item>
+    
+    <item>
+      <title>渐变</title>
+      <link>https://darcybook.github.io/docs/canvas/gradient/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/canvas/gradient/</guid>
+      <description>渐变#最后一个基本画布类型是Gradient,使用canvas.LinearGradient和canvas.RadialGradient可以绘制一种颜色到另一种颜色的渐变。 你可以通过NewHorizontalGradient()，NewVerticalGradient() 或者 NewRadialGradient()创建渐变。
+要创建渐变，首先需要一个开始和结束的颜色 &amp;ndash; 两者之前的每个颜色都有画布计算。 在下面的示例中，我们使用color.Transparent来展示一个渐变如何使用alpha值设置半透明。
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; )  func main() { 	myApp := app.New() 	w := myApp.NewWindow(&amp;#34;Gradient&amp;#34;)  	gradient := canvas.NewHorizontalGradient(color.White, color.Transparent) 	//gradient := canvas.NewRadialGradient(color.White, color.Transparent) 	w.SetContent(gradient)  	w.Resize(fyne.NewSize(100, 100)) 	w.ShowAndRun() } </description>
     </item>
     
     <item>
@@ -617,23 +699,27 @@ xcrun simctl install booted myapp.app </description>
     </item>
     
     <item>
-      <title>AppTabs</title>
-      <link>https://darcybook.github.io/docs/container/apptabs/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/container/apptabs/</guid>
-      <description>The AppTabs container is used to allow the user to switch between different content panels. Tabs are either just text or text and an icon. It is recommended not to mix some tabs having icons and some without. A tab container is created using container.NewAppTabs(...) and passing container.TabItem items (that can be created using container.NewTabItem(...)).
-The tab container can be configured by setting the location of tabs, one of container.TabLocationTop, container.</description>
-    </item>
-    
-    <item>
-      <title>List</title>
+      <title>列表</title>
       <link>https://darcybook.github.io/docs/widget/list/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/widget/list/</guid>
-      <description>The List widget is one of the toolkit&amp;rsquo;s collection widgets. These widgets are designed to help build really performant interfaces when lots of data is being presented. You can also see the Table and Tree widgets which have a similar API. Because of this design they are a little more complicated to use.
-The List uses callback functions to ask for data when it is required. There are 3 main callbacks, Length, CreateItem and UpdateItem.</description>
+      <description>列表# 列表组件时工具包的聚合组件之一。这些组件能够高性能的呈现大量数据。 你可以看到Table和Tree 组件有类似的API。 由于这种设计，用起来比较复杂。
+列表需要数据时使用回调函数请求。有3各主要的回调函数，Length、CreateItem 和 UpdateItem。 长度回调（参数1）时最简单的，呈现数据中有多少个项目。 其他的和模板有关 &amp;ndash; 图形元素如何创建、缓存和重用。
+CreateItem 回调函数范围一个模板对象。实际数据会和模板对象一起显示。 MinSize字段会影响列表的最小尺寸。
+最后UpdateItem被调用时会将数据线缓存。可以用来设置内容可供显示。
+package main  import ( 	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  var data = []string{&amp;#34;a&amp;#34;, &amp;#34;string&amp;#34;, &amp;#34;list&amp;#34;}  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;List Widget&amp;#34;)  	list := widget.NewList( 	func() int { 	return len(data) 	}, 	func() fyne.CanvasObject { 	return widget.</description>
+    </item>
+    
+    <item>
+      <title>应用选项卡</title>
+      <link>https://darcybook.github.io/docs/container/apptabs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/container/apptabs/</guid>
+      <description>AppTabs 应用选项卡# 应用选项卡允许用户在不同的面板中切换。 选项卡只有图标或者文本。建议每个选项卡是否有图标保持一致。 container.NewAppTabs(...)建立选项卡容器，参数为container.TabItem元素（可以通过container.NewTabItem(...)建立）。
+选项卡的位置可以用container.TabLocationTop、container.TabLocationBottom、container.TabLocationLeading和container.TabLocationTrailing来设置。默认配置是top。
+package main  import ( 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	//&amp;#34;fyne.io/fyne/v2/theme&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;TabContainer Widget&amp;#34;)  	tabs := container.NewAppTabs( 	container.NewTabItem(&amp;#34;Tab 1&amp;#34;, widget.NewLabel(&amp;#34;Hello&amp;#34;)), 	container.NewTabItem(&amp;#34;Tab 2&amp;#34;, widget.NewLabel(&amp;#34;World!&amp;#34;)), 	)  	//tabs.Append(container.NewTabItemWithIcon(&amp;#34;Home&amp;#34;, theme.HomeIcon(), widget.NewLabel(&amp;#34;Home tab&amp;#34;)))  	tabs.SetTabLocation(container.TabLocationLeading)  	myWindow.SetContent(tabs) 	myWindow.ShowAndRun() } 在移动设备上加载时，选项卡位置可能会被忽略。 在纵向方向中，leading或拖拽位置可以更改为底部。 在横向方向上时，顶部或底部位置将移动到leading位置。</description>
     </item>
     
     <item>
@@ -652,13 +738,16 @@ macOS App Store (since fyne 1.4.2)#实现准备:
     </item>
     
     <item>
-      <title>Table</title>
+      <title>表格</title>
       <link>https://darcybook.github.io/docs/widget/table/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/widget/table/</guid>
-      <description>The Table widget is like the List widget (another of the toolkit&amp;rsquo;s collection widgets) with a two-dimensional index. Like List this is designed to help build really performant interfaces when lots of data is being presented. Because of this the widget is not created with all the data embedded, but instead calls out to the data source when needed.
-The Table uses callback functions to ask for data when it is required.</description>
+      <description>表格# 表格组件和像一个二维的列表（另一个聚合组件）。 也是设计来高性能展示大量数据。 因此组件不会引用所有数据，在需要时才引用。
+表格在需要数据时调用回调函数。 有三个回调函数，Length、CreateCell和UpdateCell。 长度回调（参数1）时最简单的，范围需要呈现项目数量，它返回两个整数表示行和列数。 两外两个和实际使用的模板有关。
+CreateCell回调范围一个新模板对象，就像列表一样。 区别在于，MinSize会定义每个单元格的标准此村，和表格最小尺寸（至少显示一个单元格）。
+就像前面说的， UpdateCell 调用用来缓存数据源模板。索引(row, col)和数量一致。
+package main  import ( 	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  var data = [][]string{[]string{&amp;#34;top left&amp;#34;, &amp;#34;top right&amp;#34;}, 	[]string{&amp;#34;bottom left&amp;#34;, &amp;#34;bottom right&amp;#34;}}  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Table Widget&amp;#34;)  	list := widget.NewTable( 	func() (int, int) { 	return len(data), len(data[0]) 	}, 	func() fyne.</description>
     </item>
     
     <item>
@@ -1389,16 +1478,6 @@ Deprecated: Create a new custom dialog with a widget.ProgressBar() inside.func 
       <guid>https://darcybook.github.io/docs/api/dialog/progressinfinitedialog/</guid>
       <description>dialog.ProgressInfiniteDialog# import &amp;#34;fyne.io/fyne/v2/dialog&amp;#34; Usage#type ProgressInfiniteDialog#type ProgressInfiniteDialog struct { } ProgressInfiniteDialog is a simple dialog window that displays text and a infinite progress bar.
 Deprecated: Create a new custom dialog with a widget.ProgressBarInfinite() inside.func NewProgressInfinite#func NewProgressInfinite(title, message string, parent fyne.Window) *ProgressInfiniteDialog NewProgressInfinite creates a infinite progress dialog and returns the handle. Using the returned type you should call Show().</description>
-    </item>
-    
-    <item>
-      <title>Extending Widgets</title>
-      <link>https://darcybook.github.io/docs/extend/extending-widgets/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/extend/extending-widgets/</guid>
-      <description>The standard Fyne widgets provide the minimum functionality and customisation to support most use-cases. It may be required at certain times to have more advanced functionality. Rather than have developers build their own widgets it is possible to extend the existing ones.
-For example we will extend the icon widget to support being tapped. To do this we declare a new struct that embeds the widget.Icon type. We create a constructor function that calls the important ExtendBaseWidget function.</description>
     </item>
     
     <item>
@@ -2825,6 +2904,19 @@ func (*ToolbarSpacer) ToolbarObject#func (t *ToolbarSpacer) ToolbarObject() f
       
       <guid>https://darcybook.github.io/docs/api/widget/treenodeid/</guid>
       <description>widget.TreeNodeID# import &amp;#34;fyne.io/fyne/v2/widget&amp;#34; Usage#type TreeNodeID#type TreeNodeID = string TreeNodeID represents the unique id of a tree node.</description>
+    </item>
+    
+    <item>
+      <title>组件扩展</title>
+      <link>https://darcybook.github.io/docs/extend/extending-widgets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/extend/extending-widgets/</guid>
+      <description>组件扩展# 标准组件提供最少的功能和定制功能，来支持大部分案例。 某些时候我们需要更高级功能，那么开发者自己构建组件，不如直接在已有的组件扩展。
+例如我们扩展图标组件让它能被点击。 我们申明一个新的结构体嵌入widget.Icon类型。 我们新增一个构造函数让它可以调用ExtendBaseWidget函数。
+import ( 	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  type tappableIcon struct { 	widget.Icon }  func newTappableIcon(res fyne.Resource) *tappableIcon { 	icon := &amp;amp;tappableIcon{} 	icon.ExtendBaseWidget(icon) 	icon.SetResource(res)  	return icon }  **注意：**像widget.NewIcon函数可能不会用于扩展，因为它已经调用了 。
+ 然后，我们添加新函数来实现fyne.Tappable接口，添加这些函数后，每次用户点击我们的新图标时，都会调用新函数Tapped。所需的接口有两个函数Tapped(*PointEvent)和TappedSecondary(*PointEvent)，因此我们将两个都加上。
+import &amp;#34;log&amp;#34;  func (t *tappableIcon) Tapped(_ *fyne.PointEvent) { 	log.Println(&amp;#34;I have been tapped&amp;#34;) }  func (t *tappableIcon) TappedSecondary(_ *fyne.PointEvent) { } 我们可以使用简单的应用程序测试这个新的小部件，如下所示。</description>
     </item>
     
   </channel>

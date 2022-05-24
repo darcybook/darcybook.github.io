@@ -3,24 +3,34 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Applications are able to load custom themes that can apply small changes to the standard theme or provide a completely unique look. A theme will need to implement the functions of fyne.Theme interface, which is defined as follows:
-type Theme interface { 	Color(ThemeColorName, ThemeVariant) color.Color 	Font(TextStyle) Resource 	Icon(ThemeIconName) Resource 	Size(ThemeSizeName) float32 } To apply our theme changes we will first define a new type that that implements this interface.">
+<meta name="description" content="创建自定义主题# 应用可以自己加载自定义主题，这些主题可能修改一个小部分，也可能完全不一样。主题需要实现fyne.Theme接口：
+type Theme interface { 	Color(ThemeColorName, ThemeVariant) color.Color 	Font(TextStyle) Resource 	Icon(ThemeIconName) Resource 	Size(ThemeSizeName) float32 } 要应用我们的主题更改，我们将首先定义一个实现此接口的新类型。
+定义主题#我们首先定义一个新类型，它将是我们的主题，一个简单的空结构就可以了：
+type myTheme struct {} 最好断言我们实现了一个接口，这样编译器错误就更靠近类型定义。
+var _ fyne.Theme = (*myTheme)(nil) 在这里你可以看到编译错误，因为我们还没实现接口，我们从颜色开始改变。
+自定义颜色#接口中定义的函数要求我们定义命名颜色，并为用户所需的变体（例如或 ）提供提示。在我们的主题中，我们将返回自定义背景颜色 - 使用不同的浅色和深色值。 Theme接口中定义了一个Color函数，我们可以定义一个客户想要的颜色（例如theme.VariantLight或theme.VariantDark）。在我们的主题中，我们返回一个自定义的颜色 &ndash; 区分light和dark。
+func (m myTheme) Color(name fyne.ThemeColorName, variant fyne.ThemeVariant) color.Color { 	if name == theme.ColorNameBackground { 	if variant == theme.VariantLight { 	return color.">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="Creating a Custom Theme" />
-<meta property="og:description" content="Applications are able to load custom themes that can apply small changes to the standard theme or provide a completely unique look. A theme will need to implement the functions of fyne.Theme interface, which is defined as follows:
-type Theme interface { 	Color(ThemeColorName, ThemeVariant) color.Color 	Font(TextStyle) Resource 	Icon(ThemeIconName) Resource 	Size(ThemeSizeName) float32 } To apply our theme changes we will first define a new type that that implements this interface." />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="创建自定义主题" />
+<meta property="og:description" content="创建自定义主题# 应用可以自己加载自定义主题，这些主题可能修改一个小部分，也可能完全不一样。主题需要实现fyne.Theme接口：
+type Theme interface { 	Color(ThemeColorName, ThemeVariant) color.Color 	Font(TextStyle) Resource 	Icon(ThemeIconName) Resource 	Size(ThemeSizeName) float32 } 要应用我们的主题更改，我们将首先定义一个实现此接口的新类型。
+定义主题#我们首先定义一个新类型，它将是我们的主题，一个简单的空结构就可以了：
+type myTheme struct {} 最好断言我们实现了一个接口，这样编译器错误就更靠近类型定义。
+var _ fyne.Theme = (*myTheme)(nil) 在这里你可以看到编译错误，因为我们还没实现接口，我们从颜色开始改变。
+自定义颜色#接口中定义的函数要求我们定义命名颜色，并为用户所需的变体（例如或 ）提供提示。在我们的主题中，我们将返回自定义背景颜色 - 使用不同的浅色和深色值。 Theme接口中定义了一个Color函数，我们可以定义一个客户想要的颜色（例如theme.VariantLight或theme.VariantDark）。在我们的主题中，我们返回一个自定义的颜色 &ndash; 区分light和dark。
+func (m myTheme) Color(name fyne.ThemeColorName, variant fyne.ThemeVariant) color.Color { 	if name == theme.ColorNameBackground { 	if variant == theme.VariantLight { 	return color." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://darcybook.github.io/docs/extend/custom-theme/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2022-05-18T21:52:14+08:00" />
+<meta property="article:modified_time" content="2022-05-20T20:21:55+08:00" />
 
-<title>Creating a Custom Theme | darcy&#39;s</title>
+<title>创建自定义主题 | darcy&#39;s</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
   <link rel="alternate" hreflang="fyne" href="https://darcybook.github.io/fyne/docs/extend/custom-theme/" title="Creating a Custom Theme">
 <link rel="stylesheet" href="/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css" integrity="sha256-gsXb0jRHzuC0wqo&#43;0Izglh&#43;qQOH6Nw7uT4yfAuDUa18=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.666906ddbfb1dcb8bafdc2bd9112621357be923adc88cfd550e3a5bb2c10db65.js" integrity="sha256-ZmkG3b&#43;x3Li6/cK9kRJiE1e&#43;kjrciM/VUOOluywQ22U=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.0dfe2f2c158becb952a18c0962cc2880a09dc75c6d5aae38d04a0b8a3cbfca40.js" integrity="sha256-Df4vLBWL7LlSoYwJYswogKCdx1xtWq440EoLijy/ykA=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -435,7 +445,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/canvas/rectangle/" class="">Rectangle</a>
+    <a href="/docs/canvas/rectangle/" class="">矩形</a>
   
 
         </li>
@@ -448,7 +458,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/canvas/text/" class="">Text</a>
+    <a href="/docs/canvas/text/" class="">文本</a>
   
 
         </li>
@@ -461,7 +471,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/canvas/line/" class="">Line</a>
+    <a href="/docs/canvas/line/" class="">线</a>
   
 
         </li>
@@ -474,7 +484,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/canvas/circle/" class="">Circle</a>
+    <a href="/docs/canvas/circle/" class="">圆</a>
   
 
         </li>
@@ -487,7 +497,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/canvas/image/" class="">Image</a>
+    <a href="/docs/canvas/image/" class="">图形</a>
   
 
         </li>
@@ -513,7 +523,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/canvas/animation/" class="">Animation</a>
+    <a href="/docs/canvas/animation/" class="">动画</a>
   
 
         </li>
@@ -526,7 +536,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/canvas/gradient/" class="">Gradient</a>
+    <a href="/docs/canvas/gradient/" class="">渐变</a>
   
 
         </li>
@@ -546,7 +556,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-10dd021a58cb696b6cb4f79141ec5ddb" class="toggle"  />
     <label for="section-10dd021a58cb696b6cb4f79141ec5ddb" class="flex justify-between">
-      <a role="button" class="">Containers and Layout</a>
+      <a role="button" class="">容器和布局</a>
     </label>
   
 
@@ -560,7 +570,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/container/box/" class="">Box</a>
+    <a href="/docs/container/box/" class="">盒布局</a>
   
 
         </li>
@@ -573,7 +583,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/container/grid/" class="">Grid</a>
+    <a href="/docs/container/grid/" class="">网格布局</a>
   
 
         </li>
@@ -586,7 +596,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/container/gridwrap/" class="">Grid Wrap</a>
+    <a href="/docs/container/gridwrap/" class="">网格环绕</a>
   
 
         </li>
@@ -612,7 +622,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/container/form/" class="">Form</a>
+    <a href="/docs/container/form/" class="">表单布局</a>
   
 
         </li>
@@ -625,7 +635,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/container/center/" class="">Center</a>
+    <a href="/docs/container/center/" class="">中央布局</a>
   
 
         </li>
@@ -638,7 +648,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/container/max/" class="">Max</a>
+    <a href="/docs/container/max/" class="">最大布局</a>
   
 
         </li>
@@ -651,7 +661,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/container/apptabs/" class="">AppTabs</a>
+    <a href="/docs/container/apptabs/" class="">应用选项卡</a>
   
 
         </li>
@@ -671,7 +681,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-0d0eb913881a0c154c75678ce9ea1b89" class="toggle"  />
     <label for="section-0d0eb913881a0c154c75678ce9ea1b89" class="flex justify-between">
-      <a role="button" class="">Widgets</a>
+      <a role="button" class="">组件</a>
     </label>
   
 
@@ -685,7 +695,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/label/" class="">Label</a>
+    <a href="/docs/widget/label/" class="">标签</a>
   
 
         </li>
@@ -698,7 +708,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/button/" class="">Button</a>
+    <a href="/docs/widget/button/" class="">按钮</a>
   
 
         </li>
@@ -711,7 +721,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/entry/" class="">Entry</a>
+    <a href="/docs/widget/entry/" class="">输入框</a>
   
 
         </li>
@@ -724,7 +734,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/choices/" class="">Choices</a>
+    <a href="/docs/widget/choices/" class="">选择组件</a>
   
 
         </li>
@@ -737,7 +747,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/form/" class="">Form</a>
+    <a href="/docs/widget/form/" class="">表单</a>
   
 
         </li>
@@ -750,7 +760,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/progressbar/" class="">ProgressBar</a>
+    <a href="/docs/widget/progressbar/" class="">进度条</a>
   
 
         </li>
@@ -763,7 +773,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/toolbar/" class="">Toolbar</a>
+    <a href="/docs/widget/toolbar/" class="">工具栏</a>
   
 
         </li>
@@ -776,7 +786,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/list/" class="">List</a>
+    <a href="/docs/widget/list/" class="">列表</a>
   
 
         </li>
@@ -789,7 +799,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/table/" class="">Table</a>
+    <a href="/docs/widget/table/" class="">表格</a>
   
 
         </li>
@@ -809,7 +819,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-a659e7c60bb0ba8a5f830d140376b648" class="toggle"  />
     <label for="section-a659e7c60bb0ba8a5f830d140376b648" class="flex justify-between">
-      <a href="/docs/binding/" class="">Data Binding</a>
+      <a role="button" class="">数据绑定</a>
     </label>
   
 
@@ -823,7 +833,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/binding/simple/" class="">Binding Simple Widgets</a>
+    <a href="/docs/binding/introduction/" class="">介绍</a>
   
 
         </li>
@@ -836,7 +846,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/binding/twoway/" class="">Two-Way Binding</a>
+    <a href="/docs/binding/simple/" class="">绑定简单组件</a>
   
 
         </li>
@@ -849,7 +859,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/binding/conversion/" class="">Data Conversion</a>
+    <a href="/docs/binding/twoway/" class="">双向绑定</a>
   
 
         </li>
@@ -862,7 +872,20 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/binding/list/" class="">List Data</a>
+    <a href="/docs/binding/conversion/" class="">数据转换</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/binding/list/" class="">数组</a>
   
 
         </li>
@@ -882,7 +905,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-8a572438ecae81fbb2ca87c17042611c" class="toggle" checked />
     <label for="section-8a572438ecae81fbb2ca87c17042611c" class="flex justify-between">
-      <a role="button" class="">Extending Fyne</a>
+      <a role="button" class="">Fyne扩展</a>
     </label>
   
 
@@ -896,7 +919,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/extend/custom-layout/" class="">Building a Custom Layout</a>
+    <a href="/docs/extend/custom-layout/" class="">自定义布局</a>
   
 
         </li>
@@ -909,7 +932,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/extend/bundle/" class="">Bundling resources</a>
+    <a href="/docs/extend/bundle/" class="">资源绑定</a>
   
 
         </li>
@@ -922,7 +945,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/extend/custom-theme/" class="active">Creating a Custom Theme</a>
+    <a href="/docs/extend/custom-theme/" class="active">创建自定义主题</a>
   
 
         </li>
@@ -948,7 +971,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/extend/numerical-entry/" class="">Numerical Entry</a>
+    <a href="/docs/extend/numerical-entry/" class="">数字输入框</a>
   
 
         </li>
@@ -961,7 +984,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/extend/extending-widgets/" class="">Extending Widgets</a>
+    <a href="/docs/extend/extending-widgets/" class="">组件扩展</a>
   
 
         </li>
@@ -4370,7 +4393,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Creating a Custom Theme</strong>
+  <strong>创建自定义主题</strong>
 
   <label for="toc-control">
     
@@ -4386,12 +4409,12 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#创建自定义主题">创建自定义主题</a>
       <ul>
         <li>
           <ul>
-            <li><a href="#define-your-theme">Define your theme</a></li>
-            <li><a href="#load-the-theme">Load the theme</a></li>
+            <li><a href="#定义主题">定义主题</a></li>
+            <li><a href="#加载主题">加载主题</a></li>
           </ul>
         </li>
       </ul>
@@ -4408,31 +4431,34 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><p>Applications are able to load custom themes that can apply small changes to the standard theme or provide a completely unique look. A theme will need to implement the functions of <code>fyne.Theme</code> interface, which is defined as follows:</p>
+  <article class="markdown"><h1 id="创建自定义主题">
+  创建自定义主题
+  <a class="anchor" href="#%e5%88%9b%e5%bb%ba%e8%87%aa%e5%ae%9a%e4%b9%89%e4%b8%bb%e9%a2%98">#</a>
+</h1>
+<hr>
+<p>应用可以自己加载自定义主题，这些主题可能修改一个小部分，也可能完全不一样。主题需要实现<code>fyne.Theme</code>接口：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Theme</span> <span style="color:#66d9ef">interface</span> {
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Color</span>(<span style="color:#a6e22e">ThemeColorName</span>, <span style="color:#a6e22e">ThemeVariant</span>) <span style="color:#a6e22e">color</span>.<span style="color:#a6e22e">Color</span>
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Font</span>(<span style="color:#a6e22e">TextStyle</span>) <span style="color:#a6e22e">Resource</span>
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Icon</span>(<span style="color:#a6e22e">ThemeIconName</span>) <span style="color:#a6e22e">Resource</span>
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Size</span>(<span style="color:#a6e22e">ThemeSizeName</span>) <span style="color:#66d9ef">float32</span>
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>To apply our theme changes we will first define a new type that that implements this interface.</p>
-<h3 id="define-your-theme">
-  Define your theme
-  <a class="anchor" href="#define-your-theme">#</a>
+</span></span></code></pre></div><p>要应用我们的主题更改，我们将首先定义一个实现此接口的新类型。</p>
+<h3 id="定义主题">
+  定义主题
+  <a class="anchor" href="#%e5%ae%9a%e4%b9%89%e4%b8%bb%e9%a2%98">#</a>
 </h3>
-<p>We start by defining a new type that will be our theme, a simple empty struct will do:</p>
+<p>我们首先定义一个新类型，它将是我们的主题，一个简单的空结构就可以了：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">myTheme</span> <span style="color:#66d9ef">struct</span> {}
-</span></span></code></pre></div><p>It is a good idea to assert that we implement an interface so that
-compile errors are closer to the defining type.</p>
+</span></span></code></pre></div><p>最好断言我们实现了一个接口，这样编译器错误就更靠近类型定义。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">_</span> <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">Theme</span> = (<span style="color:#f92672">*</span><span style="color:#a6e22e">myTheme</span>)(<span style="color:#66d9ef">nil</span>)
-</span></span></code></pre></div><p>At this point you could see compile errors because we still need to 
-implement the methods, we start with color.</p>
-<h4 id="customising-colors">
-  Customising colors
-  <a class="anchor" href="#customising-colors">#</a>
+</span></span></code></pre></div><p>在这里你可以看到编译错误，因为我们还没实现接口，我们从颜色开始改变。</p>
+<h4 id="自定义颜色">
+  自定义颜色
+  <a class="anchor" href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e9%a2%9c%e8%89%b2">#</a>
 </h4>
-<p>The <code>Color</code> function defined in the <code>Theme</code> interface asks us to define a
-named color and also provides a hint for the variant that the user desires (for example <code>theme.VariantLight</code> or <code>theme.VariantDark</code>). In our theme we will return a custom background color - using a different value for light and dark.</p>
+<p>接口中定义的函数要求我们定义命名颜色，并为用户所需的变体（例如或 ）提供提示。在我们的主题中，我们将返回自定义背景颜色 - 使用不同的浅色和深色值。
+<code>Theme</code>接口中定义了一个<code>Color</code>函数，我们可以定义一个客户想要的颜色（例如<code>theme.VariantLight</code>或<code>theme.VariantDark</code>）。在我们的主题中，我们返回一个自定义的颜色 &ndash; 区分light和dark。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">m</span> <span style="color:#a6e22e">myTheme</span>) <span style="color:#a6e22e">Color</span>(<span style="color:#a6e22e">name</span> <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">ThemeColorName</span>, <span style="color:#a6e22e">variant</span> <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">ThemeVariant</span>) <span style="color:#a6e22e">color</span>.<span style="color:#a6e22e">Color</span> {
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">ColorNameBackground</span> {
 </span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">variant</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">VariantLight</span> {
@@ -4443,18 +4469,15 @@ named color and also provides a hint for the variant that the user desires (for 
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">DefaultTheme</span>().<span style="color:#a6e22e">Color</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">variant</span>)
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>You will see the last line here references the <code>theme.DefaultTheme()</code> to
-look up standard values. This allows us to provide custom values and yet
-fall back to the standard theme when we don&rsquo;t want to provide our own values.</p>
-<p>Of course colors are simpler than resources, we look at that for custom icons.</p>
-<h4 id="overriding-default-icons">
-  Overriding default icons
-  <a class="anchor" href="#overriding-default-icons">#</a>
+</span></span></code></pre></div><p>您将看到此处的最后一行引用了<code>theme.DefaultTheme()</code>查找标准值。这使我们能够提供自定义值，但在我们未提供自定义值时回退到标准主题。</p>
+<p>当然颜色比资源简单，我们看一下自定义图标。</p>
+<h4 id="覆盖默认图标">
+  覆盖默认图标
+  <a class="anchor" href="#%e8%a6%86%e7%9b%96%e9%bb%98%e8%ae%a4%e5%9b%be%e6%a0%87">#</a>
 </h4>
-<p>Icons (and Fonts) use <code>fyne.Resource</code> as values instead of simple types like <code>int</code> (for size) or <code>color.Color</code> for colors. We can build our own
-resource using <code>fyne.NewStaticResource</code>, or you could pass in a value
-that was created using 
-  <a href="https://developer.fyne.io/tutorial/bundle">resource embedding</a>.</p>
+<p>图标（和字体）使用<code>fyne.Resource</code>而不是基本数据类型。
+使用<code>fyne.NewStaticResource</code>我们可以新建立自己的资源，或者你可以传递通过
+  <a href="/docs/extend/bundle/">资源嵌入</a>建立的资源。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">m</span> <span style="color:#a6e22e">myTheme</span>) <span style="color:#a6e22e">Icon</span>(<span style="color:#a6e22e">name</span> <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">ThemeIconName</span>) <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">Resource</span> {
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">IconNameHome</span> {
 </span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">NewStaticResource</span>(<span style="color:#e6db74">&#34;myHome&#34;</span>, <span style="color:#a6e22e">homeBytes</span>)
@@ -4462,14 +4485,12 @@ that was created using
 </span></span><span style="display:flex;"><span>	
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">DefaultTheme</span>().<span style="color:#a6e22e">Icon</span>(<span style="color:#a6e22e">name</span>)
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>As above we return the default theme icon if we don&rsquo;t want to provide
-a specific override.</p>
-<h3 id="load-the-theme">
-  Load the theme
-  <a class="anchor" href="#load-the-theme">#</a>
+</span></span></code></pre></div><p>如果我们不想提供指定的覆盖值，我们直接返回默认主题的图标。</p>
+<h3 id="加载主题">
+  加载主题
+  <a class="anchor" href="#%e5%8a%a0%e8%bd%bd%e4%b8%bb%e9%a2%98">#</a>
 </h3>
-<p>Before we can load the theme you will need to implement the <code>Size</code> and <code>Font</code> methods as well. You can just use these empty implementations if
-you are happy to use the defaults.</p>
+<p>在我们加载主题之前，您还需要实现<code>Size</code>和<code>Font</code>方法。如果您愿意使用默认值，则可以只使用这些空实现。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">m</span> <span style="color:#a6e22e">myTheme</span>) <span style="color:#a6e22e">Font</span>(<span style="color:#a6e22e">style</span> <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">TextStyle</span>) <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">Resource</span> {
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">DefaultTheme</span>().<span style="color:#a6e22e">Font</span>(<span style="color:#a6e22e">style</span>)
 </span></span><span style="display:flex;"><span>}
@@ -4477,10 +4498,9 @@ you are happy to use the defaults.</p>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">m</span> <span style="color:#a6e22e">myTheme</span>) <span style="color:#a6e22e">Size</span>(<span style="color:#a6e22e">name</span> <span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">ThemeSizeName</span>) <span style="color:#66d9ef">float32</span> {
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">DefaultTheme</span>().<span style="color:#a6e22e">Size</span>(<span style="color:#a6e22e">name</span>)
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>To set the theme for your app you will need to add the following line of code:</p>
+</span></span></code></pre></div><p>若要设置应用的主题，需要添加以下代码行：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">Settings</span>().<span style="color:#a6e22e">SetTheme</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">myTheme</span>{})
-</span></span></code></pre></div><p>With these changes you can apply your own style, to make small tweaks or
-provide a completely custom looking application!</p>
+</span></span></code></pre></div><p>通过这些更改，您可以应用自己的样式，进行小的调整或提供完全自定义的外观应用程序！</p>
 </article>
  
       
@@ -4490,9 +4510,9 @@ provide a completely custom looking application!</p>
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/darcybook/hugo/commit/a464a380d18056f0a44219d848f147acdd0f5ad8" title='最后修改者 darcybook | May 18, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/darcybook/hugo/commit/ef1d96ac412d5f5b2bd965195a2d40321d46adf1" title='最后修改者 darcybook | May 20, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>May 18, 2022</span>
+      <span>May 20, 2022</span>
     </a>
   </div>
 
@@ -4535,12 +4555,12 @@ provide a completely custom looking application!</p>
   
 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#创建自定义主题">创建自定义主题</a>
       <ul>
         <li>
           <ul>
-            <li><a href="#define-your-theme">Define your theme</a></li>
-            <li><a href="#load-the-theme">Load the theme</a></li>
+            <li><a href="#定义主题">定义主题</a></li>
+            <li><a href="#加载主题">加载主题</a></li>
           </ul>
         </li>
       </ul>

@@ -3,22 +3,38 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Go based applications are usually built as a single binary executable, and this is the same for Fyne applications. A single file makes it easier to distribute install our software. Unfortunately GUI applications typically require additional resources to render the user interface. To manage this challenge a Go application can bundle assets into the binary itself. The Fyne toolkit prefers the use of &ldquo;fyne bundle&rdquo; as it has various benefits that we will explore below.">
+<meta name="description" content="资源绑定# 基于 Go 的应用程序通常构建为单个二进制可执行文件，对于 Fyne 应用程序也是如此。单个文件可以更轻松地分发安装我们的软件。遗憾的是，GUI 应用程序通常需要额外的资源来呈现用户界面。为了管理这一挑战，Go应用程序可以将资产捆绑到二进制文件本身中。Fyne 工具包更喜欢使用“fyne 捆绑包”，因为它具有各种好处，我们将在下面探讨。
+和go的其它应用一样，Fyne也通常打包为一个二进制可执行文件。 单个文件可以简单的分发我们的软件，但是一个GUI应用需要额外的资源显示用户界面。 go应用可以将资源绑定到二进制文件中。Fyne可以使用&quot;fyne bundle&quot;，因为它有很多好处，下面我们会探讨一下。
+绑定资源的基础命令时&quot;fyne bundle&quot;。 这个工具用各种参数可以自定义输出，下面基本命令，可以将文件转化为go源代码。
+$ ls image.png	main.go $ fyne bundle image.png &gt;&gt; bundled.go $ ls bundled.go	image.png	main.go $ bundled.go 中有一个资源变量的数组，我们可以在代码中使用这些变量。 例如上面的代码中会产生类型下面的文件：
+var resourceImagePng = &amp;fyne.StaticResource{ 	StaticName: &#34;image.png&#34;, 	StaticContent: []byte{ ... 	}} 如你所见默认的名称时&quot;resource&lt;Name&gt;.&lt;Ext&gt;&quot;。文件和包的名称也可以自定义。 之后我们就可以在画布中加载图像：
+img := canvas.NewImageFromResource(resourceImagePng) fyne 资源只是具有唯一名称的字节的集合，因此这可能是字体、声音文件或您希望加载的任何其他数据。您还可以使用该参数将许多资源捆绑到单个文件中。如果要捆绑许多文件，建议将命令保存在shell脚本中，例如此文件：
+fyne资源只是唯一标识的字节集合，因此它可以时一个字体、声音文件或者任何你需要加载的文件。 -append 参数允许你将多个资源绑定到单一文件。
+如果你要绑定多个资源建议将命令写到脚本中，例如下面的gen.sh：
+#!/bin/bash fyne bundle image1.png &gt; bundled.go fyne bundle -append image2.">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="Bundling resources" />
-<meta property="og:description" content="Go based applications are usually built as a single binary executable, and this is the same for Fyne applications. A single file makes it easier to distribute install our software. Unfortunately GUI applications typically require additional resources to render the user interface. To manage this challenge a Go application can bundle assets into the binary itself. The Fyne toolkit prefers the use of &ldquo;fyne bundle&rdquo; as it has various benefits that we will explore below." />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="资源绑定" />
+<meta property="og:description" content="资源绑定# 基于 Go 的应用程序通常构建为单个二进制可执行文件，对于 Fyne 应用程序也是如此。单个文件可以更轻松地分发安装我们的软件。遗憾的是，GUI 应用程序通常需要额外的资源来呈现用户界面。为了管理这一挑战，Go应用程序可以将资产捆绑到二进制文件本身中。Fyne 工具包更喜欢使用“fyne 捆绑包”，因为它具有各种好处，我们将在下面探讨。
+和go的其它应用一样，Fyne也通常打包为一个二进制可执行文件。 单个文件可以简单的分发我们的软件，但是一个GUI应用需要额外的资源显示用户界面。 go应用可以将资源绑定到二进制文件中。Fyne可以使用&quot;fyne bundle&quot;，因为它有很多好处，下面我们会探讨一下。
+绑定资源的基础命令时&quot;fyne bundle&quot;。 这个工具用各种参数可以自定义输出，下面基本命令，可以将文件转化为go源代码。
+$ ls image.png	main.go $ fyne bundle image.png &gt;&gt; bundled.go $ ls bundled.go	image.png	main.go $ bundled.go 中有一个资源变量的数组，我们可以在代码中使用这些变量。 例如上面的代码中会产生类型下面的文件：
+var resourceImagePng = &amp;fyne.StaticResource{ 	StaticName: &#34;image.png&#34;, 	StaticContent: []byte{ ... 	}} 如你所见默认的名称时&quot;resource&lt;Name&gt;.&lt;Ext&gt;&quot;。文件和包的名称也可以自定义。 之后我们就可以在画布中加载图像：
+img := canvas.NewImageFromResource(resourceImagePng) fyne 资源只是具有唯一名称的字节的集合，因此这可能是字体、声音文件或您希望加载的任何其他数据。您还可以使用该参数将许多资源捆绑到单个文件中。如果要捆绑许多文件，建议将命令保存在shell脚本中，例如此文件：
+fyne资源只是唯一标识的字节集合，因此它可以时一个字体、声音文件或者任何你需要加载的文件。 -append 参数允许你将多个资源绑定到单一文件。
+如果你要绑定多个资源建议将命令写到脚本中，例如下面的gen.sh：
+#!/bin/bash fyne bundle image1.png &gt; bundled.go fyne bundle -append image2." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://darcybook.github.io/docs/extend/bundle/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2022-05-18T21:52:14+08:00" />
+<meta property="article:modified_time" content="2022-05-20T20:21:55+08:00" />
 
-<title>Bundling resources | darcy&#39;s</title>
+<title>资源绑定 | darcy&#39;s</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
   <link rel="alternate" hreflang="fyne" href="https://darcybook.github.io/fyne/docs/extend/bundle/" title="Bundling resources">
 <link rel="stylesheet" href="/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css" integrity="sha256-gsXb0jRHzuC0wqo&#43;0Izglh&#43;qQOH6Nw7uT4yfAuDUa18=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.666906ddbfb1dcb8bafdc2bd9112621357be923adc88cfd550e3a5bb2c10db65.js" integrity="sha256-ZmkG3b&#43;x3Li6/cK9kRJiE1e&#43;kjrciM/VUOOluywQ22U=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.0dfe2f2c158becb952a18c0962cc2880a09dc75c6d5aae38d04a0b8a3cbfca40.js" integrity="sha256-Df4vLBWL7LlSoYwJYswogKCdx1xtWq440EoLijy/ykA=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -433,7 +449,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/canvas/rectangle/" class="">Rectangle</a>
+    <a href="/docs/canvas/rectangle/" class="">矩形</a>
   
 
         </li>
@@ -446,7 +462,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/canvas/text/" class="">Text</a>
+    <a href="/docs/canvas/text/" class="">文本</a>
   
 
         </li>
@@ -459,7 +475,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/canvas/line/" class="">Line</a>
+    <a href="/docs/canvas/line/" class="">线</a>
   
 
         </li>
@@ -472,7 +488,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/canvas/circle/" class="">Circle</a>
+    <a href="/docs/canvas/circle/" class="">圆</a>
   
 
         </li>
@@ -485,7 +501,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/canvas/image/" class="">Image</a>
+    <a href="/docs/canvas/image/" class="">图形</a>
   
 
         </li>
@@ -511,7 +527,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/canvas/animation/" class="">Animation</a>
+    <a href="/docs/canvas/animation/" class="">动画</a>
   
 
         </li>
@@ -524,7 +540,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/canvas/gradient/" class="">Gradient</a>
+    <a href="/docs/canvas/gradient/" class="">渐变</a>
   
 
         </li>
@@ -544,7 +560,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-10dd021a58cb696b6cb4f79141ec5ddb" class="toggle"  />
     <label for="section-10dd021a58cb696b6cb4f79141ec5ddb" class="flex justify-between">
-      <a role="button" class="">Containers and Layout</a>
+      <a role="button" class="">容器和布局</a>
     </label>
   
 
@@ -558,7 +574,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/container/box/" class="">Box</a>
+    <a href="/docs/container/box/" class="">盒布局</a>
   
 
         </li>
@@ -571,7 +587,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/container/grid/" class="">Grid</a>
+    <a href="/docs/container/grid/" class="">网格布局</a>
   
 
         </li>
@@ -584,7 +600,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/container/gridwrap/" class="">Grid Wrap</a>
+    <a href="/docs/container/gridwrap/" class="">网格环绕</a>
   
 
         </li>
@@ -610,7 +626,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/container/form/" class="">Form</a>
+    <a href="/docs/container/form/" class="">表单布局</a>
   
 
         </li>
@@ -623,7 +639,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/container/center/" class="">Center</a>
+    <a href="/docs/container/center/" class="">中央布局</a>
   
 
         </li>
@@ -636,7 +652,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/container/max/" class="">Max</a>
+    <a href="/docs/container/max/" class="">最大布局</a>
   
 
         </li>
@@ -649,7 +665,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/container/apptabs/" class="">AppTabs</a>
+    <a href="/docs/container/apptabs/" class="">应用选项卡</a>
   
 
         </li>
@@ -669,7 +685,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-0d0eb913881a0c154c75678ce9ea1b89" class="toggle"  />
     <label for="section-0d0eb913881a0c154c75678ce9ea1b89" class="flex justify-between">
-      <a role="button" class="">Widgets</a>
+      <a role="button" class="">组件</a>
     </label>
   
 
@@ -683,7 +699,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/label/" class="">Label</a>
+    <a href="/docs/widget/label/" class="">标签</a>
   
 
         </li>
@@ -696,7 +712,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/button/" class="">Button</a>
+    <a href="/docs/widget/button/" class="">按钮</a>
   
 
         </li>
@@ -709,7 +725,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/entry/" class="">Entry</a>
+    <a href="/docs/widget/entry/" class="">输入框</a>
   
 
         </li>
@@ -722,7 +738,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/choices/" class="">Choices</a>
+    <a href="/docs/widget/choices/" class="">选择组件</a>
   
 
         </li>
@@ -735,7 +751,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/form/" class="">Form</a>
+    <a href="/docs/widget/form/" class="">表单</a>
   
 
         </li>
@@ -748,7 +764,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/progressbar/" class="">ProgressBar</a>
+    <a href="/docs/widget/progressbar/" class="">进度条</a>
   
 
         </li>
@@ -761,7 +777,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/toolbar/" class="">Toolbar</a>
+    <a href="/docs/widget/toolbar/" class="">工具栏</a>
   
 
         </li>
@@ -774,7 +790,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/list/" class="">List</a>
+    <a href="/docs/widget/list/" class="">列表</a>
   
 
         </li>
@@ -787,7 +803,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/table/" class="">Table</a>
+    <a href="/docs/widget/table/" class="">表格</a>
   
 
         </li>
@@ -807,7 +823,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-a659e7c60bb0ba8a5f830d140376b648" class="toggle"  />
     <label for="section-a659e7c60bb0ba8a5f830d140376b648" class="flex justify-between">
-      <a href="/docs/binding/" class="">Data Binding</a>
+      <a role="button" class="">数据绑定</a>
     </label>
   
 
@@ -821,7 +837,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/binding/simple/" class="">Binding Simple Widgets</a>
+    <a href="/docs/binding/introduction/" class="">介绍</a>
   
 
         </li>
@@ -834,7 +850,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/binding/twoway/" class="">Two-Way Binding</a>
+    <a href="/docs/binding/simple/" class="">绑定简单组件</a>
   
 
         </li>
@@ -847,7 +863,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/binding/conversion/" class="">Data Conversion</a>
+    <a href="/docs/binding/twoway/" class="">双向绑定</a>
   
 
         </li>
@@ -860,7 +876,20 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/binding/list/" class="">List Data</a>
+    <a href="/docs/binding/conversion/" class="">数据转换</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/binding/list/" class="">数组</a>
   
 
         </li>
@@ -880,7 +909,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-8a572438ecae81fbb2ca87c17042611c" class="toggle" checked />
     <label for="section-8a572438ecae81fbb2ca87c17042611c" class="flex justify-between">
-      <a role="button" class="">Extending Fyne</a>
+      <a role="button" class="">Fyne扩展</a>
     </label>
   
 
@@ -894,7 +923,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/extend/custom-layout/" class="">Building a Custom Layout</a>
+    <a href="/docs/extend/custom-layout/" class="">自定义布局</a>
   
 
         </li>
@@ -907,7 +936,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/extend/bundle/" class="active">Bundling resources</a>
+    <a href="/docs/extend/bundle/" class="active">资源绑定</a>
   
 
         </li>
@@ -920,7 +949,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/extend/custom-theme/" class="">Creating a Custom Theme</a>
+    <a href="/docs/extend/custom-theme/" class="">创建自定义主题</a>
   
 
         </li>
@@ -946,7 +975,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/extend/numerical-entry/" class="">Numerical Entry</a>
+    <a href="/docs/extend/numerical-entry/" class="">数字输入框</a>
   
 
         </li>
@@ -959,7 +988,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/extend/extending-widgets/" class="">Extending Widgets</a>
+    <a href="/docs/extend/extending-widgets/" class="">组件扩展</a>
   
 
         </li>
@@ -4368,7 +4397,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Bundling resources</strong>
+  <strong>资源绑定</strong>
 
   <label for="toc-control">
     
@@ -4382,7 +4411,11 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#资源绑定">资源绑定</a></li>
+  </ul>
+</nav>
 
 
 
@@ -4393,37 +4426,44 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><p>Go based applications are usually built as a single binary executable, and this is the same for Fyne applications.
-A single file makes it easier to distribute install our software. Unfortunately GUI
-applications typically require additional resources to render the user interface.
-To manage this challenge a Go application can bundle assets into the binary itself. The Fyne toolkit prefers the use of &ldquo;fyne bundle&rdquo; as it has various benefits that we will explore below.</p>
-<p>The basic approach to bundle an asset is to execute the &ldquo;fyne bundle&rdquo; command.
-This tool has various parameters to customise the output, but in it&rsquo;s basic form the
-file to bundle will be converted into Go source code that can be built into your application.</p>
+  <article class="markdown"><h1 id="资源绑定">
+  资源绑定
+  <a class="anchor" href="#%e8%b5%84%e6%ba%90%e7%bb%91%e5%ae%9a">#</a>
+</h1>
+<hr>
+<p>基于 Go 的应用程序通常构建为单个二进制可执行文件，对于 Fyne 应用程序也是如此。单个文件可以更轻松地分发安装我们的软件。遗憾的是，GUI 应用程序通常需要额外的资源来呈现用户界面。为了管理这一挑战，Go应用程序可以将资产捆绑到二进制文件本身中。Fyne 工具包更喜欢使用“fyne 捆绑包”，因为它具有各种好处，我们将在下面探讨。</p>
+<p>和go的其它应用一样，<code>Fyne</code>也通常打包为一个二进制可执行文件。
+单个文件可以简单的分发我们的软件，但是一个GUI应用需要额外的资源显示用户界面。
+go应用可以将资源绑定到二进制文件中。<code>Fyne</code>可以使用&quot;fyne bundle&quot;，因为它有很多好处，下面我们会探讨一下。</p>
+<p>绑定资源的基础命令时&quot;fyne bundle&quot;。
+这个工具用各种参数可以自定义输出，下面基本命令，可以将文件转化为go源代码。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ls
 </span></span><span style="display:flex;"><span>image.png	main.go
 </span></span><span style="display:flex;"><span>$ fyne bundle image.png &gt;&gt; bundled.go
 </span></span><span style="display:flex;"><span>$ ls
 </span></span><span style="display:flex;"><span>bundled.go	image.png	main.go
 </span></span><span style="display:flex;"><span>$ 
-</span></span></code></pre></div><p>The contents of <code>bundled.go</code> will be a list of resource variables that we can then access in our code. For example the code above will result in a file that includes the following:</p>
+</span></span></code></pre></div><p><code>bundled.go</code> 中有一个资源变量的数组，我们可以在代码中使用这些变量。
+例如上面的代码中会产生类型下面的文件：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">resourceImagePng</span> = <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">fyne</span>.<span style="color:#a6e22e">StaticResource</span>{
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">StaticName</span>: <span style="color:#e6db74">&#34;image.png&#34;</span>,
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">StaticContent</span>: []<span style="color:#66d9ef">byte</span>{
 </span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
 </span></span><span style="display:flex;"><span>	}}
-</span></span></code></pre></div><p>As you see the default naming is &ldquo;resource&lt;Name&gt;.&lt;Ext&gt;&rdquo;. The name and package used in this file can be customised in command parameters. We can then use this name to,
-for example, load an image on our canvas:</p>
+</span></span></code></pre></div><p>如你所见默认的名称时&quot;resource&lt;Name&gt;.&lt;Ext&gt;&quot;。文件和包的名称也可以自定义。
+之后我们就可以在画布中加载图像：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">img</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">canvas</span>.<span style="color:#a6e22e">NewImageFromResource</span>(<span style="color:#a6e22e">resourceImagePng</span>)
-</span></span></code></pre></div><p>A fyne resource is just a collection of bytes with a unique name, so this could be
-a font, a sound file or any other data you wish to load. Also you can bundle many resources into a single file using the <code>-append</code> parameter. If you will be bundling many files it is recommended to save the commands in a shell script, for example this file <code>gen.sh</code>:</p>
+</span></span></code></pre></div><p>fyne 资源只是具有唯一名称的字节的集合，因此这可能是字体、声音文件或您希望加载的任何其他数据。您还可以使用该参数将许多资源捆绑到单个文件中。如果要捆绑许多文件，建议将命令保存在shell脚本中，例如此文件：</p>
+<p><code>fyne</code>资源只是唯一标识的字节集合，因此它可以时一个字体、声音文件或者任何你需要加载的文件。
+<code>-append</code> 参数允许你将多个资源绑定到单一文件。</p>
+<p>如果你要绑定多个资源建议将命令写到脚本中，例如下面的<code>gen.sh</code>：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span>!<span style="color:#f92672">/</span><span style="color:#a6e22e">bin</span><span style="color:#f92672">/</span><span style="color:#a6e22e">bash</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">fyne</span> <span style="color:#a6e22e">bundle</span> <span style="color:#a6e22e">image1</span>.<span style="color:#a6e22e">png</span> &gt; <span style="color:#a6e22e">bundled</span>.<span style="color:#66d9ef">go</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">fyne</span> <span style="color:#a6e22e">bundle</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">append</span> <span style="color:#a6e22e">image2</span>.<span style="color:#a6e22e">png</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#a6e22e">bundled</span>.<span style="color:#66d9ef">go</span>
-</span></span></code></pre></div><p>If you then change any assets or add new ones then you can update this file and run it once to update your <code>bundled.go</code> file.
-You should then add <code>bundled.go</code> to version control so others can build your app
-without needing to run &ldquo;fyne bundle&rdquo;. It is also a good idea to add <code>gen.sh</code> as well
-so that others can re-generate the bundled resources if required.</p>
+</span></span></code></pre></div><p>如果您随后更改任何资产或添加新资产，则可以更新此文件并运行一次以更新文件。然后，您应该添加到版本控制中，以便其他人可以构建您的应用程序，而无需运行“fyne捆绑包”。添加也是一个好主意，以便其他人可以根据需要重新生成捆绑的资源。</p>
+<p>后面你要更改资源或者增加资源，你可以运行这个脚本更新<code>bundled.go</code>文件。
+你应该将<code>bundled.go</code>加入到版本控制中，否则其他人运行时还需要运行<code>fyne bundle</code>.
+将你写好的脚本放到版本控制中也是一个好主意，这样别人就可以重新生产这个文件。</p>
 </article>
  
       
@@ -4433,9 +4473,9 @@ so that others can re-generate the bundled resources if required.</p>
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/darcybook/hugo/commit/a464a380d18056f0a44219d848f147acdd0f5ad8" title='最后修改者 darcybook | May 18, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/darcybook/hugo/commit/ef1d96ac412d5f5b2bd965195a2d40321d46adf1" title='最后修改者 darcybook | May 20, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>May 18, 2022</span>
+      <span>May 20, 2022</span>
     </a>
   </div>
 
@@ -4476,7 +4516,11 @@ so that others can re-generate the bundled resources if required.</p>
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#资源绑定">资源绑定</a></li>
+  </ul>
+</nav>
 
 
  

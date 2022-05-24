@@ -1,39 +1,46 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Containers and Layout on darcy&#39;s</title>
+    <title>容器和布局 on darcy&#39;s</title>
     <link>https://darcybook.github.io/docs/container/</link>
-    <description>Recent content in Containers and Layout on darcy&#39;s</description>
+    <description>Recent content in 容器和布局 on darcy&#39;s</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/docs/container/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Box</title>
+      <title>盒布局</title>
       <link>https://darcybook.github.io/docs/container/box/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/container/box/</guid>
-      <description>As discussed in Container and Layouts elements within a container can be arranged using a layout. This section explores the builtin layouts and how to use them.
-The most commonly used layout is layout.BoxLayout and it has two variants, horizontal and vertical. A box layout arranges all elements in a single row or column with optional spaces to assist alignment.
-A horizontal box layout, created with layout.NewHBoxLayout() creates an arrangement of items in a single row.</description>
+      <description>盒布局# 如容器和布局的描述一样，容器内的元素可以使用布局进行排列。本节探讨内置布局以及如何使用它们。
+最常用的布局是layout.BoxLayout，它有两种变体，水平和垂直。Box局将所有元素排列在单个行或列中，并带有可选空间以帮助对齐。
+水平Box布局，使用layout.NewHBoxLayout()创建单行中的项排列。Box中每个项目的宽度都将设置为MinSize().Width宽度，并且所有项目的高度都相等 &amp;ndash; MinSize().Height中最大的值。 布局可以在容器中使用，或者你可以使用widget.NewHBox()box控件。
+垂直框布局类似，但它在列中排列项目。每个项目的高度将设置为最小值，并且所有宽度将相等，设置为最小宽度中的最大宽度。
+添加一个layout.NewSpacer()在元素之前创建一个可扩展空间（例如，是某些元素左对齐，其他）。 一个间隔将会填充所有可用的空间。 在一个垂直box开始增加一个间隔会导致所有元素底对齐。你可以在水平Box的开始和结束添加一个间隔创建一个居中布局。
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/layout&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Box Layout&amp;#34;)  	text1 := canvas.NewText(&amp;#34;Hello&amp;#34;, color.White) 	text2 := canvas.NewText(&amp;#34;There&amp;#34;, color.White) 	text3 := canvas.NewText(&amp;#34;(right)&amp;#34;, color.White) 	content := container.New(layout.NewHBoxLayout(), text1, text2, layout.NewSpacer(), text3)  	text4 := canvas.</description>
     </item>
     
     <item>
-      <title>Grid</title>
+      <title>网格布局</title>
       <link>https://darcybook.github.io/docs/container/grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/container/grid/</guid>
-      <description>The grid layout lays out the elements of a container in a grid pattern with a fixed number of columns. Items will fill a single row until the number of columns is met, after this a new row will be created. Vertical space will be split equally between each of the rows of objects.
-You create a grid layout using layout.NewGridLayout(cols) where cols is the number of items (columns) you wish to have in each row.</description>
+      <description>网格布局# 网格布局以网格模式对容器的元素进行布局，网格模式具有固定数量的列。项将填充一行，直到达到列数，在此之后将创建一个新行。垂直空间将在每行对象之间平均分配。
+用layout.NewGridLayout(cols)建立网格布局，你希望每行的列数。 这将作为container.New(...)的第一个参数。
+如果调整容器的尺寸，则每个单元格都将平均调整大小共享空间。
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/layout&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Grid Layout&amp;#34;)  	text1 := canvas.NewText(&amp;#34;1&amp;#34;, color.White) 	text2 := canvas.NewText(&amp;#34;2&amp;#34;, color.White) 	text3 := canvas.NewText(&amp;#34;3&amp;#34;, color.White) 	grid := container.New(layout.NewGridLayout(2), text1, text2, text3) 	myWindow.SetContent(grid) 	myWindow.ShowAndRun() } </description>
     </item>
     
     <item>
-      <title>Grid Wrap</title>
+      <title>网格环绕</title>
       <link>https://darcybook.github.io/docs/container/gridwrap/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/container/gridwrap/</guid>
-      <description>Like the previous grid layout, the grid wrap layout creates an arrangement of elements in a grid pattern. However this grid does not have a set number of columns, instead it uses a fixed size for each cell and then flows the content to as many rows as is needed to display the items.
-You create a grid wrap layout using layout.NewGridWrapLayout(size) where size specifies the size to apply to all child elements.</description>
+      <description>Grid Wrap# 与网格布局一样，网格环绕布局在表格布局中排列元素。 但是网格环绕没有固定列数，用固定大小确认每个单元格的宽，然后在构建的时候指定所需行数。
+用layout.NewGridWrapLayout(size)命令建立网格环绕布局，并指定所有元素的尺寸，并作为container.New(...)的第一个参数传递。 行列数会根据当前的容器自动进行计算。
+一开始，网格环绕布局只有一列，如果调整尺寸（如下面示例），子元素将自动排列。
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/layout&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Grid Wrap Layout&amp;#34;)  	text1 := canvas.NewText(&amp;#34;1&amp;#34;, color.White) 	text2 := canvas.NewText(&amp;#34;2&amp;#34;, color.White) 	text3 := canvas.NewText(&amp;#34;3&amp;#34;, color.White) 	grid := container.New(layout.NewGridWrapLayout(fyne.NewSize(50, 50)), 	text1, text2, text3) 	myWindow.SetContent(grid)  	// myWindow.</description>
     </item>
     
     <item>
@@ -42,47 +49,53 @@ You create a grid wrap layout using layout.NewGridWrapLayout(size) where size sp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/container/border/</guid>
-      <description>The border layout is possibly the most widely used to construct user interfaces as it allows the positioning of items around a central element which will expand to fill the space. To create a border layout you need to pass the fyne.CanvasObjects that should be positioned in a border position to the layout (as well as the container as usual). This syntax is a little different to the other layouts but is basically just layout.</description>
+      <description>Border#Border 框布局可能是在构建用户界面时最长使用的方式，它可以将项目定位在中央元素周围，中央元素会扩展填充空间。 使用fyne.CanvasObject建立框布局，它需要指定边框位置（就像往常一样）。
+语法和其他布局有些不一样，但是基本layout.NewBorderLayout(top, bottom, left, right)和下面示例一下。
+传递到布局且没有指定位置的项目都会排列到中心区域，并自动填充。 还可以将nil传给布局，让位置为空。
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/layout&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Border Layout&amp;#34;)  	top := canvas.NewText(&amp;#34;top bar&amp;#34;, color.White) 	left := canvas.NewText(&amp;#34;left&amp;#34;, color.White) 	middle := canvas.NewText(&amp;#34;content&amp;#34;, color.White) 	content := container.New(layout.NewBorderLayout(top, nil, left, nil), 	top, left, middle) 	myWindow.</description>
     </item>
     
     <item>
-      <title>Form</title>
+      <title>表单布局</title>
       <link>https://darcybook.github.io/docs/container/form/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/container/form/</guid>
-      <description>The layout.FormLayout is like a 2 column grid layout but tweaked to lay out forms in an application. The height of each item will be the larger of the two minimum heights in each row. The width of the left item will be the largest minimum width of all items in the first column whilst the second item in each row will expand to fill the space.
-This layout is more typically used within the widget.</description>
+      <description>表单布局# layout.FormLayout表单布局类似一个两列的表格布局，调整成一个适合表单的样式。 每个元素的高是每两者最小高度中最高的，左侧的宽度是第一列中每项的最小宽度中最大的，第二列的元素展开自动填充。
+这个布局通常用在widget.Form部件，但也可以利用layout.NewFormLayout()传给container.New(...)。
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/layout&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Form Layout&amp;#34;)  	label1 := canvas.NewText(&amp;#34;Label 1&amp;#34;, color.Black) 	value1 := canvas.NewText(&amp;#34;Value&amp;#34;, color.White) 	label2 := canvas.NewText(&amp;#34;Label 2&amp;#34;, color.Black) 	value2 := canvas.NewText(&amp;#34;Something&amp;#34;, color.White) 	grid := container.New(layout.NewFormLayout(), label1, value1, label2, value2) 	myWindow.</description>
     </item>
     
     <item>
-      <title>Center</title>
+      <title>中央布局</title>
       <link>https://darcybook.github.io/docs/container/center/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/container/center/</guid>
-      <description>layout.CenterLayout organises all items in its container to be centered in the available space. The objects will be drawn in the order they are passed to the container, with the last being drawn top-most.
-package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/layout&amp;#34; 	&amp;#34;fyne.io/fyne/v2/theme&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Center Layout&amp;#34;)  	img := canvas.</description>
+      <description>中央布局# layout.CenterLayout中央布局排列所有项目到空间中心。 对象按照传递的顺序绘制，最后的排列在最上面。
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/layout&amp;#34; 	&amp;#34;fyne.io/fyne/v2/theme&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Center Layout&amp;#34;)  	img := canvas.NewImageFromResource(theme.FyneLogo()) 	img.FillMode = canvas.ImageFillOriginal 	text := canvas.NewText(&amp;#34;Overlay&amp;#34;, color.Black) 	content := container.New(layout.NewCenterLayout(), img, text)  	myWindow.SetContent(content) 	myWindow.ShowAndRun() } 中央布局是所有元素保持最小大小，如果希望展开项目填充，可参阅layout.MaxLayout.</description>
     </item>
     
     <item>
-      <title>Max</title>
+      <title>最大布局</title>
       <link>https://darcybook.github.io/docs/container/max/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/container/max/</guid>
-      <description>The layout.MaxLayout is the simplest layout, it sets all items in the container to be the same size as the container. This is not often useful in general containers but can be suitable when composing widgets.
-The max layout will expand the container to be at least the size of the largest item&amp;rsquo;s minimum size. The objects will be drawn in the order the are passed to the container, with the last being drawn top-most.</description>
+      <description>最大布局# layout.MaxLayout最大布局时最简单的布局，将所有元素设置和容器一样大小。这在一般容器中没啥用，但在编写小部件的时候很合适。
+最大布局会将容器扩展为至少元素的最小尺寸。 按照传递的顺序绘制，最后一个对象在最上面。
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/layout&amp;#34; 	&amp;#34;fyne.io/fyne/v2/theme&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Max Layout&amp;#34;)  	img := canvas.NewImageFromResource(theme.FyneLogo()) 	text := canvas.NewText(&amp;#34;Overlay&amp;#34;, color.Black) 	content := container.New(layout.NewMaxLayout(), img, text)  	myWindow.SetContent(content) 	myWindow.ShowAndRun() } </description>
     </item>
     
     <item>
-      <title>AppTabs</title>
+      <title>应用选项卡</title>
       <link>https://darcybook.github.io/docs/container/apptabs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/container/apptabs/</guid>
-      <description>The AppTabs container is used to allow the user to switch between different content panels. Tabs are either just text or text and an icon. It is recommended not to mix some tabs having icons and some without. A tab container is created using container.NewAppTabs(...) and passing container.TabItem items (that can be created using container.NewTabItem(...)).
-The tab container can be configured by setting the location of tabs, one of container.TabLocationTop, container.</description>
+      <description>AppTabs 应用选项卡# 应用选项卡允许用户在不同的面板中切换。 选项卡只有图标或者文本。建议每个选项卡是否有图标保持一致。 container.NewAppTabs(...)建立选项卡容器，参数为container.TabItem元素（可以通过container.NewTabItem(...)建立）。
+选项卡的位置可以用container.TabLocationTop、container.TabLocationBottom、container.TabLocationLeading和container.TabLocationTrailing来设置。默认配置是top。
+package main  import ( 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	//&amp;#34;fyne.io/fyne/v2/theme&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;TabContainer Widget&amp;#34;)  	tabs := container.NewAppTabs( 	container.NewTabItem(&amp;#34;Tab 1&amp;#34;, widget.NewLabel(&amp;#34;Hello&amp;#34;)), 	container.NewTabItem(&amp;#34;Tab 2&amp;#34;, widget.NewLabel(&amp;#34;World!&amp;#34;)), 	)  	//tabs.Append(container.NewTabItemWithIcon(&amp;#34;Home&amp;#34;, theme.HomeIcon(), widget.NewLabel(&amp;#34;Home tab&amp;#34;)))  	tabs.SetTabLocation(container.TabLocationLeading)  	myWindow.SetContent(tabs) 	myWindow.ShowAndRun() } 在移动设备上加载时，选项卡位置可能会被忽略。 在纵向方向中，leading或拖拽位置可以更改为底部。 在横向方向上时，顶部或底部位置将移动到leading位置。</description>
     </item>
     
   </channel>

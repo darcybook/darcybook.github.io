@@ -3,24 +3,30 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="There are various widgets available to present the user with a choice, these include a checkbox, radio group and select popup.
-The widget.Check provides a simple yes/no choice and is created using a string label. Each of these widgets also takes a &ldquo;changed&rdquo; func(...) where the parameter is of the appropriate type. widget.NewCheck(..) therefore takes a string parameter for the label and a func(bool) param for the change handler. You can also use the Checked field to get the boolean value.">
+<meta name="description" content="选择组件# 有各种不同组件可以让客户进行一个选择，例如单选框、多选框、和下拉框。
+widget.Check 单选框创建时使用一个字符串标签，提供一个是/否选择。 每一个组件都有一个&quot;changed&quot;func(...)有对应的参数。 widget.NewCheck(..)有一个string参数，有一个func(bool)参数作为改变监听事件。 你还可以使用Checked字段获取当前值。
+多选框也是类似的，但是第一个参数是一个string数组，用来标识每个子元素。 更改函数要求这次有一个string参数返回当前选定的值。调用widget.NewRadioGroup(...)以构造单选按钮组小部件，以后可以使用此引用来读取Selected字段，而不是使用更改回调。
+下拉框组件和多选框有相同的参数。调用widget.NewSelect(...)会显示一个按钮，点击时出现弹窗，用户可以从中选择。 对于列表使用这个更好。
+package main  import ( 	&#34;log&#34;  	&#34;fyne.io/fyne/v2/app&#34; 	&#34;fyne.io/fyne/v2/container&#34; 	&#34;fyne.io/fyne/v2/widget&#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&#34;Choice Widgets&#34;)  	check := widget.NewCheck(&#34;Optional&#34;, func(value bool) { 	log.Println(&#34;Check set to&#34;, value) 	}) 	radio := widget.NewRadioGroup([]string{&#34;Option 1&#34;, &#34;Option 2&#34;}, func(value string) { 	log.Println(&#34;Radio set to&#34;, value) 	}) 	combo := widget.">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="Choices" />
-<meta property="og:description" content="There are various widgets available to present the user with a choice, these include a checkbox, radio group and select popup.
-The widget.Check provides a simple yes/no choice and is created using a string label. Each of these widgets also takes a &ldquo;changed&rdquo; func(...) where the parameter is of the appropriate type. widget.NewCheck(..) therefore takes a string parameter for the label and a func(bool) param for the change handler. You can also use the Checked field to get the boolean value." />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="选择组件" />
+<meta property="og:description" content="选择组件# 有各种不同组件可以让客户进行一个选择，例如单选框、多选框、和下拉框。
+widget.Check 单选框创建时使用一个字符串标签，提供一个是/否选择。 每一个组件都有一个&quot;changed&quot;func(...)有对应的参数。 widget.NewCheck(..)有一个string参数，有一个func(bool)参数作为改变监听事件。 你还可以使用Checked字段获取当前值。
+多选框也是类似的，但是第一个参数是一个string数组，用来标识每个子元素。 更改函数要求这次有一个string参数返回当前选定的值。调用widget.NewRadioGroup(...)以构造单选按钮组小部件，以后可以使用此引用来读取Selected字段，而不是使用更改回调。
+下拉框组件和多选框有相同的参数。调用widget.NewSelect(...)会显示一个按钮，点击时出现弹窗，用户可以从中选择。 对于列表使用这个更好。
+package main  import ( 	&#34;log&#34;  	&#34;fyne.io/fyne/v2/app&#34; 	&#34;fyne.io/fyne/v2/container&#34; 	&#34;fyne.io/fyne/v2/widget&#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&#34;Choice Widgets&#34;)  	check := widget.NewCheck(&#34;Optional&#34;, func(value bool) { 	log.Println(&#34;Check set to&#34;, value) 	}) 	radio := widget.NewRadioGroup([]string{&#34;Option 1&#34;, &#34;Option 2&#34;}, func(value string) { 	log.Println(&#34;Radio set to&#34;, value) 	}) 	combo := widget." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://darcybook.github.io/docs/widget/choices/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2022-05-18T21:52:14+08:00" />
+<meta property="article:modified_time" content="2022-05-19T23:42:33+08:00" />
 
-<title>Choices | darcy&#39;s</title>
+<title>选择组件 | darcy&#39;s</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
   <link rel="alternate" hreflang="fyne" href="https://darcybook.github.io/fyne/docs/widget/choices/" title="Choices">
 <link rel="stylesheet" href="/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css" integrity="sha256-gsXb0jRHzuC0wqo&#43;0Izglh&#43;qQOH6Nw7uT4yfAuDUa18=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.666906ddbfb1dcb8bafdc2bd9112621357be923adc88cfd550e3a5bb2c10db65.js" integrity="sha256-ZmkG3b&#43;x3Li6/cK9kRJiE1e&#43;kjrciM/VUOOluywQ22U=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.0dfe2f2c158becb952a18c0962cc2880a09dc75c6d5aae38d04a0b8a3cbfca40.js" integrity="sha256-Df4vLBWL7LlSoYwJYswogKCdx1xtWq440EoLijy/ykA=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -435,7 +441,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/canvas/rectangle/" class="">Rectangle</a>
+    <a href="/docs/canvas/rectangle/" class="">矩形</a>
   
 
         </li>
@@ -448,7 +454,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/canvas/text/" class="">Text</a>
+    <a href="/docs/canvas/text/" class="">文本</a>
   
 
         </li>
@@ -461,7 +467,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/canvas/line/" class="">Line</a>
+    <a href="/docs/canvas/line/" class="">线</a>
   
 
         </li>
@@ -474,7 +480,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/canvas/circle/" class="">Circle</a>
+    <a href="/docs/canvas/circle/" class="">圆</a>
   
 
         </li>
@@ -487,7 +493,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/canvas/image/" class="">Image</a>
+    <a href="/docs/canvas/image/" class="">图形</a>
   
 
         </li>
@@ -513,7 +519,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/canvas/animation/" class="">Animation</a>
+    <a href="/docs/canvas/animation/" class="">动画</a>
   
 
         </li>
@@ -526,7 +532,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/canvas/gradient/" class="">Gradient</a>
+    <a href="/docs/canvas/gradient/" class="">渐变</a>
   
 
         </li>
@@ -546,7 +552,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-10dd021a58cb696b6cb4f79141ec5ddb" class="toggle"  />
     <label for="section-10dd021a58cb696b6cb4f79141ec5ddb" class="flex justify-between">
-      <a role="button" class="">Containers and Layout</a>
+      <a role="button" class="">容器和布局</a>
     </label>
   
 
@@ -560,7 +566,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/container/box/" class="">Box</a>
+    <a href="/docs/container/box/" class="">盒布局</a>
   
 
         </li>
@@ -573,7 +579,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/container/grid/" class="">Grid</a>
+    <a href="/docs/container/grid/" class="">网格布局</a>
   
 
         </li>
@@ -586,7 +592,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/container/gridwrap/" class="">Grid Wrap</a>
+    <a href="/docs/container/gridwrap/" class="">网格环绕</a>
   
 
         </li>
@@ -612,7 +618,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/container/form/" class="">Form</a>
+    <a href="/docs/container/form/" class="">表单布局</a>
   
 
         </li>
@@ -625,7 +631,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/container/center/" class="">Center</a>
+    <a href="/docs/container/center/" class="">中央布局</a>
   
 
         </li>
@@ -638,7 +644,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/container/max/" class="">Max</a>
+    <a href="/docs/container/max/" class="">最大布局</a>
   
 
         </li>
@@ -651,7 +657,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/container/apptabs/" class="">AppTabs</a>
+    <a href="/docs/container/apptabs/" class="">应用选项卡</a>
   
 
         </li>
@@ -671,7 +677,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-0d0eb913881a0c154c75678ce9ea1b89" class="toggle" checked />
     <label for="section-0d0eb913881a0c154c75678ce9ea1b89" class="flex justify-between">
-      <a role="button" class="">Widgets</a>
+      <a role="button" class="">组件</a>
     </label>
   
 
@@ -685,7 +691,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/label/" class="">Label</a>
+    <a href="/docs/widget/label/" class="">标签</a>
   
 
         </li>
@@ -698,7 +704,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/button/" class="">Button</a>
+    <a href="/docs/widget/button/" class="">按钮</a>
   
 
         </li>
@@ -711,7 +717,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/entry/" class="">Entry</a>
+    <a href="/docs/widget/entry/" class="">输入框</a>
   
 
         </li>
@@ -724,7 +730,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/choices/" class="active">Choices</a>
+    <a href="/docs/widget/choices/" class="active">选择组件</a>
   
 
         </li>
@@ -737,7 +743,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/form/" class="">Form</a>
+    <a href="/docs/widget/form/" class="">表单</a>
   
 
         </li>
@@ -750,7 +756,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/progressbar/" class="">ProgressBar</a>
+    <a href="/docs/widget/progressbar/" class="">进度条</a>
   
 
         </li>
@@ -763,7 +769,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/toolbar/" class="">Toolbar</a>
+    <a href="/docs/widget/toolbar/" class="">工具栏</a>
   
 
         </li>
@@ -776,7 +782,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/list/" class="">List</a>
+    <a href="/docs/widget/list/" class="">列表</a>
   
 
         </li>
@@ -789,7 +795,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/widget/table/" class="">Table</a>
+    <a href="/docs/widget/table/" class="">表格</a>
   
 
         </li>
@@ -809,7 +815,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-a659e7c60bb0ba8a5f830d140376b648" class="toggle"  />
     <label for="section-a659e7c60bb0ba8a5f830d140376b648" class="flex justify-between">
-      <a href="/docs/binding/" class="">Data Binding</a>
+      <a role="button" class="">数据绑定</a>
     </label>
   
 
@@ -823,7 +829,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/binding/simple/" class="">Binding Simple Widgets</a>
+    <a href="/docs/binding/introduction/" class="">介绍</a>
   
 
         </li>
@@ -836,7 +842,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/binding/twoway/" class="">Two-Way Binding</a>
+    <a href="/docs/binding/simple/" class="">绑定简单组件</a>
   
 
         </li>
@@ -849,7 +855,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/binding/conversion/" class="">Data Conversion</a>
+    <a href="/docs/binding/twoway/" class="">双向绑定</a>
   
 
         </li>
@@ -862,7 +868,20 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/binding/list/" class="">List Data</a>
+    <a href="/docs/binding/conversion/" class="">数据转换</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/binding/list/" class="">数组</a>
   
 
         </li>
@@ -882,7 +901,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-8a572438ecae81fbb2ca87c17042611c" class="toggle"  />
     <label for="section-8a572438ecae81fbb2ca87c17042611c" class="flex justify-between">
-      <a role="button" class="">Extending Fyne</a>
+      <a role="button" class="">Fyne扩展</a>
     </label>
   
 
@@ -896,7 +915,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/extend/custom-layout/" class="">Building a Custom Layout</a>
+    <a href="/docs/extend/custom-layout/" class="">自定义布局</a>
   
 
         </li>
@@ -909,7 +928,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/extend/bundle/" class="">Bundling resources</a>
+    <a href="/docs/extend/bundle/" class="">资源绑定</a>
   
 
         </li>
@@ -922,7 +941,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/extend/custom-theme/" class="">Creating a Custom Theme</a>
+    <a href="/docs/extend/custom-theme/" class="">创建自定义主题</a>
   
 
         </li>
@@ -948,7 +967,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/extend/numerical-entry/" class="">Numerical Entry</a>
+    <a href="/docs/extend/numerical-entry/" class="">数字输入框</a>
   
 
         </li>
@@ -961,7 +980,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/extend/extending-widgets/" class="">Extending Widgets</a>
+    <a href="/docs/extend/extending-widgets/" class="">组件扩展</a>
   
 
         </li>
@@ -4370,7 +4389,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Choices</strong>
+  <strong>选择组件</strong>
 
   <label for="toc-control">
     
@@ -4384,7 +4403,11 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#选择组件">选择组件</a></li>
+  </ul>
+</nav>
 
 
 
@@ -4395,26 +4418,20 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><p>There are various widgets available to present the user with
-a choice, these include a checkbox, radio group and select popup.</p>
-<p>The <code>widget.Check</code> provides a simple yes/no choice and is created
-using a string label. Each of these widgets also takes a
-&ldquo;changed&rdquo; <code>func(...)</code> where the parameter is of the appropriate
-type. <code>widget.NewCheck(..)</code> therefore takes a <code>string</code> parameter for
-the label and a <code>func(bool)</code> param for the change handler.
-You can also use the <code>Checked</code> field to get the boolean value.</p>
-<p>The radio widget is similar, but the first parameter is a
-slice of <code>string</code>s that represents each of the options.
-The change function expects a <code>string</code> parameter this time
-to return the currently selected value. Call <code>widget.NewRadioGroup(...)</code>
-to construct the radio group widget, you can use this reference
-later to read the <code>Selected</code> field instead of using the change
-callback.</p>
-<p>The select widget is identical in the constructor signature
-as the radio widget. Calling <code>widget.NewSelect(...)</code> will
-instead show a button that displays a popup when tapped from
-which the user can make a selection. This is better for long
-lists of options.</p>
+  <article class="markdown"><h1 id="选择组件">
+  选择组件
+  <a class="anchor" href="#%e9%80%89%e6%8b%a9%e7%bb%84%e4%bb%b6">#</a>
+</h1>
+<hr>
+<p>有各种不同组件可以让客户进行一个选择，例如单选框、多选框、和下拉框。</p>
+<p><code>widget.Check</code> 单选框创建时使用一个字符串标签，提供一个是/否选择。
+每一个组件都有一个&quot;changed&quot;<code>func(...)</code>有对应的参数。
+<code>widget.NewCheck(..)</code>有一个<code>string</code>参数，有一个<code>func(bool)</code>参数作为改变监听事件。
+你还可以使用<code>Checked</code>字段获取当前值。</p>
+<p>多选框也是类似的，但是第一个参数是一个<code>string</code>数组，用来标识每个子元素。
+更改函数要求这次有一个<code>string</code>参数返回当前选定的值。调用<code>widget.NewRadioGroup(...)</code>以构造单选按钮组小部件，以后可以使用此引用来读取<code>Selected</code>字段，而不是使用更改回调。</p>
+<p>下拉框组件和多选框有相同的参数。调用<code>widget.NewSelect(...)</code>会显示一个按钮，点击时出现弹窗，用户可以从中选择。
+对于列表使用这个更好。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
@@ -4451,9 +4468,9 @@ lists of options.</p>
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/darcybook/hugo/commit/a464a380d18056f0a44219d848f147acdd0f5ad8" title='最后修改者 darcybook | May 18, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/darcybook/hugo/commit/ab09b83ed2c8a1e7e7d9e6f8abe70f3928b86e1a" title='最后修改者 darcybook | May 19, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>May 18, 2022</span>
+      <span>May 19, 2022</span>
     </a>
   </div>
 
@@ -4494,7 +4511,11 @@ lists of options.</p>
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#选择组件">选择组件</a></li>
+  </ul>
+</nav>
 
 
  

@@ -1,37 +1,54 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Extending Fyne on darcy&#39;s</title>
+    <title>Fyne扩展 on darcy&#39;s</title>
     <link>https://darcybook.github.io/docs/extend/</link>
-    <description>Recent content in Extending Fyne on darcy&#39;s</description>
+    <description>Recent content in Fyne扩展 on darcy&#39;s</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/docs/extend/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Building a Custom Layout</title>
+      <title>自定义布局</title>
       <link>https://darcybook.github.io/docs/extend/custom-layout/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/extend/custom-layout/</guid>
-      <description>In a Fyne application each Container arranges it&amp;rsquo;s child elements using a simple layout algorithm. Fyne defines many layouts available in the fyne.io/fyne/v2/layout package. If you look at the code you will see that they all implement the Layout interface.
-type Layout interface { 	Layout([]CanvasObject, Size) 	MinSize(objects []CanvasObject) Size } Any application can provide a custom layout to arrange widgets in a non-standard manner. To do this you need to implement the interface above in your own code.</description>
+      <description>自定义布局# 在 Fyne 应用程序中，每个元素都使用简单的布局算法排列其子元素。Fyne 定义了包中可用的许多布局。如果你看一下代码，你会发现它们都实现了接口。 Fyne每个容器都使用简单的布局算法排列元素。 fyne.io/fyne/v2/layout包中定义了需要布局变量。 如果你看了源码会发现它们都实现了Layout接口。
+type Layout interface { 	Layout([]CanvasObject, Size) 	MinSize(objects []CanvasObject) Size } 为了说明这一点，我们将创建一个新的布局，该布局以对角线排列元素，并排列在其容器的左下角
+首先，我们将定义一个新类型，并定义它的最小大小。要计算这一点，我们只需将所有子元素的宽度和高度（指定为 参数）
+任何应用都可以用自定义布局用非标准方式排列组件，实现上面接口就可以自定义。 为了说明这一点，我们将创建一个新的布局，该布局以对角线排列元素，并排列在其容器的左下角
+首先顶一个一个新类型diagonal，定义它的最小尺寸。 要计算尺寸，我们只需要给所有子元素增加宽和高（指定[]fyne.CanvasObject为MinSize参数）。
+import &amp;#34;fyne.io/fyne/v2&amp;#34;  type diagonal struct { }  func (d *diagonal) MinSize(objects []fyne.CanvasObject) fyne.Size { 	w, h := float32(0), float32(0) 	for _, o := range objects { 	childSize := o.MinSize()  	w += childSize.Width 	h += childSize.</description>
     </item>
     
     <item>
-      <title>Bundling resources</title>
+      <title>资源绑定</title>
       <link>https://darcybook.github.io/docs/extend/bundle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/extend/bundle/</guid>
-      <description>Go based applications are usually built as a single binary executable, and this is the same for Fyne applications. A single file makes it easier to distribute install our software. Unfortunately GUI applications typically require additional resources to render the user interface. To manage this challenge a Go application can bundle assets into the binary itself. The Fyne toolkit prefers the use of &amp;ldquo;fyne bundle&amp;rdquo; as it has various benefits that we will explore below.</description>
+      <description>资源绑定# 基于 Go 的应用程序通常构建为单个二进制可执行文件，对于 Fyne 应用程序也是如此。单个文件可以更轻松地分发安装我们的软件。遗憾的是，GUI 应用程序通常需要额外的资源来呈现用户界面。为了管理这一挑战，Go应用程序可以将资产捆绑到二进制文件本身中。Fyne 工具包更喜欢使用“fyne 捆绑包”，因为它具有各种好处，我们将在下面探讨。
+和go的其它应用一样，Fyne也通常打包为一个二进制可执行文件。 单个文件可以简单的分发我们的软件，但是一个GUI应用需要额外的资源显示用户界面。 go应用可以将资源绑定到二进制文件中。Fyne可以使用&amp;quot;fyne bundle&amp;quot;，因为它有很多好处，下面我们会探讨一下。
+绑定资源的基础命令时&amp;quot;fyne bundle&amp;quot;。 这个工具用各种参数可以自定义输出，下面基本命令，可以将文件转化为go源代码。
+$ ls image.png	main.go $ fyne bundle image.png &amp;gt;&amp;gt; bundled.go $ ls bundled.go	image.png	main.go $ bundled.go 中有一个资源变量的数组，我们可以在代码中使用这些变量。 例如上面的代码中会产生类型下面的文件：
+var resourceImagePng = &amp;amp;fyne.StaticResource{ 	StaticName: &amp;#34;image.png&amp;#34;, 	StaticContent: []byte{ ... 	}} 如你所见默认的名称时&amp;quot;resource&amp;lt;Name&amp;gt;.&amp;lt;Ext&amp;gt;&amp;quot;。文件和包的名称也可以自定义。 之后我们就可以在画布中加载图像：
+img := canvas.NewImageFromResource(resourceImagePng) fyne 资源只是具有唯一名称的字节的集合，因此这可能是字体、声音文件或您希望加载的任何其他数据。您还可以使用该参数将许多资源捆绑到单个文件中。如果要捆绑许多文件，建议将命令保存在shell脚本中，例如此文件：
+fyne资源只是唯一标识的字节集合，因此它可以时一个字体、声音文件或者任何你需要加载的文件。 -append 参数允许你将多个资源绑定到单一文件。
+如果你要绑定多个资源建议将命令写到脚本中，例如下面的gen.sh：
+#!/bin/bash fyne bundle image1.png &amp;gt; bundled.go fyne bundle -append image2.</description>
     </item>
     
     <item>
-      <title>Creating a Custom Theme</title>
+      <title>创建自定义主题</title>
       <link>https://darcybook.github.io/docs/extend/custom-theme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/extend/custom-theme/</guid>
-      <description>Applications are able to load custom themes that can apply small changes to the standard theme or provide a completely unique look. A theme will need to implement the functions of fyne.Theme interface, which is defined as follows:
-type Theme interface { 	Color(ThemeColorName, ThemeVariant) color.Color 	Font(TextStyle) Resource 	Icon(ThemeIconName) Resource 	Size(ThemeSizeName) float32 } To apply our theme changes we will first define a new type that that implements this interface.</description>
+      <description>创建自定义主题# 应用可以自己加载自定义主题，这些主题可能修改一个小部分，也可能完全不一样。主题需要实现fyne.Theme接口：
+type Theme interface { 	Color(ThemeColorName, ThemeVariant) color.Color 	Font(TextStyle) Resource 	Icon(ThemeIconName) Resource 	Size(ThemeSizeName) float32 } 要应用我们的主题更改，我们将首先定义一个实现此接口的新类型。
+定义主题#我们首先定义一个新类型，它将是我们的主题，一个简单的空结构就可以了：
+type myTheme struct {} 最好断言我们实现了一个接口，这样编译器错误就更靠近类型定义。
+var _ fyne.Theme = (*myTheme)(nil) 在这里你可以看到编译错误，因为我们还没实现接口，我们从颜色开始改变。
+自定义颜色#接口中定义的函数要求我们定义命名颜色，并为用户所需的变体（例如或 ）提供提示。在我们的主题中，我们将返回自定义背景颜色 - 使用不同的浅色和深色值。 Theme接口中定义了一个Color函数，我们可以定义一个客户想要的颜色（例如theme.VariantLight或theme.VariantDark）。在我们的主题中，我们返回一个自定义的颜色 &amp;ndash; 区分light和dark。
+func (m myTheme) Color(name fyne.ThemeColorName, variant fyne.ThemeVariant) color.Color { 	if name == theme.ColorNameBackground { 	if variant == theme.VariantLight { 	return color.</description>
     </item>
     
     <item>
@@ -45,24 +62,34 @@ A widget is split into two areas - each implementing a standard interface - the 
     </item>
     
     <item>
-      <title>Numerical Entry</title>
+      <title>数字输入框</title>
       <link>https://darcybook.github.io/docs/extend/numerical-entry/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/extend/numerical-entry/</guid>
-      <description>In the traditional sense, GUI programs have used callbacks to customize actions for widgets. Fyne does not expose inserting custom callbacks to capture events on widgets, but it does not need to. The Go language is plenty extensible to make this work.
-Instead we can simply use Type Embedding and extend the widget to only make it possible to enter numerical values.
-First create a new type struct, we will call it numericalEntry.</description>
+      <description>数字输入框# 传统意义上，GUI程序在组件上使用调用回调和自定义操作。 Fyne不会暴露回调函数来捕获小部件上的事件，但它不需要这样做。 Go语言具有丰富的扩展来实现。
+相反，我们可以简单地使用类型嵌入并扩展小部件，使其只能输入数值。
+首先创建一个新的类型结构，我们将它称为numericalEntry。
+type numericalEntry struct {  widget.Entry } 如扩展组件中所述，我们遵循实用练习并创建一个构造函数并扩展BaseWidget。
+func newNumericalEntry() *numericalEntry {  entry := &amp;amp;numericalEntry{}  entry.ExtendBaseWidget(entry)  return entry } 如果没有，我们就忽略输入。此实现将仅允许输入整数，但可以在将来根据需要轻松扩展以检查其他键。
+现在我们只需要让输入框值接受数字。 重写fyne.Focusable的部门方法TypedRune(rune)来实现。 这允许我们拦截标准输入处理，处理我们键入的内容，并只允许录入我们想要的。
+在此方法中，我们将使用条件来检查内容是否与0到9之间的任何数字匹配。 如果匹配到了，我们将内容委派到TypedRune(rune)方法中。 如果没有匹配到，我们就忽略输入，这个实现仅仅允许整数输入，但是后面我们有其他需求也可以轻松扩展。
+func (e *numericalEntry) TypedRune(r rune) { 	switch r { 	case &amp;#39;0&amp;#39;, &amp;#39;1&amp;#39;, &amp;#39;2&amp;#39;, &amp;#39;3&amp;#39;, &amp;#39;4&amp;#39;, &amp;#39;5&amp;#39;, &amp;#39;6&amp;#39;, &amp;#39;7&amp;#39;, &amp;#39;8&amp;#39;, &amp;#39;9&amp;#39;: 	e.Entry.TypedRune(r) 	} } 如果我们想更新实现以允许十进制数字，我们可以简单地添加并允许的符文列表（某些语言使用逗号而不是点作为十进制表示法）。
+如果我们允许小数，我们可以只增加.和,到列表就可以录入（有些语言使用逗号表示小数点）。
+func (e *numericalEntry) TypedRune(r rune) { 	switch r { 	case &amp;#39;0&amp;#39;, &amp;#39;1&amp;#39;, &amp;#39;2&amp;#39;, &amp;#39;3&amp;#39;, &amp;#39;4&amp;#39;, &amp;#39;5&amp;#39;, &amp;#39;6&amp;#39;, &amp;#39;7&amp;#39;, &amp;#39;8&amp;#39;, &amp;#39;9&amp;#39;, &amp;#39;.</description>
     </item>
     
     <item>
-      <title>Extending Widgets</title>
+      <title>组件扩展</title>
       <link>https://darcybook.github.io/docs/extend/extending-widgets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/extend/extending-widgets/</guid>
-      <description>The standard Fyne widgets provide the minimum functionality and customisation to support most use-cases. It may be required at certain times to have more advanced functionality. Rather than have developers build their own widgets it is possible to extend the existing ones.
-For example we will extend the icon widget to support being tapped. To do this we declare a new struct that embeds the widget.Icon type. We create a constructor function that calls the important ExtendBaseWidget function.</description>
+      <description>组件扩展# 标准组件提供最少的功能和定制功能，来支持大部分案例。 某些时候我们需要更高级功能，那么开发者自己构建组件，不如直接在已有的组件扩展。
+例如我们扩展图标组件让它能被点击。 我们申明一个新的结构体嵌入widget.Icon类型。 我们新增一个构造函数让它可以调用ExtendBaseWidget函数。
+import ( 	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  type tappableIcon struct { 	widget.Icon }  func newTappableIcon(res fyne.Resource) *tappableIcon { 	icon := &amp;amp;tappableIcon{} 	icon.ExtendBaseWidget(icon) 	icon.SetResource(res)  	return icon }  **注意：**像widget.NewIcon函数可能不会用于扩展，因为它已经调用了 。
+ 然后，我们添加新函数来实现fyne.Tappable接口，添加这些函数后，每次用户点击我们的新图标时，都会调用新函数Tapped。所需的接口有两个函数Tapped(*PointEvent)和TappedSecondary(*PointEvent)，因此我们将两个都加上。
+import &amp;#34;log&amp;#34;  func (t *tappableIcon) Tapped(_ *fyne.PointEvent) { 	log.Println(&amp;#34;I have been tapped&amp;#34;) }  func (t *tappableIcon) TappedSecondary(_ *fyne.PointEvent) { } 我们可以使用简单的应用程序测试这个新的小部件，如下所示。</description>
     </item>
     
   </channel>

@@ -5,13 +5,40 @@
     <link>https://darcybook.github.io/tags/</link>
     <description>Recent content in Tags on darcy&#39;s</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 18 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://darcybook.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://darcybook.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>development</title>
       <link>https://darcybook.github.io/tags/development/</link>
-      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/tags/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>https://darcybook.github.io/tags/go/</link>
+      <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>https://darcybook.github.io/tags/golang/</link>
+      <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://darcybook.github.io/tags/hugo/</link>
+      <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     
@@ -21,33 +48,6 @@
       <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/tags/fyne/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>go</title>
-      <link>https://darcybook.github.io/tags/go/</link>
-      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>golang</title>
-      <link>https://darcybook.github.io/tags/golang/</link>
-      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hugo</title>
-      <link>https://darcybook.github.io/tags/hugo/</link>
-      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     

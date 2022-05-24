@@ -6,56 +6,59 @@
     <description>Recent content in 绘制和动画 on darcy&#39;s</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/docs/canvas/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Rectangle</title>
+      <title>矩形</title>
       <link>https://darcybook.github.io/docs/canvas/rectangle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/canvas/rectangle/</guid>
-      <description>canvas.Rectangle is the simplest canvas object in Fyne. It displays a block of the specified colour. You can also set the colour using the FillColor field.
-In this example the rectangle fills the window as it is the only content element.
-package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; )  func main() { 	myApp := app.New() 	w := myApp.NewWindow(&amp;#34;Rectangle&amp;#34;)  	rect := canvas.</description>
+      <description>矩形# canvas.Rectangle是Fyne中最简单的画布对象。 它显示一个指定颜色的区域，您还可以使用FillColor设置颜色。 在下面示例中，只有一个矩形，它会填充整个窗口。
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; )  func main() { 	myApp := app.New() 	w := myApp.NewWindow(&amp;#34;Rectangle&amp;#34;)  	rect := canvas.NewRectangle(color.White) 	w.SetContent(rect)  	w.Resize(fyne.NewSize(150, 100)) 	w.ShowAndRun() } 其它fyne.CanvaObject类型有更多设置，下一步查看。
+其他类型有更多配置，下一步。
+Other fyne.CanvaObject types have more configuration, let us look next at canvas.Text.</description>
     </item>
     
     <item>
-      <title>Text</title>
+      <title>文本</title>
       <link>https://darcybook.github.io/docs/canvas/text/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/canvas/text/</guid>
-      <description>canvas.Text is used for all text rendering within Fyne. It is created by specifying the text and colour for the text. Text is rendered using the default font, specified by the current theme.
-The text object allows certain configuration like the Alignment and TextStyle field. as illustrated in the example here. To use a monospaced font instead you can specify fyne.TextStyle{Monospace: true}.
-package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.</description>
+      <description>文本#Fyne所有文本都用canvas.Text呈现。创建时需要指定文本和颜色。 文本由当前主题默认字体呈现。
+文本对象允许设置Alignment和TextStyle这些值。 例如下列示例，指定了等宽字体fyne.TextStyle{Monospace: true}：
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; )  func main() { 	myApp := app.New() 	w := myApp.NewWindow(&amp;#34;Text&amp;#34;)  	text := canvas.NewText(&amp;#34;Text Object&amp;#34;, color.White) 	text.Alignment = fyne.TextAlignTrailing 	text.TextStyle = fyne.TextStyle{Italic: true} 	w.SetContent(text)  	w.ShowAndRun() } 通过FYNE_FONT可以设定环境变量字体。 使用此方式设定一个.ttf文件，替代Fyne工具包或当前主题提供的字体。</description>
     </item>
     
     <item>
-      <title>Line</title>
+      <title>线</title>
       <link>https://darcybook.github.io/docs/canvas/line/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/canvas/line/</guid>
-      <description>The canvas.Line object draws a line from the Position1 (default is top, left) to Position2 (default is bottom, right). You specify its colour and can vary the stroke width which otherwise defaults to 1.
-A line position can be manipulated using the Position1 or Position2 fields or by using the Move() and Resize() functions. For example a 0 width area will show a vertical line whereas 0 height would be horizontal.</description>
+      <description>线# canvas.Line对象从Position1（默认top,left）到Position1（默认bottom,right）绘制一条线。 你可以指定它的颜色和笔画粗细，默认粗细为1。
+线的位置可以通过Position1或Position2或者通过Move()和Resize()函数操作。 例如宽度为0的区域会显示一条垂直线，0高度将显示水平线。
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; )  func main() { 	myApp := app.New() 	w := myApp.NewWindow(&amp;#34;Line&amp;#34;)  	line := canvas.NewLine(color.White) 	line.StrokeWidth = 5 	w.SetContent(line)  	w.Resize(fyne.NewSize(100, 100)) 	w.ShowAndRun() } 线条通常在自定义布局中使用或手动控制。与文本不同，它们没有自然（最小）大小，但可以在复杂的布局中使用。</description>
     </item>
     
     <item>
-      <title>Circle</title>
+      <title>圆</title>
       <link>https://darcybook.github.io/docs/canvas/circle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/canvas/circle/</guid>
-      <description>canvas.Circle defines a circle shape filled by the specified colour. You may also set a StrokeWidth and therefore a different StrokeColor as shown in this example.
-The circle will fill the space specified by calling Resize() or by the layout it is controlled by. As the example sets the circle as the window content it will resize to fill the window, within a basic padding (controlled by the theme).
-package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.</description>
+      <description>圆# canvas.Circle定义一个指定颜色的圆形。 你可以设置一个StrokeWidth或者StrokeColor设置不同的圆形。
+圆形通过Resize()调整填充的小时。 由于该示例将圆圈设置为窗口content，因此它将填充真个窗口，有一个基础padding（由主题控制）。
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; )  func main() { 	myApp := app.New() 	w := myApp.NewWindow(&amp;#34;Circle&amp;#34;)  	circle := canvas.NewCircle(color.White) 	circle.StrokeColor = color.Gray{0x99} 	circle.StrokeWidth = 5 	w.SetContent(circle)  	w.Resize(fyne.NewSize(100, 100)) 	w.ShowAndRun() } 所有这些都是基本类型，可以由我们的驱动程序呈现，而无需其他信息。接下来，我们将从 Image 开始查看更复杂的类型。</description>
     </item>
     
     <item>
-      <title>Image</title>
+      <title>图形</title>
       <link>https://darcybook.github.io/docs/canvas/image/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/canvas/image/</guid>
-      <description>A canvas.Image represents a scalable image resource in Fyne. It can be loaded from a resource (as shown in the example), from an image file, from a URI location containing an image, from an io.Reader, or from a Go image.Image in memory.
-The default image fill mode is canvas.ImageFillStretch which will cause it to fill the space specified (through Resize() or layout). Alternatively you could use canvas.ImageFillContain to ensure that the aspect ratio is maintained and the image is within the bounds.</description>
+      <description>图形# canvas.Image是Fyne中可缩放的图形资源。 它可以从资源（像示例中一样）、图像文件、包含图像的url，或者从内存中的io.Reader对象或image.Image。
+默认图形填充方式是canvas.ImageFillStretch，可以让它填充指定的空间（通过Resize()或者layout布局）。 或者，可以使用canvas.ImageFillContain来确保图形的纵横比例在指定范围内。 进一步，可以使用canvas.ImageFillOriginal（例如下例），确保纵横比例的同时确保一个最小尺寸。
+package main  import ( 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; 	&amp;#34;fyne.io/fyne/v2/theme&amp;#34; )  func main() { 	myApp := app.New() 	w := myApp.NewWindow(&amp;#34;Image&amp;#34;)  	image := canvas.NewImageFromResource(theme.FyneLogo()) 	// image := canvas.NewImageFromURI(uri) 	// image := canvas.NewImageFromImage(src) 	// image := canvas.NewImageFromReader(reader, name) 	// image := canvas.NewImageFromFile(fileName) 	image.FillMode = canvas.ImageFillOriginal 	w.SetContent(image)  	w.ShowAndRun() } 图像可以基于位图（如 PNG 和 JPEG）或基于矢量（如 SVG）。 在可能的情况下，我们建议使用矢量图像，因为它们会随着尺寸的变化而继续很好地呈现。 使用原始图像大小时要小心，因为它们在使用不同的用户界面比例时可能无法完全按照预期运行。由于Fyne允许整个用户界面缩放25px图像文件，因此可能与25高度fyne对象的高度不同。</description>
     </item>
     
     <item>
@@ -64,28 +67,32 @@ The default image fill mode is canvas.ImageFillStretch which will cause it to fi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/canvas/raster/</guid>
-      <description>The canvas.Raster is like an image but draws exactly one spot for each pixel on the screen. This means that as a user interface scales or the image resizes more pixels will be requested to fill the space. To do this we use a Generator function as illustrated in this example - it will be used to return the colour of each pixel.
-The generator functions can be pixel based (as in this example where we generate a new random colour for each pixel) or based on full images.</description>
+      <description>光栅# canvas.Raster就像一个图像，为屏幕每个像素只绘制一个点。 随之用户界面尺寸或图形尺寸调整，会请求更多像素填充。 我们使用Generator函数 &amp;ndash; 它将返回每个像素的颜色。
+Generator函数可以基础像素（在下面例子中我们为每个像素生产随机颜色），也可以基础完整图像。 生产完整图像（使用canvas.NewRaster()）更有效，但有时直接控制像素更方便。
+package main  import ( 	&amp;#34;image/color&amp;#34; 	&amp;#34;math/rand&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; )  func main() { 	myApp := app.New() 	w := myApp.NewWindow(&amp;#34;Raster&amp;#34;)  	raster := canvas.NewRasterWithPixels( 	func(_, _, w, h int) color.Color { 	return color.RGBA{uint8(rand.Intn(255)), 	uint8(rand.Intn(255)), 	uint8(rand.Intn(255)), 0xff} 	}) 	// raster := canvas.NewRasterFromImage() 	w.SetContent(raster) 	w.</description>
     </item>
     
     <item>
-      <title>Animation</title>
+      <title>动画</title>
       <link>https://darcybook.github.io/docs/canvas/animation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/canvas/animation/</guid>
-      <description>Fyne includes an animation framework that allows you to smoothly transition canvas properties from one value to another over time. An animation can contain any code which means that any types of object attributes can be managed, however there are builtin animations for size, position and color.
-Animations are normally created using the builtin helpers of the canvas package, such as NewSizeAnimation, and calling Start() on the created animation. You can set animations to repeat or auto reverse, as we will see below.</description>
+      <description>Fyne 包含一个动画框架，允许您随着时间的推移将画布属性从一个值平滑地过渡到另一个值。动画可以包含任何代码，这意味着可以管理任何类型的对象属性，但是只能有针对大小，位置和颜色的内置动画。
+动画通常使用画布包内置工具（NewSizeAnimation）创建，运行Start()调用创建的动画。您可以将动画设置为重复或自动反转，如下图所示。
+首先用矩形演示一下颜色渐变的动画。 在下面示例代码中，我们设置一个矩形画布，就像哦我们之前的代码一样。 最大的不同是动画在显示窗口之前。动画用NewColorRGBAAnimation创建，它可使颜色从red变为blue，并且中间有2秒（指定的持续时间）的过度时间。
+package main  import ( 	&amp;#34;image/color&amp;#34; 	&amp;#34;time&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; )  func main() { 	a := app.New() 	w := a.NewWindow(&amp;#34;Hello&amp;#34;)  	obj := canvas.NewRectangle(color.Black) 	obj.Resize(fyne.NewSize(50, 50)) 	w.SetContent(container.NewWithoutLayout(obj))  	red := color.NRGBA{R:0xff, A:0xff} 	blue := color.NRGBA{B:0xff, A:0xff} 	canvas.NewColorRGBAAnimation(red, blue, time.Second*2, func(c color.Color) { 	obj.FillColor = c 	canvas.</description>
     </item>
     
     <item>
-      <title>Gradient</title>
+      <title>渐变</title>
       <link>https://darcybook.github.io/docs/canvas/gradient/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/canvas/gradient/</guid>
-      <description>The last canvas primitive type is Gradient, available as canvas.LinearGradient and canvas.RadialGradient which is used to draw a gradient from one colour to another in various patterns. You can create gradients using NewHorizontalGradient(), NewVerticalGradient() or NewRadialGradient().
-To create a gradient you need a start and end colour - every colour in between is calculated by the canvas. In this example we use color.Transparent to show how a gradient (or any other type) could use an alpha value to be semi-transparent over the content behind.</description>
+      <description>渐变#最后一个基本画布类型是Gradient,使用canvas.LinearGradient和canvas.RadialGradient可以绘制一种颜色到另一种颜色的渐变。 你可以通过NewHorizontalGradient()，NewVerticalGradient() 或者 NewRadialGradient()创建渐变。
+要创建渐变，首先需要一个开始和结束的颜色 &amp;ndash; 两者之前的每个颜色都有画布计算。 在下面的示例中，我们使用color.Transparent来展示一个渐变如何使用alpha值设置半透明。
+package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; )  func main() { 	myApp := app.New() 	w := myApp.NewWindow(&amp;#34;Gradient&amp;#34;)  	gradient := canvas.NewHorizontalGradient(color.White, color.Transparent) 	//gradient := canvas.NewRadialGradient(color.White, color.Transparent) 	w.SetContent(gradient)  	w.Resize(fyne.NewSize(100, 100)) 	w.ShowAndRun() } </description>
     </item>
     
   </channel>

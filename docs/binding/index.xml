@@ -1,46 +1,71 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Data Binding on darcy&#39;s</title>
+    <title>数据绑定 on darcy&#39;s</title>
     <link>https://darcybook.github.io/docs/binding/</link>
-    <description>Recent content in Data Binding on darcy&#39;s</description>
+    <description>Recent content in 数据绑定 on darcy&#39;s</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://darcybook.github.io/docs/binding/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Binding Simple Widgets</title>
+      <title>介绍</title>
+      <link>https://darcybook.github.io/docs/binding/introduction/</link>
+      <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://darcybook.github.io/docs/binding/introduction/</guid>
+      <description>数据绑定# 数据绑定是 Fyne 工具包的强大新增功能，该工具包在版本中引入。通过使用数据绑定，我们可以避免手动管理许多标准对象，如s，s和s。
+数据绑定是Fyne v2.0.0引入的强大功能。 使用数据绑定，我们可以省去手动管理一些标准对象，例如：Labels、Buttons 和 Lists。
+内建的绑定支持许多基本类型（Int、String、Float 等），数组、Map和结构体一样支持。 每个类型都可以通过简单构造函数建立。 例如用binding.NewString()建立一个空新字符串绑定。 可以用Get 和 Set方法操作它的值。
+也可以用Bind开头函数绑定已有的变更了，接受一个指向类型的指针。 例如用binding.BindInt(&amp;amp;myInt)绑定有已有的整形。
+使用指定类型指针而不是原始的变量，我们可以设置组件和函数在数据变化时自动做出反应。 如果你直接改变了外部变量，调用Reload()确保绑定功能正常读取到值。
+package main  import ( 	&amp;#34;log&amp;#34;  	&amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; )  func main() { 	boundString := binding.NewString() 	s, _ := boundString.Get() 	log.Printf(&amp;#34;Bound = &amp;#39;%s&amp;#39;&amp;#34;, s)  	myInt := 5 	boundInt := binding.BindInt(&amp;amp;myInt) 	i, _ := boundInt.Get() 	log.Printf(&amp;#34;Source = %d, bound = %d&amp;#34;, myInt, i) } 下面我面学习组件怎么绑定简单值。</description>
+    </item>
+    
+    <item>
+      <title>绑定简单组件</title>
       <link>https://darcybook.github.io/docs/binding/simple/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/binding/simple/</guid>
-      <description>The simplest form of binding a widget is to pass it a bound item as a value instead of a static value. Many widgets provide a WithData constructor that will accept a typed data binding item. To set up the binding all you need to do is pass the right type in.
-Although this may not look like much of a benefit in the initial code you can then see how it ensures that the displayed content is always up to date with the source of the data.</description>
+      <description>绑定简单组件# 绑定小部件的最简单形式使用绑定元素而不是静态值。 许多组件提供WithData构造函数接受一个数据类型绑定。 要设置绑定，您需要做的就是传入正确的类型。
+尽管这在初始代码中可能看起来不是很大的好处，但您可以看到它如何确保显示的内容始终与数据源保持同步。您会注意到我们不需要调用小部件，甚至不需要保留对它的引用，但它会相应地更新。
+一开始可能在代码中看它没有什么用处，但你能看到显示内容怎么和数据源保持同步的。 你可以看到我们不需要用Refresh()刷新Label，label可以自己更新。
+package main  import ( 	&amp;#34;time&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	myApp := app.New() 	w := myApp.NewWindow(&amp;#34;Simple&amp;#34;)  	str := binding.NewString() 	str.Set(&amp;#34;Initial value&amp;#34;)  	text := widget.NewLabelWithData(str) 	w.SetContent(text)  	go func() { 	time.Sleep(time.Second * 2) 	str.Set(&amp;#34;A new string&amp;#34;) 	}()  	w.ShowAndRun() } 下一步我们介绍如何设置双向绑定。</description>
     </item>
     
     <item>
-      <title>Two-Way Binding</title>
+      <title>双向绑定</title>
       <link>https://darcybook.github.io/docs/binding/twoway/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/binding/twoway/</guid>
-      <description>So far we have looked at data binding as a way of keeping our user interface elements up to date. Far more common, however, is the need to update values from the UI widgets and keep the data up to date everywhere. Thankfully the bindings provided in Fyne are &amp;ldquo;two-way&amp;rdquo; which means that values can be pushed into them as well as read out. The change in data will be communicated to all connected code without any additional code.</description>
+      <description>双向绑定# 目前为止，我们看到用户界面可以随着数据绑定保持最新。 更常见的是，需要让变量保持和UI组件的值保持一致。 幸好Fyne提供了双向绑定功能，可以将值推送到变量中读取。 数据的改变自动传达到所有连接的代码，而无需增加代码。
+实现这个我们建立一个包含Label和Entry的应用，并绑定到同一个值。 修改输入框的值会看到标签同样改变，我们也没有在代码中调用刷新或引用组件。
+将代码迁移到数据绑定，所有组件的指针可以不再保存。 取而代之，使用到绑定值，你的用户界面可以完全分离。 更易读和管理。
+package main  import ( 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	myApp := app.New() 	w := myApp.NewWindow(&amp;#34;Two Way&amp;#34;)  	str := binding.NewString() 	str.Set(&amp;#34;Hi!&amp;#34;)  	w.SetContent(container.NewVBox( 	widget.NewLabelWithData(str), 	widget.NewEntryWithData(str), 	))  	w.ShowAndRun() } 下一步，将介绍如何为数据增加conversions</description>
     </item>
     
     <item>
-      <title>Data Conversion</title>
+      <title>数据转换</title>
       <link>https://darcybook.github.io/docs/binding/conversion/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/binding/conversion/</guid>
-      <description>So far we have used data binding where the type of data matches the output type (for example String and Label or Entry). Often it will be desirable to present data that is not already in the correct format. To do this the binding package provides a number of helpful conversion functions.
-Most commonly this will be used to convert different types of data into strings for displaying in Label or Entry widgets.</description>
+      <description>数据转换# 目前，我们已经用到了一些输出类型的数据绑定（String 和 Label 或 Entry）。 通常我们希望展现的不是实际的格式。因此binding包提供了一系列转换的函数。
+在代码中查看如何将 a 转换为 using 。可以通过移动滑块来编辑原始值。每次数据更改时，它都会运行转换代码并更新任何连接的小部件。 最常见的是将不同数据类型转化为字符串再Label或Entry显示。 下面示例用binding.FloatToString将Float转化为String。 原始的数据通过滑块调整，每次值改变都会自动转化并关联组件。
+还可以格式化字符串让用户界面看起来更自然。 你可以看下使用WithFormat可以传递一个字符串格式化后（类似fmt包）再输出。
+package main  import ( 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	myApp := app.New() 	w := myApp.NewWindow(&amp;#34;Conversion&amp;#34;)  	f := binding.NewFloat() 	str := binding.FloatToString(f) 	short := binding.FloatToStringWithFormat(f, &amp;#34;%0.0f%%&amp;#34;) 	f.Set(25.0)  	w.SetContent(container.NewVBox( 	widget.NewSliderWithData(0, 100.0, f), 	widget.</description>
     </item>
     
     <item>
-      <title>List Data</title>
+      <title>数组</title>
       <link>https://darcybook.github.io/docs/binding/list/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darcybook.github.io/docs/binding/list/</guid>
-      <description>To demonstrate how more complex types can be connected we will look at the List widget and how data binding can make it easier to use. Firstly we create a StringList data binding, which is a list of String data type. Once we have a data of list type we can connect this to the standard List widget. To do so we use the widget.NewListWithData constructor, much like other widgets.</description>
+      <description>数组# 我们用列表组件演示怎么能更简单绑定一个复杂类型。 我们先创建一个字符串数组的数据绑定。 有个数组类型我们可以关联到标准列表组件，像其它组件一样，widget.NewListWithData可以绑定数据。
+使用此回调结构时，我们应该使用模板标签小部件，而不是调用 。这意味着，如果数据源中的任何字符串发生更改，则表的每个受影响的行都将刷新。
+和list教程比较一下，主要有2个地方变了，第一个是我们第一个参数传递数组而不是长度回调函数。 第二个是最后参数UpdateItem回调函数。 改进的版本使用binding.DataItem而不是widget.ListIndexID。
+当我们使用回调结构时，我们Bind模板标签组件而不是调用SetText。 这意味着，如果数据源中任何字符串改变，表中每个受到影响的行都会刷新。
+package main  import ( 	&amp;#34;fmt&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/data/binding&amp;#34; 	&amp;#34;fyne.io/fyne/v2/widget&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;List Data&amp;#34;)  	data := binding.BindStringList( 	&amp;amp;[]string{&amp;#34;Item 1&amp;#34;, &amp;#34;Item 2&amp;#34;, &amp;#34;Item 3&amp;#34;}, 	)  	list := widget.NewListWithData(data, 	func() fyne.CanvasObject { 	return widget.</description>
     </item>
     
   </channel>
