@@ -45,19 +45,6 @@ windows# 从下载下载页面Go并按照说明进行操作 为Windows安装
     </item>
     
     <item>
-<<<<<<< HEAD
-=======
-      <title>Building a Custom Layout</title>
-      <link>https://darcybook.github.io/docs/extend/custom-layout/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/extend/custom-layout/</guid>
-      <description>In a Fyne application each Container arranges it&amp;rsquo;s child elements using a simple layout algorithm. Fyne defines many layouts available in the fyne.io/fyne/v2/layout package. If you look at the code you will see that they all implement the Layout interface.
-type Layout interface { 	Layout([]CanvasObject, Size) 	MinSize(objects []CanvasObject) Size } Any application can provide a custom layout to arrange widgets in a non-standard manner. To do this you need to implement the interface above in your own code.</description>
-    </item>
-    
-    <item>
->>>>>>> b0c673d27632764a39f41e0073a1012826d5f4e3
       <title>Geometry</title>
       <link>https://darcybook.github.io/docs/architecture/geometry/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -114,7 +101,6 @@ package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2
 package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34; 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; )  func main() { 	myApp := app.New() 	w := myApp.NewWindow(&amp;#34;Rectangle&amp;#34;)  	rect := canvas.NewRectangle(color.White) 	w.SetContent(rect)  	w.Resize(fyne.NewSize(150, 100)) 	w.ShowAndRun() } 其它fyne.CanvaObject类型有更多设置，下一步查看。
 其他类型有更多配置，下一步。
 Other fyne.CanvaObject types have more configuration, let us look next at canvas.Text.</description>
-<<<<<<< HEAD
     </item>
     
     <item>
@@ -129,8 +115,6 @@ type Layout interface { 	Layout([]CanvasObject, Size) 	MinSize(objects []CanvasO
 任何应用都可以用自定义布局用非标准方式排列组件，实现上面接口就可以自定义。 为了说明这一点，我们将创建一个新的布局，该布局以对角线排列元素，并排列在其容器的左下角
 首先顶一个一个新类型diagonal，定义它的最小尺寸。 要计算尺寸，我们只需要给所有子元素增加宽和高（指定[]fyne.CanvasObject为MinSize参数）。
 import &amp;#34;fyne.io/fyne/v2&amp;#34;  type diagonal struct { }  func (d *diagonal) MinSize(objects []fyne.CanvasObject) fyne.Size { 	w, h := float32(0), float32(0) 	for _, o := range objects { 	childSize := o.MinSize()  	w += childSize.Width 	h += childSize.</description>
-=======
->>>>>>> b0c673d27632764a39f41e0073a1012826d5f4e3
     </item>
     
     <item>
@@ -159,19 +143,6 @@ package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2
     </item>
     
     <item>
-<<<<<<< HEAD
-=======
-      <title>Binding Simple Widgets</title>
-      <link>https://darcybook.github.io/docs/binding/simple/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/binding/simple/</guid>
-      <description>The simplest form of binding a widget is to pass it a bound item as a value instead of a static value. Many widgets provide a WithData constructor that will accept a typed data binding item. To set up the binding all you need to do is pass the right type in.
-Although this may not look like much of a benefit in the initial code you can then see how it ensures that the displayed content is always up to date with the source of the data.</description>
-    </item>
-    
-    <item>
->>>>>>> b0c673d27632764a39f41e0073a1012826d5f4e3
       <title>Scaling</title>
       <link>https://darcybook.github.io/docs/architecture/scaling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -216,7 +187,6 @@ package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2
     </item>
     
     <item>
-<<<<<<< HEAD
       <title>绑定简单组件</title>
       <link>https://darcybook.github.io/docs/binding/simple/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -229,8 +199,6 @@ package main  import ( 	&amp;#34;time&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&am
     </item>
     
     <item>
-=======
->>>>>>> b0c673d27632764a39f41e0073a1012826d5f4e3
       <title>网格布局</title>
       <link>https://darcybook.github.io/docs/container/grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -273,27 +241,6 @@ package main  import ( 	&amp;#34;fmt&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp
     </item>
     
     <item>
-<<<<<<< HEAD
-=======
-      <title>Bundling resources</title>
-      <link>https://darcybook.github.io/docs/extend/bundle/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/extend/bundle/</guid>
-      <description>Go based applications are usually built as a single binary executable, and this is the same for Fyne applications. A single file makes it easier to distribute install our software. Unfortunately GUI applications typically require additional resources to render the user interface. To manage this challenge a Go application can bundle assets into the binary itself. The Fyne toolkit prefers the use of &amp;ldquo;fyne bundle&amp;rdquo; as it has various benefits that we will explore below.</description>
-    </item>
-    
-    <item>
-      <title>Two-Way Binding</title>
-      <link>https://darcybook.github.io/docs/binding/twoway/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/binding/twoway/</guid>
-      <description>So far we have looked at data binding as a way of keeping our user interface elements up to date. Far more common, however, is the need to update values from the UI widgets and keep the data up to date everywhere. Thankfully the bindings provided in Fyne are &amp;ldquo;two-way&amp;rdquo; which means that values can be pushed into them as well as read out. The change in data will be communicated to all connected code without any additional code.</description>
-    </item>
-    
-    <item>
->>>>>>> b0c673d27632764a39f41e0073a1012826d5f4e3
       <title>Widgets</title>
       <link>https://darcybook.github.io/docs/architecture/widgets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -304,7 +251,6 @@ Behaviour API# One thing that you will notice about the standard widgets is t
     </item>
     
     <item>
-<<<<<<< HEAD
       <title>双向绑定</title>
       <link>https://darcybook.github.io/docs/binding/twoway/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -317,8 +263,6 @@ package main  import ( 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/
     </item>
     
     <item>
-=======
->>>>>>> b0c673d27632764a39f41e0073a1012826d5f4e3
       <title>线</title>
       <link>https://darcybook.github.io/docs/canvas/line/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -342,7 +286,6 @@ package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2
     </item>
     
     <item>
-<<<<<<< HEAD
       <title>资源绑定</title>
       <link>https://darcybook.github.io/docs/extend/bundle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -360,8 +303,6 @@ fyne资源只是唯一标识的字节集合，因此它可以时一个字体、�
     </item>
     
     <item>
-=======
->>>>>>> b0c673d27632764a39f41e0073a1012826d5f4e3
       <title>输入框</title>
       <link>https://darcybook.github.io/docs/widget/entry/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -416,29 +357,6 @@ package main  import ( 	&amp;#34;time&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&am
 语法和其他布局有些不一样，但是基本layout.NewBorderLayout(top, bottom, left, right)和下面示例一下。
 传递到布局且没有指定位置的项目都会排列到中心区域，并自动填充。 还可以将nil传给布局，让位置为空。
 package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/fyne/v2/canvas&amp;#34; 	&amp;#34;fyne.io/fyne/v2/container&amp;#34; 	&amp;#34;fyne.io/fyne/v2/layout&amp;#34; )  func main() { 	myApp := app.New() 	myWindow := myApp.NewWindow(&amp;#34;Border Layout&amp;#34;)  	top := canvas.NewText(&amp;#34;top bar&amp;#34;, color.White) 	left := canvas.NewText(&amp;#34;left&amp;#34;, color.White) 	middle := canvas.NewText(&amp;#34;content&amp;#34;, color.White) 	content := container.New(layout.NewBorderLayout(top, nil, left, nil), 	top, left, middle) 	myWindow.</description>
-<<<<<<< HEAD
-=======
-    </item>
-    
-    <item>
-      <title>Creating a Custom Theme</title>
-      <link>https://darcybook.github.io/docs/extend/custom-theme/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/extend/custom-theme/</guid>
-      <description>Applications are able to load custom themes that can apply small changes to the standard theme or provide a completely unique look. A theme will need to implement the functions of fyne.Theme interface, which is defined as follows:
-type Theme interface { 	Color(ThemeColorName, ThemeVariant) color.Color 	Font(TextStyle) Resource 	Icon(ThemeIconName) Resource 	Size(ThemeSizeName) float32 } To apply our theme changes we will first define a new type that that implements this interface.</description>
-    </item>
-    
-    <item>
-      <title>Data Conversion</title>
-      <link>https://darcybook.github.io/docs/binding/conversion/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/binding/conversion/</guid>
-      <description>So far we have used data binding where the type of data matches the output type (for example String and Label or Entry). Often it will be desirable to present data that is not already in the correct format. To do this the binding package provides a number of helpful conversion functions.
-Most commonly this will be used to convert different types of data into strings for displaying in Label or Entry widgets.</description>
->>>>>>> b0c673d27632764a39f41e0073a1012826d5f4e3
     </item>
     
     <item>
@@ -452,7 +370,6 @@ Most commonly this will be used to convert different types of data into strings 
     </item>
     
     <item>
-<<<<<<< HEAD
       <title>创建自定义主题</title>
       <link>https://darcybook.github.io/docs/extend/custom-theme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -468,8 +385,6 @@ func (m myTheme) Color(name fyne.ThemeColorName, variant fyne.ThemeVariant) colo
     </item>
     
     <item>
-=======
->>>>>>> b0c673d27632764a39f41e0073a1012826d5f4e3
       <title>圆</title>
       <link>https://darcybook.github.io/docs/canvas/circle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -481,7 +396,6 @@ package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2
     </item>
     
     <item>
-<<<<<<< HEAD
       <title>数据转换</title>
       <link>https://darcybook.github.io/docs/binding/conversion/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -494,8 +408,6 @@ package main  import ( 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/
     </item>
     
     <item>
-=======
->>>>>>> b0c673d27632764a39f41e0073a1012826d5f4e3
       <title>选择组件</title>
       <link>https://darcybook.github.io/docs/widget/choices/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -540,18 +452,6 @@ Windows可以随时创建，我们可以修改上面的代码，新增一个窗�
     </item>
     
     <item>
-<<<<<<< HEAD
-=======
-      <title>List Data</title>
-      <link>https://darcybook.github.io/docs/binding/list/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/binding/list/</guid>
-      <description>To demonstrate how more complex types can be connected we will look at the List widget and how data binding can make it easier to use. Firstly we create a StringList data binding, which is a list of String data type. Once we have a data of list type we can connect this to the standard List widget. To do so we use the widget.NewListWithData constructor, much like other widgets.</description>
-    </item>
-    
-    <item>
->>>>>>> b0c673d27632764a39f41e0073a1012826d5f4e3
       <title>Writing a Custom Widget</title>
       <link>https://darcybook.github.io/docs/extend/custom-widget/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -573,7 +473,6 @@ package main  import ( 	&amp;#34;fyne.io/fyne/v2/app&amp;#34; 	&amp;#34;fyne.io/
     </item>
     
     <item>
-<<<<<<< HEAD
       <title>数组</title>
       <link>https://darcybook.github.io/docs/binding/list/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -587,8 +486,6 @@ package main  import ( 	&amp;#34;fmt&amp;#34;  	&amp;#34;fyne.io/fyne/v2&amp;#34
     </item>
     
     <item>
-=======
->>>>>>> b0c673d27632764a39f41e0073a1012826d5f4e3
       <title>表单</title>
       <link>https://darcybook.github.io/docs/widget/form/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -639,20 +536,6 @@ type myEntry struct { 	widget.Entry }  func (m *myEntry) TypedShortcut(s fyne.Sh
     </item>
     
     <item>
-<<<<<<< HEAD
-=======
-      <title>Numerical Entry</title>
-      <link>https://darcybook.github.io/docs/extend/numerical-entry/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darcybook.github.io/docs/extend/numerical-entry/</guid>
-      <description>In the traditional sense, GUI programs have used callbacks to customize actions for widgets. Fyne does not expose inserting custom callbacks to capture events on widgets, but it does not need to. The Go language is plenty extensible to make this work.
-Instead we can simply use Type Embedding and extend the widget to only make it possible to enter numerical values.
-First create a new type struct, we will call it numericalEntry.</description>
-    </item>
-    
-    <item>
->>>>>>> b0c673d27632764a39f41e0073a1012826d5f4e3
       <title>Raster</title>
       <link>https://darcybook.github.io/docs/canvas/raster/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -674,7 +557,6 @@ package main  import ( 	&amp;#34;image/color&amp;#34;  	&amp;#34;fyne.io/fyne/v2
     </item>
     
     <item>
-<<<<<<< HEAD
       <title>数字输入框</title>
       <link>https://darcybook.github.io/docs/extend/numerical-entry/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -693,8 +575,6 @@ func (e *numericalEntry) TypedRune(r rune) { 	switch r { 	case &amp;#39;0&amp;#3
     </item>
     
     <item>
-=======
->>>>>>> b0c673d27632764a39f41e0073a1012826d5f4e3
       <title>进度条</title>
       <link>https://darcybook.github.io/docs/widget/progressbar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
